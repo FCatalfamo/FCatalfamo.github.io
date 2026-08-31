@@ -4,10 +4,416 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Francesco Catalfamo</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1f1f1f;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
+
+        /* NAVBAR */
+        header {
+            border-bottom: 1px solid #e5e5e5;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(8px);
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 72px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.6;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 72vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .eyebrow {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 0.95;
+            margin-bottom: 28px;
+            letter-spacing: -0.04em;
+        }
+
+        .hero-subtitle {
+            font-size: 1.35rem;
+            max-width: 700px;
+            color: #555;
+            margin-bottom: 36px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            border: 1px solid #1f1f1f;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        .button.primary {
+            background: #1f1f1f;
+            color: white;
+        }
+
+        .button:hover {
+            opacity: 0.75;
+        }
+
+        /* GENERAL SECTIONS */
+        section {
+            padding: 90px 0;
+            border-top: 1px solid #eeeeee;
+        }
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 80px;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .section-content {
+            font-size: 1.05rem;
+            color: #444;
+        }
+
+        .section-content p + p {
+            margin-top: 18px;
+        }
+
+        /* RESEARCH */
+        .research-list {
+            display: grid;
+            gap: 30px;
+        }
+
+        .research-item {
+            padding-bottom: 28px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .research-item:last-child {
+            border-bottom: none;
+        }
+
+        .research-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: #1f1f1f;
+        }
+
+        .research-meta {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid #e5e5e5;
+            padding: 40px 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* MOBILE */
+        @media (max-width: 750px) {
+            .nav-links {
+                gap: 14px;
+                font-size: 0.85rem;
+            }
+
+            .section-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 100px 0 70px;
+            }
+
+            h1 {
+                font-size: 3.2rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Francesco Catalfamo</h1>
-    <p>Political Scientist</p>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">Francesco Catalfamo</div>
+
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#cv">CV</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    Political Scientist
+                </div>
+
+                <h1>
+                    Francesco<br>
+                    Catalfamo
+                </h1>
+
+                <p class="hero-subtitle">
+                    I am a political scientist interested in political behaviour,
+                    political parties, affective polarization and political communication.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+
+                <div class="buttons">
+                    <a href="#research" class="button primary">
+                        View Research
+                    </a>
+
+                    <a href="#" class="button">
+                        Download CV
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container section-grid">
+
+            <div class="section-title">
+                About
+            </div>
+
+            <div class="section-content">
+                <p>
+                    I am a political scientist currently working on questions related
+                    to political behaviour, party competition and democratic representation.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+
+                <p>
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- RESEARCH -->
+    <section id="research">
+        <div class="container section-grid">
+
+            <div class="section-title">
+                Research
+            </div>
+
+            <div class="section-content research-list">
+
+                <div class="research-item">
+                    <h3>
+                        The Affective Consequences of Coalition Formation
+                    </h3>
+
+                    <div class="research-meta">
+                        Master's Thesis / Working Paper
+                    </div>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        This project investigates how political cooperation between parties
+                        affects citizens' evaluations of political parties.
+                    </p>
+                </div>
+
+
+                <div class="research-item">
+                    <h3>
+                        Visible Division
+                    </h3>
+
+                    <div class="research-meta">
+                        Research Project
+                    </div>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                    </p>
+                </div>
+
+
+                <div class="research-item">
+                    <h3>
+                        Political Parties and Voter Behaviour
+                    </h3>
+
+                    <div class="research-meta">
+                        Ongoing research
+                    </div>
+
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CV -->
+    <section id="cv">
+        <div class="container section-grid">
+
+            <div class="section-title">
+                CV
+            </div>
+
+            <div class="section-content">
+                <p>
+                    You can download my full academic CV below.
+                </p>
+
+                <p style="margin-top: 24px;">
+                    <a href="#" class="button">
+                        Download CV
+                    </a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container section-grid">
+
+            <div class="section-title">
+                Contact
+            </div>
+
+            <div class="section-content">
+                <p>
+                    Email: your.email@example.com
+                </p>
+
+                <p>
+                    LinkedIn · GitHub · Google Scholar
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer>
+    <div class="container footer-content">
+        <div>
+            © 2026 Francesco Catalfamo
+        </div>
+
+        <div>
+            Political Science
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
