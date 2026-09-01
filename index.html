@@ -2,18 +2,26 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description"
-        content="Francesco Catalfamo — Political Scientist">
+    <meta
+        name="description"
+        content="Francesco Catalfamo — Political Scientist"
+    >
 
     <title>Francesco Catalfamo</title>
+
 
     <style>
 
         :root {
+
             --petrol: #165f5a;
             --petrol-dark: #104945;
             --petrol-soft: #eef5f2;
@@ -25,6 +33,7 @@
             --paper: #ffffff;
 
             --max-width: 1120px;
+
         }
 
 
@@ -39,6 +48,7 @@
 
 
         body {
+
             margin: 0;
 
             font-family:
@@ -51,15 +61,20 @@
                 sans-serif;
 
             color: var(--ink);
+
             background: var(--paper);
 
             line-height: 1.65;
+
         }
 
 
         a {
+
             color: inherit;
+
             text-decoration: none;
+
         }
 
 
@@ -69,27 +84,34 @@
 
 
         .container {
+
             width: min(var(--max-width), 90%);
+
             margin: 0 auto;
+
         }
 
 
         .serif {
+
             font-family:
                 Georgia,
                 "Times New Roman",
                 serif;
+
         }
 
 
 
-        /* --------------------------------
+        /* ======================================
            HEADER
-        -------------------------------- */
+        ====================================== */
 
 
         .site-header {
+
             position: sticky;
+
             top: 0;
 
             z-index: 100;
@@ -99,29 +121,36 @@
             backdrop-filter: blur(12px);
 
             border-bottom: 1px solid var(--line);
+
         }
 
 
         .navbar {
+
             min-height: 72px;
 
             display: flex;
 
             align-items: center;
+
             justify-content: space-between;
 
             gap: 2rem;
+
         }
 
 
         .site-name {
+
             font-weight: 700;
 
             letter-spacing: -0.02em;
+
         }
 
 
         .nav-links {
+
             display: flex;
 
             align-items: center;
@@ -129,32 +158,47 @@
             gap: 1.6rem;
 
             font-size: 0.95rem;
+
         }
 
 
 
-        /* --------------------------------
+        /* ======================================
            HERO
-        -------------------------------- */
+        ====================================== */
 
 
         .hero {
-            padding: 88px 0 80px;
+
+            padding: 100px 0 92px;
+
         }
 
 
         .hero-grid {
+
             display: grid;
 
-            grid-template-columns: 1.55fr 0.7fr;
+            grid-template-columns:
+                minmax(0, 1.55fr)
+                minmax(240px, 0.65fr);
 
-            gap: 70px;
+            gap: 90px;
 
             align-items: center;
+
+        }
+
+
+        .hero-content {
+
+            max-width: 790px;
+
         }
 
 
         .eyebrow {
+
             color: var(--petrol);
 
             text-transform: uppercase;
@@ -165,11 +209,13 @@
 
             font-weight: 700;
 
-            margin-bottom: 22px;
+            margin-bottom: 24px;
+
         }
 
 
         .hero h1 {
+
             font-family:
                 Georgia,
                 "Times New Roman",
@@ -177,161 +223,221 @@
 
             font-weight: 500;
 
-            letter-spacing: -0.04em;
+            letter-spacing: -0.045em;
 
-            font-size: clamp(3.8rem, 8vw, 6.7rem);
+            font-size: clamp(4.2rem, 8vw, 7rem);
 
-            line-height: 0.92;
+            line-height: 0.9;
 
-            margin: 0 0 28px;
+            margin: 0 0 32px;
+
         }
 
 
         .hero-subtitle {
-            max-width: 760px;
 
-            color: #52605a;
+            max-width: 720px;
 
-            font-size: 1.25rem;
+            color: #48554f;
 
-            line-height: 1.6;
+            font-size: 1.22rem;
+
+            line-height: 1.65;
+
+            margin: 0;
+
         }
 
 
+        .research-interests {
 
-        /* --------------------------------
-           TAGS
-        -------------------------------- */
-
-
-        .tags {
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 8px;
-
-            margin-top: 26px;
-        }
-
-
-        .tag {
-            padding: 7px 12px;
-
-            border-radius: 999px;
-
-            background: var(--petrol-soft);
+            margin-top: 27px;
 
             color: var(--petrol);
 
-            font-size: 0.86rem;
+            font-size: 0.92rem;
+
+            font-weight: 600;
+
+            line-height: 1.8;
+
+        }
+
+
+        .research-interests span {
+
+            color: #9aa39f;
+
+            margin: 0 7px;
+
         }
 
 
 
-        /* --------------------------------
-           BUTTONS
-        -------------------------------- */
+        /* ======================================
+           HERO BUTTONS
+        ====================================== */
 
 
         .actions {
+
             display: flex;
 
             flex-wrap: wrap;
 
+            align-items: center;
+
             gap: 12px;
 
-            margin-top: 30px;
+            margin-top: 32px;
+
         }
 
 
         .button {
+
             min-height: 44px;
 
             display: inline-flex;
 
             align-items: center;
+
             justify-content: center;
 
-            padding: 10px 17px;
+            padding: 10px 18px;
 
             border: 1px solid var(--petrol);
 
-            border-radius: 6px;
+            border-radius: 5px;
 
             font-weight: 600;
 
             font-size: 0.92rem;
 
             transition: 0.18s ease;
+
         }
 
 
         .button.primary {
+
             background: var(--petrol);
 
             color: white;
+
         }
 
 
         .button:hover {
+
             background: var(--petrol-dark);
 
             border-color: var(--petrol-dark);
 
             color: white;
+
+        }
+
+
+        .text-button {
+
+            border-color: transparent;
+
+            padding-left: 8px;
+
+            padding-right: 8px;
+
+            color: var(--petrol);
+
+        }
+
+
+        .text-button:hover {
+
+            background: transparent;
+
+            border-color: transparent;
+
+            color: var(--petrol-dark);
+
         }
 
 
 
-        /* --------------------------------
+        /* ======================================
            PHOTO
-        -------------------------------- */
+        ====================================== */
+
+
+        .portrait {
+
+            display: flex;
+
+            justify-content: flex-end;
+
+        }
 
 
         .photo-placeholder {
+
+            width: 100%;
+
+            max-width: 310px;
+
             aspect-ratio: 4 / 5;
 
-            background: #e9efec;
+            background: #edf2ef;
 
             border: 1px solid var(--line);
 
             display: flex;
 
             align-items: center;
+
             justify-content: center;
 
             text-align: center;
 
-            color: #7a8580;
+            color: #89938e;
 
-            padding: 30px;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-style: italic;
+
         }
 
 
 
-        /* --------------------------------
+        /* ======================================
            GENERAL SECTIONS
-        -------------------------------- */
+        ====================================== */
 
 
         .section {
+
             border-top: 1px solid var(--line);
 
             padding: 74px 0;
+
         }
 
 
         .section-grid {
+
             display: grid;
 
             grid-template-columns: 0.55fr 1.45fr;
 
             gap: 70px;
+
         }
 
 
         .section-label {
+
             color: var(--petrol);
 
             text-transform: uppercase;
@@ -341,15 +447,18 @@
             font-size: 0.78rem;
 
             font-weight: 700;
+
         }
 
 
         .section-copy {
+
             color: #46524d;
 
             font-size: 1.05rem;
 
             max-width: 800px;
+
         }
 
 
@@ -359,67 +468,81 @@
 
 
 
-        /* --------------------------------
+        /* ======================================
            EDUCATION
-        -------------------------------- */
+        ====================================== */
 
 
         .timeline {
+
             display: grid;
 
             gap: 24px;
+
         }
 
 
         .timeline-item {
+
             display: grid;
 
             grid-template-columns: 115px 1fr;
 
             gap: 24px;
+
         }
 
 
         .timeline-year {
+
             color: #7a8580;
 
             font-size: 0.9rem;
+
         }
 
 
         .timeline-title {
+
             font-weight: 700;
+
         }
 
 
         .timeline-meta {
+
             margin-top: 3px;
 
             color: var(--muted);
 
             font-size: 0.92rem;
+
         }
 
 
 
-        /* --------------------------------
+        /* ======================================
            SECTION HEADERS
-        -------------------------------- */
+        ====================================== */
 
 
         .section-heading-row {
+
             display: flex;
 
             justify-content: space-between;
+
             align-items: end;
 
             gap: 20px;
 
             margin-bottom: 30px;
+
         }
 
 
         .section-heading-row h2 {
+
             font-family:
                 Georgia,
                 "Times New Roman",
@@ -430,46 +553,56 @@
             font-weight: 500;
 
             margin: 5px 0 0;
+
         }
 
 
         .text-link {
+
             color: var(--petrol);
 
             font-weight: 600;
 
             font-size: 0.92rem;
+
         }
 
 
 
-        /* --------------------------------
+        /* ======================================
            RESEARCH
-        -------------------------------- */
+        ====================================== */
 
 
         .cards {
+
             display: grid;
 
             grid-template-columns: repeat(2, 1fr);
 
             gap: 34px;
+
         }
 
 
         .card {
+
             border-top: 1px solid #cfd8d3;
 
             padding-top: 19px;
+
         }
 
 
         .card.featured {
+
             border-top: 2px solid var(--petrol);
+
         }
 
 
         .card-meta {
+
             color: #7a8580;
 
             font-size: 0.76rem;
@@ -479,10 +612,12 @@
             letter-spacing: 0.1em;
 
             margin-bottom: 11px;
+
         }
 
 
         .card h3 {
+
             font-family:
                 Georgia,
                 "Times New Roman",
@@ -495,30 +630,36 @@
             line-height: 1.2;
 
             margin: 0 0 12px;
+
         }
 
 
         .card p {
+
             color: var(--muted);
 
             font-size: 0.95rem;
 
             margin-bottom: 0;
+
         }
 
 
 
-        /* --------------------------------
+        /* ======================================
            NOTES
-        -------------------------------- */
+        ====================================== */
 
 
         .note-list {
+
             border-top: 1px solid var(--line);
+
         }
 
 
         .note-row {
+
             display: grid;
 
             grid-template-columns: 125px 1fr;
@@ -528,46 +669,56 @@
             padding: 22px 0;
 
             border-bottom: 1px solid var(--line);
+
         }
 
 
         .note-date {
+
             color: #7a8580;
 
             font-size: 0.9rem;
+
         }
 
 
         .note-title {
+
             font-weight: 700;
+
         }
 
 
         .note-excerpt {
+
             color: var(--muted);
 
             margin-top: 4px;
 
             font-size: 0.94rem;
+
         }
 
 
 
-        /* --------------------------------
+        /* ======================================
            CV + CONTACT
-        -------------------------------- */
+        ====================================== */
 
 
         .cv-contact {
+
             display: grid;
 
             grid-template-columns: 1fr 1fr;
 
             gap: 70px;
+
         }
 
 
         .social-links {
+
             display: flex;
 
             flex-wrap: wrap;
@@ -575,16 +726,18 @@
             gap: 18px;
 
             margin-top: 12px;
+
         }
 
 
 
-        /* --------------------------------
+        /* ======================================
            FOOTER
-        -------------------------------- */
+        ====================================== */
 
 
         .site-footer {
+
             border-top: 1px solid var(--line);
 
             padding: 28px 0;
@@ -592,10 +745,12 @@
             color: #7a8580;
 
             font-size: 0.82rem;
+
         }
 
 
         .footer-inner {
+
             display: flex;
 
             justify-content: space-between;
@@ -603,33 +758,40 @@
             gap: 20px;
 
             flex-wrap: wrap;
+
         }
 
 
 
-        /* --------------------------------
-           MOBILE
-        -------------------------------- */
+        /* ======================================
+           TABLET / MOBILE
+        ====================================== */
 
 
         @media (max-width: 780px) {
 
             .navbar {
+
                 align-items: flex-start;
 
                 padding: 18px 0;
+
             }
 
 
             .nav-links {
+
                 gap: 14px;
 
                 font-size: 0.86rem;
+
             }
 
 
             .hero {
-                padding: 62px 0;
+
+                padding: 65px 0 70px;
+
             }
 
 
@@ -637,62 +799,95 @@
             .section-grid,
             .cv-contact,
             .cards {
+
                 grid-template-columns: 1fr;
+
             }
 
 
             .hero-grid,
             .section-grid,
             .cv-contact {
+
                 gap: 34px;
+
+            }
+
+
+            .portrait {
+
+                justify-content: flex-start;
+
             }
 
 
             .photo-placeholder {
-                max-width: 330px;
+
+                max-width: 280px;
+
             }
 
 
             .timeline-item,
             .note-row {
+
                 grid-template-columns: 1fr;
 
                 gap: 6px;
+
             }
 
 
             .section-heading-row {
+
                 align-items: flex-start;
 
                 flex-direction: column;
+
+            }
+
+
+            .research-interests span {
+
+                margin: 0 4px;
+
             }
 
         }
+
 
 
         @media (max-width: 540px) {
 
             .navbar {
+
                 flex-direction: column;
 
                 gap: 10px;
+
             }
 
 
             .nav-links {
+
                 width: 100%;
 
                 justify-content: space-between;
+
             }
 
 
             .hero h1 {
+
                 font-size: 3.7rem;
+
             }
 
         }
 
+
     </style>
+
 </head>
 
 
@@ -700,18 +895,20 @@
 <body>
 
 
-    <!-- ==============================
+    <!-- ======================================
          HEADER
-    =============================== -->
+    ====================================== -->
 
 
     <header class="site-header">
 
         <div class="container navbar">
 
+
             <a
                 class="site-name"
-                href="/">
+                href="/"
+            >
 
                 Francesco Catalfamo
 
@@ -720,21 +917,33 @@
 
             <nav
                 class="nav-links"
-                aria-label="Main navigation">
+                aria-label="Main navigation"
+            >
+
 
                 <a href="/research/">
+
                     Research
+
                 </a>
+
 
                 <a href="/notes/">
+
                     Notes
+
                 </a>
+
 
                 <a href="/about/">
+
                     About
+
                 </a>
 
+
             </nav>
+
 
         </div>
 
@@ -746,9 +955,9 @@
     <main>
 
 
-        <!-- ==============================
+        <!-- ======================================
              HERO
-        =============================== -->
+        ====================================== -->
 
 
         <section class="hero">
@@ -756,7 +965,7 @@
             <div class="container hero-grid">
 
 
-                <div>
+                <div class="hero-content">
 
 
                     <div class="eyebrow">
@@ -777,58 +986,67 @@
                     <p class="hero-subtitle">
 
                         I study political behaviour,
-                        political parties,
-                        affective polarization
-                        and political communication,
-                        with a particular interest in
-                        how elite cooperation and
-                        political institutions shape
-                        citizens' attitudes.
+                        party politics and affective polarization,
+                        with a particular interest in how elite cooperation,
+                        competition and political institutions
+                        shape citizens’ attitudes.
 
                     </p>
 
 
-                    <div class="tags">
+                    <div class="research-interests">
 
-                        <span class="tag">
-                            Political Behaviour
-                        </span>
+                        Political Behaviour
 
-                        <span class="tag">
-                            Political Parties
-                        </span>
+                        <span>·</span>
 
-                        <span class="tag">
-                            Affective Polarization
-                        </span>
+                        Party Politics
 
-                        <span class="tag">
-                            Political Communication
-                        </span>
+                        <span>·</span>
+
+                        Affective Polarization
+
+                        <span>·</span>
+
+                        Political Communication
 
                     </div>
 
 
                     <div class="actions">
 
+
                         <a
                             class="button primary"
-                            href="/research/">
+                            href="/research/"
+                        >
 
-                            Explore research
+                            Research
 
                         </a>
 
 
                         <a
                             class="button"
-                            href="/assets/cv.pdf"
-                            target="_blank"
-                            rel="noopener">
+                            href="/notes/"
+                        >
 
-                            View CV
+                            Notes
 
                         </a>
+
+
+                        <a
+                            class="button text-button"
+                            href="/assets/cv.pdf"
+                            target="_blank"
+                            rel="noopener"
+                        >
+
+                            View CV →
+
+                        </a>
+
 
                     </div>
 
@@ -838,12 +1056,15 @@
 
 
 
-                <div class="photo-placeholder">
+                <div class="portrait">
 
-                    Your photo goes here.<br>
 
-                    Replace this block later
-                    with an image.
+                    <div class="photo-placeholder">
+
+                        Photo
+
+                    </div>
+
 
                 </div>
 
@@ -855,9 +1076,9 @@
 
 
 
-        <!-- ==============================
+        <!-- ======================================
              PROFILE
-        =============================== -->
+        ====================================== -->
 
 
         <section class="section">
@@ -873,6 +1094,7 @@
 
 
                 <div class="section-copy">
+
 
                     <p>
 
@@ -900,6 +1122,7 @@
 
                     </p>
 
+
                 </div>
 
 
@@ -910,9 +1133,9 @@
 
 
 
-        <!-- ==============================
+        <!-- ======================================
              EDUCATION
-        =============================== -->
+        ====================================== -->
 
 
         <section class="section">
@@ -930,6 +1153,8 @@
                 <div class="timeline">
 
 
+
+
                     <div class="timeline-item">
 
 
@@ -941,6 +1166,7 @@
 
 
                         <div>
+
 
                             <div class="timeline-title">
 
@@ -954,6 +1180,7 @@
                                 Current institution / programme
 
                             </div>
+
 
                         </div>
 
@@ -975,6 +1202,7 @@
 
                         <div>
 
+
                             <div class="timeline-title">
 
                                 M.A. Political Science
@@ -987,6 +1215,7 @@
                                 University of Mannheim
 
                             </div>
+
 
                         </div>
 
@@ -1008,6 +1237,7 @@
 
                         <div>
 
+
                             <div class="timeline-title">
 
                                 Previous studies
@@ -1020,6 +1250,7 @@
                                 University of Milan
 
                             </div>
+
 
                         </div>
 
@@ -1037,9 +1268,9 @@
 
 
 
-        <!-- ==============================
+        <!-- ======================================
              SELECTED RESEARCH
-        =============================== -->
+        ====================================== -->
 
 
         <section class="section">
@@ -1051,6 +1282,7 @@
 
 
                     <div>
+
 
                         <div class="section-label">
 
@@ -1065,12 +1297,14 @@
 
                         </h2>
 
+
                     </div>
 
 
                     <a
                         class="text-link"
-                        href="/research/">
+                        href="/research/"
+                    >
 
                         All research →
 
@@ -1083,6 +1317,8 @@
 
 
                 <div class="cards">
+
+
 
 
                     <article class="card featured">
@@ -1156,9 +1392,9 @@
 
 
 
-        <!-- ==============================
+        <!-- ======================================
              NOTES
-        =============================== -->
+        ====================================== -->
 
 
         <section class="section">
@@ -1170,6 +1406,7 @@
 
 
                     <div>
+
 
                         <div class="section-label">
 
@@ -1184,12 +1421,14 @@
 
                         </h2>
 
+
                     </div>
 
 
                     <a
                         class="text-link"
-                        href="/notes/">
+                        href="/notes/"
+                    >
 
                         All notes →
 
@@ -1204,9 +1443,12 @@
                 <div class="note-list">
 
 
+
+
                     <a
                         class="note-row"
-                        href="/notes/sample-note/">
+                        href="/notes/sample-note/"
+                    >
 
 
                         <div class="note-date">
@@ -1217,6 +1459,7 @@
 
 
                         <div>
+
 
                             <div class="note-title">
 
@@ -1231,6 +1474,7 @@
                                 event or dataset discussed in this note.
 
                             </div>
+
 
                         </div>
 
@@ -1252,6 +1496,7 @@
 
                         <div>
 
+
                             <div class="note-title">
 
                                 Future analysis or commentary
@@ -1265,6 +1510,7 @@
                                 data explorations or methodological notes.
 
                             </div>
+
 
                         </div>
 
@@ -1282,14 +1528,16 @@
 
 
 
-        <!-- ==============================
+        <!-- ======================================
              CV + CONTACT
-        =============================== -->
+        ====================================== -->
 
 
         <section class="section">
 
             <div class="container cv-contact">
+
+
 
 
                 <div>
@@ -1305,10 +1553,11 @@
                     <h2
                         class="serif"
                         style="
-                        font-size: 2.2rem;
-                        font-weight: 500;
-                        margin: 10px 0 20px;
-                        ">
+                            font-size: 2.2rem;
+                            font-weight: 500;
+                            margin: 10px 0 20px;
+                        "
+                    >
 
                         Experience,
                         education & skills.
@@ -1320,7 +1569,8 @@
                         class="button primary"
                         href="/assets/cv.pdf"
                         target="_blank"
-                        rel="noopener">
+                        rel="noopener"
+                    >
 
                         View CV
 
@@ -1356,7 +1606,8 @@
                             class="text-link"
                             href="#"
                             target="_blank"
-                            rel="noopener">
+                            rel="noopener"
+                        >
 
                             LinkedIn ↗
 
@@ -1367,7 +1618,8 @@
                             class="text-link"
                             href="#"
                             target="_blank"
-                            rel="noopener">
+                            rel="noopener"
+                        >
 
                             X ↗
 
@@ -1378,7 +1630,8 @@
                             class="text-link"
                             href="#"
                             target="_blank"
-                            rel="noopener">
+                            rel="noopener"
+                        >
 
                             GitHub ↗
 
@@ -1401,14 +1654,15 @@
 
 
 
-    <!-- ==============================
+    <!-- ======================================
          FOOTER
-    =============================== -->
+    ====================================== -->
 
 
     <footer class="site-footer">
 
         <div class="container footer-inner">
+
 
             <span>
 
@@ -1422,6 +1676,7 @@
                 Political Science
 
             </span>
+
 
         </div>
 
