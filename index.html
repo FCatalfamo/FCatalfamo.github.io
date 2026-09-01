@@ -1,3 +1,8 @@
+---
+layout: none
+title: Francesco Catalfamo
+---
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,11 +75,8 @@
 
 
         a {
-
             color: inherit;
-
             text-decoration: none;
-
         }
 
 
@@ -616,9 +618,35 @@
         }
 
 
+        .note-category {
+
+            color: var(--petrol);
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.1em;
+
+            font-size: 0.72rem;
+
+            font-weight: 700;
+
+            margin-bottom: 5px;
+
+        }
+
+
         .note-title {
 
             font-weight: 700;
+
+            font-size: 1rem;
+
+        }
+
+
+        .note-title a:hover {
+
+            color: var(--petrol);
 
         }
 
@@ -630,6 +658,17 @@
             margin-top: 4px;
 
             font-size: 0.94rem;
+
+            max-width: 760px;
+
+        }
+
+
+        .empty-notes {
+
+            padding: 25px 0;
+
+            color: var(--muted);
 
         }
 
@@ -909,9 +948,7 @@
                 class="site-name"
                 href="/"
             >
-
                 Francesco Catalfamo
-
             </a>
 
 
@@ -920,26 +957,21 @@
                 aria-label="Main navigation"
             >
 
-
                 <a href="/research/">
                     Research
                 </a>
-
 
                 <a href="/notes/">
                     Notes
                 </a>
 
-
                 <a href="/about/">
                     About
                 </a>
 
-
                 <a href="/contact/">
                     Contact
                 </a>
-
 
             </nav>
 
@@ -968,17 +1000,13 @@
 
 
                     <div class="eyebrow">
-
                         Political Scientist
-
                     </div>
 
 
                     <h1>
-
                         Francesco<br>
                         Catalfamo
-
                     </h1>
 
 
@@ -1023,9 +1051,7 @@
 
 
                     <div class="photo-placeholder">
-
                         Photo
-
                     </div>
 
 
@@ -1050,9 +1076,7 @@
 
 
                 <div class="section-label">
-
                     Profile
-
                 </div>
 
 
@@ -1102,24 +1126,18 @@
 
 
                 <div class="section-label">
-
                     Education
-
                 </div>
 
 
                 <div class="timeline">
 
 
-
-
                     <div class="timeline-item">
 
 
                         <div class="timeline-year">
-
                             2026–
-
                         </div>
 
 
@@ -1127,23 +1145,17 @@
 
 
                             <div class="timeline-title">
-
                                 PhD in Political Science
-
                             </div>
 
 
                             <div class="timeline-meta">
-
                                 Network for the Advancement of Social and Political Studies (NASP)
-
                             </div>
 
 
                             <div class="timeline-detail">
-
                                 University of Milan &amp; University of Pavia
-
                             </div>
 
 
@@ -1159,9 +1171,7 @@
 
 
                         <div class="timeline-year">
-
                             2024–2026
-
                         </div>
 
 
@@ -1169,16 +1179,12 @@
 
 
                             <div class="timeline-title">
-
                                 M.A. in Political Science
-
                             </div>
 
 
                             <div class="timeline-meta">
-
                                 University of Mannheim
-
                             </div>
 
 
@@ -1194,9 +1200,7 @@
 
 
                         <div class="timeline-year">
-
                             2021–2023
-
                         </div>
 
 
@@ -1204,16 +1208,12 @@
 
 
                             <div class="timeline-title">
-
                                 M.A. in Public and Corporate Communication
-
                             </div>
 
 
                             <div class="timeline-meta">
-
                                 University of Milan
-
                             </div>
 
 
@@ -1237,9 +1237,7 @@
 
 
                         <div class="timeline-year">
-
                             2018–2021
-
                         </div>
 
 
@@ -1247,16 +1245,12 @@
 
 
                             <div class="timeline-title">
-
                                 B.A. in Political Science
-
                             </div>
 
 
                             <div class="timeline-meta">
-
                                 University of Milan
-
                             </div>
 
 
@@ -1290,9 +1284,7 @@
 
 
                     <h2>
-
                         Current work
-
                     </h2>
 
 
@@ -1300,9 +1292,7 @@
                         class="text-link"
                         href="/research/"
                     >
-
                         All research →
-
                     </a>
 
 
@@ -1314,23 +1304,17 @@
                 <div class="cards">
 
 
-
-
                     <article class="card featured">
 
 
                         <div class="card-meta">
-
                             Master's Thesis / Working Paper
-
                         </div>
 
 
                         <h3>
-
                             The Affective Consequences
                             of Coalition Formation
-
                         </h3>
 
 
@@ -1353,16 +1337,12 @@
 
 
                         <div class="card-meta">
-
                             Research Project
-
                         </div>
 
 
                         <h3>
-
                             Visible Division
-
                         </h3>
 
 
@@ -1388,7 +1368,7 @@
 
 
         <!-- ======================================
-             NOTES
+             AUTOMATIC LATEST NOTES
         ====================================== -->
 
 
@@ -1401,9 +1381,7 @@
 
 
                     <h2>
-
                         Analysis &amp; commentary
-
                     </h2>
 
 
@@ -1411,9 +1389,7 @@
                         class="text-link"
                         href="/notes/"
                     >
-
                         All notes →
-
                     </a>
 
 
@@ -1425,79 +1401,83 @@
                 <div class="note-list">
 
 
+                    {% assign latest_notes = site.notes | sort: "date" | reverse %}
 
 
-                    <a
-                        class="note-row"
-                        href="/notes/sample-note/"
-                    >
+                    {% if latest_notes.size > 0 %}
 
 
-                        <div class="note-date">
+                        {% for note in latest_notes limit:3 %}
 
-                            31 Aug 2026
+
+                            <article class="note-row">
+
+
+                                <div class="note-date">
+
+                                    {{ note.date | date: "%d %b %Y" }}
+
+                                </div>
+
+
+                                <div>
+
+
+                                    {% if note.category %}
+
+                                        <div class="note-category">
+
+                                            {{ note.category }}
+
+                                        </div>
+
+                                    {% endif %}
+
+
+                                    <div class="note-title">
+
+
+                                        <a href="{{ note.url }}">
+
+                                            {{ note.title }}
+
+                                        </a>
+
+
+                                    </div>
+
+
+                                    {% if note.description %}
+
+                                        <div class="note-excerpt">
+
+                                            {{ note.description }}
+
+                                        </div>
+
+                                    {% endif %}
+
+
+                                </div>
+
+
+                            </article>
+
+
+                        {% endfor %}
+
+
+                    {% else %}
+
+
+                        <div class="empty-notes">
+
+                            No notes published yet.
 
                         </div>
 
 
-                        <div>
-
-
-                            <div class="note-title">
-
-                                A sample political note
-
-                            </div>
-
-
-                            <div class="note-excerpt">
-
-                                A short description of the argument,
-                                event or dataset discussed in this note.
-
-                            </div>
-
-
-                        </div>
-
-
-                    </a>
-
-
-
-
-                    <div class="note-row">
-
-
-                        <div class="note-date">
-
-                            Coming soon
-
-                        </div>
-
-
-                        <div>
-
-
-                            <div class="note-title">
-
-                                Future analysis or commentary
-
-                            </div>
-
-
-                            <div class="note-excerpt">
-
-                                This space can host short political commentary,
-                                data explorations or methodological notes.
-
-                            </div>
-
-
-                        </div>
-
-
-                    </div>
+                    {% endif %}
 
 
                 </div>
@@ -1520,15 +1500,11 @@
             <div class="container cv-contact">
 
 
-
-
                 <div>
 
 
                     <h2>
-
                         Curriculum Vitae
-
                     </h2>
 
 
@@ -1538,9 +1514,7 @@
                         target="_blank"
                         rel="noopener"
                     >
-
                         View my CV →
-
                     </a>
 
 
@@ -1553,21 +1527,19 @@
 
 
                     <h2>
-
                         Contact
-
                     </h2>
 
 
                     <p class="contact-email">
 
+
                         <a
                             href="mailto:francesco.catalfamo01@universitadipavia.it"
                         >
-
                             francesco.catalfamo01@universitadipavia.it
-
                         </a>
+
 
                     </p>
 
@@ -1581,9 +1553,7 @@
                             target="_blank"
                             rel="noopener"
                         >
-
                             LinkedIn ↗
-
                         </a>
 
 
@@ -1593,21 +1563,17 @@
                             target="_blank"
                             rel="noopener"
                         >
-
                             X ↗
-
                         </a>
 
 
                         <a
                             class="text-link"
-                            href="#"
+                            href="https://github.com/FCatalfamo"
                             target="_blank"
                             rel="noopener"
                         >
-
                             GitHub ↗
-
                         </a>
 
 
@@ -1621,9 +1587,7 @@
                             class="text-link"
                             href="/contact/"
                         >
-
                             Full contact details →
-
                         </a>
 
 
@@ -1654,16 +1618,12 @@
 
 
             <span>
-
                 © 2026 Francesco Catalfamo
-
             </span>
 
 
             <span>
-
                 Political Science
-
             </span>
 
 
