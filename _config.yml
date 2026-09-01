@@ -1,0 +1,20 @@
+title: Francesco Catalfamo
+description: Personal academic website of Francesco Catalfamo
+url: "https://fcatalfamo.github.io"
+
+collections:
+  notes:
+    output: true
+    permalink: /notes/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note
+
+markdown: kramdown
+
+exclude:
+  - README.md
