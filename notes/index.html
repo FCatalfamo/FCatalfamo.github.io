@@ -1,15 +1,1074 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Notes by Francesco Catalfamo"
+    >
+
     <title>Notes | Francesco Catalfamo</title>
+
+
+    <style>
+
+        :root {
+
+            --petrol: #165f5a;
+            --petrol-dark: #104945;
+            --petrol-soft: #eef5f2;
+
+            --ink: #202522;
+            --muted: #66716c;
+            --line: #dfe6e2;
+
+            --paper: #ffffff;
+
+            --max-width: 1120px;
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family:
+                Inter,
+                ui-sans-serif,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            color: var(--ink);
+
+            background: var(--paper);
+
+            line-height: 1.65;
+
+        }
+
+
+        a {
+
+            color: inherit;
+
+            text-decoration: none;
+
+        }
+
+
+        a:hover {
+            color: var(--petrol);
+        }
+
+
+        .container {
+
+            width: min(var(--max-width), 90%);
+
+            margin: 0 auto;
+
+        }
+
+
+
+        /* ======================================
+           HEADER
+        ====================================== */
+
+
+        .site-header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+            background: rgba(255, 255, 255, 0.94);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid var(--line);
+
+        }
+
+
+        .navbar {
+
+            min-height: 72px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 2rem;
+
+        }
+
+
+        .site-name {
+
+            font-weight: 700;
+
+            letter-spacing: -0.02em;
+
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 1.6rem;
+
+            font-size: 0.95rem;
+
+        }
+
+
+        .nav-links .active {
+
+            color: var(--petrol);
+
+            font-weight: 600;
+
+        }
+
+
+
+        /* ======================================
+           PAGE HERO
+        ====================================== */
+
+
+        .page-hero {
+
+            padding: 100px 0 72px;
+
+        }
+
+
+        .eyebrow {
+
+            color: var(--petrol);
+
+            text-transform: uppercase;
+
+            font-size: 0.82rem;
+
+            letter-spacing: 0.18em;
+
+            font-weight: 700;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        h1 {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: clamp(3.8rem, 8vw, 6.5rem);
+
+            font-weight: 500;
+
+            letter-spacing: -0.045em;
+
+            line-height: 0.95;
+
+            margin: 0;
+
+        }
+
+
+        .page-intro {
+
+            max-width: 760px;
+
+            margin-top: 28px;
+
+            color: var(--muted);
+
+            font-size: 1.18rem;
+
+            line-height: 1.7;
+
+        }
+
+
+
+        /* ======================================
+           FILTERS
+        ====================================== */
+
+
+        .filters-section {
+
+            border-top: 1px solid var(--line);
+
+            padding: 34px 0;
+
+        }
+
+
+        .filters {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+        }
+
+
+        .filter {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 38px;
+
+            padding: 7px 13px;
+
+            border: 1px solid var(--line);
+
+            border-radius: 999px;
+
+            color: var(--muted);
+
+            font-size: 0.88rem;
+
+            font-weight: 600;
+
+            transition: 0.18s ease;
+
+        }
+
+
+        .filter.active {
+
+            background: var(--petrol);
+
+            color: white;
+
+            border-color: var(--petrol);
+
+        }
+
+
+        .filter:hover {
+
+            color: var(--petrol);
+
+            border-color: var(--petrol);
+
+        }
+
+
+        .filter.active:hover {
+
+            color: white;
+
+            background: var(--petrol-dark);
+
+            border-color: var(--petrol-dark);
+
+        }
+
+
+
+        /* ======================================
+           NOTES ARCHIVE
+        ====================================== */
+
+
+        .notes-section {
+
+            border-top: 1px solid var(--line);
+
+            padding: 0 0 90px;
+
+        }
+
+
+        .notes-list {
+
+            border-top: 0;
+
+        }
+
+
+        .note-item {
+
+            display: grid;
+
+            grid-template-columns: 145px 1fr;
+
+            gap: 36px;
+
+            padding: 38px 0;
+
+            border-bottom: 1px solid var(--line);
+
+        }
+
+
+        .note-date {
+
+            color: #7a8580;
+
+            font-size: 0.88rem;
+
+            letter-spacing: 0.03em;
+
+            text-transform: uppercase;
+
+            padding-top: 5px;
+
+        }
+
+
+        .note-content {
+
+            max-width: 800px;
+
+        }
+
+
+        .note-category {
+
+            color: var(--petrol);
+
+            font-size: 0.76rem;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.12em;
+
+            margin-bottom: 9px;
+
+        }
+
+
+        .note-title {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 1.8rem;
+
+            font-weight: 500;
+
+            line-height: 1.2;
+
+            margin: 0 0 10px;
+
+        }
+
+
+        .note-title a:hover {
+
+            color: var(--petrol);
+
+        }
+
+
+        .note-excerpt {
+
+            color: var(--muted);
+
+            font-size: 0.98rem;
+
+            line-height: 1.65;
+
+            margin: 0;
+
+            max-width: 730px;
+
+        }
+
+
+        .note-tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 15px;
+
+        }
+
+
+        .note-tag {
+
+            color: #7a8580;
+
+            font-size: 0.8rem;
+
+        }
+
+
+        .note-tag + .note-tag::before {
+
+            content: "·";
+
+            color: #a0aaa5;
+
+            margin-right: 8px;
+
+        }
+
+
+        .read-link {
+
+            display: inline-block;
+
+            margin-top: 17px;
+
+            color: var(--petrol);
+
+            font-size: 0.9rem;
+
+            font-weight: 600;
+
+        }
+
+
+        .read-link:hover {
+
+            color: var(--petrol-dark);
+
+        }
+
+
+
+        /* ======================================
+           FOOTER
+        ====================================== */
+
+
+        .site-footer {
+
+            border-top: 1px solid var(--line);
+
+            padding: 28px 0;
+
+            color: #7a8580;
+
+            font-size: 0.82rem;
+
+        }
+
+
+        .footer-inner {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+
+        /* ======================================
+           MOBILE
+        ====================================== */
+
+
+        @media (max-width: 780px) {
+
+            .navbar {
+
+                align-items: flex-start;
+
+                padding: 18px 0;
+
+            }
+
+
+            .nav-links {
+
+                gap: 14px;
+
+                font-size: 0.86rem;
+
+            }
+
+
+            .note-item {
+
+                grid-template-columns: 1fr;
+
+                gap: 8px;
+
+            }
+
+        }
+
+
+
+        @media (max-width: 540px) {
+
+            .navbar {
+
+                flex-direction: column;
+
+                gap: 10px;
+
+            }
+
+
+            .nav-links {
+
+                width: 100%;
+
+                justify-content: space-between;
+
+                flex-wrap: wrap;
+
+            }
+
+
+            h1 {
+
+                font-size: 3.6rem;
+
+            }
+
+
+            .note-title {
+
+                font-size: 1.55rem;
+
+            }
+
+        }
+
+
+    </style>
+
 </head>
 
-<body>
-    <h1>Notes</h1>
-    <p>This page will contain my notes.</p>
 
-    <a href="/">Back to home</a>
+
+<body>
+
+
+    <!-- ======================================
+         HEADER
+    ====================================== -->
+
+
+    <header class="site-header">
+
+        <div class="container navbar">
+
+
+            <a
+                class="site-name"
+                href="/"
+            >
+
+                Francesco Catalfamo
+
+            </a>
+
+
+            <nav
+                class="nav-links"
+                aria-label="Main navigation"
+            >
+
+
+                <a href="/research/">
+
+                    Research
+
+                </a>
+
+
+                <a
+                    href="/notes/"
+                    class="active"
+                >
+
+                    Notes
+
+                </a>
+
+
+                <a href="/about/">
+
+                    About
+
+                </a>
+
+
+                <a href="/contact/">
+
+                    Contact
+
+                </a>
+
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+
+    <main>
+
+
+        <!-- ======================================
+             HERO
+        ====================================== -->
+
+
+        <section class="page-hero">
+
+            <div class="container">
+
+
+                <div class="eyebrow">
+
+                    Notes
+
+                </div>
+
+
+                <h1>
+
+                    Analysis &amp; commentary.
+
+                </h1>
+
+
+                <p class="page-intro">
+
+                    Short analyses and observations on politics,
+                    political science, data and methods.
+
+                    This is a space for ideas, empirical explorations
+                    and comments that do not necessarily belong
+                    in a full academic paper.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- ======================================
+             FILTERS
+        ====================================== -->
+
+
+        <section class="filters-section">
+
+            <div class="container">
+
+
+                <div class="filters">
+
+
+                    <span class="filter active">
+
+                        All
+
+                    </span>
+
+
+                    <span class="filter">
+
+                        Politics
+
+                    </span>
+
+
+                    <span class="filter">
+
+                        Methods
+
+                    </span>
+
+
+                    <span class="filter">
+
+                        Data
+
+                    </span>
+
+
+                    <span class="filter">
+
+                        Papers
+
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- ======================================
+             NOTES ARCHIVE
+        ====================================== -->
+
+
+        <section class="notes-section">
+
+            <div class="container">
+
+
+                <div class="notes-list">
+
+
+
+
+                    <!-- NOTE 1 -->
+
+
+                    <article class="note-item">
+
+
+                        <div class="note-date">
+
+                            01 Sep 2026
+
+                        </div>
+
+
+                        <div class="note-content">
+
+
+                            <div class="note-category">
+
+                                Politics
+
+                            </div>
+
+
+                            <h2 class="note-title">
+
+                                <a href="/notes/coalition-negotiations/">
+
+                                    Coalition negotiations are political events too
+
+                                </a>
+
+                            </h2>
+
+
+                            <p class="note-excerpt">
+
+                                Why coalition bargaining may matter for citizens'
+                                political evaluations before a government
+                                is formally created.
+
+                            </p>
+
+
+                            <div class="note-tags">
+
+
+                                <span class="note-tag">
+
+                                    Coalition Politics
+
+                                </span>
+
+
+                                <span class="note-tag">
+
+                                    Political Behaviour
+
+                                </span>
+
+
+                            </div>
+
+
+                            <a
+                                class="read-link"
+                                href="/notes/coalition-negotiations/"
+                            >
+
+                                Read →
+
+                            </a>
+
+
+                        </div>
+
+
+                    </article>
+
+
+
+
+                    <!-- NOTE 2 -->
+
+
+                    <article class="note-item">
+
+
+                        <div class="note-date">
+
+                            24 Aug 2026
+
+                        </div>
+
+
+                        <div class="note-content">
+
+
+                            <div class="note-category">
+
+                                Methods
+
+                            </div>
+
+
+                            <h2 class="note-title">
+
+                                <a href="/notes/event-study-pretrends/">
+
+                                    What should we make of significant pre-trends?
+
+                                </a>
+
+                            </h2>
+
+
+                            <p class="note-excerpt">
+
+                                A short note on how to interpret event-study
+                                diagnostics when pre-treatment coefficients
+                                suggest differential trends.
+
+                            </p>
+
+
+                            <div class="note-tags">
+
+
+                                <span class="note-tag">
+
+                                    Causal Inference
+
+                                </span>
+
+
+                                <span class="note-tag">
+
+                                    Event Studies
+
+                                </span>
+
+
+                            </div>
+
+
+                            <a
+                                class="read-link"
+                                href="/notes/event-study-pretrends/"
+                            >
+
+                                Read →
+
+                            </a>
+
+
+                        </div>
+
+
+                    </article>
+
+
+
+
+                    <!-- NOTE 3 -->
+
+
+                    <article class="note-item">
+
+
+                        <div class="note-date">
+
+                            15 Aug 2026
+
+                        </div>
+
+
+                        <div class="note-content">
+
+
+                            <div class="note-category">
+
+                                Data
+
+                            </div>
+
+
+                            <h2 class="note-title">
+
+                                <a href="/notes/measuring-affective-polarization/">
+
+                                    Measuring affective polarization across party systems
+
+                                </a>
+
+                            </h2>
+
+
+                            <p class="note-excerpt">
+
+                                Some thoughts on comparative measurement
+                                and the challenges involved in comparing
+                                partisan affect across multiparty systems.
+
+                            </p>
+
+
+                            <div class="note-tags">
+
+
+                                <span class="note-tag">
+
+                                    Affective Polarization
+
+                                </span>
+
+
+                                <span class="note-tag">
+
+                                    Comparative Politics
+
+                                </span>
+
+
+                            </div>
+
+
+                            <a
+                                class="read-link"
+                                href="/notes/measuring-affective-polarization/"
+                            >
+
+                                Read →
+
+                            </a>
+
+
+                        </div>
+
+
+                    </article>
+
+
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+
+    <!-- ======================================
+         FOOTER
+    ====================================== -->
+
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+
+            <span>
+
+                © 2026 Francesco Catalfamo
+
+            </span>
+
+
+            <span>
+
+                Political Science
+
+            </span>
+
+
+        </div>
+
+    </footer>
+
+
 </body>
+
 </html>
