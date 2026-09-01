@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Contact Francesco Catalfamo"
+    >
+
+    <title>Contact | Francesco Catalfamo</title>
+
+
+    <style>
+
+        :root {
+
+            --petrol: #165f5a;
+            --petrol-dark: #104945;
+
+            --ink: #202522;
+            --muted: #66716c;
+            --line: #dfe6e2;
+
+            --paper: #ffffff;
+
+            --max-width: 1120px;
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family:
+                Inter,
+                ui-sans-serif,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            color: var(--ink);
+
+            background: var(--paper);
+
+            line-height: 1.65;
+
+        }
+
+
+        a {
+
+            color: inherit;
+
+            text-decoration: none;
+
+        }
+
+
+        a:hover {
+            color: var(--petrol);
+        }
+
+
+        .container {
+
+            width: min(var(--max-width), 90%);
+
+            margin: 0 auto;
+
+        }
+
+
+
+        /* HEADER */
+
+
+        .site-header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+            background: rgba(255, 255, 255, 0.94);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid var(--line);
+
+        }
+
+
+        .navbar {
+
+            min-height: 72px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 2rem;
+
+        }
+
+
+        .site-name {
+
+            font-weight: 700;
+
+            letter-spacing: -0.02em;
+
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 1.6rem;
+
+            font-size: 0.95rem;
+
+        }
+
+
+        .nav-links .active {
+
+            color: var(--petrol);
+
+            font-weight: 600;
+
+        }
+
+
+
+        /* PAGE */
+
+
+        .page-hero {
+
+            padding: 100px 0 70px;
+
+        }
+
+
+        .eyebrow {
+
+            color: var(--petrol);
+
+            text-transform: uppercase;
+
+            font-size: 0.82rem;
+
+            letter-spacing: 0.18em;
+
+            font-weight: 700;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        h1 {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: clamp(3.8rem, 8vw, 6.5rem);
+
+            font-weight: 500;
+
+            letter-spacing: -0.045em;
+
+            line-height: 0.95;
+
+            margin: 0;
+
+        }
+
+
+        .intro {
+
+            max-width: 680px;
+
+            margin-top: 28px;
+
+            color: var(--muted);
+
+            font-size: 1.15rem;
+
+        }
+
+
+        .contact-section {
+
+            border-top: 1px solid var(--line);
+
+            padding: 70px 0 90px;
+
+        }
+
+
+        .contact-grid {
+
+            display: grid;
+
+            grid-template-columns: 0.55fr 1.45fr;
+
+            gap: 70px;
+
+        }
+
+
+        .contact-label {
+
+            color: var(--petrol);
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.13em;
+
+            font-size: 1.05rem;
+
+            font-weight: 700;
+
+        }
+
+
+        .contact-list {
+
+            display: grid;
+
+            gap: 30px;
+
+        }
+
+
+        .contact-item {
+
+            padding-bottom: 24px;
+
+            border-bottom: 1px solid var(--line);
+
+        }
+
+
+        .contact-item:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        .contact-item-title {
+
+            font-size: 0.82rem;
+
+            color: var(--muted);
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.09em;
+
+            margin-bottom: 6px;
+
+        }
+
+
+        .contact-item a {
+
+            color: var(--petrol);
+
+            font-size: 1.04rem;
+
+            font-weight: 600;
+
+        }
+
+
+        /* FOOTER */
+
+
+        .site-footer {
+
+            border-top: 1px solid var(--line);
+
+            padding: 28px 0;
+
+            color: #7a8580;
+
+            font-size: 0.82rem;
+
+        }
+
+
+        .footer-inner {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+
+        @media (max-width: 780px) {
+
+            .navbar {
+
+                align-items: flex-start;
+
+                padding: 18px 0;
+
+            }
+
+
+            .nav-links {
+
+                gap: 14px;
+
+                font-size: 0.86rem;
+
+            }
+
+
+            .contact-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 34px;
+
+            }
+
+        }
+
+
+
+        @media (max-width: 540px) {
+
+            .navbar {
+
+                flex-direction: column;
+
+                gap: 10px;
+
+            }
+
+
+            .nav-links {
+
+                width: 100%;
+
+                justify-content: space-between;
+
+                flex-wrap: wrap;
+
+            }
+
+        }
+
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <header class="site-header">
+
+        <div class="container navbar">
+
+
+            <a
+                class="site-name"
+                href="/"
+            >
+
+                Francesco Catalfamo
+
+            </a>
+
+
+            <nav
+                class="nav-links"
+                aria-label="Main navigation"
+            >
+
+
+                <a href="/research/">
+                    Research
+                </a>
+
+
+                <a href="/notes/">
+                    Notes
+                </a>
+
+
+                <a href="/about/">
+                    About
+                </a>
+
+
+                <a
+                    href="/contact/"
+                    class="active"
+                >
+                    Contact
+                </a>
+
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+
+    <main>
+
+
+        <section class="page-hero">
+
+            <div class="container">
+
+
+                <div class="eyebrow">
+
+                    Contact
+
+                </div>
+
+
+                <h1>
+
+                    Get in touch.
+
+                </h1>
+
+
+                <p class="intro">
+
+                    For research-related enquiries, academic correspondence
+                    or other professional matters, feel free to contact me
+                    by email or through the platforms below.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <section class="contact-section">
+
+            <div class="container contact-grid">
+
+
+                <div class="contact-label">
+
+                    Contact
+
+                </div>
+
+
+                <div class="contact-list">
+
+
+
+
+                    <div class="contact-item">
+
+
+                        <div class="contact-item-title">
+
+                            Email
+
+                        </div>
+
+
+                        <a
+                            href="mailto:francesco.catalfamo01@universitadipavia.it"
+                        >
+
+                            francesco.catalfamo01@universitadipavia.it
+
+                        </a>
+
+
+                    </div>
+
+
+
+
+                    <div class="contact-item">
+
+
+                        <div class="contact-item-title">
+
+                            LinkedIn
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener"
+                        >
+
+                            LinkedIn profile ↗
+
+                        </a>
+
+
+                    </div>
+
+
+
+
+                    <div class="contact-item">
+
+
+                        <div class="contact-item-title">
+
+                            X
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener"
+                        >
+
+                            X profile ↗
+
+                        </a>
+
+
+                    </div>
+
+
+
+
+                    <div class="contact-item">
+
+
+                        <div class="contact-item-title">
+
+                            GitHub
+
+                        </div>
+
+
+                        <a
+                            href="https://github.com/FCatalfamo"
+                            target="_blank"
+                            rel="noopener"
+                        >
+
+                            github.com/FCatalfamo ↗
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+
+            <span>
+
+                © 2026 Francesco Catalfamo
+
+            </span>
+
+
+            <span>
+
+                Political Science
+
+            </span>
+
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
