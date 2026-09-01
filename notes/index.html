@@ -1,3 +1,8 @@
+---
+layout: none
+title: Notes
+---
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -274,8 +279,6 @@
 
             font-weight: 600;
 
-            transition: 0.18s ease;
-
         }
 
 
@@ -286,26 +289,6 @@
             color: white;
 
             border-color: var(--petrol);
-
-        }
-
-
-        .filter:hover {
-
-            color: var(--petrol);
-
-            border-color: var(--petrol);
-
-        }
-
-
-        .filter.active:hover {
-
-            color: white;
-
-            background: var(--petrol-dark);
-
-            border-color: var(--petrol-dark);
 
         }
 
@@ -321,13 +304,6 @@
             border-top: 1px solid var(--line);
 
             padding: 0 0 90px;
-
-        }
-
-
-        .notes-list {
-
-            border-top: 0;
 
         }
 
@@ -404,13 +380,6 @@
         }
 
 
-        .note-title a:hover {
-
-            color: var(--petrol);
-
-        }
-
-
         .note-excerpt {
 
             color: var(--muted);
@@ -474,9 +443,11 @@
         }
 
 
-        .read-link:hover {
+        .empty-state {
 
-            color: var(--petrol-dark);
+            padding: 55px 0;
+
+            color: var(--muted);
 
         }
 
@@ -625,9 +596,7 @@
 
 
                 <a href="/research/">
-
                     Research
-
                 </a>
 
 
@@ -635,23 +604,17 @@
                     href="/notes/"
                     class="active"
                 >
-
                     Notes
-
                 </a>
 
 
                 <a href="/about/">
-
                     About
-
                 </a>
 
 
                 <a href="/contact/">
-
                     Contact
-
                 </a>
 
 
@@ -723,41 +686,25 @@
 
                 <div class="filters">
 
-
                     <span class="filter active">
-
                         All
-
                     </span>
 
-
                     <span class="filter">
-
                         Politics
-
                     </span>
 
-
                     <span class="filter">
-
                         Methods
-
                     </span>
 
-
                     <span class="filter">
-
                         Data
-
                     </span>
-
 
                     <span class="filter">
-
                         Papers
-
                     </span>
-
 
                 </div>
 
@@ -770,7 +717,7 @@
 
 
         <!-- ======================================
-             NOTES ARCHIVE
+             AUTOMATIC NOTES ARCHIVE
         ====================================== -->
 
 
@@ -779,255 +726,110 @@
             <div class="container">
 
 
-                <div class="notes-list">
+                {% assign sorted_notes = site.notes | sort: "date" | reverse %}
 
 
+                {% if sorted_notes.size > 0 %}
 
 
-                    <!-- NOTE 1 -->
+                    {% for note in sorted_notes %}
 
 
-                    <article class="note-item">
+                        <article class="note-item">
 
 
-                        <div class="note-date">
+                            <div class="note-date">
 
-                            01 Sep 2026
-
-                        </div>
-
-
-                        <div class="note-content">
-
-
-                            <div class="note-category">
-
-                                Politics
+                                {{ note.date | date: "%d %b %Y" }}
 
                             </div>
 
 
-                            <h2 class="note-title">
+                            <div class="note-content">
 
-                                <a href="/notes/coalition-negotiations/">
 
-                                    Coalition negotiations are political events too
+                                {% if note.category %}
+
+                                    <div class="note-category">
+
+                                        {{ note.category }}
+
+                                    </div>
+
+                                {% endif %}
+
+
+                                <h2 class="note-title">
+
+                                    <a href="{{ note.url }}">
+
+                                        {{ note.title }}
+
+                                    </a>
+
+                                </h2>
+
+
+                                {% if note.description %}
+
+                                    <p class="note-excerpt">
+
+                                        {{ note.description }}
+
+                                    </p>
+
+                                {% endif %}
+
+
+                                {% if note.tags %}
+
+                                    <div class="note-tags">
+
+                                        {% for tag in note.tags %}
+
+                                            <span class="note-tag">
+
+                                                {{ tag }}
+
+                                            </span>
+
+                                        {% endfor %}
+
+                                    </div>
+
+                                {% endif %}
+
+
+                                <a
+                                    class="read-link"
+                                    href="{{ note.url }}"
+                                >
+
+                                    Read →
 
                                 </a>
 
-                            </h2>
-
-
-                            <p class="note-excerpt">
-
-                                Why coalition bargaining may matter for citizens'
-                                political evaluations before a government
-                                is formally created.
-
-                            </p>
-
-
-                            <div class="note-tags">
-
-
-                                <span class="note-tag">
-
-                                    Coalition Politics
-
-                                </span>
-
-
-                                <span class="note-tag">
-
-                                    Political Behaviour
-
-                                </span>
-
 
                             </div>
 
 
-                            <a
-                                class="read-link"
-                                href="/notes/coalition-negotiations/"
-                            >
+                        </article>
 
-                                Read →
 
-                            </a>
+                    {% endfor %}
 
 
-                        </div>
+                {% else %}
 
 
-                    </article>
+                    <div class="empty-state">
 
+                        No notes published yet.
 
+                    </div>
 
 
-                    <!-- NOTE 2 -->
-
-
-                    <article class="note-item">
-
-
-                        <div class="note-date">
-
-                            24 Aug 2026
-
-                        </div>
-
-
-                        <div class="note-content">
-
-
-                            <div class="note-category">
-
-                                Methods
-
-                            </div>
-
-
-                            <h2 class="note-title">
-
-                                <a href="/notes/event-study-pretrends/">
-
-                                    What should we make of significant pre-trends?
-
-                                </a>
-
-                            </h2>
-
-
-                            <p class="note-excerpt">
-
-                                A short note on how to interpret event-study
-                                diagnostics when pre-treatment coefficients
-                                suggest differential trends.
-
-                            </p>
-
-
-                            <div class="note-tags">
-
-
-                                <span class="note-tag">
-
-                                    Causal Inference
-
-                                </span>
-
-
-                                <span class="note-tag">
-
-                                    Event Studies
-
-                                </span>
-
-
-                            </div>
-
-
-                            <a
-                                class="read-link"
-                                href="/notes/event-study-pretrends/"
-                            >
-
-                                Read →
-
-                            </a>
-
-
-                        </div>
-
-
-                    </article>
-
-
-
-
-                    <!-- NOTE 3 -->
-
-
-                    <article class="note-item">
-
-
-                        <div class="note-date">
-
-                            15 Aug 2026
-
-                        </div>
-
-
-                        <div class="note-content">
-
-
-                            <div class="note-category">
-
-                                Data
-
-                            </div>
-
-
-                            <h2 class="note-title">
-
-                                <a href="/notes/measuring-affective-polarization/">
-
-                                    Measuring affective polarization across party systems
-
-                                </a>
-
-                            </h2>
-
-
-                            <p class="note-excerpt">
-
-                                Some thoughts on comparative measurement
-                                and the challenges involved in comparing
-                                partisan affect across multiparty systems.
-
-                            </p>
-
-
-                            <div class="note-tags">
-
-
-                                <span class="note-tag">
-
-                                    Affective Polarization
-
-                                </span>
-
-
-                                <span class="note-tag">
-
-                                    Comparative Politics
-
-                                </span>
-
-
-                            </div>
-
-
-                            <a
-                                class="read-link"
-                                href="/notes/measuring-affective-polarization/"
-                            >
-
-                                Read →
-
-                            </a>
-
-
-                        </div>
-
-
-                    </article>
-
-
-
-
-                </div>
+                {% endif %}
 
 
             </div>
