@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Coalition negotiations are political events too — Francesco Catalfamo"
+    >
+
+    <title>
+        Coalition negotiations are political events too | Francesco Catalfamo
+    </title>
+
+
+    <style>
+
+        :root {
+
+            --petrol: #165f5a;
+            --petrol-dark: #104945;
+            --petrol-soft: #eef5f2;
+
+            --ink: #202522;
+            --muted: #66716c;
+            --line: #dfe6e2;
+
+            --paper: #ffffff;
+
+            --max-width: 1120px;
+            --article-width: 760px;
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family:
+                Inter,
+                ui-sans-serif,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            color: var(--ink);
+
+            background: var(--paper);
+
+            line-height: 1.7;
+
+        }
+
+
+        a {
+
+            color: inherit;
+
+            text-decoration: none;
+
+        }
+
+
+        a:hover {
+            color: var(--petrol);
+        }
+
+
+        .container {
+
+            width: min(var(--max-width), 90%);
+
+            margin: 0 auto;
+
+        }
+
+
+        .article-container {
+
+            width: min(var(--article-width), 90%);
+
+            margin: 0 auto;
+
+        }
+
+
+
+        /* ======================================
+           HEADER
+        ====================================== */
+
+
+        .site-header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+            background: rgba(255, 255, 255, 0.94);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid var(--line);
+
+        }
+
+
+        .navbar {
+
+            min-height: 72px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 2rem;
+
+        }
+
+
+        .site-name {
+
+            font-weight: 700;
+
+            letter-spacing: -0.02em;
+
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 1.6rem;
+
+            font-size: 0.95rem;
+
+        }
+
+
+        .nav-links .active {
+
+            color: var(--petrol);
+
+            font-weight: 600;
+
+        }
+
+
+
+        /* ======================================
+           ARTICLE HERO
+        ====================================== */
+
+
+        .article-hero {
+
+            padding: 90px 0 56px;
+
+        }
+
+
+        .article-category {
+
+            color: var(--petrol);
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.14em;
+
+            font-size: 0.8rem;
+
+            font-weight: 700;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .article-title {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: clamp(3rem, 7vw, 5.2rem);
+
+            font-weight: 500;
+
+            letter-spacing: -0.04em;
+
+            line-height: 1.02;
+
+            margin: 0;
+
+        }
+
+
+        .article-subtitle {
+
+            margin-top: 24px;
+
+            max-width: 720px;
+
+            color: var(--muted);
+
+            font-size: 1.18rem;
+
+            line-height: 1.7;
+
+        }
+
+
+        .article-meta {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px 18px;
+
+            margin-top: 28px;
+
+            color: #7a8580;
+
+            font-size: 0.88rem;
+
+        }
+
+
+        .article-meta span + span::before {
+
+            content: "·";
+
+            margin-right: 18px;
+
+            color: #a0aaa5;
+
+        }
+
+
+
+        /* ======================================
+           TAGS
+        ====================================== */
+
+
+        .tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 20px;
+
+        }
+
+
+        .tag {
+
+            background: var(--petrol-soft);
+
+            color: var(--petrol);
+
+            border-radius: 999px;
+
+            padding: 6px 11px;
+
+            font-size: 0.8rem;
+
+            font-weight: 600;
+
+        }
+
+
+
+        /* ======================================
+           ARTICLE BODY
+        ====================================== */
+
+
+        .article-body {
+
+            border-top: 1px solid var(--line);
+
+            padding: 58px 0 80px;
+
+        }
+
+
+        .article-body p {
+
+            margin: 0 0 24px;
+
+            color: #3f4944;
+
+            font-size: 1.04rem;
+
+        }
+
+
+        .article-body h2 {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 2rem;
+
+            font-weight: 500;
+
+            line-height: 1.2;
+
+            margin: 48px 0 18px;
+
+        }
+
+
+        .article-body h3 {
+
+            font-size: 1.15rem;
+
+            margin: 36px 0 12px;
+
+        }
+
+
+        .article-body ul,
+        .article-body ol {
+
+            margin: 0 0 24px;
+
+            padding-left: 24px;
+
+            color: #3f4944;
+
+        }
+
+
+        .article-body li {
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .article-body blockquote {
+
+            margin: 36px 0;
+
+            padding: 2px 0 2px 22px;
+
+            border-left: 3px solid var(--petrol);
+
+            color: #58635e;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 1.18rem;
+
+            line-height: 1.6;
+
+        }
+
+
+        .article-body a {
+
+            color: var(--petrol);
+
+            text-decoration: underline;
+
+            text-decoration-thickness: 1px;
+
+            text-underline-offset: 3px;
+
+        }
+
+
+
+        /* ======================================
+           FIGURES
+        ====================================== */
+
+
+        .figure {
+
+            margin: 42px 0;
+
+        }
+
+
+        .figure-placeholder {
+
+            min-height: 320px;
+
+            background: #edf2ef;
+
+            border: 1px solid var(--line);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #7a8580;
+
+            font-style: italic;
+
+            text-align: center;
+
+            padding: 30px;
+
+        }
+
+
+        .figure-caption {
+
+            margin-top: 10px;
+
+            color: #7a8580;
+
+            font-size: 0.84rem;
+
+            line-height: 1.5;
+
+        }
+
+
+
+        /* ======================================
+           NOTE FOOTER
+        ====================================== */
+
+
+        .note-end {
+
+            border-top: 1px solid var(--line);
+
+            padding: 36px 0 64px;
+
+        }
+
+
+        .back-link {
+
+            color: var(--petrol);
+
+            font-weight: 600;
+
+            font-size: 0.92rem;
+
+        }
+
+
+        .back-link:hover {
+
+            color: var(--petrol-dark);
+
+        }
+
+
+
+        /* ======================================
+           SITE FOOTER
+        ====================================== */
+
+
+        .site-footer {
+
+            border-top: 1px solid var(--line);
+
+            padding: 28px 0;
+
+            color: #7a8580;
+
+            font-size: 0.82rem;
+
+        }
+
+
+        .footer-inner {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+
+        /* ======================================
+           MOBILE
+        ====================================== */
+
+
+        @media (max-width: 780px) {
+
+            .navbar {
+
+                align-items: flex-start;
+
+                padding: 18px 0;
+
+            }
+
+
+            .nav-links {
+
+                gap: 14px;
+
+                font-size: 0.86rem;
+
+            }
+
+
+            .article-hero {
+
+                padding: 62px 0 44px;
+
+            }
+
+
+            .article-title {
+
+                font-size: 3.2rem;
+
+            }
+
+        }
+
+
+
+        @media (max-width: 540px) {
+
+            .navbar {
+
+                flex-direction: column;
+
+                gap: 10px;
+
+            }
+
+
+            .nav-links {
+
+                width: 100%;
+
+                justify-content: space-between;
+
+                flex-wrap: wrap;
+
+            }
+
+
+            .article-meta {
+
+                flex-direction: column;
+
+                gap: 4px;
+
+            }
+
+
+            .article-meta span + span::before {
+
+                content: "";
+
+                margin: 0;
+
+            }
+
+        }
+
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <!-- ======================================
+         HEADER
+    ====================================== -->
+
+
+    <header class="site-header">
+
+        <div class="container navbar">
+
+
+            <a
+                class="site-name"
+                href="/"
+            >
+
+                Francesco Catalfamo
+
+            </a>
+
+
+            <nav
+                class="nav-links"
+                aria-label="Main navigation"
+            >
+
+
+                <a href="/research/">
+
+                    Research
+
+                </a>
+
+
+                <a
+                    href="/notes/"
+                    class="active"
+                >
+
+                    Notes
+
+                </a>
+
+
+                <a href="/about/">
+
+                    About
+
+                </a>
+
+
+                <a href="/contact/">
+
+                    Contact
+
+                </a>
+
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+
+    <main>
+
+
+        <!-- ======================================
+             ARTICLE HERO
+        ====================================== -->
+
+
+        <section class="article-hero">
+
+            <div class="article-container">
+
+
+                <div class="article-category">
+
+                    Politics
+
+                </div>
+
+
+                <h1 class="article-title">
+
+                    Coalition negotiations are political events too
+
+                </h1>
+
+
+                <p class="article-subtitle">
+
+                    Why coalition bargaining may matter for citizens'
+                    political evaluations before a government
+                    is formally created.
+
+                </p>
+
+
+                <div class="article-meta">
+
+
+                    <span>
+
+                        1 September 2026
+
+                    </span>
+
+
+                    <span>
+
+                        6 min read
+
+                    </span>
+
+
+                </div>
+
+
+                <div class="tags">
+
+
+                    <span class="tag">
+
+                        Coalition Politics
+
+                    </span>
+
+
+                    <span class="tag">
+
+                        Political Behaviour
+
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- ======================================
+             ARTICLE BODY
+        ====================================== -->
+
+
+        <article class="article-body">
+
+            <div class="article-container">
+
+
+                <p>
+
+                    Coalition formation is often treated as a discrete political event:
+                    an election takes place, parties negotiate, a government is formed,
+                    and researchers then study how citizens respond to the new cabinet.
+
+                    But politically, the process is rarely so clean.
+
+                </p>
+
+
+                <p>
+
+                    Negotiations may last days, weeks or even months.
+                    During that period, voters receive information about which parties
+                    are talking to one another, what compromises are being discussed
+                    and which coalitions appear increasingly likely.
+
+                </p>
+
+
+
+
+                <h2>
+
+                    Negotiations as political signals
+
+                </h2>
+
+
+                <p>
+
+                    One possibility is that coalition negotiations themselves
+                    provide voters with information about party relationships.
+
+                    If two parties repeatedly appear together in negotiations,
+                    voters may begin to perceive them as more politically compatible
+                    even before a coalition agreement is formally signed.
+
+                </p>
+
+
+                <blockquote>
+
+                    Coalition bargaining may therefore be part of the treatment,
+                    rather than simply the period preceding it.
+
+                </blockquote>
+
+
+                <p>
+
+                    This possibility matters especially for research designs
+                    that define government formation as a single treatment date.
+
+                    If voters already react during the bargaining period,
+                    estimates based on the formal cabinet start may understate
+                    or mis-time the actual political process.
+
+                </p>
+
+
+
+
+                <h2>
+
+                    A possible empirical implication
+
+                </h2>
+
+
+                <p>
+
+                    Consider a panel survey fielded during coalition negotiations.
+
+                    Respondents interviewed early in the fieldwork may still
+                    perceive the eventual coalition parties as competitors,
+                    while respondents interviewed later may already have observed
+                    repeated signals of cooperation.
+
+                </p>
+
+
+                <p>
+
+                    In such cases, the relevant timing of political exposure
+                    may not correspond perfectly to the formal date
+                    on which the cabinet takes office.
+
+                </p>
+
+
+
+
+                <!-- OPTIONAL FIGURE -->
+
+
+                <div class="figure">
+
+
+                    <div class="figure-placeholder">
+
+                        Optional figure, chart or image
+
+                    </div>
+
+
+                    <div class="figure-caption">
+
+                        Figure 1. Example caption.
+                        Charts and figures can be added to individual notes when useful.
+
+                    </div>
+
+
+                </div>
+
+
+
+
+                <h2>
+
+                    Why this matters
+
+                </h2>
+
+
+                <p>
+
+                    More broadly, this suggests that political events
+                    that researchers code as discrete transitions
+                    may sometimes be better understood as processes.
+
+                    Coalition formation is one example:
+                    bargaining, announcements, agreements and cabinet formation
+                    may each provide distinct signals to voters.
+
+                </p>
+
+
+                <p>
+
+                    This does not mean that every stage needs to be treated
+                    as a separate causal event.
+
+                    But it does suggest that the informational environment
+                    surrounding coalition negotiations deserves more attention
+                    when studying citizens' responses to government formation.
+
+                </p>
+
+
+            </div>
+
+        </article>
+
+
+
+
+        <!-- ======================================
+             BACK TO NOTES
+        ====================================== -->
+
+
+        <section class="note-end">
+
+            <div class="article-container">
+
+
+                <a
+                    class="back-link"
+                    href="/notes/"
+                >
+
+                    ← Back to all Notes
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+
+    <!-- ======================================
+         FOOTER
+    ====================================== -->
+
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+
+            <span>
+
+                © 2026 Francesco Catalfamo
+
+            </span>
+
+
+            <span>
+
+                Political Science
+
+            </span>
+
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
