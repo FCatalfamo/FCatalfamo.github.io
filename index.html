@@ -34,12 +34,14 @@ title: Francesco Catalfamo
             --accent: #c46a4a;
             --accent-soft: #f6ebe6;
 
+            --warm: #f7f4ef;
+
             --ink: #202522;
             --muted: #66716c;
-            --line: #dfe6e2;
 
-            --paper: #ffffff;
-            --paper-soft: #fafbf9;
+            --white: #ffffff;
+
+            --warm-line: rgba(16, 73, 69, 0.28);
 
             --max-width: 1120px;
 
@@ -71,7 +73,7 @@ title: Francesco Catalfamo
 
             color: var(--ink);
 
-            background: var(--paper);
+            background: var(--warm);
 
             line-height: 1.65;
 
@@ -118,11 +120,11 @@ title: Francesco Catalfamo
 
             z-index: 100;
 
-            background: rgba(255, 255, 255, 0.94);
+            background: rgba(247, 244, 239, 0.95);
 
             backdrop-filter: blur(12px);
 
-            border-bottom: 1px solid var(--line);
+            border-bottom: 1px solid var(--warm-line);
 
         }
 
@@ -173,6 +175,8 @@ title: Francesco Catalfamo
         .hero {
 
             padding: 100px 0 92px;
+
+            background: var(--warm);
 
         }
 
@@ -298,9 +302,9 @@ title: Francesco Catalfamo
 
             aspect-ratio: 4 / 5;
 
-            background: #edf2ef;
+            background: #ebe7df;
 
-            border: 1px solid var(--line);
+            border: 1px solid rgba(16, 73, 69, 0.20);
 
             display: flex;
 
@@ -330,9 +334,25 @@ title: Francesco Catalfamo
 
         .section {
 
-            border-top: 1px solid var(--line);
-
             padding: 74px 0;
+
+        }
+
+
+        .warm-section {
+
+            background: var(--warm);
+
+            border-top: 1px solid var(--warm-line);
+
+        }
+
+
+        .dark-section {
+
+            background: var(--petrol-dark);
+
+            color: #f7f4ef;
 
         }
 
@@ -365,6 +385,13 @@ title: Francesco Catalfamo
         }
 
 
+        .dark-section .section-label {
+
+            color: #d8a088;
+
+        }
+
+
         .section-copy {
 
             color: #46524d;
@@ -372,6 +399,13 @@ title: Francesco Catalfamo
             font-size: 1.05rem;
 
             max-width: 820px;
+
+        }
+
+
+        .dark-section .section-copy {
+
+            color: rgba(247, 244, 239, 0.88);
 
         }
 
@@ -645,7 +679,7 @@ title: Francesco Catalfamo
                 linear-gradient(
                     135deg,
                     var(--petrol-soft) 0%,
-                    #f7f3ed 100%
+                    #f1e9e2 100%
                 );
 
             color: var(--petrol);
@@ -778,7 +812,7 @@ title: Francesco Catalfamo
 
         .note-list {
 
-            border-top: 1px solid var(--line);
+            border-top: 1px solid rgba(16, 73, 69, 0.18);
 
         }
 
@@ -795,7 +829,7 @@ title: Francesco Catalfamo
 
             padding: 24px 0;
 
-            border-bottom: 1px solid var(--line);
+            border-bottom: 1px solid rgba(16, 73, 69, 0.18);
 
         }
 
@@ -1002,6 +1036,8 @@ title: Francesco Catalfamo
 
             margin: 0 0 18px;
 
+            color: #f7f4ef;
+
         }
 
 
@@ -1013,7 +1049,7 @@ title: Francesco Catalfamo
 
             gap: 6px;
 
-            color: var(--petrol);
+            color: #d8a088;
 
             font-size: 1rem;
 
@@ -1021,7 +1057,7 @@ title: Francesco Catalfamo
 
             padding-bottom: 3px;
 
-            border-bottom: 1px solid var(--petrol);
+            border-bottom: 1px solid rgba(216, 160, 136, 0.75);
 
             transition: 0.18s ease;
 
@@ -1030,9 +1066,9 @@ title: Francesco Catalfamo
 
         .cv-link:hover {
 
-            color: var(--petrol-dark);
+            color: #ffffff;
 
-            border-color: var(--petrol-dark);
+            border-color: #ffffff;
 
         }
 
@@ -1050,11 +1086,32 @@ title: Francesco Catalfamo
         }
 
 
+        .dark-section .text-link {
+
+            color: #d8a088;
+
+        }
+
+
+        .dark-section .text-link:hover {
+
+            color: #ffffff;
+
+        }
+
+
         .contact-email {
 
             margin-top: 14px;
 
-            color: #46524d;
+            color: rgba(247, 244, 239, 0.88);
+
+        }
+
+
+        .contact-email a:hover {
+
+            color: #ffffff;
 
         }
 
@@ -1074,11 +1131,13 @@ title: Francesco Catalfamo
 
         .site-footer {
 
-            border-top: 1px solid var(--line);
+            background: var(--petrol-dark);
+
+            border-top: 1px solid rgba(247, 244, 239, 0.12);
 
             padding: 28px 0;
 
-            color: #7a8580;
+            color: rgba(247, 244, 239, 0.60);
 
             font-size: 0.82rem;
 
@@ -1478,7 +1537,7 @@ title: Francesco Catalfamo
         ====================================== -->
 
 
-        <section class="section">
+        <section class="section dark-section">
 
             <div class="container section-grid">
 
@@ -1527,7 +1586,7 @@ title: Francesco Catalfamo
         ====================================== -->
 
 
-        <section class="section">
+        <section class="section warm-section">
 
             <div class="container section-grid">
 
@@ -1705,7 +1764,7 @@ title: Francesco Catalfamo
         ====================================== -->
 
 
-        <section class="section">
+        <section class="section warm-section">
 
             <div class="container">
 
@@ -1731,22 +1790,7 @@ title: Francesco Catalfamo
                 <div class="research-cards">
 
 
-                    <!-- COALITION FORMATION -->
-
-
                     <article class="research-card">
-
-
-                        <!--
-                        Quando avrai la cover, sostituisci il blocco
-                        research-placeholder con:
-
-                        <img
-                            class="research-cover"
-                            src="/assets/images/research/coalition-formation.jpg"
-                            alt="Cover for The Affective Consequences of Coalition Formation"
-                        >
-                        -->
 
 
                         <a
@@ -1790,9 +1834,6 @@ title: Francesco Catalfamo
                     </article>
 
 
-
-
-                    <!-- VISIBLE DIVISION -->
 
 
                     <article class="research-card">
@@ -1845,11 +1886,11 @@ title: Francesco Catalfamo
 
 
         <!-- ======================================
-             LATEST NOTES
+             NOTES
         ====================================== -->
 
 
-        <section class="section">
+        <section class="section warm-section">
 
             <div class="container">
 
@@ -1993,7 +2034,7 @@ title: Francesco Catalfamo
         ====================================== -->
 
 
-        <section class="section">
+        <section class="section dark-section">
 
             <div class="container cv-contact">
 
