@@ -85,6 +85,12 @@ title: Francesco Catalfamo
         }
 
 
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+
         .container {
 
             width: min(var(--max-width), 90%);
@@ -391,7 +397,7 @@ title: Francesco Catalfamo
 
             display: grid;
 
-            gap: 29px;
+            gap: 34px;
 
         }
 
@@ -400,9 +406,11 @@ title: Francesco Catalfamo
 
             display: grid;
 
-            grid-template-columns: 115px 1fr;
+            grid-template-columns: 115px 64px 1fr;
 
-            gap: 24px;
+            gap: 22px;
+
+            align-items: start;
 
         }
 
@@ -413,7 +421,44 @@ title: Francesco Catalfamo
 
             font-size: 0.9rem;
 
-            padding-top: 2px;
+            padding-top: 8px;
+
+        }
+
+
+        .education-logo-wrapper {
+
+            width: 64px;
+
+            height: 64px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        .education-logo {
+
+            max-width: 58px;
+
+            max-height: 52px;
+
+            width: auto;
+
+            height: auto;
+
+            object-fit: contain;
+
+        }
+
+
+        .timeline-content {
+
+            min-width: 0;
 
         }
 
@@ -865,7 +910,33 @@ title: Francesco Catalfamo
             }
 
 
-            .timeline-item,
+            .timeline-item {
+
+                grid-template-columns: 80px 52px 1fr;
+
+                gap: 14px;
+
+            }
+
+
+            .education-logo-wrapper {
+
+                width: 52px;
+
+                height: 52px;
+
+            }
+
+
+            .education-logo {
+
+                max-width: 48px;
+
+                max-height: 44px;
+
+            }
+
+
             .note-row {
 
                 grid-template-columns: 1fr;
@@ -919,6 +990,44 @@ title: Francesco Catalfamo
             .hero h1 {
 
                 font-size: 3.7rem;
+
+            }
+
+
+            .timeline-item {
+
+                grid-template-columns: 48px 1fr;
+
+                gap: 14px;
+
+            }
+
+
+            .timeline-year {
+
+                grid-column: 1 / -1;
+
+                padding-top: 0;
+
+                margin-bottom: -5px;
+
+            }
+
+
+            .education-logo-wrapper {
+
+                width: 48px;
+
+                height: 48px;
+
+            }
+
+
+            .education-logo {
+
+                max-width: 45px;
+
+                max-height: 42px;
 
             }
 
@@ -1049,11 +1158,9 @@ title: Francesco Catalfamo
 
                 <div class="portrait">
 
-
                     <div class="photo-placeholder">
                         Photo
                     </div>
-
 
                 </div>
 
@@ -1133,6 +1240,9 @@ title: Francesco Catalfamo
                 <div class="timeline">
 
 
+                    <!-- PhD -->
+
+
                     <div class="timeline-item">
 
 
@@ -1141,7 +1251,18 @@ title: Francesco Catalfamo
                         </div>
 
 
-                        <div>
+                        <div class="education-logo-wrapper">
+
+                            <img
+                                class="education-logo"
+                                src="/assets/logos/nasp.png"
+                                alt="NASP logo"
+                            >
+
+                        </div>
+
+
+                        <div class="timeline-content">
 
 
                             <div class="timeline-title">
@@ -1167,6 +1288,9 @@ title: Francesco Catalfamo
 
 
 
+                    <!-- Mannheim -->
+
+
                     <div class="timeline-item">
 
 
@@ -1175,7 +1299,18 @@ title: Francesco Catalfamo
                         </div>
 
 
-                        <div>
+                        <div class="education-logo-wrapper">
+
+                            <img
+                                class="education-logo"
+                                src="/assets/logos/mannheim.png"
+                                alt="University of Mannheim logo"
+                            >
+
+                        </div>
+
+
+                        <div class="timeline-content">
 
 
                             <div class="timeline-title">
@@ -1196,6 +1331,9 @@ title: Francesco Catalfamo
 
 
 
+                    <!-- UNIMI MA -->
+
+
                     <div class="timeline-item">
 
 
@@ -1204,7 +1342,18 @@ title: Francesco Catalfamo
                         </div>
 
 
-                        <div>
+                        <div class="education-logo-wrapper">
+
+                            <img
+                                class="education-logo"
+                                src="/assets/logos/unimi.png"
+                                alt="University of Milan logo"
+                            >
+
+                        </div>
+
+
+                        <div class="timeline-content">
 
 
                             <div class="timeline-title">
@@ -1233,6 +1382,9 @@ title: Francesco Catalfamo
 
 
 
+                    <!-- UNIMI BA -->
+
+
                     <div class="timeline-item">
 
 
@@ -1241,7 +1393,18 @@ title: Francesco Catalfamo
                         </div>
 
 
-                        <div>
+                        <div class="education-logo-wrapper">
+
+                            <img
+                                class="education-logo"
+                                src="/assets/logos/unimi.png"
+                                alt="University of Milan logo"
+                            >
+
+                        </div>
+
+
+                        <div class="timeline-content">
 
 
                             <div class="timeline-title">
