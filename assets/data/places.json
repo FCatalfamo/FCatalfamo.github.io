@@ -1,0 +1,807 @@
+[
+  {
+    "name": "Mantua",
+    "lat": 45.1692628,
+    "lng": 10.6708365,
+    "url": "https://www.google.com/maps/place/Mantua/data=!4m2!3m1!1s0x4781d40f82e52ed9:0xc1c7fd07590e7b85",
+    "matched_name": "Mantova, Lombardia, Italia"
+  },
+  {
+    "name": "Certosa di Pavia",
+    "lat": 45.2527583,
+    "lng": 9.1256244,
+    "url": "https://www.google.com/maps/place/Certosa+di+Pavia/data=!4m2!3m1!1s0x4786d8ece9f2492d:0x2772be533c30cd3a",
+    "matched_name": "Certosa di Pavia, Pavia, Lombardia, 27012, Italia"
+  },
+  {
+    "name": "Cremona",
+    "lat": 45.2208641,
+    "lng": 10.037038,
+    "url": "https://www.google.com/maps/place/Cremona/data=!4m2!3m1!1s0x4780fe6d3c71fe83:0x307737e7e74bdaf5",
+    "matched_name": "Cremona, Lombardia, Italia"
+  },
+  {
+    "name": "Briançon",
+    "lat": 44.8984037,
+    "lng": 6.6436313,
+    "url": "https://www.google.com/maps/place/Brian%C3%A7on/data=!4m2!3m1!1s0x4789e46803744111:0x40819a5fd97a9a0",
+    "matched_name": "Briançon, Hautes-Alpes, Provenza-Alpi-Costa Azzurra, Francia metropolitana, 05100, Francia"
+  },
+  {
+    "name": "Val-d'Isère",
+    "lat": 45.449556,
+    "lng": 6.9787389,
+    "url": "https://www.google.com/maps/place/Val-d'Is%C3%A8re/data=!4m2!3m1!1s0x47890909fd5ffb93:0x408ab2ae4baa830",
+    "matched_name": "Val-d'Isère, Albertville, Savoia, Auvergne-Rhône-Alpes, Francia metropolitana, 73150, Francia"
+  },
+  {
+    "name": "Aosta",
+    "lat": 45.7373075,
+    "lng": 7.3204025,
+    "url": "https://www.google.com/maps/place/Aosta/data=!4m2!3m1!1s0x478920b73eb6afb7:0x6749e443ee2610",
+    "matched_name": "Aosta, Valle d'Aosta, 11100, Italia"
+  },
+  {
+    "name": "Grosotto",
+    "lat": 46.2798623,
+    "lng": 10.2584412,
+    "url": "https://www.google.com/maps/place/Grosotto/data=!4m2!3m1!1s0x4783a425d5773ee9:0xcac87f5649ec2a14",
+    "matched_name": "Grosotto, Comunità montana della Valtellina di Tirano, Sondrio, Lombardia, 23034, Italia"
+  },
+  {
+    "name": "Grosio",
+    "lat": 46.2989301,
+    "lng": 10.2745156,
+    "url": "https://www.google.com/maps/place/Grosio/data=!4m2!3m1!1s0x4783a68bdde9a88d:0xfe31e21073b7b035",
+    "matched_name": "Grosio, Comunità montana della Valtellina di Tirano, Sondrio, Lombardia, 23033, Italia"
+  },
+  {
+    "name": "Mazzo di Valtellina",
+    "lat": 46.2613886,
+    "lng": 10.2708689,
+    "url": "https://www.google.com/maps/place/Mazzo+di+Valtellina/data=!4m2!3m1!1s0x4783a4503a80e925:0x4f72ea451562598",
+    "matched_name": "Mazzo di Valtellina, Comunità montana della Valtellina di Tirano, Sondrio, Lombardia, 23030, Italia"
+  },
+  {
+    "name": "Madonna di Tirano",
+    "lat": 46.2180165,
+    "lng": 10.1559111,
+    "url": "https://www.google.com/maps/place/Madonna+di+Tirano/data=!4m2!3m1!1s0x4783bcd45b907f4b:0x857340ebc45bae64",
+    "matched_name": "Madonna, Roncaiola, Tirano, Comunità montana della Valtellina di Tirano, Sondrio, Lombardia, 23037, Italia"
+  },
+  {
+    "name": "Sondrio",
+    "lat": 46.3233662,
+    "lng": 10.2583951,
+    "url": "https://www.google.com/maps/place/Sondrio/data=!4m2!3m1!1s0x47838e0adc0987af:0x1b348c4dfc1ac476",
+    "matched_name": "Sondrio, Lombardia, Italia"
+  },
+  {
+    "name": "Domaso",
+    "lat": 46.1509896,
+    "lng": 9.3281424,
+    "url": "https://www.google.com/maps/place/Domaso/data=!4m2!3m1!1s0x47846abdb8db7335:0x971a3bdbfc4b2f5",
+    "matched_name": "Domaso, Como, Lombardia, 22013, Italia"
+  },
+  {
+    "name": "San Vito Lo Capo",
+    "lat": 38.172347,
+    "lng": 12.734932,
+    "url": "https://www.google.com/maps/place/San+Vito+Lo+Capo/data=!4m2!3m1!1s0x131976dd9b3eb555:0xbd9991d901f80c1d",
+    "matched_name": "San Vito Lo Capo, Trapani, Sicilia, 91030, Italia"
+  },
+  {
+    "name": "Étretat",
+    "lat": 49.7074621,
+    "lng": 0.2031905,
+    "url": "https://www.google.com/maps/place/%C3%89tretat/data=!4m2!3m1!1s0x47e017c3893f4e43:0x40c14484fb684d0",
+    "matched_name": "Étretat, Le Havre, Seine-Maritime, Normandia, Francia metropolitana, 76790, Francia"
+  },
+  {
+    "name": "Chambéry",
+    "lat": 45.5662672,
+    "lng": 5.9203636,
+    "url": "https://www.google.com/maps/place/Chamb%C3%A9ry/data=!4m2!3m1!1s0x478ba85708695f63:0xd5c21acfa63d899c",
+    "matched_name": "Chambéry, Savoia, Auvergne-Rhône-Alpes, Francia metropolitana, 73000, Francia"
+  },
+  {
+    "name": "Mont Saint-Michel",
+    "lat": 48.6359541,
+    "lng": -1.51146,
+    "url": "https://www.google.com/maps/place/Mont+Saint-Michel/data=!4m2!3m1!1s0x480ea8d67c9ceeb3:0xc5834ce47e0dc3fe",
+    "matched_name": "Mont Saint-Michel, Le Mont-Saint-Michel, Avranches, Manche, Normandia, Francia metropolitana, 50170, Francia"
+  },
+  {
+    "name": "Waterloo",
+    "lat": 42.498275,
+    "lng": -92.3328743,
+    "url": "https://www.google.com/maps/place/Waterloo/data=!4m2!3m1!1s0x47c3d1c32d7f21d9:0x40099ab2f4d7280",
+    "matched_name": "Waterloo, Black Hawk County, Iowa, Stati Uniti d'America"
+  },
+  {
+    "name": "Besançon",
+    "lat": 47.2380222,
+    "lng": 6.0243622,
+    "url": "https://www.google.com/maps/place/Besan%C3%A7on/data=!4m2!3m1!1s0x478d62faf0ee130b:0x409ce34b313ed30",
+    "matched_name": "Besanzone, Besançon, Doubs, Borgogna-Franca Contea, Francia metropolitana, 25000, Francia"
+  },
+  {
+    "name": "Freiburg im Breisgau",
+    "lat": 47.9960901,
+    "lng": 7.8494005,
+    "url": "https://www.google.com/maps/place/Freiburg+im+Breisgau/data=!4m2!3m1!1s0x47911b26560bd665:0x41f6bb7a5df57b0",
+    "matched_name": "Friburgo in Brisgovia, Baden-Württemberg, Germania"
+  },
+  {
+    "name": "Château de Cheverny",
+    "lat": 47.500231,
+    "lng": 1.4580181,
+    "url": "https://www.google.com/maps/place/Ch%C3%A2teau+de+Cheverny/data=!4m2!3m1!1s0x47e4adc7e2f2290d:0x365e2b1882a1787c",
+    "matched_name": "Château de Cheverny, Avenue du Château, Le Bourg, Cheverny, Blois, Loir-et-Cher, Centro, Francia metropolitana, 41700, Francia"
+  },
+  {
+    "name": "Château de Chambord",
+    "lat": 47.6160697,
+    "lng": 1.5170502,
+    "url": "https://www.google.com/maps/place/Ch%C3%A2teau+de+Chambord/data=!4m2!3m1!1s0x47e4add37eb82821:0x6d1fb075610e2871",
+    "matched_name": "Chambord castle, Avenue du Roi, Le Château, Chambord, Blois, Loir-et-Cher, Centro, Francia metropolitana, 41250, Francia"
+  },
+  {
+    "name": "Amboise",
+    "lat": 47.4110351,
+    "lng": 0.983698,
+    "url": "https://www.google.com/maps/place/Amboise/data=!4m2!3m1!1s0x47fcb59a6f0f2835:0x40dc8d705389400",
+    "matched_name": "Ambosa, Loches, Indre-et-Loire, Centro, Francia metropolitana, 37400, Francia"
+  },
+  {
+    "name": "Saint-Malo",
+    "lat": 48.649518,
+    "lng": -2.0260409,
+    "url": "https://www.google.com/maps/place/Saint-Malo/data=!4m2!3m1!1s0x480e81102126bf5d:0xf8e97dadb22be12d",
+    "matched_name": "Saint-Malo, Ille-et-Vilaine, Bretagna, Francia metropolitana, 35400, Francia"
+  },
+  {
+    "name": "Mainz",
+    "lat": 49.9995205,
+    "lng": 8.2736253,
+    "url": "https://www.google.com/maps/place/Mainz/data=!4m2!3m1!1s0x47bd912e33df1379:0x422d4d510db1ba0",
+    "matched_name": "Magonza, Renania-Palatinato, Germania"
+  },
+  {
+    "name": "Avignon",
+    "lat": 43.9492493,
+    "lng": 4.8059012,
+    "url": "https://www.google.com/maps/place/Avignon/data=!4m2!3m1!1s0x12b5eb8739bc9d07:0xe6429b6efa1d7b36",
+    "matched_name": "Avignone, Vaucluse, Provenza-Alpi-Costa Azzurra, Francia metropolitana, 84000, Francia"
+  },
+  {
+    "name": "Chartres",
+    "lat": 48.4438601,
+    "lng": 1.4881434,
+    "url": "https://www.google.com/maps/place/Chartres/data=!4m2!3m1!1s0x47e40c4424f1e18b:0x7863884853c7ed29",
+    "matched_name": "Ciartre, Chartres, Eure-et-Loir, Centro, Francia metropolitana, 28000, Francia"
+  },
+  {
+    "name": "Lille",
+    "lat": 50.6365654,
+    "lng": 3.0635282,
+    "url": "https://www.google.com/maps/place/Lille/data=!4m2!3m1!1s0x47c2d579b3256e11:0x40af13e81646360",
+    "matched_name": "Lilla, Nord, Alta Francia, Francia metropolitana, Francia"
+  },
+  {
+    "name": "Bayeux",
+    "lat": 49.2764624,
+    "lng": -0.7024738,
+    "url": "https://www.google.com/maps/place/Bayeux/data=!4m2!3m1!1s0x480bacaab8e20a89:0xd64bc55fc9c3f294",
+    "matched_name": "Bayeux, Calvados, Normandia, Francia metropolitana, 14400, Francia"
+  },
+  {
+    "name": "Rouen",
+    "lat": 49.4404591,
+    "lng": 1.0939658,
+    "url": "https://www.google.com/maps/place/Rouen/data=!4m2!3m1!1s0x47e0de76ca71faab:0x3d1cabefa49f93d6",
+    "matched_name": "Rouen, Seine-Maritime, Normandia, Francia metropolitana, Francia"
+  },
+  {
+    "name": "Caen",
+    "lat": 49.1813403,
+    "lng": -0.3635615,
+    "url": "https://www.google.com/maps/place/Caen/data=!4m2!3m1!1s0x480a42bd4c04c933:0x3da5749f30d00859",
+    "matched_name": "Caen, Calvados, Normandia, Francia metropolitana, 14000, Francia"
+  },
+  {
+    "name": "Lloret de Mar",
+    "lat": 41.6973503,
+    "lng": 2.8392392,
+    "url": "https://www.google.com/maps/place/Lloret+de+Mar/data=!4m2!3m1!1s0x12bb170787077a59:0x9273ef3da6e68c78",
+    "matched_name": "Lloret de Mar, la Selva, Girona, Catalogna, 17310, Spagna"
+  },
+  {
+    "name": "Monaco",
+    "lat": 43.7323492,
+    "lng": 7.4276832,
+    "url": "https://www.google.com/maps/place/Monaco/data=!4m2!3m1!1s0x12cdc26f7b3f8531:0x74f7784c3ac49cfc",
+    "matched_name": "Monaco"
+  },
+  {
+    "name": "Spoleto",
+    "lat": 42.7342971,
+    "lng": 12.7382035,
+    "url": "https://www.google.com/maps/place/Spoleto/data=!4m2!3m1!1s0x132ef4979d0dd2a9:0xe465f98fb0b5611a",
+    "matched_name": "Spoleto, Perugia, Umbria, 06049, Italia"
+  },
+  {
+    "name": "Assisi",
+    "lat": 43.0711952,
+    "lng": 12.6146669,
+    "url": "https://www.google.com/maps/place/Assisi/data=!4m2!3m1!1s0x132e9d33527024f1:0xd0981a7dd8fce3ac",
+    "matched_name": "Assisi, Perugia, Umbria, 06081, Italia"
+  },
+  {
+    "name": "Gubbio",
+    "lat": 43.3517605,
+    "lng": 12.5772959,
+    "url": "https://www.google.com/maps/place/Gubbio/data=!4m2!3m1!1s0x132c3909a6a92db7:0xa5e7504e5ba40dbf",
+    "matched_name": "Gubbio, Perugia, Umbria, 06024, Italia"
+  },
+  {
+    "name": "Urbino",
+    "lat": 43.7262608,
+    "lng": 12.6363135,
+    "url": "https://www.google.com/maps/place/Urbino/data=!4m2!3m1!1s0x132cf82fd9d4d9e3:0xdb5a75a4db4b2a1c",
+    "matched_name": "Urbino, Pesaro e Urbino, Marche, 61029, Italia"
+  },
+  {
+    "name": "Misano Adriatico",
+    "lat": 43.9774954,
+    "lng": 12.6986947,
+    "url": "https://www.google.com/maps/place/Misano+Adriatico/data=!4m2!3m1!1s0x132ce7469e6e1b51:0x2b92c2ea682f1c6e",
+    "matched_name": "Misano Adriatico, Rimini, Emilia-Romagna, Italia"
+  },
+  {
+    "name": "Palermo",
+    "lat": 38.1112268,
+    "lng": 13.3524434,
+    "url": "https://www.google.com/maps/place/Palermo/data=!4m2!3m1!1s0x1319e8c9814ed099:0xa0b042c233bd880",
+    "matched_name": "Palermo, Sicilia, Italia"
+  },
+  {
+    "name": "Riserva Naturale Orientata dello Zingaro",
+    "lat": 38.0979475,
+    "lng": 12.7832148,
+    "url": "https://www.google.com/maps/place/Riserva+Naturale+Orientata+dello+Zingaro/data=!4m2!3m1!1s0x1319832f2286b561:0x8c0abc589c910f44",
+    "matched_name": "Zingaro Nature Reserve, San Vito Lo Capo, Trapani, Sicilia, 91030, Italia"
+  },
+  {
+    "name": "Custonaci",
+    "lat": 38.0781631,
+    "lng": 12.6752292,
+    "url": "https://www.google.com/maps/place/Custonaci/data=!4m2!3m1!1s0x13197bbc0be0bccd:0xedced2b42ffc4040",
+    "matched_name": "Custonaci, Trapani, Sicilia, 91015, Italia"
+  },
+  {
+    "name": "Trapani",
+    "lat": 37.9003731,
+    "lng": 12.7116255,
+    "url": "https://www.google.com/maps/place/Trapani/data=!4m2!3m1!1s0x1319622fd6a4905f:0x8bf1debcf9983482",
+    "matched_name": "Trapani, Sicilia, 91100, Italia"
+  },
+  {
+    "name": "Paris",
+    "lat": 48.8588897,
+    "lng": 2.320041,
+    "url": "https://www.google.com/maps/place/Paris/data=!4m2!3m1!1s0x47e66e1f06e2b70f:0x40b82c3688c9460",
+    "matched_name": "Parigi, Isola di Francia, Francia metropolitana, Francia"
+  },
+  {
+    "name": "Bergamo",
+    "lat": 45.7566557,
+    "lng": 9.7542192,
+    "url": "https://www.google.com/maps/place/Bergamo/data=!4m2!3m1!1s0x47815111bc62ae73:0xd32fcb8f0be5a4d1",
+    "matched_name": "Bergamo, Lombardia, Italia"
+  },
+  {
+    "name": "Rome",
+    "lat": 41.8933203,
+    "lng": 12.4829321,
+    "url": "https://www.google.com/maps/place/Rome/data=!4m2!3m1!1s0x132f6196f9928ebb:0xb90f770693656e38",
+    "matched_name": "Roma, Lazio, Italia"
+  },
+  {
+    "name": "Verona",
+    "lat": 45.4424977,
+    "lng": 10.9857377,
+    "url": "https://www.google.com/maps/place/Verona/data=!4m2!3m1!1s0x477f5f68699be0e3:0x53f85a636882595b",
+    "matched_name": "Verona, Veneto, Italia"
+  },
+  {
+    "name": "Opatija",
+    "lat": 45.3349238,
+    "lng": 14.3067834,
+    "url": "https://www.google.com/maps/place/Opatija/data=!4m2!3m1!1s0x4764a84acbb5741b:0x400ad50862bc290",
+    "matched_name": "Città di Abbazia, Regione litoraneo-montana, Croazia"
+  },
+  {
+    "name": "Leuven",
+    "lat": 50.879202,
+    "lng": 4.7011675,
+    "url": "https://www.google.com/maps/place/Leuven/data=!4m2!3m1!1s0x47c160d05ebbdf85:0x40099ab2f4d5690",
+    "matched_name": "Lovanio, Flemish Brabant, Fiandre, Belgio"
+  },
+  {
+    "name": "Naples",
+    "lat": 40.8358846,
+    "lng": 14.2487679,
+    "url": "https://www.google.com/maps/place/Naples/data=!4m2!3m1!1s0x133b0866db7afaeb:0xd23a43cc658cb87e",
+    "matched_name": "Napoli, Campania, Italia"
+  },
+  {
+    "name": "Brescia",
+    "lat": 45.7795805,
+    "lng": 10.425873,
+    "url": "https://www.google.com/maps/place/Brescia/data=!4m2!3m1!1s0x4781766ea2b0294d:0x22cd4615476aea04",
+    "matched_name": "Brescia, Lombardia, Italia"
+  },
+  {
+    "name": "Caserta",
+    "lat": 41.2035193,
+    "lng": 14.1168624,
+    "url": "https://www.google.com/maps/place/Caserta/data=!4m2!3m1!1s0x133a5449f6ea3eeb:0xc5e4ce46383bee6d",
+    "matched_name": "Caserta, Campania, Italia"
+  },
+  {
+    "name": "Turin",
+    "lat": 45.0677551,
+    "lng": 7.6824892,
+    "url": "https://www.google.com/maps/place/Turin/data=!4m2!3m1!1s0x47886d126418be25:0x8903f803d69c77bf",
+    "matched_name": "Torino, Piemonte, Italia"
+  },
+  {
+    "name": "Florence",
+    "lat": 43.7697955,
+    "lng": 11.2556404,
+    "url": "https://www.google.com/maps/place/Florence/data=!4m2!3m1!1s0x132a56a680d2d6ad:0x93d57917efc72a03",
+    "matched_name": "Firenze, Toscana, Italia"
+  },
+  {
+    "name": "Wrocław",
+    "lat": 51.1089776,
+    "lng": 17.0326689,
+    "url": "https://www.google.com/maps/place/Wroc%C5%82aw/data=!4m2!3m1!1s0x470fe9c2d4b58abf:0xb70956aec205e0f5",
+    "matched_name": "Breslavia, voivodato della Bassa Slesia, Polonia"
+  },
+  {
+    "name": "Munich",
+    "lat": 48.1371079,
+    "lng": 11.5753822,
+    "url": "https://www.google.com/maps/place/Munich/data=!4m2!3m1!1s0x479e75f9a38c5fd9:0x10cb84a7db1987d",
+    "matched_name": "Monaco di Baviera, Baviera, Germania"
+  },
+  {
+    "name": "Venice",
+    "lat": 45.4371908,
+    "lng": 12.3345898,
+    "url": "https://www.google.com/maps/place/Venice/data=!4m2!3m1!1s0x477eb1daf1d63d89:0x7ba3c6f0bd92102f",
+    "matched_name": "Venezia, Veneto, 30121-30176, Italia"
+  },
+  {
+    "name": "Prague",
+    "lat": 50.0874654,
+    "lng": 14.4212535,
+    "url": "https://www.google.com/maps/place/Prague/data=!4m2!3m1!1s0x470b939c0970798b:0x400af0f66164090",
+    "matched_name": "Praga, Repubblica Ceca"
+  },
+  {
+    "name": "Perugia",
+    "lat": 43.1070321,
+    "lng": 12.4029962,
+    "url": "https://www.google.com/maps/place/Perugia/data=!4m2!3m1!1s0x132ea08cea51c34f:0xce39eb2a884fc7f4",
+    "matched_name": "Perugia, Umbria, Italia"
+  },
+  {
+    "name": "Ravenna",
+    "lat": 44.3640607,
+    "lng": 12.0590095,
+    "url": "https://www.google.com/maps/place/Ravenna/data=!4m2!3m1!1s0x477df9505a24da17:0x2a74a33c9c54a776",
+    "matched_name": "Ravenna, Emilia-Romagna, Italia"
+  },
+  {
+    "name": "Vienna",
+    "lat": 48.2083537,
+    "lng": 16.3725042,
+    "url": "https://www.google.com/maps/place/Vienna/data=!4m2!3m1!1s0x476d079e5136ca9f:0xfdc2e58a51a25b46",
+    "matched_name": "Vienna, Austria"
+  },
+  {
+    "name": "Salzburg",
+    "lat": 47.7981346,
+    "lng": 13.0464806,
+    "url": "https://www.google.com/maps/place/Salzburg/data=!4m2!3m1!1s0x47769adda908d4b1:0xc1e183a1412af73d",
+    "matched_name": "Salisburgo, Austria"
+  },
+  {
+    "name": "Trento",
+    "lat": 46.1029536,
+    "lng": 11.1297425,
+    "url": "https://www.google.com/maps/place/Trento/data=!4m2!3m1!1s0x478276cac9ce9ddb:0x27c6a299139ff547",
+    "matched_name": "Trento, Trentino-Alto Adige, Italia"
+  },
+  {
+    "name": "Trieste",
+    "lat": 45.6496485,
+    "lng": 13.7772781,
+    "url": "https://www.google.com/maps/place/Trieste/data=!4m2!3m1!1s0x477b6b06e4edf533:0x666a2484d4dd2b50",
+    "matched_name": "Trieste, Friuli-Venezia Giulia, 34121-34151, Italia"
+  },
+  {
+    "name": "Berlin",
+    "lat": 52.5173885,
+    "lng": 13.3951309,
+    "url": "https://www.google.com/maps/place/Berlin/data=!4m2!3m1!1s0x47a84e373f035901:0x42120465b5e3b70",
+    "matched_name": "Berlino, Germania"
+  },
+  {
+    "name": "Budapest",
+    "lat": 47.4978789,
+    "lng": 19.0402383,
+    "url": "https://www.google.com/maps/place/Budapest/data=!4m2!3m1!1s0x4741c334d1d4cfc9:0x400c4290c1e1160",
+    "matched_name": "Budapest, Ungheria Centrale, Ungheria"
+  },
+  {
+    "name": "Zagreb",
+    "lat": 45.8130967,
+    "lng": 15.9772795,
+    "url": "https://www.google.com/maps/place/Zagreb/data=!4m2!3m1!1s0x4765d692c902cc39:0x3a45249628fbc28a",
+    "matched_name": "Città di Zagabria, Croazia"
+  },
+  {
+    "name": "Rijeka",
+    "lat": 45.3267976,
+    "lng": 14.442208,
+    "url": "https://www.google.com/maps/place/Rijeka/data=!4m2!3m1!1s0x4764a12517aabe2d:0x373c6f383dcbb670",
+    "matched_name": "Città di Fiume, Regione litoraneo-montana, Croazia"
+  },
+  {
+    "name": "Zadar",
+    "lat": 44.1168594,
+    "lng": 15.2353257,
+    "url": "https://www.google.com/maps/place/Zadar/data=!4m2!3m1!1s0x4761fa62d2c0b88f:0x12323e1c13f40784",
+    "matched_name": "Zara, Città di Zara, Regione zaratina, Croazia"
+  },
+  {
+    "name": "Nuremberg",
+    "lat": 49.453872,
+    "lng": 11.077298,
+    "url": "https://www.google.com/maps/place/Nuremberg/data=!4m2!3m1!1s0x479f57aeb5b61cd3:0xdd5daf85a98c21b7",
+    "matched_name": "Norimberga, Baviera, Germania"
+  },
+  {
+    "name": "Pula",
+    "lat": 44.8702281,
+    "lng": 13.8455311,
+    "url": "https://www.google.com/maps/place/Pula/data=!4m2!3m1!1s0x477cd2de09337b6d:0x72324a3a7b4e580d",
+    "matched_name": "Città di Pola, Regione istriana, Croazia"
+  },
+  {
+    "name": "Częstochowa",
+    "lat": 50.8089997,
+    "lng": 19.1244089,
+    "url": "https://www.google.com/maps/place/Cz%C4%99stochowa/data=!4m2!3m1!1s0x4710b5c54e2ca8af:0x854f0d4d1a178236",
+    "matched_name": "Częstochowa, Voivodato della Slesia, Polonia"
+  },
+  {
+    "name": "Stuttgart",
+    "lat": 48.7784485,
+    "lng": 9.1800132,
+    "url": "https://www.google.com/maps/place/Stuttgart/data=!4m2!3m1!1s0x4799db34c1ad8fd3:0x79d5c11c7791cfe4",
+    "matched_name": "Stoccarda, Baden-Württemberg, Germania"
+  },
+  {
+    "name": "Dresden",
+    "lat": 51.0493286,
+    "lng": 13.7381437,
+    "url": "https://www.google.com/maps/place/Dresden/data=!4m2!3m1!1s0x4709cf29101ad6a9:0x421b1cb4288feb0",
+    "matched_name": "Dresda, Sassonia, Germania"
+  },
+  {
+    "name": "Cologne",
+    "lat": 50.938361,
+    "lng": 6.959974,
+    "url": "https://www.google.com/maps/place/Cologne/data=!4m2!3m1!1s0x47bf259169ab2fe5:0x42760fc4a2a77f0",
+    "matched_name": "Colonia, Renania Settentrionale-Vestfalia, Germania"
+  },
+  {
+    "name": "Lakolk strand",
+    "lat": 55.1516179,
+    "lng": 8.4812604,
+    "url": "https://www.google.com/maps/place/Lakolk+strand/data=!4m2!3m1!1s0x47b4d2e2baa09199:0x59efadd2f23d7075",
+    "matched_name": "Lakolk Strand, Tønder Municipality, Danimarca meridionale, Danimarca"
+  },
+  {
+    "name": "Karlsruhe",
+    "lat": 49.0068705,
+    "lng": 8.4034195,
+    "url": "https://www.google.com/maps/place/Karlsruhe/data=!4m2!3m1!1s0x0:0xb6fc55734cb7ee7f",
+    "matched_name": "Karlsruhe, Baden-Württemberg, Germania"
+  },
+  {
+    "name": "Aachen",
+    "lat": 50.776351,
+    "lng": 6.083862,
+    "url": "https://www.google.com/maps/place/Aachen/data=!4m2!3m1!1s0x47c0997cb08a191d:0x63a30eae0b0e444f",
+    "matched_name": "Aquisgrana, Aachen (district), Renania Settentrionale-Vestfalia, Germania"
+  },
+  {
+    "name": "Kronborg Castle",
+    "lat": 56.039052,
+    "lng": 12.6212071,
+    "url": "https://www.google.com/maps/place/Kronborg+Castle/data=!4m2!3m1!1s0x4652310d8be4e5e3:0xc201c3cdc1f14036",
+    "matched_name": "Kronborg Castle, Kronborg, Elsinore, Helsingør Municipality, Capital Region of Denmark, 3000, Danimarca"
+  },
+  {
+    "name": "Dortmund",
+    "lat": 51.5142273,
+    "lng": 7.4652789,
+    "url": "https://www.google.com/maps/place/Dortmund/data=!4m2!3m1!1s0x47b91760bff07a11:0x427f28131548750",
+    "matched_name": "Dortmund, Renania Settentrionale-Vestfalia, Germania"
+  },
+  {
+    "name": "Mannheim",
+    "lat": 49.4892913,
+    "lng": 8.4673098,
+    "url": "https://www.google.com/maps/place/Mannheim/data=!4m2!3m1!1s0x0:0xb1e4fe7aa406e687",
+    "matched_name": "Mannheim, Baden-Württemberg, Germania"
+  },
+  {
+    "name": "Trier",
+    "lat": 49.7596208,
+    "lng": 6.6441878,
+    "url": "https://www.google.com/maps/place/Trier/data=!4m2!3m1!1s0x47957c9bd11cfbc5:0xfe0ca3a54dcd724b",
+    "matched_name": "Treviri, Trierweiler, Renania-Palatinato, Germania"
+  },
+  {
+    "name": "Heidelberg",
+    "lat": 49.4093582,
+    "lng": 8.694724,
+    "url": "https://www.google.com/maps/place/Heidelberg/data=!4m2!3m1!1s0x0:0xefe6ea0044243ad7",
+    "matched_name": "Heidelberg, Baden-Württemberg, Germania"
+  },
+  {
+    "name": "Saarbrücken",
+    "lat": 49.234362,
+    "lng": 6.996379,
+    "url": "https://www.google.com/maps/place/Saarbr%C3%BCcken/data=!4m2!3m1!1s0x4795b152e302c0eb:0x422d4d510db6b80",
+    "matched_name": "Saarbrücken, Regionalverband Saarbrücken, Saarland, Germania"
+  },
+  {
+    "name": "Amsterdam",
+    "lat": 52.3730796,
+    "lng": 4.8924534,
+    "url": "https://www.google.com/maps/place/Amsterdam/data=!4m2!3m1!1s0x47c63fb5949a7755:0x6600fd4cb7c0af8d",
+    "matched_name": "Amsterdam, North Holland, Paesi Bassi"
+  },
+  {
+    "name": "Brussels",
+    "lat": 50.8467372,
+    "lng": 4.352493,
+    "url": "https://www.google.com/maps/place/Brussels/data=!4m2!3m1!1s0x47c3a4ed73c76867:0xc18b3a66787302a7",
+    "matched_name": "Bruxelles, Brussels-Capital, Belgio"
+  },
+  {
+    "name": "Rotterdam",
+    "lat": 51.9244424,
+    "lng": 4.47775,
+    "url": "https://www.google.com/maps/place/Rotterdam/data=!4m2!3m1!1s0x47c5b7605f54c47d:0x5229bbac955e4b85",
+    "matched_name": "Rotterdam, South Holland, Paesi Bassi"
+  },
+  {
+    "name": "Delft",
+    "lat": 51.9994572,
+    "lng": 4.3627245,
+    "url": "https://www.google.com/maps/place/Delft/data=!4m2!3m1!1s0x47c5b5c3515f58fd:0x89b05ca3c54bd43d",
+    "matched_name": "Delft, South Holland, Paesi Bassi"
+  },
+  {
+    "name": "The Hague",
+    "lat": 52.0749456,
+    "lng": 4.2696802,
+    "url": "https://www.google.com/maps/place/The+Hague/data=!4m2!3m1!1s0x47c5b72f4298bd71:0x400de5a8d1e6c10",
+    "matched_name": "L'Aia, South Holland, Paesi Bassi"
+  },
+  {
+    "name": "Copenhagen",
+    "lat": 55.6867243,
+    "lng": 12.5700724,
+    "url": "https://www.google.com/maps/place/Copenhagen/data=!4m2!3m1!1s0x4652533c5c803d23:0x4dd7edde69467b8",
+    "matched_name": "Copenaghen, Copenhagen Municipality, Capital Region of Denmark, 1357, Danimarca"
+  },
+  {
+    "name": "Dijon",
+    "lat": 47.3215806,
+    "lng": 5.0414701,
+    "url": "https://www.google.com/maps/place/Dijon/data=!4m2!3m1!1s0x47f29d8ceffd9675:0x409ce34b31458d0",
+    "matched_name": "Digione, Dijon, Côte-d'Or, Borgogna-Franca Contea, Francia metropolitana, 21000, Francia"
+  },
+  {
+    "name": "Luxembourg",
+    "lat": 49.8158683,
+    "lng": 6.1296751,
+    "url": "https://www.google.com/maps/place/Luxembourg/data=!4m2!3m1!1s0x479548cd9df32c57:0x400d1d6d1056d10",
+    "matched_name": "Lussemburgo"
+  },
+  {
+    "name": "Hamburg",
+    "lat": 53.5501721,
+    "lng": 10.0013165,
+    "url": "https://www.google.com/maps/place/Hamburg/data=!4m2!3m1!1s0x47b161837e1813b9:0x4263df27bd63aa0",
+    "matched_name": "Amburgo, Germania"
+  },
+  {
+    "name": "Milan",
+    "lat": 45.4641943,
+    "lng": 9.1896346,
+    "url": "https://www.google.com/maps/place/Milan/data=!4m2!3m1!1s0x4786c1493f1275e7:0x3cffcd13c6740e8d",
+    "matched_name": "Milano, Rodano, Milano, Lombardia, Italia"
+  },
+  {
+    "name": "Calais",
+    "lat": 50.9524769,
+    "lng": 1.8538446,
+    "url": "https://www.google.com/maps/place/Calais/data=!4m2!3m1!1s0x47dc3f75d7f1e363:0xacbed9e08cd279f4",
+    "matched_name": "Calais, Pas-de-Calais, Alta Francia, Francia metropolitana, 62100, Francia"
+  },
+  {
+    "name": "Strasbourg",
+    "lat": 48.584614,
+    "lng": 7.7507127,
+    "url": "https://www.google.com/maps/place/Strasbourg/data=!4m2!3m1!1s0x4796c8495e18b2c1:0x971a483118e7241f",
+    "matched_name": "Strasburgo, Basso-Reno, European Collectivity of Alsace, Grande Est, Francia metropolitana, Francia"
+  },
+  {
+    "name": "Warsaw",
+    "lat": 52.2319581,
+    "lng": 21.0067249,
+    "url": "https://www.google.com/maps/place/Warsaw/data=!4m2!3m1!1s0x471ecc669a869f01:0x72f0be2a88ead3fc",
+    "matched_name": "Varsavia, Voivodato della Masovia, Polonia"
+  },
+  {
+    "name": "Viterbo",
+    "lat": 42.4929522,
+    "lng": 11.9488136,
+    "url": "https://www.google.com/maps/place/Viterbo/data=!4m2!3m1!1s0x132f2cf9a622dfcf:0xb50255953c6f6b43",
+    "matched_name": "Viterbo, Lazio, Italia"
+  },
+  {
+    "name": "Colmar",
+    "lat": 48.0777517,
+    "lng": 7.3579641,
+    "url": "https://www.google.com/maps/place/Colmar/data=!4m2!3m1!1s0x479165dff670c1cf:0xe35d7e3e616ce966",
+    "matched_name": "Colmar, Colmar-Ribeauvillé, Haut-Rhin, European Collectivity of Alsace, Grande Est, Francia metropolitana, 68000, Francia"
+  },
+  {
+    "name": "Pisa",
+    "lat": 43.4714722,
+    "lng": 10.6797912,
+    "url": "https://www.google.com/maps/place/Pisa/data=!4m2!3m1!1s0x12d5919af0f6598f:0xaab80fb5a78478c8",
+    "matched_name": "Pisa, Toscana, Italia"
+  },
+  {
+    "name": "Genoa",
+    "lat": 44.40726,
+    "lng": 8.9338624,
+    "url": "https://www.google.com/maps/place/Genoa/data=!4m2!3m1!1s0x12d34152dcd49aad:0x236a84f11881620a",
+    "matched_name": "Genova, Liguria, Italia"
+  },
+  {
+    "name": "Kraków",
+    "lat": 50.0469432,
+    "lng": 19.9971534,
+    "url": "https://www.google.com/maps/place/Krak%C3%B3w/data=!4m2!3m1!1s0x471644c0354e18d1:0xb46bb6b576478abf",
+    "matched_name": "Cracovia, Voivodato della Piccola Polonia, Polonia"
+  },
+  {
+    "name": "Alkmaar",
+    "lat": 52.6008538,
+    "lng": 4.8170994,
+    "url": "https://www.google.com/maps/place/Alkmaar/data=!4m2!3m1!1s0x47cf57b2d7368c5b:0x400de5a8d1e7470",
+    "matched_name": "Alkmaar, North Holland, Paesi Bassi"
+  },
+  {
+    "name": "Barcelona",
+    "lat": 41.3825802,
+    "lng": 2.177073,
+    "url": "https://www.google.com/maps/place/Barcelona/data=!4m2!3m1!1s0x12a49816718e30e5:0x44b0fb3d4f47660a",
+    "matched_name": "Barcellona, Barcelonès, Barcelona, Catalogna, Spagna"
+  },
+  {
+    "name": "Antwerp",
+    "lat": 51.2211097,
+    "lng": 4.3997081,
+    "url": "https://www.google.com/maps/place/Antwerp/data=!4m2!3m1!1s0x47c3f68ebfc3887d:0x3eaf448482a88ab8",
+    "matched_name": "Anversa, Fiandre, Belgio"
+  },
+  {
+    "name": "Dunkirk",
+    "lat": 51.0347708,
+    "lng": 2.3772525,
+    "url": "https://www.google.com/maps/place/Dunkirk/data=!4m2!3m1!1s0x47dc8b6dd9ff20b9:0x40af13e81646da0",
+    "matched_name": "Dunkerque, Dunkirk, Nord, Alta Francia, Francia metropolitana, Francia"
+  },
+  {
+    "name": "Bruges",
+    "lat": 51.2085526,
+    "lng": 3.226772,
+    "url": "https://www.google.com/maps/place/Bruges/data=!4m2!3m1!1s0x47c350d0c11e420d:0x1aa2f35ac8834df7",
+    "matched_name": "Bruges, West Flanders, Fiandre, Belgio"
+  },
+  {
+    "name": "Ghent",
+    "lat": 51.0538286,
+    "lng": 3.7250121,
+    "url": "https://www.google.com/maps/place/Ghent/data=!4m2!3m1!1s0x47c370e1339443ad:0x40099ab2f4d5140",
+    "matched_name": "Gand, Gent, Provincia delle Fiandre Orientali, Fiandre, Belgio"
+  },
+  {
+    "name": "Frankfurt",
+    "lat": 50.1106444,
+    "lng": 8.6820917,
+    "url": "https://www.google.com/maps/place/Frankfurt/data=!4m2!3m1!1s0x47bd096f477096c5:0x422435029b0c600",
+    "matched_name": "Francoforte sul Meno, Assia, Germania"
+  },
+  {
+    "name": "Ludwigsburg",
+    "lat": 48.8953937,
+    "lng": 9.1895147,
+    "url": "https://www.google.com/maps/place/Ludwigsburg/data=!4m2!3m1!1s0x4799ce1d98f44a1b:0x41ffd3c8d092f10",
+    "matched_name": "Ludwigsburg, Landkreis Ludwigsburg, Baden-Württemberg, Germania"
+  },
+  {
+    "name": "Como",
+    "lat": 45.9395857,
+    "lng": 9.1493609,
+    "url": "https://www.google.com/maps/place/Como/data=!4m2!3m1!1s0x47869c481027ed63:0xb99b96af785ff524",
+    "matched_name": "Como, Lombardia, Italia"
+  },
+  {
+    "name": "Saint-Denis",
+    "lat": 48.9383732,
+    "lng": 2.3627508,
+    "url": "https://www.google.com/maps/place/Saint-Denis/data=!4m2!3m1!1s0x47e66eaae7346d61:0xc7efebbaf928e90d",
+    "matched_name": "Saint-Denis, Seine-Saint-Denis, Isola di Francia, Francia metropolitana, Francia"
+  },
+  {
+    "name": "Novara",
+    "lat": 45.58425,
+    "lng": 8.545997,
+    "url": "https://www.google.com/maps/place/Novara/data=!4m2!3m1!1s0x47865a204242336d:0x4d210e35fa2980f0",
+    "matched_name": "Novara, Piemonte, Italia"
+  },
+  {
+    "name": "Versailles",
+    "lat": 48.8035403,
+    "lng": 2.1266886,
+    "url": "https://www.google.com/maps/place/Versailles/data=!4m2!3m1!1s0x47e67db475f420bd:0x869e00ad0d844aba",
+    "matched_name": "Versailles, Yvelines, Isola di Francia, Francia metropolitana, 78000, Francia"
+  },
+  {
+    "name": "Reims",
+    "lat": 49.2577886,
+    "lng": 4.031926,
+    "url": "https://www.google.com/maps/place/Reims/data=!4m2!3m1!1s0x47e974334a533b09:0x40a5fb99a3b45c0",
+    "matched_name": "Reims, Marna, Grande Est, Francia metropolitana, 51100, Francia"
+  },
+  {
+    "name": "Cagliari",
+    "lat": 39.2171994,
+    "lng": 9.113311,
+    "url": "https://www.google.com/maps/place/Cagliari/data=!4m2!3m1!1s0x12e73415b68e1ca3:0x201e1506cf816eb1",
+    "matched_name": "Cagliari, Sardegna, Italia"
+  },
+  {
+    "name": "Tours",
+    "lat": 47.3900474,
+    "lng": 0.6889268,
+    "url": "https://www.google.com/maps/place/Tours/data=!4m2!3m1!1s0x47fcd5b34a979a55:0x40dc8d705388430",
+    "matched_name": "Tours, Indre-et-Loire, Centro, Francia metropolitana, Francia"
+  }
+]
