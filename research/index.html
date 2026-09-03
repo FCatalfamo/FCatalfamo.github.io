@@ -22,6 +22,7 @@ title: Research
 
     <title>Research — Francesco Catalfamo</title>
 
+
     <style>
 
         :root {
@@ -29,27 +30,39 @@ title: Research
             --petrol: #165f5a;
             --petrol-dark: #104945;
 
-            --ivory: rgba(246, 229, 209, 0.42);
+            --ivory: #fbf7f1;
+            --ivory-strong: #f6eee4;
 
             --sage: #88b79b;
-            --sage-soft: rgba(136, 183, 155, 0.22);
+            --sage-soft: rgba(136, 183, 155, 0.16);
+            --sage-medium: rgba(136, 183, 155, 0.28);
+
+            --dark-section: rgba(16, 73, 69, 0.92);
 
             --ink: #202522;
             --muted: #66716c;
 
+            --light-text: #f7f2ec;
+            --light-muted: #e5ddd4;
+            --light-soft: #f0e9e1;
+
             --line-dark: rgba(16, 73, 69, 0.22);
+            --line-light: rgba(246, 229, 209, 0.24);
 
             --max-width: 1120px;
 
         }
 
+
         * {
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
+
 
         body {
 
@@ -72,15 +85,18 @@ title: Research
 
         }
 
+
         a {
             color: inherit;
             text-decoration: none;
         }
 
+
         img {
             display: block;
             max-width: 100%;
         }
+
 
         .container {
 
@@ -90,7 +106,12 @@ title: Research
 
         }
 
-        /* HEADER */
+
+
+        /* ======================================
+           HEADER
+        ====================================== */
+
 
         .site-header {
 
@@ -100,13 +121,14 @@ title: Research
 
             z-index: 100;
 
-            background: rgba(252, 248, 243, 0.94);
+            background: rgba(16, 73, 69, 0.97);
 
             backdrop-filter: blur(12px);
 
-            border-bottom: 1px solid var(--line-dark);
+            border-bottom: 1px solid rgba(246, 229, 209, 0.16);
 
         }
+
 
         .navbar {
 
@@ -122,15 +144,17 @@ title: Research
 
         }
 
+
         .site-name {
 
             font-weight: 700;
 
             letter-spacing: -0.02em;
 
-            color: var(--petrol-dark);
+            color: var(--light-text);
 
         }
+
 
         .nav-links {
 
@@ -144,28 +168,99 @@ title: Research
 
         }
 
+
         .nav-links a {
 
-            color: var(--petrol-dark);
+            color: var(--light-muted);
 
             transition: color 0.18s ease;
 
         }
 
+
         .nav-links a:hover,
         .nav-links a.active {
 
-            color: var(--petrol);
+            color: #ffffff;
 
         }
 
-        /* HERO */
+
+
+        /* ======================================
+           HERO
+        ====================================== */
+
 
         .research-hero {
 
-            padding: 88px 0 76px;
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 90px 0 78px;
+
+            background: var(--ivory);
 
         }
+
+
+        .research-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 380px;
+
+            height: 330px;
+
+            right: -130px;
+
+            top: -110px;
+
+            background: var(--sage-soft);
+
+            border-radius:
+                42% 58% 48% 52%
+                / 55% 42% 58% 45%;
+
+            transform: rotate(12deg);
+
+        }
+
+
+        .research-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 165px;
+
+            height: 165px;
+
+            right: 160px;
+
+            bottom: -95px;
+
+            border: 1px solid rgba(22, 95, 90, 0.18);
+
+            border-radius: 50%;
+
+        }
+
+
+        .hero-inner {
+
+            position: relative;
+
+            z-index: 1;
+
+            max-width: 800px;
+
+        }
+
 
         .eyebrow {
 
@@ -183,6 +278,7 @@ title: Research
 
         }
 
+
         .research-hero h1 {
 
             font-family:
@@ -190,148 +286,132 @@ title: Research
                 "Times New Roman",
                 serif;
 
-            font-size: clamp(3.5rem, 7vw, 5.8rem);
+            font-size: clamp(3.8rem, 6.5vw, 5.7rem);
 
-            line-height: 0.95;
+            line-height: 0.96;
 
-            letter-spacing: -0.04em;
+            letter-spacing: -0.045em;
 
             font-weight: 500;
 
             color: var(--petrol-dark);
 
-            margin: 0 0 28px;
+            margin: 0 0 27px;
 
         }
 
-        .research-intro {
 
-            max-width: 780px;
+        .hero-intro {
 
-            color: #4c5953;
+            max-width: 720px;
 
-            font-size: 1.15rem;
+            color: #53605a;
+
+            font-size: 1.08rem;
+
+            line-height: 1.7;
 
             margin: 0;
 
         }
 
-        /* PROJECTS */
 
-        .projects-section {
 
-            padding: 68px 0 92px;
+        /* ======================================
+           ARCHIVE
+        ====================================== */
+
+
+        .research-section {
+
+            padding: 28px 0 92px;
 
             border-top: 1px solid var(--line-dark);
 
         }
 
-        .projects-header {
+
+        .research-list {
+
+            border-top: 1px solid var(--line-dark);
+
+        }
+
+
+        .research-item {
 
             display: grid;
 
-            grid-template-columns: 0.5fr 1.5fr;
+            grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
 
-            gap: 70px;
+            gap: 48px;
 
-            margin-bottom: 42px;
+            padding: 42px 0;
 
-        }
+            border-bottom: 1px solid var(--line-dark);
 
-        .projects-label {
-
-            color: var(--petrol);
-
-            text-transform: uppercase;
-
-            letter-spacing: 0.13em;
-
-            font-size: 1rem;
-
-            font-weight: 700;
+            align-items: start;
 
         }
 
-        .projects-description {
 
-            color: #596963;
 
-            max-width: 720px;
+        /* ======================================
+           COVER
+        ====================================== */
 
-            font-size: 0.98rem;
 
-        }
-
-        .projects-grid {
-
-            display: grid;
-
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-
-            gap: 54px 42px;
-
-        }
-
-        .project-card {
-
-            min-width: 0;
-
-        }
-
-        .project-image-link {
+        .research-image-link {
 
             display: block;
 
             overflow: hidden;
 
-            margin-bottom: 20px;
-
-            background: var(--sage-soft);
+            background: #e4eee7;
 
         }
 
-        .project-image {
+
+        .research-image {
 
             width: 100%;
 
-            aspect-ratio: 16 / 9;
+            aspect-ratio: 16 / 10;
 
             object-fit: cover;
 
             transition:
-                transform 0.45s ease,
-                opacity 0.45s ease;
+                transform 0.4s ease,
+                opacity 0.4s ease;
 
         }
 
-        .project-image-link:hover .project-image {
 
-            transform: scale(1.018);
+        .research-image-link:hover .research-image {
+
+            transform: scale(1.02);
 
             opacity: 0.94;
 
         }
 
-        .project-placeholder {
+
+        .research-placeholder {
 
             width: 100%;
 
-            aspect-ratio: 16 / 9;
+            aspect-ratio: 16 / 10;
 
             position: relative;
 
             overflow: hidden;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(136, 183, 155, 0.18),
-                    rgba(246, 229, 209, 0.35)
-                );
+            background: #e4eee7;
 
         }
 
-        .project-placeholder::before {
+
+        .research-placeholder::before {
 
             content: "";
 
@@ -345,150 +425,236 @@ title: Research
 
             border: 1px solid rgba(16, 73, 69, 0.18);
 
-            top: -55px;
+            right: -25px;
 
-            right: -30px;
+            top: -45px;
 
         }
 
-        .project-placeholder::after {
+
+        .research-placeholder::after {
 
             content: "";
 
             position: absolute;
 
-            width: 100px;
+            width: 115px;
 
-            height: 100px;
+            height: 115px;
 
-            background: var(--sage-soft);
+            left: 38px;
 
-            bottom: -40px;
+            bottom: -48px;
 
-            left: 35px;
+            background: rgba(136, 183, 155, 0.40);
 
-            transform: rotate(35deg);
+            transform: rotate(32deg);
 
         }
 
-        .project-status {
+
+        .placeholder-line {
+
+            position: absolute;
+
+            width: 44%;
+
+            height: 1px;
+
+            left: 28%;
+
+            top: 54%;
+
+            background: rgba(16, 73, 69, 0.25);
+
+            transform: rotate(-11deg);
+
+        }
+
+
+        .placeholder-line::before,
+        .placeholder-line::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 11px;
+
+            height: 11px;
+
+            border-radius: 50%;
+
+            background: rgba(16, 73, 69, 0.38);
+
+            top: -5px;
+
+        }
+
+
+        .placeholder-line::before {
+            left: 17%;
+        }
+
+
+        .placeholder-line::after {
+            right: 11%;
+        }
+
+
+
+        /* ======================================
+           PROJECT CONTENT
+        ====================================== */
+
+
+        .research-content {
+
+            padding-top: 2px;
+
+        }
+
+
+        .research-status {
+
+            display: inline-block;
 
             color: var(--petrol);
 
             text-transform: uppercase;
 
-            letter-spacing: 0.11em;
+            letter-spacing: 0.12em;
 
             font-size: 0.72rem;
 
             font-weight: 700;
 
-            margin-bottom: 9px;
+            margin-bottom: 12px;
 
         }
 
-        .project-date {
 
-            color: #718078;
-
-            font-size: 0.82rem;
-
-            margin-bottom: 8px;
-
-        }
-
-        .project-title {
+        .research-title {
 
             font-family:
                 Georgia,
                 "Times New Roman",
                 serif;
 
-            font-size: 1.75rem;
-
-            line-height: 1.18;
+            font-size: clamp(1.75rem, 3vw, 2.35rem);
 
             font-weight: 500;
 
-            margin: 0 0 10px;
+            line-height: 1.15;
+
+            letter-spacing: -0.02em;
+
+            color: var(--ink);
+
+            margin: 0 0 12px;
 
         }
 
-        .project-title a {
+
+        .research-title a {
 
             transition: color 0.18s ease;
 
         }
 
-        .project-title a:hover {
+
+        .research-title a:hover {
 
             color: var(--petrol);
 
         }
 
-        .project-authors {
 
-            color: #718078;
+        .research-authors {
 
-            font-size: 0.87rem;
+            color: #66736d;
 
-            margin-bottom: 9px;
+            font-size: 0.9rem;
 
-        }
-
-        .project-description {
-
-            color: #596963;
-
-            font-size: 0.95rem;
-
-            margin: 0;
-
-            max-width: 500px;
+            margin-bottom: 16px;
 
         }
 
-        .project-link {
+
+        .research-description {
+
+            color: #53605a;
+
+            font-size: 0.98rem;
+
+            line-height: 1.65;
+
+            max-width: 650px;
+
+            margin: 0 0 19px;
+
+        }
+
+
+        .research-tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+        }
+
+
+        .research-tag {
 
             display: inline-block;
 
-            margin-top: 15px;
+            padding: 5px 9px;
 
-            color: var(--petrol);
-
-            font-size: 0.87rem;
-
-            font-weight: 600;
-
-        }
-
-        .project-link:hover {
+            background: rgba(136, 183, 155, 0.14);
 
             color: var(--petrol-dark);
 
+            font-size: 0.72rem;
+
+            line-height: 1;
+
+            border: 1px solid rgba(136, 183, 155, 0.24);
+
         }
 
-        .empty-projects {
+
+        .empty-state {
+
+            padding: 48px 0;
 
             color: var(--muted);
 
-            padding: 30px 0;
-
         }
 
-        /* FOOTER */
+
+
+        /* ======================================
+           FOOTER
+        ====================================== */
+
 
         .site-footer {
 
-            border-top: 1px solid var(--line-dark);
+            background: rgba(16, 73, 69, 0.97);
+
+            border-top: 1px solid rgba(246, 229, 209, 0.16);
 
             padding: 28px 0;
 
-            color: #718078;
+            color: var(--light-muted);
 
             font-size: 0.82rem;
 
         }
+
 
         .footer-inner {
 
@@ -502,28 +668,39 @@ title: Research
 
         }
 
-        @media (max-width: 760px) {
 
-            .projects-header,
-            .projects-grid {
+
+        /* ======================================
+           TABLET
+        ====================================== */
+
+
+        @media (max-width: 800px) {
+
+            .research-item {
 
                 grid-template-columns: 1fr;
 
-            }
-
-            .projects-header {
-
-                gap: 24px;
+                gap: 26px;
 
             }
 
-            .projects-grid {
 
-                gap: 48px;
+            .research-image-link,
+            .research-placeholder {
+
+                max-width: 600px;
 
             }
 
         }
+
+
+
+        /* ======================================
+           MOBILE
+        ====================================== */
+
 
         @media (max-width: 560px) {
 
@@ -539,6 +716,7 @@ title: Research
 
             }
 
+
             .nav-links {
 
                 width: 100%;
@@ -551,23 +729,48 @@ title: Research
 
             }
 
+
             .research-hero {
 
-                padding: 62px 0 54px;
+                padding: 62px 0 52px;
+
+            }
+
+
+            .research-section {
+
+                padding-bottom: 64px;
+
+            }
+
+
+            .research-item {
+
+                padding: 32px 0;
 
             }
 
         }
 
+
     </style>
 
 </head>
 
+
+
 <body>
+
+
+    <!-- ======================================
+         HEADER
+    ====================================== -->
+
 
     <header class="site-header">
 
         <div class="container navbar">
+
 
             <a
                 class="site-name"
@@ -575,6 +778,7 @@ title: Research
             >
                 Francesco Catalfamo
             </a>
+
 
             <nav
                 class="nav-links"
@@ -602,58 +806,66 @@ title: Research
 
             </nav>
 
+
         </div>
 
     </header>
 
+
+
+
     <main>
+
+
+        <!-- ======================================
+             HERO
+        ====================================== -->
+
 
         <section class="research-hero">
 
             <div class="container">
 
-                <div class="eyebrow">
-                    Research
+                <div class="hero-inner">
+
+
+                    <div class="eyebrow">
+                        Research
+                    </div>
+
+
+                    <h1>
+                        Research.
+                    </h1>
+
+
+                    <p class="hero-intro">
+
+                        My research focuses on political behaviour,
+                        party politics and political communication,
+                        with particular interests in coalition politics,
+                        affective polarization and intra-party dynamics.
+
+                    </p>
+
+
                 </div>
-
-                <h1>
-                    Research.
-                </h1>
-
-                <p class="research-intro">
-
-                    My research focuses on political behaviour,
-                    party politics and political communication,
-                    with particular attention to coalition politics,
-                    affective polarization and intra-party dynamics.
-
-                    I mainly use quantitative, comparative and
-                    computational approaches.
-
-                </p>
 
             </div>
 
         </section>
 
-        <section class="projects-section">
+
+
+
+        <!-- ======================================
+             RESEARCH ARCHIVE
+        ====================================== -->
+
+
+        <section class="research-section">
 
             <div class="container">
-
-                <div class="projects-header">
-
-                    <div class="projects-label">
-                        Projects
-                    </div>
-
-                    <div class="projects-description">
-
-                        Selected research projects, working papers
-                        and ongoing empirical work.
-
-                    </div>
-
-                </div>
 
 
                 {% assign projects = site.research | sort: "date" | reverse %}
@@ -661,33 +873,60 @@ title: Research
 
                 {% if projects.size > 0 %}
 
-                    <div class="projects-grid">
+
+                    <div class="research-list">
 
 
                         {% for project in projects %}
 
 
-                            <article class="project-card">
+                            <article class="research-item">
+
+
+                                <!-- COVER -->
 
 
                                 <a
-                                    class="project-image-link"
+                                    class="research-image-link"
                                     href="{{ project.url }}"
                                 >
 
 
                                     {% if project.image %}
 
+
                                         <img
-                                            class="project-image"
+                                            class="research-image"
                                             src="{{ project.image }}"
                                             alt="Cover image for {{ project.title }}"
+                                            onerror="
+                                                this.style.display='none';
+                                                this.nextElementSibling.style.display='block';
+                                            "
                                         >
+
+
+                                        <div
+                                            class="research-placeholder"
+                                            style="display:none;"
+                                        >
+
+                                            <div class="placeholder-line">
+                                            </div>
+
+                                        </div>
+
 
                                     {% else %}
 
-                                        <div class="project-placeholder">
+
+                                        <div class="research-placeholder">
+
+                                            <div class="placeholder-line">
+                                            </div>
+
                                         </div>
+
 
                                     {% endif %}
 
@@ -695,67 +934,86 @@ title: Research
                                 </a>
 
 
-                                {% if project.status %}
-
-                                    <div class="project-status">
-
-                                        {{ project.status }}
-
-                                    </div>
-
-                                {% endif %}
 
 
-                                {% if project.date %}
-
-                                    <div class="project-date">
-
-                                        {{ project.date | date: "%b %Y" }}
-
-                                    </div>
-
-                                {% endif %}
+                                <!-- CONTENT -->
 
 
-                                <h2 class="project-title">
-
-                                    <a href="{{ project.url }}">
-
-                                        {{ project.title }}
-
-                                    </a>
-
-                                </h2>
+                                <div class="research-content">
 
 
-                                {% if project.authors %}
-
-                                    <div class="project-authors">
-
-                                        {{ project.authors }}
-
-                                    </div>
-
-                                {% endif %}
+                                    {% if project.status %}
 
 
-                                {% if project.description %}
-
-                                    <p class="project-description">
-
-                                        {{ project.description }}
-
-                                    </p>
-
-                                {% endif %}
+                                        <div class="research-status">
+                                            {{ project.status }}
+                                        </div>
 
 
-                                <a
-                                    class="project-link"
-                                    href="{{ project.url }}"
-                                >
-                                    Project page →
-                                </a>
+                                    {% endif %}
+
+
+
+
+                                    <h2 class="research-title">
+
+                                        <a href="{{ project.url }}">
+                                            {{ project.title }}
+                                        </a>
+
+                                    </h2>
+
+
+
+
+                                    {% if project.authors %}
+
+
+                                        <div class="research-authors">
+                                            {{ project.authors }}
+                                        </div>
+
+
+                                    {% endif %}
+
+
+
+
+                                    {% if project.description %}
+
+
+                                        <p class="research-description">
+                                            {{ project.description }}
+                                        </p>
+
+
+                                    {% endif %}
+
+
+
+
+                                    {% if project.tags %}
+
+
+                                        <div class="research-tags">
+
+
+                                            {% for tag in project.tags %}
+
+                                                <span class="research-tag">
+                                                    {{ tag }}
+                                                </span>
+
+                                            {% endfor %}
+
+
+                                        </div>
+
+
+                                    {% endif %}
+
+
+                                </div>
 
 
                             </article>
@@ -770,10 +1028,8 @@ title: Research
                 {% else %}
 
 
-                    <div class="empty-projects">
-
+                    <div class="empty-state">
                         No research projects published yet.
-
                     </div>
 
 
@@ -784,23 +1040,36 @@ title: Research
 
         </section>
 
+
     </main>
+
+
+
+
+    <!-- ======================================
+         FOOTER
+    ====================================== -->
+
 
     <footer class="site-footer">
 
         <div class="container footer-inner">
 
+
             <span>
                 © 2026 Francesco Catalfamo
             </span>
+
 
             <span>
                 Political Science
             </span>
 
+
         </div>
 
     </footer>
+
 
 </body>
 
