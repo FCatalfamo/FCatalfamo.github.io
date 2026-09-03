@@ -264,9 +264,9 @@ title: Contact
 
             display: grid;
 
-            grid-template-columns: 0.52fr 1.48fr;
+            grid-template-columns: 0.42fr 1.58fr;
 
-            gap: 72px;
+            gap: 64px;
 
             align-items: start;
 
@@ -338,15 +338,15 @@ title: Contact
                 "Times New Roman",
                 serif;
 
-            font-size: clamp(1.6rem, 3vw, 2.6rem);
+            font-size: clamp(1.15rem, 1.9vw, 1.75rem);
 
-            line-height: 1.2;
+            line-height: 1.25;
 
             color: var(--petrol-dark);
 
             transition: color 0.18s ease;
 
-            overflow-wrap: anywhere;
+            white-space: nowrap;
 
         }
 
@@ -508,6 +508,15 @@ title: Contact
 
             }
 
+
+            .email-link {
+
+                white-space: normal;
+
+                overflow-wrap: anywhere;
+
+            }
+
         }
 
 
@@ -581,6 +590,13 @@ title: Contact
 
             }
 
+
+            .email-link {
+
+                font-size: 1.05rem;
+
+            }
+
         }
 
 
@@ -593,10 +609,7 @@ title: Contact
 <body>
 
 
-    <!-- ======================================
-         HEADER
-    ====================================== -->
-
+    <!-- HEADER -->
 
     <header class="site-header">
 
@@ -648,10 +661,7 @@ title: Contact
     <main>
 
 
-        <!-- ======================================
-             HERO
-        ====================================== -->
-
+        <!-- HERO -->
 
         <section class="contact-hero">
 
@@ -688,10 +698,7 @@ title: Contact
 
 
 
-        <!-- ======================================
-             CONTACT DETAILS
-        ====================================== -->
-
+        <!-- CONTACT DETAILS -->
 
         <section class="contact-main">
 
@@ -707,7 +714,6 @@ title: Contact
 
 
                     <!-- EMAIL -->
-
 
                     <div class="email-block">
 
@@ -731,7 +737,6 @@ title: Contact
 
 
                     <!-- SOCIALS -->
-
 
                     <div class="social-list">
 
@@ -822,10 +827,7 @@ title: Contact
 
 
 
-    <!-- ======================================
-         FOOTER
-    ====================================== -->
-
+    <!-- FOOTER -->
 
     <footer class="site-footer">
 
