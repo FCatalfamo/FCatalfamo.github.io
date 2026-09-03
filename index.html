@@ -42,11 +42,12 @@ title: Francesco Catalfamo
             --ink: #202522;
             --muted: #66716c;
 
-            --light-text: #f7f4ef;
-            --light-muted: #dbe5df;
+            --light-text: #f7f2ec;
+            --light-muted: #e5ddd4;
+            --light-soft: #f0e9e1;
 
             --line-dark: rgba(16, 73, 69, 0.22);
-            --line-light: rgba(246, 229, 209, 0.20);
+            --line-light: rgba(246, 229, 209, 0.28);
 
             --paper: #ffffff;
 
@@ -255,9 +256,38 @@ title: Francesco Catalfamo
 
             line-height: 0.9;
 
-            margin: 0 0 32px;
+            margin: 0 0 30px;
 
             color: var(--petrol-dark);
+
+        }
+
+
+        /*
+           INTERESTS NOW COME BEFORE THE DESCRIPTION
+        */
+
+
+        .research-interests {
+
+            color: var(--petrol);
+
+            font-size: 0.94rem;
+
+            font-weight: 600;
+
+            line-height: 1.8;
+
+            margin-bottom: 24px;
+
+        }
+
+
+        .research-interests span {
+
+            color: var(--sage);
+
+            margin: 0 7px;
 
         }
 
@@ -277,56 +307,56 @@ title: Francesco Catalfamo
         }
 
 
-        .research-interests {
 
-            margin-top: 28px;
+        /* ======================================
+           HERO CV DIVIDER
+        ====================================== */
 
-            color: var(--petrol);
 
-            font-size: 0.94rem;
+        .hero-cv-divider {
 
-            font-weight: 600;
+            display: flex;
 
-            line-height: 1.8;
+            align-items: center;
+
+            gap: 16px;
+
+            width: 100%;
+
+            max-width: 550px;
+
+            margin-top: 32px;
 
         }
 
 
-        .research-interests span {
+        .hero-cv-divider::before,
+        .hero-cv-divider::after {
 
-            color: var(--sage);
+            content: "";
 
-            margin: 0 7px;
+            flex: 1;
 
-        }
+            height: 1px;
 
-
-        .hero-cv {
-
-            margin-top: 18px;
+            background: rgba(16, 73, 69, 0.28);
 
         }
 
 
         .hero-cv-link {
 
-            display: inline-flex;
-
-            align-items: center;
+            flex-shrink: 0;
 
             color: var(--petrol-dark);
 
-            font-size: 0.9rem;
+            font-size: 0.85rem;
 
             font-weight: 600;
 
-            padding-bottom: 2px;
+            letter-spacing: 0.03em;
 
-            border-bottom: 1px solid rgba(16, 73, 69, 0.32);
-
-            transition:
-                color 0.18s ease,
-                border-color 0.18s ease;
+            transition: color 0.18s ease;
 
         }
 
@@ -334,8 +364,6 @@ title: Francesco Catalfamo
         .hero-cv-link:hover {
 
             color: var(--petrol);
-
-            border-color: var(--petrol);
 
         }
 
@@ -431,9 +459,14 @@ title: Francesco Catalfamo
         }
 
 
+        /*
+           NO MORE GREEN ON DARK GREEN
+        */
+
+
         .section-dark .section-label {
 
-            color: var(--sage);
+            color: var(--light-text);
 
         }
 
@@ -716,9 +749,8 @@ title: Francesco Catalfamo
         }
 
 
-        /*
-           FILLER FOR MISSING RESEARCH IMAGES
-        */
+
+        /* MISSING RESEARCH IMAGE FILLER */
 
 
         .research-placeholder {
@@ -802,27 +834,7 @@ title: Francesco Catalfamo
         }
 
 
-        .research-placeholder-shape::before {
-
-            content: "";
-
-            position: absolute;
-
-            width: 12px;
-
-            height: 12px;
-
-            border-radius: 50%;
-
-            background: rgba(16, 73, 69, 0.36);
-
-            left: 20%;
-
-            top: -6px;
-
-        }
-
-
+        .research-placeholder-shape::before,
         .research-placeholder-shape::after {
 
             content: "";
@@ -837,10 +849,18 @@ title: Francesco Catalfamo
 
             background: rgba(16, 73, 69, 0.36);
 
-            right: 12%;
-
             top: -6px;
 
+        }
+
+
+        .research-placeholder-shape::before {
+            left: 20%;
+        }
+
+
+        .research-placeholder-shape::after {
+            right: 12%;
         }
 
 
@@ -993,11 +1013,6 @@ title: Francesco Catalfamo
             opacity: 0.94;
 
         }
-
-
-        /*
-           FILLER FOR MISSING NOTE IMAGES
-        */
 
 
         .note-thumb-placeholder {
@@ -1168,24 +1183,16 @@ title: Francesco Catalfamo
 
             font-weight: 500;
 
-            margin: 0 0 12px;
-
-            color: #f6eee4;
-
-        }
-
-
-        .cv-description {
-
-            color: var(--light-muted);
-
-            font-size: 0.94rem;
-
-            max-width: 410px;
-
             margin: 0 0 18px;
 
+            color: var(--light-text);
+
         }
+
+
+        /*
+           SIMPLE CV LINK — NO DESCRIPTION
+        */
 
 
         .cv-link {
@@ -1194,15 +1201,15 @@ title: Francesco Catalfamo
 
             align-items: center;
 
-            color: var(--sage);
+            color: var(--light-soft);
 
-            font-size: 0.93rem;
+            font-size: 0.95rem;
 
             font-weight: 600;
 
-            padding-bottom: 2px;
+            padding-bottom: 3px;
 
-            border-bottom: 1px solid rgba(136, 183, 155, 0.55);
+            border-bottom: 1px solid rgba(247, 242, 236, 0.45);
 
             transition:
                 color 0.18s ease,
@@ -1229,7 +1236,7 @@ title: Francesco Catalfamo
 
         .contact-email a {
 
-            color: var(--light-muted);
+            color: var(--light-soft);
 
             transition: color 0.18s ease;
 
@@ -1238,7 +1245,7 @@ title: Francesco Catalfamo
 
         .contact-email a:hover {
 
-            color: var(--sage);
+            color: #ffffff;
 
         }
 
@@ -1256,9 +1263,15 @@ title: Francesco Catalfamo
         }
 
 
+        /*
+           SOCIAL LINKS ARE NOW LIGHT,
+           NOT GREEN ON GREEN
+        */
+
+
         .social-link {
 
-            color: var(--sage);
+            color: var(--light-soft);
 
             font-weight: 600;
 
@@ -1475,6 +1488,15 @@ title: Francesco Catalfamo
             }
 
 
+            .hero-cv-divider {
+
+                max-width: 100%;
+
+                gap: 12px;
+
+            }
+
+
             .timeline-item {
 
                 grid-template-columns: 50px 1fr;
@@ -1631,17 +1653,8 @@ title: Francesco Catalfamo
                     </h1>
 
 
-                    <p class="hero-subtitle">
 
-                        I am a political scientist interested in
-                        political behaviour, party politics and
-                        political communication.
-
-                        My research focuses on how political cooperation,
-                        competition and elite behaviour shape citizens’
-                        attitudes toward parties and politics.
-
-                    </p>
+                    <!-- INTERESTS -->
 
 
                     <div class="research-interests">
@@ -1663,7 +1676,28 @@ title: Francesco Catalfamo
                     </div>
 
 
-                    <div class="hero-cv">
+
+                    <!-- DESCRIPTION -->
+
+
+                    <p class="hero-subtitle">
+
+                        I am a political scientist interested in
+                        political behaviour, party politics and
+                        political communication.
+
+                        My research focuses on how political cooperation,
+                        competition and elite behaviour shape citizens’
+                        attitudes toward parties and politics.
+
+                    </p>
+
+
+
+                    <!-- CV BETWEEN TWO LINES -->
+
+
+                    <div class="hero-cv-divider">
 
                         <a
                             class="hero-cv-link"
@@ -2314,14 +2348,6 @@ title: Francesco Catalfamo
                     <h2>
                         Curriculum Vitae
                     </h2>
-
-
-                    <p class="cv-description">
-
-                        A complete overview of my academic background,
-                        research experience and professional activities.
-
-                    </p>
 
 
                     <a
