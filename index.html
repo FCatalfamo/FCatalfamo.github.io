@@ -36,6 +36,8 @@ title: Francesco Catalfamo
             --sage: #88b79b;
             --sage-soft: rgba(136, 183, 155, 0.22);
             --sage-soft-strong: rgba(136, 183, 155, 0.30);
+            --sage-section: rgba(136, 183, 155, 0.13);
+            --sage-card: rgba(136, 183, 155, 0.14);
 
             --dark-section: rgba(16, 73, 69, 0.92);
 
@@ -199,6 +201,8 @@ title: Francesco Catalfamo
 
             background: var(--ivory);
 
+            overflow: hidden;
+
         }
 
 
@@ -220,6 +224,10 @@ title: Francesco Catalfamo
         .hero-content {
 
             max-width: 790px;
+
+            position: relative;
+
+            z-index: 2;
 
         }
 
@@ -304,7 +312,7 @@ title: Francesco Catalfamo
 
 
         /* ======================================
-           HERO CV DIVIDER
+           HERO CV
         ====================================== */
 
 
@@ -332,9 +340,9 @@ title: Francesco Catalfamo
 
             flex: 1;
 
-            height: 1px;
+            height: 2px;
 
-            background: rgba(16, 73, 69, 0.28);
+            background: rgba(136, 183, 155, 0.72);
 
         }
 
@@ -365,7 +373,7 @@ title: Francesco Catalfamo
 
 
         /* ======================================
-           PHOTO
+           PHOTO + SAGE SHAPE
         ====================================== */
 
 
@@ -374,6 +382,65 @@ title: Francesco Catalfamo
             display: flex;
 
             justify-content: flex-end;
+
+            position: relative;
+
+            padding: 28px 14px 24px 30px;
+
+        }
+
+
+        /*
+           LARGE ORGANIC SAGE SHAPE
+        */
+
+
+        .portrait::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 330px;
+
+            height: 390px;
+
+            right: -35px;
+
+            top: -18px;
+
+            background: rgba(136, 183, 155, 0.28);
+
+            border-radius:
+                46% 54% 58% 42%
+                / 38% 44% 56% 62%;
+
+            transform: rotate(7deg);
+
+            z-index: 0;
+
+        }
+
+
+        .portrait::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 150px;
+
+            height: 150px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(22, 95, 90, 0.18);
+
+            right: -55px;
+
+            bottom: -32px;
+
+            z-index: 0;
 
         }
 
@@ -391,6 +458,10 @@ title: Francesco Catalfamo
             object-position: center;
 
             border: 1px solid rgba(16, 73, 69, 0.16);
+
+            position: relative;
+
+            z-index: 1;
 
         }
 
@@ -413,6 +484,15 @@ title: Francesco Catalfamo
             background: var(--ivory);
 
             border-top: 1px solid var(--line-dark);
+
+        }
+
+
+        .section-sage {
+
+            background: var(--sage-section);
+
+            border-top: 1px solid rgba(16, 73, 69, 0.18);
 
         }
 
@@ -510,7 +590,7 @@ title: Francesco Catalfamo
 
             grid-template-columns: 110px 72px 1fr;
 
-            gap: 10px;
+            gap: 14px;
 
             align-items: center;
 
@@ -526,6 +606,12 @@ title: Francesco Catalfamo
         }
 
 
+
+        /*
+           ORGANIC HALO BEHIND LOGOS
+        */
+
+
         .education-logo-wrapper {
 
             width: 72px;
@@ -538,6 +624,31 @@ title: Francesco Catalfamo
 
             justify-content: center;
 
+            position: relative;
+
+        }
+
+
+        .education-logo-wrapper::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 62px;
+
+            height: 54px;
+
+            background: rgba(136, 183, 155, 0.18);
+
+            border-radius:
+                50% 45% 52% 48%
+                / 43% 54% 46% 57%;
+
+            transform: rotate(-7deg);
+
+            z-index: 0;
+
         }
 
 
@@ -548,6 +659,10 @@ title: Francesco Catalfamo
             height: auto;
 
             object-fit: contain;
+
+            position: relative;
+
+            z-index: 1;
 
         }
 
@@ -690,14 +805,25 @@ title: Francesco Catalfamo
 
             grid-template-columns: repeat(2, minmax(0, 1fr));
 
-            gap: 42px;
+            gap: 28px;
 
         }
+
+
+        /*
+           MORE VISIBLE SAGE RESEARCH CARDS
+        */
 
 
         .research-card {
 
             min-width: 0;
+
+            background: var(--sage-card);
+
+            padding: 18px 18px 24px;
+
+            border: 1px solid rgba(136, 183, 155, 0.24);
 
         }
 
@@ -752,8 +878,8 @@ title: Francesco Catalfamo
             background:
                 linear-gradient(
                     135deg,
-                    rgba(136, 183, 155, 0.22),
-                    rgba(246, 229, 209, 0.40)
+                    rgba(136, 183, 155, 0.25),
+                    rgba(246, 229, 209, 0.44)
                 );
 
         }
@@ -790,7 +916,7 @@ title: Francesco Catalfamo
 
             height: 125px;
 
-            background: rgba(136, 183, 155, 0.28);
+            background: rgba(136, 183, 155, 0.32);
 
             bottom: -55px;
 
@@ -931,7 +1057,7 @@ title: Francesco Catalfamo
 
         .note-list {
 
-            border-top: 1px solid var(--line-dark);
+            border-top: 1px solid rgba(16, 73, 69, 0.20);
 
         }
 
@@ -948,7 +1074,7 @@ title: Francesco Catalfamo
 
             padding: 24px 0;
 
-            border-bottom: 1px solid var(--line-dark);
+            border-bottom: 1px solid rgba(16, 73, 69, 0.18);
 
         }
 
@@ -1010,7 +1136,7 @@ title: Francesco Catalfamo
             background:
                 linear-gradient(
                     135deg,
-                    rgba(136, 183, 155, 0.18),
+                    rgba(136, 183, 155, 0.24),
                     rgba(246, 229, 209, 0.35)
                 );
 
@@ -1052,7 +1178,7 @@ title: Francesco Catalfamo
 
             height: 45px;
 
-            background: var(--sage-soft);
+            background: rgba(136, 183, 155, 0.34);
 
             bottom: -11px;
 
@@ -1352,7 +1478,7 @@ title: Francesco Catalfamo
 
             .research-cards {
 
-                gap: 42px;
+                gap: 28px;
 
             }
 
@@ -1360,6 +1486,21 @@ title: Francesco Catalfamo
             .portrait {
 
                 justify-content: flex-start;
+
+                max-width: 340px;
+
+            }
+
+
+            .portrait::before {
+
+                width: 290px;
+
+                height: 340px;
+
+                left: 10px;
+
+                right: auto;
 
             }
 
@@ -1385,6 +1526,15 @@ title: Francesco Catalfamo
                 width: 58px;
 
                 height: 56px;
+
+            }
+
+
+            .education-logo-wrapper::before {
+
+                width: 52px;
+
+                height: 48px;
 
             }
 
@@ -1499,6 +1649,15 @@ title: Francesco Catalfamo
             }
 
 
+            .education-logo-wrapper::before {
+
+                width: 46px;
+
+                height: 43px;
+
+            }
+
+
             img[alt="NASP logo"] {
 
                 max-width: 58px;
@@ -1552,7 +1711,10 @@ title: Francesco Catalfamo
 <body>
 
 
-    <!-- HEADER -->
+    <!-- ======================================
+         HEADER
+    ====================================== -->
+
 
     <header class="site-header">
 
@@ -1594,10 +1756,14 @@ title: Francesco Catalfamo
 
 
 
+
     <main>
 
 
-        <!-- HERO -->
+        <!-- ======================================
+             HERO
+        ====================================== -->
+
 
         <section class="hero">
 
@@ -1605,6 +1771,7 @@ title: Francesco Catalfamo
 
 
                 <div class="hero-content">
+
 
                     <div class="eyebrow">
                         Political Scientist
@@ -1657,12 +1824,15 @@ title: Francesco Catalfamo
                             target="_blank"
                             rel="noopener"
                         >
-                            Curriculum Vitae
+                            Curriculum Vitae ↗
                         </a>
 
                     </div>
 
+
                 </div>
+
+
 
 
                 <div class="portrait">
@@ -1682,17 +1852,24 @@ title: Francesco Catalfamo
 
 
 
-        <!-- PROFILE -->
+
+        <!-- ======================================
+             PROFILE
+        ====================================== -->
+
 
         <section class="section section-dark">
 
             <div class="container section-grid">
 
+
                 <div class="section-label">
                     Profile
                 </div>
 
+
                 <div class="section-copy">
+
 
                     <p>
 
@@ -1702,6 +1879,7 @@ title: Francesco Catalfamo
                         and the University of Pavia.
 
                     </p>
+
 
                     <p>
 
@@ -1714,7 +1892,9 @@ title: Francesco Catalfamo
 
                     </p>
 
+
                 </div>
+
 
             </div>
 
@@ -1722,11 +1902,16 @@ title: Francesco Catalfamo
 
 
 
-        <!-- EDUCATION -->
+
+        <!-- ======================================
+             EDUCATION
+        ====================================== -->
+
 
         <section class="section section-ivory">
 
             <div class="container section-grid">
+
 
                 <div class="section-label">
                     Education
@@ -1771,6 +1956,8 @@ title: Francesco Catalfamo
                     </div>
 
 
+
+
                     <div class="timeline-item">
 
                         <div class="timeline-year">
@@ -1800,6 +1987,8 @@ title: Francesco Catalfamo
                         </div>
 
                     </div>
+
+
 
 
                     <div class="timeline-item">
@@ -1840,6 +2029,8 @@ title: Francesco Catalfamo
                     </div>
 
 
+
+
                     <div class="timeline-item">
 
                         <div class="timeline-year">
@@ -1873,17 +2064,23 @@ title: Francesco Catalfamo
 
                 </div>
 
+
             </div>
 
         </section>
 
 
 
-        <!-- CURRENT WORK -->
+
+        <!-- ======================================
+             CURRENT WORK
+        ====================================== -->
+
 
         <section class="section section-ivory">
 
             <div class="container">
+
 
                 <div class="section-heading-row">
 
@@ -1971,7 +2168,9 @@ title: Francesco Catalfamo
                                 {% if project.status %}
 
                                     <div class="research-meta">
+
                                         {{ project.status }}
+
                                     </div>
 
                                 {% endif %}
@@ -1980,7 +2179,9 @@ title: Francesco Catalfamo
                                 <h3>
 
                                     <a href="{{ project.url }}">
+
                                         {{ project.title }}
+
                                     </a>
 
                                 </h3>
@@ -1989,7 +2190,9 @@ title: Francesco Catalfamo
                                 {% if project.description %}
 
                                     <p>
+
                                         {{ project.description }}
+
                                     </p>
 
                                 {% endif %}
@@ -2023,11 +2226,16 @@ title: Francesco Catalfamo
 
 
 
-        <!-- NOTES -->
 
-        <section class="section section-ivory">
+        <!-- ======================================
+             NOTES
+        ====================================== -->
+
+
+        <section class="section section-sage">
 
             <div class="container">
+
 
                 <div class="section-heading-row">
 
@@ -2122,7 +2330,9 @@ title: Francesco Catalfamo
                                     <div class="note-title">
 
                                         <a href="{{ note.url }}">
+
                                             {{ note.title }}
+
                                         </a>
 
                                     </div>
@@ -2131,7 +2341,9 @@ title: Francesco Catalfamo
                                     {% if note.description %}
 
                                         <div class="note-excerpt">
+
                                             {{ note.description }}
+
                                         </div>
 
                                     {% endif %}
@@ -2161,17 +2373,23 @@ title: Francesco Catalfamo
 
                 </div>
 
+
             </div>
 
         </section>
 
 
 
-        <!-- CV + CONTACT -->
+
+        <!-- ======================================
+             CV + CONTACT
+        ====================================== -->
+
 
         <section class="section cv-contact-section">
 
             <div class="container cv-contact">
+
 
                 <div>
 
@@ -2196,6 +2414,7 @@ title: Francesco Catalfamo
                     <h2>
                         Contact
                     </h2>
+
 
                     <p class="contact-email">
 
@@ -2243,7 +2462,9 @@ title: Francesco Catalfamo
 
                     </div>
 
+
                 </div>
+
 
             </div>
 
@@ -2254,7 +2475,11 @@ title: Francesco Catalfamo
 
 
 
-    <!-- FOOTER -->
+
+    <!-- ======================================
+         FOOTER
+    ====================================== -->
+
 
     <footer class="site-footer">
 
