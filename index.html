@@ -30,13 +30,14 @@ title: Francesco Catalfamo
             --petrol: #165f5a;
             --petrol-dark: #104945;
 
-            --ivory: rgba(246, 229, 209, 0.42);
-            --ivory-strong: rgba(246, 229, 209, 0.58);
+            --ivory: #fbf7f1;
+            --ivory-strong: #f6eee4;
 
             --sage: #88b79b;
             --sage-soft: rgba(136, 183, 155, 0.22);
             --sage-soft-strong: rgba(136, 183, 155, 0.30);
-            --sage-section: rgba(136, 183, 155, 0.13);
+
+            --sage-section: #edf4ef;
             --sage-card: rgba(136, 183, 155, 0.14);
 
             --dark-section: rgba(16, 73, 69, 0.92);
@@ -390,11 +391,6 @@ title: Francesco Catalfamo
         }
 
 
-        /*
-           LARGE ORGANIC SAGE SHAPE
-        */
-
-
         .portrait::before {
 
             content: "";
@@ -606,12 +602,6 @@ title: Francesco Catalfamo
         }
 
 
-
-        /*
-           ORGANIC HALO BEHIND LOGOS
-        */
-
-
         .education-logo-wrapper {
 
             width: 72px;
@@ -624,31 +614,6 @@ title: Francesco Catalfamo
 
             justify-content: center;
 
-            position: relative;
-
-        }
-
-
-        .education-logo-wrapper::before {
-
-            content: "";
-
-            position: absolute;
-
-            width: 62px;
-
-            height: 54px;
-
-            background: rgba(136, 183, 155, 0.18);
-
-            border-radius:
-                50% 45% 52% 48%
-                / 43% 54% 46% 57%;
-
-            transform: rotate(-7deg);
-
-            z-index: 0;
-
         }
 
 
@@ -659,10 +624,6 @@ title: Francesco Catalfamo
             height: auto;
 
             object-fit: contain;
-
-            position: relative;
-
-            z-index: 1;
 
         }
 
@@ -810,11 +771,6 @@ title: Francesco Catalfamo
         }
 
 
-        /*
-           MORE VISIBLE SAGE RESEARCH CARDS
-        */
-
-
         .research-card {
 
             min-width: 0;
@@ -879,7 +835,7 @@ title: Francesco Catalfamo
                 linear-gradient(
                     135deg,
                     rgba(136, 183, 155, 0.25),
-                    rgba(246, 229, 209, 0.44)
+                    var(--ivory-strong)
                 );
 
         }
@@ -1098,7 +1054,7 @@ title: Francesco Catalfamo
 
             overflow: hidden;
 
-            background: var(--sage-soft);
+            background: #e2eee6;
 
         }
 
@@ -1133,12 +1089,7 @@ title: Francesco Catalfamo
 
             aspect-ratio: 4 / 3;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(136, 183, 155, 0.24),
-                    rgba(246, 229, 209, 0.35)
-                );
+            background: #e2eee6;
 
             position: relative;
 
@@ -1178,7 +1129,7 @@ title: Francesco Catalfamo
 
             height: 45px;
 
-            background: rgba(136, 183, 155, 0.34);
+            background: #c8dfcf;
 
             bottom: -11px;
 
@@ -1530,15 +1481,6 @@ title: Francesco Catalfamo
             }
 
 
-            .education-logo-wrapper::before {
-
-                width: 52px;
-
-                height: 48px;
-
-            }
-
-
             img[alt="NASP logo"] {
 
                 max-width: 68px;
@@ -1645,15 +1587,6 @@ title: Francesco Catalfamo
                 width: 50px;
 
                 height: 50px;
-
-            }
-
-
-            .education-logo-wrapper::before {
-
-                width: 46px;
-
-                height: 43px;
 
             }
 
@@ -1824,7 +1757,7 @@ title: Francesco Catalfamo
                             target="_blank"
                             rel="noopener"
                         >
-                            Curriculum Vitae ↗
+                            Curriculum Vitae
                         </a>
 
                     </div>
@@ -1923,9 +1856,11 @@ title: Francesco Catalfamo
 
                     <div class="timeline-item">
 
+
                         <div class="timeline-year">
                             2026–
                         </div>
+
 
                         <div class="education-logo-wrapper">
 
@@ -1937,21 +1872,27 @@ title: Francesco Catalfamo
 
                         </div>
 
+
                         <div class="timeline-content">
+
 
                             <div class="timeline-title">
                                 PhD in Political Science
                             </div>
 
+
                             <div class="timeline-meta">
                                 Network for the Advancement of Social and Political Studies (NASP)
                             </div>
+
 
                             <div class="timeline-detail">
                                 University of Milan &amp; University of Pavia
                             </div>
 
+
                         </div>
+
 
                     </div>
 
@@ -1960,9 +1901,11 @@ title: Francesco Catalfamo
 
                     <div class="timeline-item">
 
+
                         <div class="timeline-year">
                             2024–2026
                         </div>
+
 
                         <div class="education-logo-wrapper">
 
@@ -1974,17 +1917,22 @@ title: Francesco Catalfamo
 
                         </div>
 
+
                         <div class="timeline-content">
+
 
                             <div class="timeline-title">
                                 M.A. in Political Science
                             </div>
 
+
                             <div class="timeline-meta">
                                 University of Mannheim
                             </div>
 
+
                         </div>
+
 
                     </div>
 
@@ -1993,9 +1941,11 @@ title: Francesco Catalfamo
 
                     <div class="timeline-item">
 
+
                         <div class="timeline-year">
                             2021–2023
                         </div>
+
 
                         <div class="education-logo-wrapper">
 
@@ -2007,15 +1957,19 @@ title: Francesco Catalfamo
 
                         </div>
 
+
                         <div class="timeline-content">
+
 
                             <div class="timeline-title">
                                 M.A. in Public and Corporate Communication
                             </div>
 
+
                             <div class="timeline-meta">
                                 University of Milan
                             </div>
+
 
                             <div class="timeline-detail">
 
@@ -2024,7 +1978,9 @@ title: Francesco Catalfamo
 
                             </div>
 
+
                         </div>
+
 
                     </div>
 
@@ -2033,9 +1989,11 @@ title: Francesco Catalfamo
 
                     <div class="timeline-item">
 
+
                         <div class="timeline-year">
                             2018–2021
                         </div>
+
 
                         <div class="education-logo-wrapper">
 
@@ -2047,17 +2005,22 @@ title: Francesco Catalfamo
 
                         </div>
 
+
                         <div class="timeline-content">
+
 
                             <div class="timeline-title">
                                 B.A. in Political Science
                             </div>
 
+
                             <div class="timeline-meta">
                                 University of Milan
                             </div>
 
+
                         </div>
+
 
                     </div>
 
@@ -2084,9 +2047,11 @@ title: Francesco Catalfamo
 
                 <div class="section-heading-row">
 
+
                     <h2>
                         Current work
                     </h2>
+
 
                     <a
                         class="text-link"
@@ -2094,6 +2059,7 @@ title: Francesco Catalfamo
                     >
                         All research →
                     </a>
+
 
                 </div>
 
@@ -2167,11 +2133,13 @@ title: Francesco Catalfamo
 
                                 {% if project.status %}
 
+
                                     <div class="research-meta">
 
                                         {{ project.status }}
 
                                     </div>
+
 
                                 {% endif %}
 
@@ -2189,11 +2157,13 @@ title: Francesco Catalfamo
 
                                 {% if project.description %}
 
+
                                     <p>
 
                                         {{ project.description }}
 
                                     </p>
+
 
                                 {% endif %}
 
@@ -2239,9 +2209,11 @@ title: Francesco Catalfamo
 
                 <div class="section-heading-row">
 
+
                     <h2>
                         Analysis &amp; commentary
                     </h2>
+
 
                     <a
                         class="text-link"
@@ -2249,6 +2221,7 @@ title: Francesco Catalfamo
                     >
                         All notes →
                     </a>
+
 
                 </div>
 
@@ -2320,14 +2293,19 @@ title: Francesco Catalfamo
 
                                     {% if note.category %}
 
+
                                         <div class="note-category">
+
                                             {{ note.category }}
+
                                         </div>
+
 
                                     {% endif %}
 
 
                                     <div class="note-title">
+
 
                                         <a href="{{ note.url }}">
 
@@ -2335,16 +2313,19 @@ title: Francesco Catalfamo
 
                                         </a>
 
+
                                     </div>
 
 
                                     {% if note.description %}
+
 
                                         <div class="note-excerpt">
 
                                             {{ note.description }}
 
                                         </div>
+
 
                                     {% endif %}
 
@@ -2393,9 +2374,11 @@ title: Francesco Catalfamo
 
                 <div>
 
+
                     <h2>
                         Curriculum Vitae
                     </h2>
+
 
                     <a
                         class="cv-link"
@@ -2406,10 +2389,14 @@ title: Francesco Catalfamo
                         View Curriculum Vitae ↗
                     </a>
 
+
                 </div>
 
 
+
+
                 <div>
+
 
                     <h2>
                         Contact
@@ -2485,13 +2472,16 @@ title: Francesco Catalfamo
 
         <div class="container footer-inner">
 
+
             <span>
                 © 2026 Francesco Catalfamo
             </span>
 
+
             <span>
                 Political Science
             </span>
+
 
         </div>
 
