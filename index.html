@@ -28,7 +28,11 @@ title: Francesco Catalfamo
         :root {
 
             --petrol: #165f5a;
-            --petrol-dark: #5f827c;
+            --petrol-dark: #104945;
+
+            /* nuovo verde per le sezioni */
+            --petrol-panel: #4f756f;
+
             --petrol-soft: #eef5f2;
 
             --accent: #c46a4a;
@@ -41,7 +45,8 @@ title: Francesco Catalfamo
 
             --white: #ffffff;
 
-            --warm-line: rgba(16, 73, 69, 0.48);
+            /* separatori più visibili */
+            --warm-line: rgba(16, 73, 69, 0.55);
 
             --max-width: 1120px;
 
@@ -124,7 +129,7 @@ title: Francesco Catalfamo
 
             backdrop-filter: blur(12px);
 
-            border-bottom: 1px solid rgba(16, 73, 69, 0.32);
+            border-bottom: 1px solid rgba(16, 73, 69, 0.34);
 
         }
 
@@ -350,7 +355,7 @@ title: Francesco Catalfamo
 
         .dark-section {
 
-            background: rgba(16, 73, 69, 0.82);
+            background: var(--petrol-panel);
 
             color: var(--warm);
 
@@ -387,7 +392,7 @@ title: Francesco Catalfamo
 
         .dark-section .section-label {
 
-            color: #e4b19c;
+            color: #f0c2ad;
 
         }
 
@@ -405,7 +410,7 @@ title: Francesco Catalfamo
 
         .dark-section .section-copy {
 
-            color: rgba(247, 244, 239, 0.90);
+            color: rgba(247, 244, 239, 0.93);
 
         }
 
@@ -812,7 +817,7 @@ title: Francesco Catalfamo
 
         .note-list {
 
-            border-top: 1px solid rgba(16, 73, 69, 0.28);
+            border-top: 1px solid rgba(16, 73, 69, 0.34);
 
         }
 
@@ -829,7 +834,7 @@ title: Francesco Catalfamo
 
             padding: 24px 0;
 
-            border-bottom: 1px solid rgba(16, 73, 69, 0.28);
+            border-bottom: 1px solid rgba(16, 73, 69, 0.34);
 
         }
 
@@ -1049,7 +1054,7 @@ title: Francesco Catalfamo
 
             gap: 6px;
 
-            color: #e4b19c;
+            color: #f0c2ad;
 
             font-size: 1rem;
 
@@ -1057,7 +1062,7 @@ title: Francesco Catalfamo
 
             padding-bottom: 3px;
 
-            border-bottom: 1px solid rgba(228, 177, 156, 0.72);
+            border-bottom: 1px solid rgba(240, 194, 173, 0.72);
 
             transition: 0.18s ease;
 
@@ -1088,7 +1093,7 @@ title: Francesco Catalfamo
 
         .dark-section .text-link {
 
-            color: #e4b19c;
+            color: #f0c2ad;
 
         }
 
@@ -1104,7 +1109,7 @@ title: Francesco Catalfamo
 
             margin-top: 14px;
 
-            color: rgba(247, 244, 239, 0.90);
+            color: rgba(247, 244, 239, 0.93);
 
         }
 
@@ -1131,13 +1136,13 @@ title: Francesco Catalfamo
 
         .site-footer {
 
-            background: rgba(16, 73, 69, 0.82);
+            background: var(--petrol-panel);
 
-            border-top: 1px solid rgba(247, 244, 239, 0.20);
+            border-top: 1px solid rgba(247, 244, 239, 0.24);
 
             padding: 28px 0;
 
-            color: rgba(247, 244, 239, 0.64);
+            color: rgba(247, 244, 239, 0.68);
 
             font-size: 0.82rem;
 
@@ -1410,6 +1415,9 @@ title: Francesco Catalfamo
 <body>
 
 
+    <!-- HEADER -->
+
+
     <header class="site-header">
 
         <div class="container navbar">
@@ -1540,7 +1548,6 @@ title: Francesco Catalfamo
 
                 <div class="section-copy">
 
-
                     <p>
 
                         I am a PhD researcher in Political Science at the
@@ -1561,7 +1568,6 @@ title: Francesco Catalfamo
                         I mainly use quantitative and comparative methods.
 
                     </p>
-
 
                 </div>
 
