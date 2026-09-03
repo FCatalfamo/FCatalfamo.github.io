@@ -22,12 +22,14 @@ title: About
 
     <title>About — Francesco Catalfamo</title>
 
+
     <link
         rel="stylesheet"
         href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
         crossorigin=""
     >
+
 
     <style>
 
@@ -384,20 +386,18 @@ title: About
         }
 
 
-        .outside-section .section-label {
+        .outside-heading {
 
-            color: var(--light-text);
+            margin-bottom: 30px;
 
         }
 
 
-        .outside-intro {
+        .outside-section .section-label {
 
-            color: var(--light-muted);
+            color: var(--light-text);
 
-            font-size: 0.94rem;
-
-            margin: 0 0 28px;
+            padding-top: 0;
 
         }
 
@@ -408,7 +408,7 @@ title: About
 
             grid-template-columns: repeat(3, minmax(0, 1fr));
 
-            gap: 22px;
+            gap: 28px;
 
         }
 
@@ -433,7 +433,7 @@ title: About
 
             background: rgba(255, 255, 255, 0.04);
 
-            margin-bottom: 16px;
+            margin-bottom: 18px;
 
             border: 1px solid rgba(246, 229, 209, 0.10);
 
@@ -443,7 +443,9 @@ title: About
         .outside-image {
 
             width: 100%;
+
             height: 100%;
+
             object-fit: cover;
 
             transition:
@@ -456,16 +458,26 @@ title: About
         .outside-card:hover .outside-image {
 
             transform: scale(1.02);
+
             opacity: 0.94;
 
         }
 
 
+
+        /* ======================================
+           IMAGE PLACEHOLDER
+        ====================================== */
+
+
         .outside-placeholder {
 
             width: 100%;
+
             height: 100%;
+
             position: relative;
+
             overflow: hidden;
 
             background:
@@ -483,13 +495,17 @@ title: About
             content: "";
 
             position: absolute;
-            width: 120px;
-            height: 120px;
+
+            width: 140px;
+
+            height: 140px;
 
             border: 1px solid rgba(247, 242, 236, 0.22);
+
             border-radius: 50%;
 
-            top: -32px;
+            top: -35px;
+
             right: -10px;
 
         }
@@ -500,16 +516,26 @@ title: About
             content: "";
 
             position: absolute;
-            width: 75px;
-            height: 75px;
+
+            width: 85px;
+
+            height: 85px;
 
             background: rgba(246, 229, 209, 0.08);
+
             transform: rotate(34deg);
 
-            left: 28px;
-            bottom: -28px;
+            left: 32px;
+
+            bottom: -30px;
 
         }
+
+
+
+        /* ======================================
+           OUTSIDE TITLES
+        ====================================== */
 
 
         .outside-title {
@@ -521,42 +547,11 @@ title: About
 
             color: var(--light-text);
 
-            font-size: 1.35rem;
+            font-size: 1.55rem;
 
-            line-height: 1.25;
+            line-height: 1.2;
 
             margin: 0;
-
-        }
-
-
-        .outside-link {
-
-            display: inline-block;
-
-            margin-top: 9px;
-
-            color: var(--light-muted);
-
-            font-size: 0.85rem;
-
-            font-weight: 600;
-
-            padding-bottom: 2px;
-
-            border-bottom: 1px solid rgba(246, 229, 209, 0.30);
-
-            transition:
-                color 0.18s ease,
-                border-color 0.18s ease;
-
-        }
-
-
-        .outside-link:hover {
-
-            color: #ffffff;
-            border-color: #ffffff;
 
         }
 
@@ -570,51 +565,59 @@ title: About
         #travel-map {
 
             width: 100%;
+
             height: 100%;
 
-            min-height: 280px;
+            min-height: 300px;
+
             background: rgba(255, 255, 255, 0.03);
 
         }
 
 
-        .map-status {
-
-            margin-top: 10px;
-            color: var(--light-muted);
-            font-size: 0.82rem;
-        }
-
-
         .leaflet-container {
-            font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+
+            font-family:
+                Inter,
+                ui-sans-serif,
+                system-ui,
+                sans-serif;
+
         }
 
 
         .leaflet-popup-content-wrapper,
         .leaflet-popup-tip {
+
             background: #fcfaf7;
-            color: #202522;
+
+            color: var(--ink);
+
         }
 
 
         .leaflet-popup-content {
-            margin: 12px 14px;
-            line-height: 1.45;
+
+            margin: 11px 14px;
+
+            line-height: 1.4;
+
         }
 
 
         .popup-title {
-            font-weight: 700;
-            margin-bottom: 6px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 1rem;
+
             color: var(--petrol-dark);
-        }
 
-
-        .popup-link {
-            color: var(--petrol);
-            font-size: 0.86rem;
             font-weight: 600;
+
         }
 
 
@@ -634,7 +637,9 @@ title: About
         .more-links {
 
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 14px 28px;
 
         }
@@ -645,9 +650,11 @@ title: About
             color: var(--petrol);
 
             font-weight: 600;
+
             font-size: 0.92rem;
 
             padding-bottom: 2px;
+
             border-bottom: 1px solid rgba(22, 95, 90, 0.30);
 
             transition:
@@ -660,6 +667,7 @@ title: About
         .more-link:hover {
 
             color: var(--petrol-dark);
+
             border-color: var(--petrol-dark);
 
         }
@@ -680,6 +688,7 @@ title: About
             padding: 28px 0;
 
             color: var(--light-muted);
+
             font-size: 0.82rem;
 
         }
@@ -688,8 +697,11 @@ title: About
         .footer-inner {
 
             display: flex;
+
             justify-content: space-between;
+
             gap: 20px;
+
             flex-wrap: wrap;
 
         }
@@ -706,24 +718,31 @@ title: About
             .section-grid {
 
                 grid-template-columns: 1fr;
+
                 gap: 24px;
 
             }
 
 
             .section-label {
+
                 padding-top: 0;
+
             }
 
 
             .outside-grid {
+
                 grid-template-columns: 1fr;
+
             }
 
 
             .outside-image-wrapper,
             .travel-map-wrapper {
-                max-width: 520px;
+
+                max-width: 560px;
+
             }
 
         }
@@ -740,9 +759,11 @@ title: About
             .navbar {
 
                 flex-direction: column;
+
                 align-items: flex-start;
 
                 padding: 18px 0;
+
                 gap: 10px;
 
             }
@@ -751,25 +772,34 @@ title: About
             .nav-links {
 
                 width: 100%;
+
                 justify-content: space-between;
+
                 flex-wrap: wrap;
+
                 gap: 12px;
 
             }
 
 
             .about-hero {
+
                 padding: 62px 0 50px;
+
             }
 
 
             .section {
+
                 padding: 56px 0;
+
             }
 
 
             #travel-map {
-                min-height: 240px;
+
+                min-height: 260px;
+
             }
 
         }
@@ -784,9 +814,15 @@ title: About
 <body>
 
 
+    <!-- ======================================
+         HEADER
+    ====================================== -->
+
+
     <header class="site-header">
 
         <div class="container navbar">
+
 
             <a
                 class="site-name"
@@ -794,6 +830,7 @@ title: About
             >
                 Francesco Catalfamo
             </a>
+
 
             <nav
                 class="nav-links"
@@ -821,6 +858,7 @@ title: About
 
             </nav>
 
+
         </div>
 
     </header>
@@ -831,19 +869,27 @@ title: About
     <main>
 
 
+        <!-- ======================================
+             HERO
+        ====================================== -->
+
+
         <section class="about-hero">
 
             <div class="container">
 
                 <div class="hero-inner">
 
+
                     <div class="eyebrow">
                         About
                     </div>
 
+
                     <h1>
                         About me.
                     </h1>
+
 
                 </div>
 
@@ -854,235 +900,308 @@ title: About
 
 
 
+        <!-- ======================================
+             ACADEMIC PROFILE
+        ====================================== -->
+
+
         <section class="section section-bordered">
 
             <div class="container section-grid">
+
 
                 <div class="section-label">
                     Academic Profile
                 </div>
 
+
                 <div class="section-content">
+
 
                     <p>
 
                         I am a PhD researcher in Political Science at the
                         Network for the Advancement of Social and Political
                         Studies (NASP), jointly affiliated with the University
-                        of Milan and the University of Pavia. Before starting
-                        my PhD, I studied Political Science at the University
-                        of Mannheim and Public and Corporate Communication at
-                        the University of Milan, with a curriculum in Data
-                        Analytics for Politics, Society and Complex Organizations.
+                        of Milan and the University of Pavia.
+
+                        Before starting my PhD, I completed an M.A. in Political
+                        Science at the University of Mannheim
+                        (current grade: 1.8) and an M.A. in Public and Corporate
+                        Communication at the University of Milan
+                        (110/110 cum laude), with a curriculum in Data Analytics
+                        for Politics, Society and Complex Organizations.
+
+                        I previously obtained a B.A. in Political Science from
+                        the University of Milan (104/110).
 
                     </p>
+
 
                     <p>
 
                         My research focuses on political behaviour, party
                         politics and political communication, with particular
                         interests in coalition politics, affective polarization
-                        and intra-party dynamics. I primarily use quantitative
-                        and comparative methods, including panel data and
-                        computational approaches to political text.
+                        and intra-party dynamics.
+
+                        I primarily use quantitative and comparative methods,
+                        including panel data and computational approaches to
+                        political text.
 
                     </p>
 
+
                 </div>
+
 
             </div>
 
         </section>
 
 
+
+
+        <!-- ======================================
+             PROFESSIONAL EXPERIENCE
+        ====================================== -->
 
 
         <section class="section section-bordered">
 
             <div class="container section-grid">
 
+
                 <div class="section-label">
                     Professional Experience
                 </div>
 
+
                 <div class="section-content">
 
+
                     <div class="experience-header">
+
 
                         <div class="experience-title">
                             Istituto Bruno Leoni
                         </div>
 
+
                         <div class="experience-meta">
                             Research &amp; Communication
                         </div>
 
+
                     </div>
+
 
                     <p>
 
                         At the Istituto Bruno Leoni, my work combined research
                         and policy analysis with the communication of research
-                        to broader audiences. Alongside quantitative work,
-                        data collection and research support, I contributed to
-                        translating policy research into accessible public-facing
-                        content.
+                        to broader audiences.
+
+                        Alongside quantitative work, data collection and
+                        research support, I contributed to translating policy
+                        research into accessible public-facing content.
 
                     </p>
+
 
                     <p>
 
                         My work included social media and digital communication,
                         press releases, graphics, video and audio production,
                         website management, stakeholder outreach and event
-                        organisation. I was also involved in educational
-                        initiatives aimed at bringing economic and policy
-                        debates to students outside traditional academic settings.
+                        organisation.
+
+                        I was also involved in educational initiatives aimed at
+                        bringing economic and policy debates to students outside
+                        traditional academic settings.
 
                     </p>
 
+
                 </div>
+
 
             </div>
 
         </section>
 
 
+
+
+        <!-- ======================================
+             OUTSIDE ACADEMIA
+        ====================================== -->
 
 
         <section class="section outside-section">
 
-            <div class="container section-grid">
+            <div class="container">
 
-                <div class="section-label">
-                    Outside Academia
+
+                <div class="outside-heading">
+
+                    <div class="section-label">
+                        Outside Academia
+                    </div>
+
                 </div>
 
-                <div>
-
-                    <p class="outside-intro">
-                        A few things I enjoy outside political science.
-                    </p>
-
-
-                    <div class="outside-grid">
-
-
-                        <!-- VOLLEYBALL -->
-
-                        <div class="outside-card">
-
-                            <div class="outside-image-wrapper">
-
-                                <img
-                                    class="outside-image"
-                                    src="/assets/images/about/volleyball.jpg"
-                                    alt="Volleyball"
-                                    onerror="
-                                        this.style.display='none';
-                                        this.nextElementSibling.style.display='block';
-                                    "
-                                >
-
-                                <div
-                                    class="outside-placeholder"
-                                    style="display:none;"
-                                >
-                                </div>
-
-                            </div>
-
-                            <h3 class="outside-title">
-                                Volleyball
-                            </h3>
-
-                        </div>
 
 
 
-                        <!-- TRAVEL MAP -->
+                <div class="outside-grid">
 
-                        <div class="outside-card">
 
-                            <div class="travel-map-wrapper">
-                                <div id="travel-map"></div>
-                            </div>
+                    <!-- ======================================
+                         VOLLEYBALL
+                    ====================================== -->
 
-                            <h3 class="outside-title">
-                                Travel &amp; Outdoors
-                            </h3>
+
+                    <div class="outside-card">
+
+
+                        <div class="outside-image-wrapper">
+
+
+                            <img
+                                class="outside-image"
+                                src="/assets/images/about/volleyball.jpg"
+                                alt="Volleyball"
+                                onerror="
+                                    this.style.display='none';
+                                    this.nextElementSibling.style.display='block';
+                                "
+                            >
+
 
                             <div
-                                class="map-status"
-                                id="map-status"
+                                class="outside-placeholder"
+                                style="display:none;"
                             >
-                                Loading visited places...
                             </div>
 
-                            <a
-                                class="outside-link"
-                                href="https://maps.app.goo.gl/bbcjbYduUdEVKdDN8"
-                                target="_blank"
-                                rel="noopener"
-                            >
-                                Explore my map ↗
-                            </a>
 
                         </div>
 
 
-
-                        <!-- BEER & FRIENDS -->
-
-                        <div class="outside-card">
-
-                            <div class="outside-image-wrapper">
-
-                                <img
-                                    class="outside-image"
-                                    src="/assets/images/about/beer-friends.jpg"
-                                    alt="Beer and friends"
-                                    onerror="
-                                        this.style.display='none';
-                                        this.nextElementSibling.style.display='block';
-                                    "
-                                >
-
-                                <div
-                                    class="outside-placeholder"
-                                    style="display:none;"
-                                >
-                                </div>
-
-                            </div>
-
-                            <h3 class="outside-title">
-                                Beer &amp; Friends
-                            </h3>
-
-                        </div>
+                        <h3 class="outside-title">
+                            Volleyball
+                        </h3>
 
 
                     </div>
 
+
+
+
+                    <!-- ======================================
+                         TRAVEL
+                    ====================================== -->
+
+
+                    <div class="outside-card">
+
+
+                        <div class="travel-map-wrapper">
+
+                            <div id="travel-map">
+                            </div>
+
+                        </div>
+
+
+                        <h3 class="outside-title">
+                            Travel &amp; Outdoors
+                        </h3>
+
+
+                    </div>
+
+
+
+
+                    <!-- ======================================
+                         BEER & FRIENDS
+                    ====================================== -->
+
+
+                    <div class="outside-card">
+
+
+                        <div class="outside-image-wrapper">
+
+
+                            <img
+                                class="outside-image"
+                                src="/assets/images/about/beer-friends.jpg"
+                                alt="Beer and friends"
+                                onerror="
+                                    this.style.display='none';
+                                    this.nextElementSibling.style.display='block';
+                                "
+                            >
+
+
+                            <div
+                                class="outside-placeholder"
+                                style="display:none;"
+                            >
+                            </div>
+
+
+                        </div>
+
+
+                        <h3 class="outside-title">
+                            Beer &amp; Friends
+                        </h3>
+
+
+                    </div>
+
+
                 </div>
+
 
             </div>
 
         </section>
 
 
+
+
+        <!-- ======================================
+             MORE
+        ====================================== -->
 
 
         <section class="section more-section">
 
             <div class="container section-grid">
 
+
                 <div class="section-label">
                     More
                 </div>
 
+
                 <div class="more-links">
+
+
+                    <a
+                        class="more-link"
+                        href="/assets/cv.pdf"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Curriculum Vitae
+                    </a>
+
 
                     <a
                         class="more-link"
@@ -1091,6 +1210,7 @@ title: About
                         Research →
                     </a>
 
+
                     <a
                         class="more-link"
                         href="/notes/"
@@ -1098,14 +1218,6 @@ title: About
                         Notes →
                     </a>
 
-                    <a
-                        class="more-link"
-                        href="/assets/cv.pdf"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        Curriculum Vitae ↗
-                    </a>
 
                     <a
                         class="more-link"
@@ -1114,7 +1226,9 @@ title: About
                         Contact →
                     </a>
 
+
                 </div>
+
 
             </div>
 
@@ -1126,22 +1240,36 @@ title: About
 
 
 
+    <!-- ======================================
+         FOOTER
+    ====================================== -->
+
+
     <footer class="site-footer">
 
         <div class="container footer-inner">
+
 
             <span>
                 © 2026 Francesco Catalfamo
             </span>
 
+
             <span>
                 Political Science
             </span>
+
 
         </div>
 
     </footer>
 
+
+
+
+    <!-- ======================================
+         LEAFLET
+    ====================================== -->
 
 
     <script
@@ -1150,11 +1278,10 @@ title: About
         crossorigin=""
     ></script>
 
+
     <script>
 
         async function loadTravelMap() {
-
-            const statusEl = document.getElementById("map-status");
 
             try {
 
@@ -1164,35 +1291,52 @@ title: About
                     throw new Error("places.json not found");
                 }
 
+
                 const places = await response.json();
+
 
                 const validPlaces = places.filter(place =>
                     typeof place.lat === "number" &&
                     typeof place.lng === "number"
                 );
 
+
                 if (validPlaces.length === 0) {
-                    statusEl.textContent = "No mapped places available yet.";
                     return;
                 }
 
-                const map = L.map("travel-map", {
-                    scrollWheelZoom: false
-                });
+
+                const map = L.map(
+                    "travel-map",
+                    {
+                        scrollWheelZoom: false,
+                        zoomControl: true
+                    }
+                );
+
 
                 L.tileLayer(
+
                     "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+
                     {
-                        attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
+                        attribution:
+                            "&copy; OpenStreetMap contributors &copy; CARTO"
                     }
+
                 ).addTo(map);
+
 
                 const bounds = [];
 
+
                 validPlaces.forEach(place => {
 
+
                     const marker = L.circleMarker(
+
                         [place.lat, place.lng],
+
                         {
                             radius: 5,
                             color: "#165f5a",
@@ -1200,43 +1344,54 @@ title: About
                             fillColor: "#165f5a",
                             fillOpacity: 0.82
                         }
+
                     ).addTo(map);
 
-                    const popupHTML = `
-                        <div class="popup-title">${place.name}</div>
-                        <a
-                            class="popup-link"
-                            href="${place.url}"
-                            target="_blank"
-                            rel="noopener"
-                        >
-                            Open in Google Maps ↗
-                        </a>
-                    `;
 
-                    marker.bindPopup(popupHTML);
+                    marker.bindPopup(
+                        `
+                        <div class="popup-title">
+                            ${place.name}
+                        </div>
+                        `
+                    );
 
-                    bounds.push([place.lat, place.lng]);
+
+                    bounds.push(
+                        [place.lat, place.lng]
+                    );
+
 
                 });
 
-                map.fitBounds(bounds, {
-                    padding: [22, 22]
-                });
 
-                statusEl.textContent = `${validPlaces.length} visited places mapped.`;
+                map.fitBounds(
+
+                    bounds,
+
+                    {
+                        padding: [22, 22]
+                    }
+
+                );
+
 
             } catch (error) {
 
-                statusEl.textContent = "Map data not loaded yet. Add /assets/data/places.json to activate the map.";
+                console.error(
+                    "Unable to load travel map:",
+                    error
+                );
 
             }
 
         }
 
+
         loadTravelMap();
 
     </script>
+
 
 </body>
 
