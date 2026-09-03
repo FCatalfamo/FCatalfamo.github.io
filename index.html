@@ -22,6 +22,7 @@ title: Francesco Catalfamo
 
     <title>Francesco Catalfamo</title>
 
+
     <style>
 
         :root {
@@ -53,13 +54,16 @@ title: Francesco Catalfamo
 
         }
 
+
         * {
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
+
 
         body {
 
@@ -82,15 +86,18 @@ title: Francesco Catalfamo
 
         }
 
+
         a {
             color: inherit;
             text-decoration: none;
         }
 
+
         img {
             display: block;
             max-width: 100%;
         }
+
 
         .container {
 
@@ -100,7 +107,12 @@ title: Francesco Catalfamo
 
         }
 
-        /* HEADER */
+
+
+        /* ======================================
+           HEADER
+        ====================================== */
+
 
         .site-header {
 
@@ -118,6 +130,7 @@ title: Francesco Catalfamo
 
         }
 
+
         .navbar {
 
             min-height: 72px;
@@ -132,6 +145,7 @@ title: Francesco Catalfamo
 
         }
 
+
         .site-name {
 
             font-weight: 700;
@@ -141,6 +155,7 @@ title: Francesco Catalfamo
             color: var(--petrol-dark);
 
         }
+
 
         .nav-links {
 
@@ -154,6 +169,7 @@ title: Francesco Catalfamo
 
         }
 
+
         .nav-links a {
 
             color: var(--petrol-dark);
@@ -162,13 +178,19 @@ title: Francesco Catalfamo
 
         }
 
+
         .nav-links a:hover {
 
             color: var(--petrol);
 
         }
 
-        /* HERO */
+
+
+        /* ======================================
+           HERO
+        ====================================== */
+
 
         .hero {
 
@@ -177,6 +199,7 @@ title: Francesco Catalfamo
             background: var(--ivory);
 
         }
+
 
         .hero-grid {
 
@@ -192,11 +215,13 @@ title: Francesco Catalfamo
 
         }
 
+
         .hero-content {
 
             max-width: 790px;
 
         }
+
 
         .eyebrow {
 
@@ -213,6 +238,7 @@ title: Francesco Catalfamo
             margin-bottom: 24px;
 
         }
+
 
         .hero h1 {
 
@@ -235,6 +261,7 @@ title: Francesco Catalfamo
 
         }
 
+
         .hero-subtitle {
 
             max-width: 730px;
@@ -248,6 +275,7 @@ title: Francesco Catalfamo
             margin: 0;
 
         }
+
 
         .research-interests {
 
@@ -263,6 +291,7 @@ title: Francesco Catalfamo
 
         }
 
+
         .research-interests span {
 
             color: var(--sage);
@@ -271,7 +300,51 @@ title: Francesco Catalfamo
 
         }
 
-        /* PHOTO */
+
+        .hero-cv {
+
+            margin-top: 18px;
+
+        }
+
+
+        .hero-cv-link {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            color: var(--petrol-dark);
+
+            font-size: 0.9rem;
+
+            font-weight: 600;
+
+            padding-bottom: 2px;
+
+            border-bottom: 1px solid rgba(16, 73, 69, 0.32);
+
+            transition:
+                color 0.18s ease,
+                border-color 0.18s ease;
+
+        }
+
+
+        .hero-cv-link:hover {
+
+            color: var(--petrol);
+
+            border-color: var(--petrol);
+
+        }
+
+
+
+        /* ======================================
+           PHOTO
+        ====================================== */
+
 
         .portrait {
 
@@ -281,7 +354,8 @@ title: Francesco Catalfamo
 
         }
 
-        .photo-placeholder {
+
+        .profile-photo {
 
             width: 100%;
 
@@ -289,36 +363,27 @@ title: Francesco Catalfamo
 
             aspect-ratio: 4 / 5;
 
-            background: var(--sage-soft);
+            object-fit: cover;
 
-            border: 1px solid rgba(16, 73, 69, 0.18);
+            object-position: center;
 
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            text-align: center;
-
-            color: var(--petrol);
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            font-style: italic;
+            border: 1px solid rgba(16, 73, 69, 0.16);
 
         }
 
-        /* GENERAL SECTIONS */
+
+
+        /* ======================================
+           GENERAL SECTIONS
+        ====================================== */
+
 
         .section {
 
             padding: 74px 0;
 
         }
+
 
         .section-ivory {
 
@@ -328,6 +393,7 @@ title: Francesco Catalfamo
 
         }
 
+
         .section-dark {
 
             background: var(--dark-section);
@@ -335,6 +401,7 @@ title: Francesco Catalfamo
             color: var(--light-text);
 
         }
+
 
         .section-grid {
 
@@ -345,6 +412,7 @@ title: Francesco Catalfamo
             gap: 70px;
 
         }
+
 
         .section-label {
 
@@ -362,11 +430,13 @@ title: Francesco Catalfamo
 
         }
 
+
         .section-dark .section-label {
 
             color: var(--sage);
 
         }
+
 
         .section-copy {
 
@@ -378,41 +448,51 @@ title: Francesco Catalfamo
 
         }
 
+
         .section-dark .section-copy {
 
             color: var(--light-text);
 
         }
 
+
         .section-copy p:first-child {
             margin-top: 0;
         }
+
 
         .section-copy p:last-child {
             margin-bottom: 0;
         }
 
-        /* EDUCATION */
+
+
+        /* ======================================
+           EDUCATION
+        ====================================== */
+
 
         .timeline {
 
             display: grid;
 
-            gap: 38px;
+            gap: 36px;
 
         }
+
 
         .timeline-item {
 
             display: grid;
 
-            grid-template-columns: 110px 82px 1fr;
+            grid-template-columns: 110px 72px 1fr;
 
             gap: 10px;
 
             align-items: center;
 
         }
+
 
         .timeline-year {
 
@@ -422,11 +502,12 @@ title: Francesco Catalfamo
 
         }
 
+
         .education-logo-wrapper {
 
-            width: 82px;
+            width: 72px;
 
-            height: 76px;
+            height: 66px;
 
             display: flex;
 
@@ -435,6 +516,7 @@ title: Francesco Catalfamo
             justify-content: center;
 
         }
+
 
         .education-logo {
 
@@ -446,35 +528,40 @@ title: Francesco Catalfamo
 
         }
 
+
         img[alt="NASP logo"] {
 
-            max-width: 98px;
+            max-width: 82px;
 
-            max-height: 60px;
+            max-height: 50px;
 
         }
+
 
         img[alt="University of Mannheim logo"] {
 
-            max-width: 72px;
+            max-width: 62px;
 
-            max-height: 72px;
+            max-height: 62px;
 
         }
+
 
         img[alt="University of Milan logo"] {
 
-            max-width: 72px;
+            max-width: 62px;
 
-            max-height: 72px;
+            max-height: 62px;
 
         }
+
 
         .timeline-content {
 
             min-width: 0;
 
         }
+
 
         .timeline-title {
 
@@ -486,6 +573,7 @@ title: Francesco Catalfamo
 
         }
 
+
         .timeline-meta {
 
             margin-top: 3px;
@@ -495,6 +583,7 @@ title: Francesco Catalfamo
             font-size: 0.92rem;
 
         }
+
 
         .timeline-detail {
 
@@ -506,7 +595,12 @@ title: Francesco Catalfamo
 
         }
 
-        /* SECTION HEADINGS */
+
+
+        /* ======================================
+           SECTION HEADINGS
+        ====================================== */
+
 
         .section-heading-row {
 
@@ -521,6 +615,7 @@ title: Francesco Catalfamo
             margin-bottom: 32px;
 
         }
+
 
         .section-heading-row h2 {
 
@@ -539,6 +634,7 @@ title: Francesco Catalfamo
 
         }
 
+
         .text-link {
 
             color: var(--petrol);
@@ -551,13 +647,19 @@ title: Francesco Catalfamo
 
         }
 
+
         .text-link:hover {
 
             color: var(--petrol-dark);
 
         }
 
-        /* RESEARCH */
+
+
+        /* ======================================
+           RESEARCH
+        ====================================== */
+
 
         .research-cards {
 
@@ -569,11 +671,13 @@ title: Francesco Catalfamo
 
         }
 
+
         .research-card {
 
             min-width: 0;
 
         }
+
 
         .research-cover-link {
 
@@ -586,6 +690,7 @@ title: Francesco Catalfamo
             margin-bottom: 20px;
 
         }
+
 
         .research-cover {
 
@@ -601,6 +706,7 @@ title: Francesco Catalfamo
 
         }
 
+
         .research-cover-link:hover .research-cover {
 
             transform: scale(1.018);
@@ -609,17 +715,18 @@ title: Francesco Catalfamo
 
         }
 
+
+        /*
+           Graphic placeholder when no research cover exists.
+           No text is displayed.
+        */
+
+
         .research-placeholder {
 
             width: 100%;
 
             aspect-ratio: 16 / 9;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
 
             position: relative;
 
@@ -628,11 +735,12 @@ title: Francesco Catalfamo
             background:
                 linear-gradient(
                     135deg,
-                    rgba(136, 183, 155, 0.20),
-                    rgba(246, 229, 209, 0.35)
+                    rgba(136, 183, 155, 0.22),
+                    rgba(246, 229, 209, 0.40)
                 );
 
         }
+
 
         .research-placeholder::before {
 
@@ -644,15 +752,16 @@ title: Francesco Catalfamo
 
             height: 190px;
 
-            border: 1px solid rgba(16, 73, 69, 0.18);
-
             border-radius: 50%;
 
-            top: -65px;
+            border: 1px solid rgba(16, 73, 69, 0.20);
 
-            right: -35px;
+            top: -52px;
+
+            right: 7%;
 
         }
+
 
         .research-placeholder::after {
 
@@ -660,38 +769,81 @@ title: Francesco Catalfamo
 
             position: absolute;
 
-            width: 115px;
+            width: 125px;
 
-            height: 115px;
+            height: 125px;
 
-            background: var(--sage-soft);
+            background: rgba(136, 183, 155, 0.28);
 
-            transform: rotate(35deg);
+            bottom: -55px;
 
-            bottom: -50px;
+            left: 12%;
 
-            left: 35px;
+            transform: rotate(32deg);
+
+        }
+
+
+        .research-placeholder-shape {
+
+            position: absolute;
+
+            width: 42%;
+
+            height: 1px;
+
+            background: rgba(16, 73, 69, 0.24);
+
+            left: 28%;
+
+            top: 52%;
+
+            transform: rotate(-13deg);
 
         }
 
-        .research-placeholder span {
 
-            position: relative;
+        .research-placeholder-shape::before {
 
-            z-index: 2;
+            content: "";
 
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
+            position: absolute;
 
-            font-style: italic;
+            width: 12px;
 
-            font-size: 0.9rem;
+            height: 12px;
 
-            color: var(--petrol);
+            border-radius: 50%;
+
+            background: rgba(16, 73, 69, 0.36);
+
+            left: 20%;
+
+            top: -6px;
 
         }
+
+
+        .research-placeholder-shape::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 12px;
+
+            height: 12px;
+
+            border-radius: 50%;
+
+            background: rgba(16, 73, 69, 0.36);
+
+            right: 12%;
+
+            top: -6px;
+
+        }
+
 
         .research-meta {
 
@@ -708,6 +860,7 @@ title: Francesco Catalfamo
             margin-bottom: 9px;
 
         }
+
 
         .research-card h3 {
 
@@ -728,11 +881,20 @@ title: Francesco Catalfamo
 
         }
 
+
+        .research-card h3 a {
+
+            transition: color 0.18s ease;
+
+        }
+
+
         .research-card h3 a:hover {
 
             color: var(--petrol);
 
         }
+
 
         .research-card p {
 
@@ -746,6 +908,7 @@ title: Francesco Catalfamo
 
         }
 
+
         .empty-research {
 
             color: var(--muted);
@@ -754,13 +917,19 @@ title: Francesco Catalfamo
 
         }
 
-        /* NOTES */
+
+
+        /* ======================================
+           NOTES
+        ====================================== */
+
 
         .note-list {
 
             border-top: 1px solid var(--line-dark);
 
         }
+
 
         .note-row {
 
@@ -778,6 +947,7 @@ title: Francesco Catalfamo
 
         }
 
+
         .note-date {
 
             color: #687771;
@@ -790,6 +960,7 @@ title: Francesco Catalfamo
 
         }
 
+
         .note-thumb-link {
 
             display: block;
@@ -800,6 +971,7 @@ title: Francesco Catalfamo
 
         }
 
+
         .note-thumb {
 
             width: 100%;
@@ -808,7 +980,21 @@ title: Francesco Catalfamo
 
             object-fit: cover;
 
+            transition:
+                transform 0.4s ease,
+                opacity 0.4s ease;
+
         }
+
+
+        .note-thumb-link:hover .note-thumb {
+
+            transform: scale(1.025);
+
+            opacity: 0.94;
+
+        }
+
 
         .note-thumb-placeholder {
 
@@ -823,7 +1009,54 @@ title: Francesco Catalfamo
                     rgba(246, 229, 209, 0.35)
                 );
 
+            position: relative;
+
+            overflow: hidden;
+
         }
+
+
+        .note-thumb-placeholder::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 75px;
+
+            height: 75px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(16, 73, 69, 0.18);
+
+            top: 16px;
+
+            right: 17px;
+
+        }
+
+
+        .note-thumb-placeholder::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 45px;
+
+            height: 45px;
+
+            background: var(--sage-soft);
+
+            bottom: -11px;
+
+            left: 24px;
+
+            transform: rotate(35deg);
+
+        }
+
 
         .note-category {
 
@@ -841,6 +1074,7 @@ title: Francesco Catalfamo
 
         }
 
+
         .note-title {
 
             font-family:
@@ -856,11 +1090,20 @@ title: Francesco Catalfamo
 
         }
 
+
+        .note-title a {
+
+            transition: color 0.18s ease;
+
+        }
+
+
         .note-title a:hover {
 
             color: var(--petrol);
 
         }
+
 
         .note-excerpt {
 
@@ -874,6 +1117,7 @@ title: Francesco Catalfamo
 
         }
 
+
         .empty-notes {
 
             padding: 25px 0;
@@ -882,7 +1126,12 @@ title: Francesco Catalfamo
 
         }
 
-        /* CV + CONTACT */
+
+
+        /* ======================================
+           CV + CONTACT
+        ====================================== */
+
 
         .cv-contact-section {
 
@@ -892,15 +1141,17 @@ title: Francesco Catalfamo
 
         }
 
+
         .cv-contact {
 
             display: grid;
 
             grid-template-columns: 1fr 1fr;
 
-            gap: 70px;
+            gap: 90px;
 
         }
+
 
         .cv-contact h2 {
 
@@ -913,11 +1164,25 @@ title: Francesco Catalfamo
 
             font-weight: 500;
 
-            margin: 0 0 18px;
+            margin: 0 0 12px;
 
             color: #f6eee4;
 
         }
+
+
+        .cv-description {
+
+            color: var(--light-muted);
+
+            font-size: 0.94rem;
+
+            max-width: 410px;
+
+            margin: 0 0 18px;
+
+        }
+
 
         .cv-link {
 
@@ -925,27 +1190,54 @@ title: Francesco Catalfamo
 
             align-items: center;
 
-            gap: 6px;
-
             color: var(--sage);
 
-            font-size: 1rem;
+            font-size: 0.93rem;
 
             font-weight: 600;
 
-            padding-bottom: 3px;
+            padding-bottom: 2px;
 
-            border-bottom: 1px solid var(--sage);
+            border-bottom: 1px solid rgba(136, 183, 155, 0.55);
+
+            transition:
+                color 0.18s ease,
+                border-color 0.18s ease;
 
         }
+
+
+        .cv-link:hover {
+
+            color: #ffffff;
+
+            border-color: #ffffff;
+
+        }
+
 
         .contact-email {
 
-            margin-top: 14px;
+            margin: 0 0 18px;
+
+        }
+
+
+        .contact-email a {
 
             color: var(--light-muted);
 
+            transition: color 0.18s ease;
+
         }
+
+
+        .contact-email a:hover {
+
+            color: var(--sage);
+
+        }
+
 
         .social-links {
 
@@ -953,25 +1245,38 @@ title: Francesco Catalfamo
 
             flex-wrap: wrap;
 
-            gap: 18px;
+            gap: 19px;
 
             margin-top: 12px;
 
         }
 
-        .cv-contact-section .text-link {
+
+        .social-link {
 
             color: var(--sage);
 
+            font-weight: 600;
+
+            font-size: 0.92rem;
+
+            transition: color 0.18s ease;
+
         }
 
-        .contact-more {
 
-            margin-top: 16px;
+        .social-link:hover {
+
+            color: #ffffff;
 
         }
 
-        /* FOOTER */
+
+
+        /* ======================================
+           FOOTER
+        ====================================== */
+
 
         .site-footer {
 
@@ -987,6 +1292,7 @@ title: Francesco Catalfamo
 
         }
 
+
         .footer-inner {
 
             display: flex;
@@ -999,7 +1305,39 @@ title: Francesco Catalfamo
 
         }
 
+
+
+        /* ======================================
+           TABLET
+        ====================================== */
+
+
         @media (max-width: 780px) {
+
+            .navbar {
+
+                align-items: flex-start;
+
+                padding: 18px 0;
+
+            }
+
+
+            .nav-links {
+
+                gap: 14px;
+
+                font-size: 0.86rem;
+
+            }
+
+
+            .hero {
+
+                padding: 65px 0 70px;
+
+            }
+
 
             .hero-grid,
             .section-grid,
@@ -1010,23 +1348,218 @@ title: Francesco Catalfamo
 
             }
 
+
+            .hero-grid,
+            .section-grid,
+            .cv-contact {
+
+                gap: 34px;
+
+            }
+
+
+            .research-cards {
+
+                gap: 42px;
+
+            }
+
+
+            .portrait {
+
+                justify-content: flex-start;
+
+            }
+
+
+            .profile-photo {
+
+                max-width: 280px;
+
+            }
+
+
+            .timeline-item {
+
+                grid-template-columns: 80px 58px 1fr;
+
+                gap: 10px;
+
+            }
+
+
+            .education-logo-wrapper {
+
+                width: 58px;
+
+                height: 56px;
+
+            }
+
+
+            img[alt="NASP logo"] {
+
+                max-width: 68px;
+
+                max-height: 44px;
+
+            }
+
+
+            img[alt="University of Mannheim logo"],
+            img[alt="University of Milan logo"] {
+
+                max-width: 52px;
+
+                max-height: 52px;
+
+            }
+
+
             .note-row {
 
-                grid-template-columns: 1fr;
+                grid-template-columns: 90px 135px 1fr;
+
+                gap: 17px;
+
+            }
+
+
+            .section-heading-row {
+
+                align-items: flex-start;
+
+                flex-direction: column;
 
             }
 
         }
 
+
+
+        /* ======================================
+           MOBILE
+        ====================================== */
+
+
+        @media (max-width: 560px) {
+
+            .navbar {
+
+                flex-direction: column;
+
+                gap: 10px;
+
+            }
+
+
+            .nav-links {
+
+                width: 100%;
+
+                justify-content: space-between;
+
+                flex-wrap: wrap;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 3.7rem;
+
+            }
+
+
+            .timeline-item {
+
+                grid-template-columns: 50px 1fr;
+
+                gap: 14px;
+
+            }
+
+
+            .timeline-year {
+
+                grid-column: 1 / -1;
+
+                margin-bottom: -5px;
+
+            }
+
+
+            .education-logo-wrapper {
+
+                width: 50px;
+
+                height: 50px;
+
+            }
+
+
+            img[alt="NASP logo"] {
+
+                max-width: 58px;
+
+                max-height: 40px;
+
+            }
+
+
+            img[alt="University of Mannheim logo"],
+            img[alt="University of Milan logo"] {
+
+                max-width: 46px;
+
+                max-height: 46px;
+
+            }
+
+
+            .note-row {
+
+                grid-template-columns: 1fr;
+
+                gap: 10px;
+
+            }
+
+
+            .note-date {
+
+                padding-top: 0;
+
+            }
+
+
+            .note-thumb-link {
+
+                max-width: 240px;
+
+            }
+
+        }
+
+
     </style>
 
 </head>
 
+
+
 <body>
+
+
+    <!-- ======================================
+         HEADER
+    ====================================== -->
+
 
     <header class="site-header">
 
         <div class="container navbar">
+
 
             <a
                 class="site-name"
@@ -1035,35 +1568,64 @@ title: Francesco Catalfamo
                 Francesco Catalfamo
             </a>
 
-            <nav class="nav-links">
 
-                <a href="/research/">Research</a>
-                <a href="/notes/">Notes</a>
-                <a href="/about/">About</a>
-                <a href="/contact/">Contact</a>
+            <nav
+                class="nav-links"
+                aria-label="Main navigation"
+            >
+
+                <a href="/research/">
+                    Research
+                </a>
+
+                <a href="/notes/">
+                    Notes
+                </a>
+
+                <a href="/about/">
+                    About
+                </a>
+
+                <a href="/contact/">
+                    Contact
+                </a>
 
             </nav>
+
 
         </div>
 
     </header>
 
+
+
+
     <main>
+
+
+        <!-- ======================================
+             HERO
+        ====================================== -->
+
 
         <section class="hero">
 
             <div class="container hero-grid">
 
+
                 <div class="hero-content">
+
 
                     <div class="eyebrow">
                         Political Scientist
                     </div>
 
+
                     <h1>
                         Francesco<br>
                         Catalfamo
                     </h1>
+
 
                     <p class="hero-subtitle">
 
@@ -1077,78 +1639,138 @@ title: Francesco Catalfamo
 
                     </p>
 
+
                     <div class="research-interests">
 
                         Political Behaviour
+
                         <span>·</span>
+
                         Party Politics
+
                         <span>·</span>
+
                         Coalition Politics
+
                         <span>·</span>
+
                         Affective Polarization
 
                     </div>
 
+
+                    <div class="hero-cv">
+
+                        <a
+                            class="hero-cv-link"
+                            href="/assets/cv.pdf"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Curriculum Vitae ↗
+                        </a>
+
+                    </div>
+
+
                 </div>
+
+
+
 
                 <div class="portrait">
 
-                    <div class="photo-placeholder">
-                        Photo
-                    </div>
+                    <img
+                        class="profile-photo"
+                        src="/assets/images/profile.jpg"
+                        alt="Francesco Catalfamo"
+                    >
 
                 </div>
+
 
             </div>
 
         </section>
+
+
+
+
+        <!-- ======================================
+             PROFILE
+        ====================================== -->
+
 
         <section class="section section-dark">
 
             <div class="container section-grid">
 
+
                 <div class="section-label">
                     Profile
                 </div>
 
+
                 <div class="section-copy">
 
+
                     <p>
+
                         I am a PhD researcher in Political Science at the
                         Network for the Advancement of Social and Political Studies (NASP),
                         jointly affiliated with the University of Milan
                         and the University of Pavia.
+
                     </p>
 
+
                     <p>
+
                         My research interests lie at the intersection of
                         political behaviour, party politics and political communication,
                         with a particular focus on affective polarization,
                         coalition politics and citizens’ responses to elite behaviour.
+
                         I mainly use quantitative and comparative methods.
+
                     </p>
 
+
                 </div>
+
 
             </div>
 
         </section>
 
+
+
+
+        <!-- ======================================
+             EDUCATION
+        ====================================== -->
+
+
         <section class="section section-ivory">
 
             <div class="container section-grid">
+
 
                 <div class="section-label">
                     Education
                 </div>
 
+
                 <div class="timeline">
 
+
                     <div class="timeline-item">
+
 
                         <div class="timeline-year">
                             2026–
                         </div>
+
 
                         <div class="education-logo-wrapper">
 
@@ -1160,29 +1782,40 @@ title: Francesco Catalfamo
 
                         </div>
 
+
                         <div class="timeline-content">
+
 
                             <div class="timeline-title">
                                 PhD in Political Science
                             </div>
 
+
                             <div class="timeline-meta">
                                 Network for the Advancement of Social and Political Studies (NASP)
                             </div>
+
 
                             <div class="timeline-detail">
                                 University of Milan &amp; University of Pavia
                             </div>
 
+
                         </div>
+
 
                     </div>
 
+
+
+
                     <div class="timeline-item">
+
 
                         <div class="timeline-year">
                             2024–2026
                         </div>
+
 
                         <div class="education-logo-wrapper">
 
@@ -1194,26 +1827,36 @@ title: Francesco Catalfamo
 
                         </div>
 
+
                         <div class="timeline-content">
+
 
                             <div class="timeline-title">
                                 M.A. in Political Science
                             </div>
 
+
                             <div class="timeline-meta">
                                 University of Mannheim
                             </div>
 
+
                         </div>
+
 
                     </div>
 
+
+
+
                     <div class="timeline-item">
+
 
                         <div class="timeline-year">
                             2021–2023
                         </div>
 
+
                         <div class="education-logo-wrapper">
 
                             <img
@@ -1224,30 +1867,43 @@ title: Francesco Catalfamo
 
                         </div>
 
+
                         <div class="timeline-content">
+
 
                             <div class="timeline-title">
                                 M.A. in Public and Corporate Communication
                             </div>
 
+
                             <div class="timeline-meta">
                                 University of Milan
                             </div>
 
+
                             <div class="timeline-detail">
+
                                 Curriculum in Data Analytics for Politics,
                                 Society and Complex Organizations
+
                             </div>
+
 
                         </div>
 
+
                     </div>
 
+
+
+
                     <div class="timeline-item">
+
 
                         <div class="timeline-year">
                             2018–2021
                         </div>
+
 
                         <div class="education-logo-wrapper">
 
@@ -1259,37 +1915,53 @@ title: Francesco Catalfamo
 
                         </div>
 
+
                         <div class="timeline-content">
+
 
                             <div class="timeline-title">
                                 B.A. in Political Science
                             </div>
 
+
                             <div class="timeline-meta">
                                 University of Milan
                             </div>
 
+
                         </div>
+
 
                     </div>
 
+
                 </div>
+
 
             </div>
 
         </section>
 
-        <!-- RESEARCH AUTOMATICO, PIÙ RECENTE PRIMA -->
+
+
+
+        <!-- ======================================
+             CURRENT WORK
+        ====================================== -->
+
 
         <section class="section section-ivory">
 
             <div class="container">
 
+
                 <div class="section-heading-row">
+
 
                     <h2>
                         Current work
                     </h2>
+
 
                     <a
                         class="text-link"
@@ -1298,7 +1970,10 @@ title: Francesco Catalfamo
                         All research →
                     </a>
 
+
                 </div>
+
+
 
 
                 {% assign featured_projects = site.research
@@ -1308,7 +1983,10 @@ title: Francesco Catalfamo
                 %}
 
 
+
+
                 {% if featured_projects.size > 0 %}
+
 
                     <div class="research-cards">
 
@@ -1327,21 +2005,24 @@ title: Francesco Catalfamo
 
                                     {% if project.image %}
 
+
                                         <img
                                             class="research-cover"
                                             src="{{ project.image }}"
                                             alt="Cover image for {{ project.title }}"
                                         >
 
+
                                     {% else %}
+
 
                                         <div class="research-placeholder">
 
-                                            <span>
-                                                Research
-                                            </span>
+                                            <div class="research-placeholder-shape">
+                                            </div>
 
                                         </div>
+
 
                                     {% endif %}
 
@@ -1349,7 +2030,10 @@ title: Francesco Catalfamo
                                 </a>
 
 
+
+
                                 {% if project.status %}
+
 
                                     <div class="research-meta">
 
@@ -1357,7 +2041,10 @@ title: Francesco Catalfamo
 
                                     </div>
 
+
                                 {% endif %}
+
+
 
 
                                 <h3>
@@ -1371,13 +2058,17 @@ title: Francesco Catalfamo
                                 </h3>
 
 
+
+
                                 {% if project.description %}
+
 
                                     <p>
 
                                         {{ project.description }}
 
                                     </p>
+
 
                                 {% endif %}
 
@@ -1408,17 +2099,26 @@ title: Francesco Catalfamo
 
         </section>
 
-        <!-- NOTES, PIÙ RECENTI PRIMA -->
+
+
+
+        <!-- ======================================
+             NOTES
+        ====================================== -->
+
 
         <section class="section section-ivory">
 
             <div class="container">
 
+
                 <div class="section-heading-row">
+
 
                     <h2>
                         Analysis &amp; commentary
                     </h2>
+
 
                     <a
                         class="text-link"
@@ -1427,12 +2127,18 @@ title: Francesco Catalfamo
                         All notes →
                     </a>
 
+
                 </div>
+
+
+
 
                 <div class="note-list">
 
 
                     {% assign latest_notes = site.notes | sort: "date" | reverse %}
+
+
 
 
                     {% if latest_notes.size > 0 %}
@@ -1443,18 +2149,24 @@ title: Francesco Catalfamo
 
                             <article class="note-row">
 
+
                                 <div class="note-date">
 
                                     {{ note.date | date: "%d %b %Y" }}
 
                                 </div>
 
+
+
+
                                 <a
                                     class="note-thumb-link"
                                     href="{{ note.url }}"
                                 >
 
+
                                     {% if note.image %}
+
 
                                         <img
                                             class="note-thumb"
@@ -1462,42 +2174,70 @@ title: Francesco Catalfamo
                                             alt="Cover image for {{ note.title }}"
                                         >
 
+
                                     {% else %}
+
 
                                         <div class="note-thumb-placeholder">
                                         </div>
 
+
                                     {% endif %}
+
 
                                 </a>
 
+
+
+
                                 <div>
+
 
                                     {% if note.category %}
 
+
                                         <div class="note-category">
+
                                             {{ note.category }}
+
                                         </div>
 
+
                                     {% endif %}
+
+
+
 
                                     <div class="note-title">
 
+
                                         <a href="{{ note.url }}">
+
                                             {{ note.title }}
+
                                         </a>
+
 
                                     </div>
 
+
+
+
                                     {% if note.description %}
 
+
                                         <div class="note-excerpt">
+
                                             {{ note.description }}
+
                                         </div>
+
 
                                     {% endif %}
 
+
                                 </div>
+
 
                             </article>
 
@@ -1507,108 +2247,160 @@ title: Francesco Catalfamo
 
                     {% else %}
 
+
                         <div class="empty-notes">
+
                             No notes published yet.
+
                         </div>
+
 
                     {% endif %}
 
 
                 </div>
 
+
             </div>
 
         </section>
+
+
+
+
+        <!-- ======================================
+             CV + CONTACT
+        ====================================== -->
+
 
         <section class="section cv-contact-section">
 
             <div class="container cv-contact">
 
+
                 <div>
+
 
                     <h2>
                         Curriculum Vitae
                     </h2>
 
+
+                    <p class="cv-description">
+
+                        A complete overview of my academic background,
+                        research experience and professional activities.
+
+                    </p>
+
+
                     <a
                         class="cv-link"
                         href="/assets/cv.pdf"
                         target="_blank"
+                        rel="noopener"
                     >
-                        View my CV →
+                        View Curriculum Vitae ↗
                     </a>
+
 
                 </div>
 
+
+
+
                 <div>
+
 
                     <h2>
                         Contact
                     </h2>
 
+
                     <p class="contact-email">
 
-                        <a href="mailto:francesco.catalfamo01@universitadipavia.it">
-
+                        <a
+                            href="mailto:francesco.catalfamo01@universitadipavia.it"
+                        >
                             francesco.catalfamo01@universitadipavia.it
-
                         </a>
 
                     </p>
 
+
                     <div class="social-links">
 
-                        <a class="text-link" href="#">
+
+                        <a
+                            class="social-link"
+                            href="https://www.linkedin.com/in/francesco-catalfamo-53475a194/"
+                            target="_blank"
+                            rel="noopener"
+                        >
                             LinkedIn ↗
                         </a>
 
-                        <a class="text-link" href="#">
+
+                        <a
+                            class="social-link"
+                            href="https://x.com/f_catalfamo"
+                            target="_blank"
+                            rel="noopener"
+                        >
                             X ↗
                         </a>
 
+
                         <a
-                            class="text-link"
+                            class="social-link"
                             href="https://github.com/FCatalfamo"
+                            target="_blank"
+                            rel="noopener"
                         >
                             GitHub ↗
                         </a>
 
-                    </div>
-
-                    <div class="contact-more">
-
-                        <a
-                            class="text-link"
-                            href="/contact/"
-                        >
-                            Full contact details →
-                        </a>
 
                     </div>
+
 
                 </div>
+
 
             </div>
 
         </section>
 
+
     </main>
+
+
+
+
+    <!-- ======================================
+         FOOTER
+    ====================================== -->
+
 
     <footer class="site-footer">
 
         <div class="container footer-inner">
 
+
             <span>
                 © 2026 Francesco Catalfamo
             </span>
+
 
             <span>
                 Political Science
             </span>
 
+
         </div>
 
     </footer>
+
 
 </body>
 
