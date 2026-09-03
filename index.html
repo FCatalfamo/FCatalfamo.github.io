@@ -717,8 +717,7 @@ title: Francesco Catalfamo
 
 
         /*
-           Graphic placeholder when no research cover exists.
-           No text is displayed.
+           FILLER FOR MISSING RESEARCH IMAGES
         */
 
 
@@ -994,6 +993,11 @@ title: Francesco Catalfamo
             opacity: 0.94;
 
         }
+
+
+        /*
+           FILLER FOR MISSING NOTE IMAGES
+        */
 
 
         .note-thumb-placeholder {
@@ -2010,7 +2014,22 @@ title: Francesco Catalfamo
                                             class="research-cover"
                                             src="{{ project.image }}"
                                             alt="Cover image for {{ project.title }}"
+                                            onerror="
+                                                this.style.display='none';
+                                                this.nextElementSibling.style.display='block';
+                                            "
                                         >
+
+
+                                        <div
+                                            class="research-placeholder"
+                                            style="display:none;"
+                                        >
+
+                                            <div class="research-placeholder-shape">
+                                            </div>
+
+                                        </div>
 
 
                                     {% else %}
@@ -2172,7 +2191,18 @@ title: Francesco Catalfamo
                                             class="note-thumb"
                                             src="{{ note.image }}"
                                             alt="Cover image for {{ note.title }}"
+                                            onerror="
+                                                this.style.display='none';
+                                                this.nextElementSibling.style.display='block';
+                                            "
                                         >
+
+
+                                        <div
+                                            class="note-thumb-placeholder"
+                                            style="display:none;"
+                                        >
+                                        </div>
 
 
                                     {% else %}
