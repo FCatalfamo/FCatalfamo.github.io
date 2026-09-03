@@ -1,15 +1,906 @@
+---
+layout: none
+title: Research
+---
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research | Francesco Catalfamo</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Research by Francesco Catalfamo"
+    >
+
+    <title>Research — Francesco Catalfamo</title>
+
+
+    <style>
+
+        :root {
+
+            --petrol: #165f5a;
+            --petrol-dark: #104945;
+
+            --ivory: rgba(246, 229, 209, 0.42);
+
+            --sage: #88b79b;
+            --sage-soft: rgba(136, 183, 155, 0.22);
+
+            --ink: #202522;
+            --muted: #66716c;
+
+            --line-dark: rgba(16, 73, 69, 0.22);
+
+            --max-width: 1120px;
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family:
+                Inter,
+                ui-sans-serif,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            color: var(--ink);
+
+            background: var(--ivory);
+
+            line-height: 1.65;
+
+        }
+
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+
+        .container {
+
+            width: min(var(--max-width), 90%);
+
+            margin: 0 auto;
+
+        }
+
+
+
+        /* ======================================
+           HEADER
+        ====================================== */
+
+
+        .site-header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+            background: rgba(252, 248, 243, 0.94);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid var(--line-dark);
+
+        }
+
+
+        .navbar {
+
+            min-height: 72px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 2rem;
+
+        }
+
+
+        .site-name {
+
+            font-weight: 700;
+
+            letter-spacing: -0.02em;
+
+            color: var(--petrol-dark);
+
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 1.6rem;
+
+            font-size: 0.95rem;
+
+        }
+
+
+        .nav-links a {
+
+            color: var(--petrol-dark);
+
+            transition: color 0.18s ease;
+
+        }
+
+
+        .nav-links a:hover,
+        .nav-links a.active {
+
+            color: var(--petrol);
+
+        }
+
+
+
+        /* ======================================
+           HERO
+        ====================================== */
+
+
+        .research-hero {
+
+            padding: 88px 0 76px;
+
+        }
+
+
+        .eyebrow {
+
+            color: var(--petrol);
+
+            text-transform: uppercase;
+
+            font-size: 0.82rem;
+
+            letter-spacing: 0.18em;
+
+            font-weight: 700;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .research-hero h1 {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: clamp(3.5rem, 7vw, 5.8rem);
+
+            line-height: 0.95;
+
+            letter-spacing: -0.04em;
+
+            font-weight: 500;
+
+            color: var(--petrol-dark);
+
+            margin: 0 0 28px;
+
+        }
+
+
+        .research-intro {
+
+            max-width: 780px;
+
+            color: #4c5953;
+
+            font-size: 1.15rem;
+
+            margin: 0;
+
+        }
+
+
+
+        /* ======================================
+           PROJECTS
+        ====================================== */
+
+
+        .projects-section {
+
+            padding: 68px 0 92px;
+
+            border-top: 1px solid var(--line-dark);
+
+        }
+
+
+        .projects-header {
+
+            display: grid;
+
+            grid-template-columns: 0.5fr 1.5fr;
+
+            gap: 70px;
+
+            margin-bottom: 42px;
+
+        }
+
+
+        .projects-label {
+
+            color: var(--petrol);
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.13em;
+
+            font-size: 1rem;
+
+            font-weight: 700;
+
+        }
+
+
+        .projects-description {
+
+            color: #596963;
+
+            max-width: 720px;
+
+            font-size: 0.98rem;
+
+        }
+
+
+        .projects-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            gap: 54px 42px;
+
+        }
+
+
+        .project-card {
+
+            min-width: 0;
+
+        }
+
+
+        .project-image-link {
+
+            display: block;
+
+            overflow: hidden;
+
+            margin-bottom: 20px;
+
+            background: var(--sage-soft);
+
+        }
+
+
+        .project-image {
+
+            width: 100%;
+
+            aspect-ratio: 16 / 9;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.45s ease,
+                opacity 0.45s ease;
+
+        }
+
+
+        .project-image-link:hover .project-image {
+
+            transform: scale(1.018);
+
+            opacity: 0.94;
+
+        }
+
+
+        .project-placeholder {
+
+            width: 100%;
+
+            aspect-ratio: 16 / 9;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(136, 183, 155, 0.18),
+                    rgba(246, 229, 209, 0.35)
+                );
+
+        }
+
+
+        .project-placeholder::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 180px;
+
+            height: 180px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(16, 73, 69, 0.18);
+
+            top: -55px;
+
+            right: -30px;
+
+        }
+
+
+        .project-placeholder::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 100px;
+
+            height: 100px;
+
+            background: var(--sage-soft);
+
+            bottom: -40px;
+
+            left: 35px;
+
+            transform: rotate(35deg);
+
+        }
+
+
+        .project-status {
+
+            color: var(--petrol);
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.11em;
+
+            font-size: 0.72rem;
+
+            font-weight: 700;
+
+            margin-bottom: 9px;
+
+        }
+
+
+        .project-title {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 1.75rem;
+
+            line-height: 1.18;
+
+            font-weight: 500;
+
+            margin: 0 0 10px;
+
+        }
+
+
+        .project-title a {
+
+            transition: color 0.18s ease;
+
+        }
+
+
+        .project-title a:hover {
+
+            color: var(--petrol);
+
+        }
+
+
+        .project-authors {
+
+            color: #718078;
+
+            font-size: 0.87rem;
+
+            margin-bottom: 9px;
+
+        }
+
+
+        .project-description {
+
+            color: #596963;
+
+            font-size: 0.95rem;
+
+            margin: 0;
+
+            max-width: 500px;
+
+        }
+
+
+        .project-link {
+
+            display: inline-block;
+
+            margin-top: 15px;
+
+            color: var(--petrol);
+
+            font-size: 0.87rem;
+
+            font-weight: 600;
+
+        }
+
+
+        .project-link:hover {
+
+            color: var(--petrol-dark);
+
+        }
+
+
+        .empty-projects {
+
+            color: var(--muted);
+
+            padding: 30px 0;
+
+        }
+
+
+
+        /* ======================================
+           FOOTER
+        ====================================== */
+
+
+        .site-footer {
+
+            border-top: 1px solid var(--line-dark);
+
+            padding: 28px 0;
+
+            color: #718078;
+
+            font-size: 0.82rem;
+
+        }
+
+
+        .footer-inner {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+
+        /* ======================================
+           RESPONSIVE
+        ====================================== */
+
+
+        @media (max-width: 760px) {
+
+            .projects-header,
+            .projects-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .projects-header {
+
+                gap: 24px;
+
+            }
+
+
+            .projects-grid {
+
+                gap: 48px;
+
+            }
+
+        }
+
+
+        @media (max-width: 560px) {
+
+            .navbar {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                padding: 18px 0;
+
+                gap: 10px;
+
+            }
+
+
+            .nav-links {
+
+                width: 100%;
+
+                justify-content: space-between;
+
+                flex-wrap: wrap;
+
+                gap: 12px;
+
+            }
+
+
+            .research-hero {
+
+                padding: 62px 0 54px;
+
+            }
+
+        }
+
+
+    </style>
+
 </head>
 
-<body>
-    <h1>Research</h1>
-    <p>This page will contain my research projects.</p>
 
-    <a href="/">Back to home</a>
+
+<body>
+
+
+    <!-- HEADER -->
+
+
+    <header class="site-header">
+
+        <div class="container navbar">
+
+
+            <a
+                class="site-name"
+                href="/"
+            >
+                Francesco Catalfamo
+            </a>
+
+
+            <nav
+                class="nav-links"
+                aria-label="Main navigation"
+            >
+
+                <a
+                    href="/research/"
+                    class="active"
+                >
+                    Research
+                </a>
+
+                <a href="/notes/">
+                    Notes
+                </a>
+
+                <a href="/about/">
+                    About
+                </a>
+
+                <a href="/contact/">
+                    Contact
+                </a>
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+
+    <main>
+
+
+        <!-- HERO -->
+
+
+        <section class="research-hero">
+
+            <div class="container">
+
+
+                <div class="eyebrow">
+                    Research
+                </div>
+
+
+                <h1>
+                    Research.
+                </h1>
+
+
+                <p class="research-intro">
+
+                    My research focuses on political behaviour,
+                    party politics and political communication,
+                    with particular attention to coalition politics,
+                    affective polarization and intra-party dynamics.
+
+                    I mainly use quantitative, comparative and
+                    computational approaches.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- PROJECTS -->
+
+
+        <section class="projects-section">
+
+            <div class="container">
+
+
+                <div class="projects-header">
+
+
+                    <div class="projects-label">
+                        Projects
+                    </div>
+
+
+                    <div class="projects-description">
+
+                        Selected research projects, working papers
+                        and ongoing empirical work.
+
+                    </div>
+
+
+                </div>
+
+
+
+
+                {% assign projects = site.research | sort: "order" %}
+
+
+                {% if projects.size > 0 %}
+
+
+                    <div class="projects-grid">
+
+
+                        {% for project in projects %}
+
+
+                            <article class="project-card">
+
+
+                                <a
+                                    class="project-image-link"
+                                    href="{{ project.url }}"
+                                >
+
+
+                                    {% if project.image %}
+
+                                        <img
+                                            class="project-image"
+                                            src="{{ project.image }}"
+                                            alt="Cover image for {{ project.title }}"
+                                        >
+
+                                    {% else %}
+
+                                        <div class="project-placeholder">
+                                        </div>
+
+                                    {% endif %}
+
+
+                                </a>
+
+
+
+
+                                {% if project.status %}
+
+                                    <div class="project-status">
+
+                                        {{ project.status }}
+
+                                    </div>
+
+                                {% endif %}
+
+
+
+
+                                <h2 class="project-title">
+
+                                    <a href="{{ project.url }}">
+
+                                        {{ project.title }}
+
+                                    </a>
+
+                                </h2>
+
+
+
+
+                                {% if project.authors %}
+
+                                    <div class="project-authors">
+
+                                        {{ project.authors }}
+
+                                    </div>
+
+                                {% endif %}
+
+
+
+
+                                {% if project.description %}
+
+                                    <p class="project-description">
+
+                                        {{ project.description }}
+
+                                    </p>
+
+                                {% endif %}
+
+
+
+
+                                <a
+                                    class="project-link"
+                                    href="{{ project.url }}"
+                                >
+                                    Project page →
+                                </a>
+
+
+                            </article>
+
+
+                        {% endfor %}
+
+
+                    </div>
+
+
+                {% else %}
+
+
+                    <div class="empty-projects">
+
+                        No research projects published yet.
+
+                    </div>
+
+
+                {% endif %}
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+
+    <!-- FOOTER -->
+
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <span>
+                © 2026 Francesco Catalfamo
+            </span>
+
+            <span>
+                Political Science
+            </span>
+
+        </div>
+
+    </footer>
+
+
 </body>
+
 </html>
