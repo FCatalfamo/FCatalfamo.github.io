@@ -22,6 +22,7 @@ title: Contact
 
     <title>Contact — Francesco Catalfamo</title>
 
+
     <style>
 
         :root {
@@ -39,25 +40,27 @@ title: Contact
             --ink: #202522;
             --muted: #66716c;
 
-            --light-text: #f7f4ef;
-            --light-muted: #dbe5df;
+            --light-text: #f7f2ec;
+            --light-muted: #e5ddd4;
+            --light-soft: #f0e9e1;
 
             --line-dark: rgba(16, 73, 69, 0.22);
-            --line-light: rgba(246, 229, 209, 0.20);
-
-            --paper: #ffffff;
+            --line-light: rgba(246, 229, 209, 0.28);
 
             --max-width: 1120px;
 
         }
 
+
         * {
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
+
 
         body {
 
@@ -80,10 +83,12 @@ title: Contact
 
         }
 
+
         a {
             color: inherit;
             text-decoration: none;
         }
+
 
         .container {
 
@@ -93,7 +98,12 @@ title: Contact
 
         }
 
-        /* HEADER */
+
+
+        /* ======================================
+           HEADER
+        ====================================== */
+
 
         .site-header {
 
@@ -111,6 +121,7 @@ title: Contact
 
         }
 
+
         .navbar {
 
             min-height: 72px;
@@ -125,6 +136,7 @@ title: Contact
 
         }
 
+
         .site-name {
 
             font-weight: 700;
@@ -134,6 +146,7 @@ title: Contact
             color: var(--petrol-dark);
 
         }
+
 
         .nav-links {
 
@@ -147,6 +160,7 @@ title: Contact
 
         }
 
+
         .nav-links a {
 
             color: var(--petrol-dark);
@@ -155,6 +169,7 @@ title: Contact
 
         }
 
+
         .nav-links a:hover,
         .nav-links a.active {
 
@@ -162,15 +177,21 @@ title: Contact
 
         }
 
-        /* HERO */
+
+
+        /* ======================================
+           HERO
+        ====================================== */
+
 
         .contact-hero {
 
-            padding: 88px 0 76px;
+            padding: 92px 0 78px;
 
             background: var(--ivory);
 
         }
+
 
         .eyebrow {
 
@@ -188,6 +209,7 @@ title: Contact
 
         }
 
+
         .contact-hero h1 {
 
             font-family:
@@ -195,7 +217,7 @@ title: Contact
                 "Times New Roman",
                 serif;
 
-            font-size: clamp(3.5rem, 7vw, 5.8rem);
+            font-size: clamp(3.6rem, 7vw, 5.8rem);
 
             line-height: 0.95;
 
@@ -209,6 +231,7 @@ title: Contact
 
         }
 
+
         .contact-intro {
 
             max-width: 720px;
@@ -221,29 +244,109 @@ title: Contact
 
         }
 
-        /* CONTACT SECTION */
 
-        .contact-section {
 
-            padding: 72px 0 94px;
+        /* ======================================
+           EMAIL
+        ====================================== */
+
+
+        .email-section {
+
+            padding: 68px 0 78px;
 
             border-top: 1px solid var(--line-dark);
 
         }
 
-        .contact-grid {
 
-            display: grid;
+        .email-label {
 
-            grid-template-columns: 0.55fr 1.45fr;
+            color: var(--petrol);
 
-            gap: 70px;
+            text-transform: uppercase;
+
+            letter-spacing: 0.13em;
+
+            font-size: 0.9rem;
+
+            font-weight: 700;
+
+            margin-bottom: 18px;
 
         }
 
-        .section-label {
+
+        .email-link {
+
+            display: inline-block;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: clamp(1.55rem, 3vw, 2.55rem);
+
+            line-height: 1.2;
+
+            color: var(--petrol-dark);
+
+            border-bottom: 1px solid rgba(16, 73, 69, 0.28);
+
+            padding-bottom: 5px;
+
+            transition:
+                color 0.18s ease,
+                border-color 0.18s ease;
+
+            overflow-wrap: anywhere;
+
+        }
+
+
+        .email-link:hover {
 
             color: var(--petrol);
+
+            border-color: var(--petrol);
+
+        }
+
+
+
+        /* ======================================
+           ELSEWHERE
+        ====================================== */
+
+
+        .elsewhere-section {
+
+            background: var(--dark-section);
+
+            color: var(--light-text);
+
+            padding: 76px 0 86px;
+
+        }
+
+
+        .elsewhere-heading {
+
+            display: grid;
+
+            grid-template-columns: 0.5fr 1.5fr;
+
+            gap: 70px;
+
+            margin-bottom: 38px;
+
+        }
+
+
+        .elsewhere-label {
+
+            color: var(--light-text);
 
             text-transform: uppercase;
 
@@ -255,66 +358,109 @@ title: Contact
 
         }
 
-        .contact-list {
 
-            border-top: 1px solid var(--line-dark);
+        .elsewhere-copy {
+
+            color: var(--light-muted);
+
+            max-width: 620px;
+
+            font-size: 0.98rem;
 
         }
 
-        .contact-item {
+
+        .social-grid {
 
             display: grid;
 
-            grid-template-columns: 150px 1fr;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
 
-            gap: 28px;
-
-            padding: 22px 0;
-
-            border-bottom: 1px solid var(--line-dark);
+            gap: 24px;
 
         }
 
-        .contact-type {
 
-            color: #718078;
+        .social-card {
 
-            font-size: 0.86rem;
+            display: block;
 
-            text-transform: uppercase;
+            min-height: 170px;
 
-            letter-spacing: 0.08em;
+            padding: 22px;
 
-            font-weight: 700;
+            border: 1px solid rgba(246, 229, 209, 0.18);
+
+            background: rgba(255, 255, 255, 0.025);
+
+            transition:
+                background 0.18s ease,
+                transform 0.18s ease,
+                border-color 0.18s ease;
 
         }
 
-        .contact-value {
+
+        .social-card:hover {
+
+            background: rgba(255, 255, 255, 0.05);
+
+            border-color: rgba(246, 229, 209, 0.34);
+
+            transform: translateY(-2px);
+
+        }
+
+
+        .social-name {
 
             font-family:
                 Georgia,
                 "Times New Roman",
                 serif;
 
-            font-size: 1.25rem;
+            font-size: 1.45rem;
 
-            color: var(--petrol-dark);
+            line-height: 1.25;
 
-        }
+            color: var(--light-text);
 
-        .contact-value a {
-
-            transition: color 0.18s ease;
+            margin-bottom: 9px;
 
         }
 
-        .contact-value a:hover {
 
-            color: var(--petrol);
+        .social-platform {
+
+            color: var(--light-muted);
+
+            font-size: 0.78rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.1em;
+
+            font-weight: 700;
 
         }
 
-        /* FOOTER */
+
+        .social-arrow {
+
+            margin-top: 28px;
+
+            color: var(--light-soft);
+
+            font-size: 1rem;
+
+        }
+
+
+
+        /* ======================================
+           FOOTER
+        ====================================== */
+
 
         .site-footer {
 
@@ -330,6 +476,7 @@ title: Contact
 
         }
 
+
         .footer-inner {
 
             display: flex;
@@ -342,27 +489,45 @@ title: Contact
 
         }
 
-        /* RESPONSIVE */
 
-        @media (max-width: 700px) {
 
-            .contact-grid {
+        /* ======================================
+           RESPONSIVE
+        ====================================== */
+
+
+        @media (max-width: 760px) {
+
+            .elsewhere-heading,
+            .social-grid {
 
                 grid-template-columns: 1fr;
-
-                gap: 30px;
 
             }
 
-            .contact-item {
 
-                grid-template-columns: 1fr;
+            .elsewhere-heading {
 
-                gap: 6px;
+                gap: 24px;
+
+            }
+
+
+            .social-grid {
+
+                gap: 16px;
+
+            }
+
+
+            .social-card {
+
+                min-height: 130px;
 
             }
 
         }
+
 
         @media (max-width: 560px) {
 
@@ -378,6 +543,7 @@ title: Contact
 
             }
 
+
             .nav-links {
 
                 width: 100%;
@@ -390,31 +556,41 @@ title: Contact
 
             }
 
+
             .contact-hero {
 
                 padding: 62px 0 54px;
 
             }
 
-            .contact-value {
 
-                font-size: 1.05rem;
+            .email-section {
 
-                overflow-wrap: anywhere;
+                padding: 54px 0 62px;
 
             }
 
         }
 
+
     </style>
 
 </head>
 
+
+
 <body>
+
+
+    <!-- ======================================
+         HEADER
+    ====================================== -->
+
 
     <header class="site-header">
 
         <div class="container navbar">
+
 
             <a
                 class="site-name"
@@ -422,6 +598,7 @@ title: Contact
             >
                 Francesco Catalfamo
             </a>
+
 
             <nav
                 class="nav-links"
@@ -449,151 +626,232 @@ title: Contact
 
             </nav>
 
+
         </div>
 
     </header>
 
+
+
+
     <main>
 
-        <!-- HERO -->
+
+        <!-- ======================================
+             HERO
+        ====================================== -->
+
 
         <section class="contact-hero">
 
             <div class="container">
 
+
                 <div class="eyebrow">
                     Contact
                 </div>
+
 
                 <h1>
                     Get in touch.
                 </h1>
 
+
                 <p class="contact-intro">
 
                     Feel free to get in touch regarding research,
-                    academic opportunities, collaborations or anything
+                    collaborations, academic opportunities or anything
                     related to my work.
 
                 </p>
 
+
             </div>
 
         </section>
 
-        <!-- CONTACT DETAILS -->
 
-        <section class="contact-section">
 
-            <div class="container contact-grid">
 
-                <div class="section-label">
-                    Contact Details
+        <!-- ======================================
+             EMAIL
+        ====================================== -->
+
+
+        <section class="email-section">
+
+            <div class="container">
+
+
+                <div class="email-label">
+                    Email
                 </div>
 
-                <div class="contact-list">
 
-                    <div class="contact-item">
+                <a
+                    class="email-link"
+                    href="mailto:francesco.catalfamo01@universitadipavia.it"
+                >
+                    francesco.catalfamo01@universitadipavia.it
+                </a>
 
-                        <div class="contact-type">
-                            Email
-                        </div>
 
-                        <div class="contact-value">
+            </div>
 
-                            <a
-                                href="mailto:francesco.catalfamo01@universitadipavia.it"
-                            >
-                                francesco.catalfamo01@universitadipavia.it
-                            </a>
+        </section>
 
-                        </div>
+
+
+
+        <!-- ======================================
+             ELSEWHERE
+        ====================================== -->
+
+
+        <section class="elsewhere-section">
+
+            <div class="container">
+
+
+                <div class="elsewhere-heading">
+
+
+                    <div class="elsewhere-label">
+                        Elsewhere
+                    </div>
+
+
+                    <div class="elsewhere-copy">
+
+                        You can also find me on these platforms.
 
                     </div>
 
-                    <div class="contact-item">
 
-                        <div class="contact-type">
+                </div>
+
+
+
+
+                <div class="social-grid">
+
+
+                    <!-- LINKEDIN -->
+
+
+                    <a
+                        class="social-card"
+                        href="https://www.linkedin.com/in/francesco-catalfamo-53475a194/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+
+                        <div class="social-name">
+                            Francesco Catalfamo
+                        </div>
+
+                        <div class="social-platform">
                             LinkedIn
                         </div>
 
-                        <div class="contact-value">
-
-                            <a
-                                href="#"
-                                target="_blank"
-                                rel="noopener"
-                            >
-                                LinkedIn ↗
-                            </a>
-
+                        <div class="social-arrow">
+                            ↗
                         </div>
 
-                    </div>
+                    </a>
 
-                    <div class="contact-item">
 
-                        <div class="contact-type">
+
+
+                    <!-- X -->
+
+
+                    <a
+                        class="social-card"
+                        href="https://x.com/f_catalfamo"
+                        target="_blank"
+                        rel="noopener"
+                    >
+
+                        <div class="social-name">
+                            @f_catalfamo
+                        </div>
+
+                        <div class="social-platform">
                             X
                         </div>
 
-                        <div class="contact-value">
-
-                            <a
-                                href="#"
-                                target="_blank"
-                                rel="noopener"
-                            >
-                                X / Twitter ↗
-                            </a>
-
+                        <div class="social-arrow">
+                            ↗
                         </div>
 
-                    </div>
+                    </a>
 
-                    <div class="contact-item">
 
-                        <div class="contact-type">
+
+
+                    <!-- GITHUB -->
+
+
+                    <a
+                        class="social-card"
+                        href="https://github.com/FCatalfamo"
+                        target="_blank"
+                        rel="noopener"
+                    >
+
+                        <div class="social-name">
+                            FCatalfamo
+                        </div>
+
+                        <div class="social-platform">
                             GitHub
                         </div>
 
-                        <div class="contact-value">
-
-                            <a
-                                href="https://github.com/FCatalfamo"
-                                target="_blank"
-                                rel="noopener"
-                            >
-                                github.com/FCatalfamo ↗
-                            </a>
-
+                        <div class="social-arrow">
+                            ↗
                         </div>
 
-                    </div>
+                    </a>
+
 
                 </div>
+
 
             </div>
 
         </section>
 
+
     </main>
+
+
+
+
+    <!-- ======================================
+         FOOTER
+    ====================================== -->
+
 
     <footer class="site-footer">
 
         <div class="container footer-inner">
 
+
             <span>
                 © 2026 Francesco Catalfamo
             </span>
+
 
             <span>
                 Political Science
             </span>
 
+
         </div>
 
     </footer>
+
 
 </body>
 
