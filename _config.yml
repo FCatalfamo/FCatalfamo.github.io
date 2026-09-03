@@ -3,16 +3,28 @@ description: Personal academic website of Francesco Catalfamo
 url: "https://fcatalfamo.github.io"
 
 collections:
+
   notes:
     output: true
     permalink: /notes/:name/
 
+  research:
+    output: true
+    permalink: /research/:name/
+
 defaults:
+
   - scope:
       path: ""
       type: notes
     values:
       layout: note
+
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: research
 
 markdown: kramdown
 
