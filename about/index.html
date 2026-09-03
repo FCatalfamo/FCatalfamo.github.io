@@ -1,1457 +1,210 @@
----
-layout: none
-title: About
----
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build places.json</title>
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="description"
-        content="About Francesco Catalfamo"
-    >
-
-    <title>About — Francesco Catalfamo</title>
-
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
     <style>
-
-        :root {
-
-            --petrol: #165f5a;
-            --petrol-dark: #104945;
-
-            --ivory: rgba(246, 229, 209, 0.42);
-            --ivory-strong: rgba(246, 229, 209, 0.58);
-
-            --sage: #88b79b;
-            --sage-soft: rgba(136, 183, 155, 0.22);
-            --sage-soft-strong: rgba(136, 183, 155, 0.30);
-
-            --dark-section: rgba(16, 73, 69, 0.92);
-
-            --ink: #202522;
-            --muted: #66716c;
-
-            --light-text: #f7f2ec;
-            --light-muted: #e5ddd4;
-            --light-soft: #f0e9e1;
-
-            --line-dark: rgba(16, 73, 69, 0.22);
-            --line-light: rgba(246, 229, 209, 0.24);
-
-            --paper: #ffffff;
-
-            --max-width: 1120px;
-
-        }
-
-
-        * {
-            box-sizing: border-box;
-        }
-
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-
         body {
-
-            margin: 0;
-
-            font-family:
-                Inter,
-                ui-sans-serif,
-                system-ui,
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                sans-serif;
-
-            color: var(--ink);
-
-            background: var(--ivory);
-
-            line-height: 1.65;
-
-        }
-
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-
-        .container {
-
-            width: min(var(--max-width), 90%);
-
-            margin: 0 auto;
-
-        }
-
-
-
-        /* ======================================
-           HEADER
-        ====================================== */
-
-
-        .site-header {
-
-            position: sticky;
-
-            top: 0;
-
-            z-index: 100;
-
-            background: rgba(16, 73, 69, 0.97);
-
-            backdrop-filter: blur(12px);
-
-            border-bottom: 1px solid rgba(246, 229, 209, 0.16);
-
-        }
-
-
-        .navbar {
-
-            min-height: 72px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 2rem;
-
-        }
-
-
-        .site-name {
-
-            font-weight: 700;
-
-            letter-spacing: -0.02em;
-
-            color: var(--light-text);
-
-        }
-
-
-        .nav-links {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 1.6rem;
-
-            font-size: 0.95rem;
-
-        }
-
-
-        .nav-links a {
-
-            color: var(--light-muted);
-
-            transition: color 0.18s ease;
-
-        }
-
-
-        .nav-links a:hover,
-        .nav-links a.active {
-
-            color: #ffffff;
-
-        }
-
-
-
-        /* ======================================
-           HERO
-        ====================================== */
-
-
-        .about-hero {
-
-            padding: 88px 0 72px;
-
-            background: var(--ivory);
-
-        }
-
-
-        .hero-inner {
-
-            max-width: 780px;
-
-        }
-
-
-        .eyebrow {
-
-            color: var(--petrol);
-
-            text-transform: uppercase;
-
-            font-size: 0.82rem;
-
-            letter-spacing: 0.18em;
-
-            font-weight: 700;
-
-            margin-bottom: 20px;
-
-        }
-
-
-        .about-hero h1 {
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            font-size: clamp(3.6rem, 6vw, 5.2rem);
-
-            line-height: 0.96;
-
-            letter-spacing: -0.04em;
-
-            font-weight: 500;
-
-            color: var(--petrol-dark);
-
-            margin: 0;
-
-        }
-
-
-
-        /* ======================================
-           GENERAL SECTIONS
-        ====================================== */
-
-
-        .section {
-
-            padding: 76px 0;
-
-        }
-
-
-        .section-bordered {
-
-            border-top: 1px solid var(--line-dark);
-
-        }
-
-
-        .section-grid {
-
-            display: grid;
-
-            grid-template-columns: 0.48fr 1.52fr;
-
-            gap: 72px;
-
-            align-items: start;
-
-        }
-
-
-        .section-label {
-
-            color: var(--petrol);
-
-            text-transform: uppercase;
-
-            letter-spacing: 0.13em;
-
-            font-size: 0.95rem;
-
-            font-weight: 700;
-
-            line-height: 1.35;
-
-            padding-top: 5px;
-
-        }
-
-
-        .section-content {
-
-            max-width: 790px;
-
-        }
-
-
-        .section-content p {
-
-            margin-top: 0;
-
-            margin-bottom: 20px;
-
-            color: #46524d;
-
-            font-size: 1.03rem;
-
-        }
-
-
-        .section-content p:last-child {
-
-            margin-bottom: 0;
-
-        }
-
-
-
-        /* ======================================
-           ACADEMIC PROFILE
-        ====================================== */
-
-
-        .academic-profile {
-
-            background: var(--ivory);
-
-        }
-
-
-        .academic-intro {
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            font-size: 1.38rem !important;
-
-            line-height: 1.55;
-
-            color: var(--petrol-dark) !important;
-
-            margin-bottom: 24px !important;
-
-        }
-
-
-        .inline-link {
-
-            color: var(--petrol);
-
-            border-bottom: 1px solid rgba(22, 95, 90, 0.28);
-
-            transition:
-                color 0.18s ease,
-                border-color 0.18s ease;
-
-        }
-
-
-        .inline-link:hover {
-
-            color: var(--petrol-dark);
-
-            border-color: var(--petrol-dark);
-
-        }
-
-
-
-        /* ======================================
-           PROFESSIONAL EXPERIENCE
-        ====================================== */
-
-
-        .professional-section {
-
-            background: var(--ivory);
-
-        }
-
-
-        .experience-header {
-
-            margin-bottom: 24px;
-
-        }
-
-
-        .experience-title {
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            font-size: 1.65rem;
-
-            line-height: 1.2;
-
-            font-weight: 500;
-
-            color: var(--petrol-dark);
-
-            margin-bottom: 4px;
-
-        }
-
-
-        .experience-meta {
-
-            color: #718078;
-
-            font-size: 0.88rem;
-
-        }
-
-
-        .experience-highlight {
-
-            margin-top: 30px;
-
-            padding-top: 24px;
-
-            border-top: 1px solid var(--line-dark);
-
-            display: grid;
-
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-
-            gap: 18px 34px;
-
-        }
-
-
-        .experience-item {
-
-            position: relative;
-
-            padding-left: 18px;
-
-            color: #596963;
-
-            font-size: 0.94rem;
-
-        }
-
-
-        .experience-item::before {
-
-            content: "";
-
-            position: absolute;
-
-            width: 5px;
-
-            height: 5px;
-
-            border-radius: 50%;
-
-            background: var(--petrol);
-
-            left: 0;
-
-            top: 0.67em;
-
-        }
-
-
-
-        /* ======================================
-           OUTSIDE ACADEMIA
-        ====================================== */
-
-
-        .outside-section {
-
-            background: var(--dark-section);
-
-            color: var(--light-text);
-
-        }
-
-
-        .outside-section .section-label {
-
-            color: var(--light-text);
-
-        }
-
-
-        .outside-intro {
-
-            color: var(--light-muted);
-
-            max-width: 650px;
-
-            margin-bottom: 34px;
-
-            font-size: 0.98rem;
-
-        }
-
-
-        .outside-grid {
-
-            display: grid;
-
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-
-            gap: 18px;
-
-        }
-
-
-        .outside-card {
-
-            min-height: 250px;
-
-            padding: 24px;
-
-            border: 1px solid rgba(246, 229, 209, 0.18);
-
-            background: rgba(255, 255, 255, 0.025);
-
-            display: flex;
-
-            flex-direction: column;
-
-        }
-
-
-        .outside-number {
-
-            color: var(--light-muted);
-
-            font-size: 0.72rem;
-
-            letter-spacing: 0.12em;
-
-            margin-bottom: 28px;
-
-        }
-
-
-        .outside-title {
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            color: var(--light-text);
-
-            font-size: 1.43rem;
-
-            line-height: 1.2;
-
-            margin-bottom: 13px;
-
-        }
-
-
-        .outside-text {
-
-            color: var(--light-muted);
-
-            font-size: 0.9rem;
-
+            font-family: Inter, Arial, sans-serif;
+            margin: 40px auto;
+            width: min(900px, 92%);
             line-height: 1.6;
-
-            margin: 0;
-
+            color: #202522;
         }
 
-
-
-        /* ======================================
-           TRAVEL MAP VISUAL
-        ====================================== */
-
-
-        .travel-map {
-
-            position: relative;
-
-            width: 100%;
-
-            height: 88px;
-
-            margin: 22px 0 18px;
-
-            overflow: hidden;
-
-            border-top: 1px solid rgba(246, 229, 209, 0.15);
-
-            border-bottom: 1px solid rgba(246, 229, 209, 0.15);
-
+        h1 {
+            margin-bottom: 10px;
         }
 
-
-        .map-line {
-
-            position: absolute;
-
-            left: 7%;
-
-            top: 48%;
-
-            width: 83%;
-
-            height: 1px;
-
-            background: rgba(247, 242, 236, 0.30);
-
-            transform: rotate(-5deg);
-
+        .box {
+            border: 1px solid #d7d7d7;
+            padding: 20px;
+            margin-top: 20px;
         }
 
-
-        .map-line::before {
-
-            content: "";
-
-            position: absolute;
-
-            width: 42%;
-
-            height: 1px;
-
-            background: rgba(247, 242, 236, 0.22);
-
-            left: 18%;
-
-            top: 19px;
-
-            transform: rotate(16deg);
-
+        button {
+            background: #104945;
+            color: white;
+            border: 0;
+            padding: 12px 18px;
+            cursor: pointer;
+            font-size: 14px;
         }
 
-
-        .map-point {
-
-            position: absolute;
-
-            width: 7px;
-
-            height: 7px;
-
-            border-radius: 50%;
-
-            background: var(--light-text);
-
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
         }
 
-
-        .map-point.one {
-
-            left: 12%;
-
-            top: 52%;
-
+        #log {
+            white-space: pre-wrap;
+            font-family: ui-monospace, monospace;
+            font-size: 13px;
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            padding: 16px;
+            min-height: 180px;
+            margin-top: 16px;
         }
-
-
-        .map-point.two {
-
-            left: 34%;
-
-            top: 37%;
-
-        }
-
-
-        .map-point.three {
-
-            left: 54%;
-
-            top: 59%;
-
-        }
-
-
-        .map-point.four {
-
-            left: 72%;
-
-            top: 31%;
-
-        }
-
-
-        .map-point.five {
-
-            left: 88%;
-
-            top: 48%;
-
-        }
-
-
-        .map-link {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 5px;
-
-            margin-top: auto;
-
-            padding-top: 18px;
-
-            color: var(--light-text);
-
-            font-size: 0.88rem;
-
-            font-weight: 600;
-
-            transition: opacity 0.18s ease;
-
-        }
-
-
-        .map-link:hover {
-
-            opacity: 0.72;
-
-        }
-
-
-
-        /* ======================================
-           MORE LINKS
-        ====================================== */
-
-
-        .more-section {
-
-            background: var(--ivory);
-
-        }
-
-
-        .more-links {
-
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 14px 28px;
-
-        }
-
-
-        .more-link {
-
-            color: var(--petrol);
-
-            font-weight: 600;
-
-            font-size: 0.92rem;
-
-            padding-bottom: 2px;
-
-            border-bottom: 1px solid rgba(22, 95, 90, 0.30);
-
-            transition:
-                color 0.18s ease,
-                border-color 0.18s ease;
-
-        }
-
-
-        .more-link:hover {
-
-            color: var(--petrol-dark);
-
-            border-color: var(--petrol-dark);
-
-        }
-
-
-
-        /* ======================================
-           FOOTER
-        ====================================== */
-
-
-        .site-footer {
-
-            background: rgba(16, 73, 69, 0.97);
-
-            border-top: 1px solid rgba(246, 229, 209, 0.16);
-
-            padding: 28px 0;
-
-            color: var(--light-muted);
-
-            font-size: 0.82rem;
-
-        }
-
-
-        .footer-inner {
-
-            display: flex;
-
-            justify-content: space-between;
-
-            gap: 20px;
-
-            flex-wrap: wrap;
-
-        }
-
-
-
-        /* ======================================
-           TABLET
-        ====================================== */
-
-
-        @media (max-width: 850px) {
-
-            .section-grid {
-
-                grid-template-columns: 1fr;
-
-                gap: 24px;
-
-            }
-
-
-            .section-label {
-
-                padding-top: 0;
-
-            }
-
-
-            .outside-grid {
-
-                grid-template-columns: 1fr;
-
-            }
-
-
-            .outside-card {
-
-                min-height: auto;
-
-            }
-
-        }
-
-
-
-        /* ======================================
-           MOBILE
-        ====================================== */
-
-
-        @media (max-width: 560px) {
-
-            .navbar {
-
-                flex-direction: column;
-
-                align-items: flex-start;
-
-                padding: 18px 0;
-
-                gap: 10px;
-
-            }
-
-
-            .nav-links {
-
-                width: 100%;
-
-                justify-content: space-between;
-
-                flex-wrap: wrap;
-
-                gap: 12px;
-
-            }
-
-
-            .about-hero {
-
-                padding: 62px 0 50px;
-
-            }
-
-
-            .section {
-
-                padding: 58px 0;
-
-            }
-
-
-            .experience-highlight {
-
-                grid-template-columns: 1fr;
-
-                gap: 14px;
-
-            }
-
-
-            .academic-intro {
-
-                font-size: 1.22rem !important;
-
-            }
-
-        }
-
-
     </style>
-
 </head>
-
-
-
 <body>
 
+    <h1>Build places.json</h1>
 
-    <!-- ======================================
-         HEADER
-    ====================================== -->
+    <p>
+        Carica il file <strong>Visited.csv</strong>, poi clicca il bottone.
+        Il file verrà geocodificato e scaricherai <strong>places.json</strong>.
+    </p>
 
+    <div class="box">
+        <input type="file" id="csvFile" accept=".csv">
+        <button id="startBtn">Convert CSV to places.json</button>
+        <div id="log">Waiting for file...</div>
+    </div>
 
-    <header class="site-header">
+    <script>
+        const csvFileInput = document.getElementById("csvFile");
+        const startBtn = document.getElementById("startBtn");
+        const logEl = document.getElementById("log");
 
-        <div class="container navbar">
+        function log(message) {
+            logEl.textContent += "\n" + message;
+            logEl.scrollTop = logEl.scrollHeight;
+        }
 
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
 
-            <a
-                class="site-name"
-                href="/"
-            >
-                Francesco Catalfamo
-            </a>
+        async function geocodePlace(name) {
+            const url = `https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&q=${encodeURIComponent(name)}`;
 
+            const response = await fetch(url, {
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
 
-            <nav
-                class="nav-links"
-                aria-label="Main navigation"
-            >
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
 
-                <a href="/research/">
-                    Research
-                </a>
+            const results = await response.json();
 
-                <a href="/notes/">
-                    Notes
-                </a>
+            if (!results.length) {
+                return null;
+            }
 
-                <a
-                    href="/about/"
-                    class="active"
-                >
-                    About
-                </a>
+            return results[0];
+        }
 
-                <a href="/contact/">
-                    Contact
-                </a>
+        startBtn.addEventListener("click", async () => {
 
-            </nav>
+            const file = csvFileInput.files[0];
 
+            if (!file) {
+                alert("Carica prima il file Visited.csv");
+                return;
+            }
 
-        </div>
+            startBtn.disabled = true;
+            logEl.textContent = "Parsing CSV...";
 
-    </header>
+            Papa.parse(file, {
+                header: true,
+                skipEmptyLines: true,
+                complete: async function(results) {
 
+                    const rows = results.data
+                        .filter(row => row.Titolo && row.Titolo.trim() !== "")
+                        .map(row => ({
+                            name: row.Titolo.trim(),
+                            url: (row.URL || "").trim()
+                        }));
 
+                    log(`Found ${rows.length} places.`);
+                    log("Starting geocoding...");
+                    log("This may take a while.");
 
+                    const output = [];
 
-    <main>
+                    for (let i = 0; i < rows.length; i++) {
 
+                        const row = rows[i];
 
-        <!-- ======================================
-             HERO
-        ====================================== -->
+                        log(`[${i + 1}/${rows.length}] ${row.name}`);
 
+                        try {
 
-        <section class="about-hero">
+                            const result = await geocodePlace(row.name);
 
-            <div class="container">
+                            if (result) {
 
-                <div class="hero-inner">
+                                output.push({
+                                    name: row.name,
+                                    lat: parseFloat(result.lat),
+                                    lng: parseFloat(result.lon),
+                                    url: row.url,
+                                    matched_name: result.display_name
+                                });
 
+                                log(`  -> matched: ${result.display_name}`);
 
-                    <div class="eyebrow">
-                        About
-                    </div>
-
-
-                    <h1>
-                        About me.
-                    </h1>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-
-        <!-- ======================================
-             ACADEMIC PROFILE
-        ====================================== -->
-
-
-        <section class="section academic-profile section-bordered">
-
-            <div class="container section-grid">
-
-
-                <div class="section-label">
-                    Academic Profile
-                </div>
-
-
-                <div class="section-content">
-
-
-                    <p class="academic-intro">
-
-                        I am a political scientist interested in how
-                        political parties compete, cooperate and communicate,
-                        and in how citizens respond to these dynamics.
-
-                    </p>
-
-
-                    <p>
-
-                        I am currently a PhD researcher in Political Science
-                        at the Network for the Advancement of Social and
-                        Political Studies (NASP), jointly affiliated with the
-                        University of Milan and the University of Pavia.
-
-                        Before starting my PhD, I studied Political Science
-                        at the University of Mannheim and Public and Corporate
-                        Communication at the University of Milan, where I
-                        followed a curriculum in Data Analytics for Politics,
-                        Society and Complex Organizations.
-
-                    </p>
-
-
-                    <p>
-
-                        My research focuses primarily on political behaviour,
-                        party politics, political communication, coalition
-                        politics and affective polarization.
-
-                        I mainly work with quantitative and comparative
-                        research designs, including panel data, causal
-                        inference and computational approaches to political
-                        text.
-
-                    </p>
-
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-
-
-        <!-- ======================================
-             PROFESSIONAL EXPERIENCE
-        ====================================== -->
-
-
-        <section class="section professional-section section-bordered">
-
-            <div class="container section-grid">
-
-
-                <div class="section-label">
-                    Professional Experience
-                </div>
-
-
-                <div class="section-content">
-
-
-                    <div class="experience-header">
-
-                        <div class="experience-title">
-                            Istituto Bruno Leoni
-                        </div>
-
-                        <div class="experience-meta">
-                            Research &amp; Communication
-                        </div>
-
-                    </div>
-
-
-                    <p>
-
-                        Alongside academic research, I have worked at the
-                        Istituto Bruno Leoni on the production and
-                        communication of policy research.
-
-                        My work combined quantitative analysis and research
-                        support with the broader task of translating research
-                        findings into accessible public-facing content.
-
-                    </p>
-
-
-                    <p>
-
-                        A substantial part of my work focused on research
-                        communication: developing content for social media,
-                        preparing press releases and other communication
-                        materials, producing graphics, video and audio content,
-                        managing web content and supporting the dissemination
-                        of research across different audiences.
-
-                    </p>
-
-
-                    <p>
-
-                        I have also been involved in stakeholder outreach,
-                        event organisation and educational activities,
-                        including work on initiatives aimed at bringing
-                        economic and policy debates to students outside
-                        traditional academic settings.
-
-                    </p>
-
-
-                    <div class="experience-highlight">
-
-
-                        <div class="experience-item">
-                            Research communication and public-facing content
-                        </div>
-
-
-                        <div class="experience-item">
-                            Social media and digital communication
-                        </div>
-
-
-                        <div class="experience-item">
-                            Press releases and media materials
-                        </div>
-
-
-                        <div class="experience-item">
-                            Graphics, video and audio production
-                        </div>
-
-
-                        <div class="experience-item">
-                            Web content and WordPress
-                        </div>
-
-
-                        <div class="experience-item">
-                            Events, outreach and educational projects
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-
-
-        <!-- ======================================
-             OUTSIDE ACADEMIA
-        ====================================== -->
-
-
-        <section class="section outside-section">
-
-            <div class="container section-grid">
-
-
-                <div class="section-label">
-                    Outside Academia
-                </div>
-
-
-                <div>
-
-
-                    <div class="outside-intro">
-
-                        A few things that occupy a significant amount of my
-                        time when I am not working on political science.
-
-                    </div>
-
-
-
-
-                    <div class="outside-grid">
-
-
-                        <!-- VOLLEYBALL -->
-
-
-                        <div class="outside-card">
-
-
-                            <div class="outside-number">
-                                01
-                            </div>
-
-
-                            <div class="outside-title">
-                                Volleyball
-                            </div>
-
-
-                            <p class="outside-text">
-
-                                Volleyball has been part of my life for many
-                                years, both on and around the court.
-
-                                I have played, coached and refereed, including
-                                refereeing competitive volleyball in Italy
-                                and Germany.
-
-                            </p>
-
-
-                        </div>
-
-
-
-
-                        <!-- TRAVEL -->
-
-
-                        <div class="outside-card">
-
-
-                            <div class="outside-number">
-                                02
-                            </div>
-
-
-                            <div class="outside-title">
-                                Travel &amp; Outdoors
-                            </div>
-
-
-                            <p class="outside-text">
-
-                                I enjoy travelling, hiking and discovering
-                                places at a slower pace whenever possible.
-
-                            </p>
-
-
-                            <div class="travel-map">
-
-                                <div class="map-line"></div>
-
-                                <span class="map-point one"></span>
-                                <span class="map-point two"></span>
-                                <span class="map-point three"></span>
-                                <span class="map-point four"></span>
-                                <span class="map-point five"></span>
-
-                            </div>
-
-
-                            <a
-                                class="map-link"
-                                href="https://maps.app.goo.gl/bbcjbYduUdEVKdDN8"
-                                target="_blank"
-                                rel="noopener"
-                            >
-                                Explore my map ↗
-                            </a>
-
-
-                        </div>
-
-
-
-
-                        <!-- BEER -->
-
-
-                        <div class="outside-card">
-
-
-                            <div class="outside-number">
-                                03
-                            </div>
-
-
-                            <div class="outside-title">
-                                Beer &amp; Breweries
-                            </div>
-
-
-                            <p class="outside-text">
-
-                                I also enjoy discovering local beers,
-                                breweries and pub cultures while travelling —
-                                preferably combining this interest with the
-                                one next door.
-
-                            </p>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-
-
-        <!-- ======================================
-             MORE
-        ====================================== -->
-
-
-        <section class="section more-section">
-
-            <div class="container section-grid">
-
-
-                <div class="section-label">
-                    More
-                </div>
-
-
-                <div class="more-links">
-
-
-                    <a
-                        class="more-link"
-                        href="/research/"
-                    >
-                        Research →
-                    </a>
-
-
-                    <a
-                        class="more-link"
-                        href="/notes/"
-                    >
-                        Notes →
-                    </a>
-
-
-                    <a
-                        class="more-link"
-                        href="/assets/cv.pdf"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        Curriculum Vitae ↗
-                    </a>
-
-
-                    <a
-                        class="more-link"
-                        href="/contact/"
-                    >
-                        Contact →
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-    </main>
-
-
-
-
-    <!-- ======================================
-         FOOTER
-    ====================================== -->
-
-
-    <footer class="site-footer">
-
-        <div class="container footer-inner">
-
-
-            <span>
-                © 2026 Francesco Catalfamo
-            </span>
-
-
-            <span>
-                Political Science
-            </span>
-
-
-        </div>
-
-    </footer>
-
+                            } else {
+
+                                output.push({
+                                    name: row.name,
+                                    lat: null,
+                                    lng: null,
+                                    url: row.url,
+                                    matched_name: null
+                                });
+
+                                log("  -> no match found");
+                            }
+
+                        } catch (error) {
+
+                            output.push({
+                                name: row.name,
+                                lat: null,
+                                lng: null,
+                                url: row.url,
+                                matched_name: null
+                            });
+
+                            log(`  -> error: ${error.message}`);
+                        }
+
+                        await sleep(1100);
+                    }
+
+                    const blob = new Blob(
+                        [JSON.stringify(output, null, 2)],
+                        { type: "application/json" }
+                    );
+
+                    const downloadUrl = URL.createObjectURL(blob);
+                    const a = document.createElement("a");
+                    a.href = downloadUrl;
+                    a.download = "places.json";
+                    a.click();
+                    URL.revokeObjectURL(downloadUrl);
+
+                    log("");
+                    log("Done. places.json downloaded.");
+                    log("Now move it into /assets/data/places.json");
+
+                    startBtn.disabled = false;
+                }
+            });
+        });
+    </script>
 
 </body>
-
 </html>
