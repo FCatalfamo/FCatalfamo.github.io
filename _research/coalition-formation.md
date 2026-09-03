@@ -1,11 +1,11 @@
 ---
 title: "The Affective Consequences of Coalition Formation"
+date: 2026-09-03
 status: "Working Paper"
 authors: "Francesco Catalfamo"
 description: "A cross-national panel study examining how coalition formation shapes citizens' evaluations of political parties and affective polarization."
 image: /assets/images/research/coalition-formation.jpg
 pdf: /assets/papers/coalition-formation.pdf
-order: 1
 featured: true
 tags:
   - Coalition Politics
