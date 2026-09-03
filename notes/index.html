@@ -20,7 +20,7 @@ title: Notes
         content="Notes by Francesco Catalfamo"
     >
 
-    <title>Notes | Francesco Catalfamo</title>
+    <title>Notes — Francesco Catalfamo</title>
 
 
     <style>
@@ -29,11 +29,16 @@ title: Notes
 
             --petrol: #165f5a;
             --petrol-dark: #104945;
-            --petrol-soft: #eef5f2;
+
+            --ivory: rgba(246, 229, 209, 0.42);
+
+            --sage: #88b79b;
+            --sage-soft: rgba(136, 183, 155, 0.22);
 
             --ink: #202522;
             --muted: #66716c;
-            --line: #dfe6e2;
+
+            --line-dark: rgba(16, 73, 69, 0.22);
 
             --paper: #ffffff;
 
@@ -42,14 +47,17 @@ title: Notes
         }
 
 
+
         * {
             box-sizing: border-box;
         }
 
 
+
         html {
             scroll-behavior: smooth;
         }
+
 
 
         body {
@@ -67,25 +75,26 @@ title: Notes
 
             color: var(--ink);
 
-            background: var(--paper);
+            background: var(--ivory);
 
             line-height: 1.65;
 
         }
 
 
+
         a {
-
             color: inherit;
-
             text-decoration: none;
-
         }
 
 
-        a:hover {
-            color: var(--petrol);
+
+        img {
+            display: block;
+            max-width: 100%;
         }
+
 
 
         .container {
@@ -111,13 +120,14 @@ title: Notes
 
             z-index: 100;
 
-            background: rgba(255, 255, 255, 0.94);
+            background: rgba(252, 248, 243, 0.94);
 
             backdrop-filter: blur(12px);
 
-            border-bottom: 1px solid var(--line);
+            border-bottom: 1px solid var(--line-dark);
 
         }
+
 
 
         .navbar {
@@ -135,13 +145,17 @@ title: Notes
         }
 
 
+
         .site-name {
 
             font-weight: 700;
 
             letter-spacing: -0.02em;
 
+            color: var(--petrol-dark);
+
         }
+
 
 
         .nav-links {
@@ -157,26 +171,39 @@ title: Notes
         }
 
 
-        .nav-links .active {
+
+        .nav-links a {
+
+            color: var(--petrol-dark);
+
+            transition: color 0.18s ease;
+
+        }
+
+
+
+        .nav-links a:hover,
+        .nav-links a.active {
 
             color: var(--petrol);
-
-            font-weight: 600;
 
         }
 
 
 
         /* ======================================
-           PAGE HERO
+           HERO
         ====================================== */
 
 
-        .page-hero {
+        .notes-hero {
 
-            padding: 100px 0 72px;
+            padding: 88px 0 72px;
+
+            background: var(--ivory);
 
         }
+
 
 
         .eyebrow {
@@ -191,42 +218,44 @@ title: Notes
 
             font-weight: 700;
 
-            margin-bottom: 22px;
+            margin-bottom: 20px;
 
         }
 
 
-        h1 {
+
+        .notes-hero h1 {
 
             font-family:
                 Georgia,
                 "Times New Roman",
                 serif;
 
-            font-size: clamp(3.8rem, 8vw, 6.5rem);
-
-            font-weight: 500;
-
-            letter-spacing: -0.045em;
+            font-size: clamp(3.5rem, 7vw, 5.8rem);
 
             line-height: 0.95;
 
-            margin: 0;
+            letter-spacing: -0.04em;
+
+            font-weight: 500;
+
+            color: var(--petrol-dark);
+
+            margin: 0 0 28px;
 
         }
 
 
-        .page-intro {
+
+        .notes-intro {
 
             max-width: 760px;
 
-            margin-top: 28px;
+            font-size: 1.15rem;
 
-            color: var(--muted);
+            color: #4c5953;
 
-            font-size: 1.18rem;
-
-            line-height: 1.7;
+            margin: 0;
 
         }
 
@@ -239,11 +268,14 @@ title: Notes
 
         .filters-section {
 
-            border-top: 1px solid var(--line);
+            border-top: 1px solid var(--line-dark);
 
-            padding: 34px 0;
+            border-bottom: 1px solid var(--line-dark);
+
+            padding: 22px 0;
 
         }
+
 
 
         .filters {
@@ -257,7 +289,8 @@ title: Notes
         }
 
 
-        .filter {
+
+        .filter-pill {
 
             display: inline-flex;
 
@@ -265,101 +298,212 @@ title: Notes
 
             justify-content: center;
 
-            min-height: 38px;
-
             padding: 7px 13px;
 
-            border: 1px solid var(--line);
+            border: 1px solid rgba(16, 73, 69, 0.18);
 
             border-radius: 999px;
 
-            color: var(--muted);
+            color: var(--petrol-dark);
 
-            font-size: 0.88rem;
+            background: rgba(255,255,255,0.35);
+
+            font-size: 0.82rem;
 
             font-weight: 600;
 
         }
 
 
-        .filter.active {
 
-            background: var(--petrol);
+        .filter-pill.active {
 
-            color: white;
+            background: var(--sage-soft);
 
-            border-color: var(--petrol);
+            border-color: rgba(16, 73, 69, 0.30);
 
         }
 
 
 
         /* ======================================
-           NOTES ARCHIVE
+           NOTES LIST
         ====================================== */
 
 
         .notes-section {
 
-            border-top: 1px solid var(--line);
-
-            padding: 0 0 90px;
+            padding: 56px 0 88px;
 
         }
+
+
+
+        .notes-list {
+
+            border-top: 1px solid var(--line-dark);
+
+        }
+
 
 
         .note-item {
 
             display: grid;
 
-            grid-template-columns: 145px 1fr;
+            grid-template-columns: 110px 220px 1fr;
 
-            gap: 36px;
+            gap: 28px;
 
-            padding: 38px 0;
+            align-items: start;
 
-            border-bottom: 1px solid var(--line);
+            padding: 30px 0;
+
+            border-bottom: 1px solid var(--line-dark);
 
         }
+
 
 
         .note-date {
 
-            color: #7a8580;
+            color: #718078;
 
             font-size: 0.88rem;
 
-            letter-spacing: 0.03em;
-
-            text-transform: uppercase;
-
-            padding-top: 5px;
+            padding-top: 4px;
 
         }
+
+
+
+        .note-image-link {
+
+            display: block;
+
+            overflow: hidden;
+
+            background: var(--sage-soft);
+
+        }
+
+
+
+        .note-image {
+
+            width: 100%;
+
+            aspect-ratio: 4 / 3;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.4s ease,
+                opacity 0.4s ease;
+
+        }
+
+
+
+        .note-image-link:hover .note-image {
+
+            transform: scale(1.025);
+
+            opacity: 0.94;
+
+        }
+
+
+
+        .note-image-placeholder {
+
+            width: 100%;
+
+            aspect-ratio: 4 / 3;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(136, 183, 155, 0.18),
+                    rgba(246, 229, 209, 0.35)
+                );
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+
+        .note-image-placeholder::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 105px;
+
+            height: 105px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(16, 73, 69, 0.18);
+
+            top: 20px;
+
+            right: 20px;
+
+        }
+
+
+
+        .note-image-placeholder::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 62px;
+
+            height: 62px;
+
+            background: var(--sage-soft);
+
+            bottom: -16px;
+
+            left: 30px;
+
+            transform: rotate(35deg);
+
+        }
+
 
 
         .note-content {
 
-            max-width: 800px;
+            min-width: 0;
 
         }
+
 
 
         .note-category {
 
             color: var(--petrol);
 
-            font-size: 0.76rem;
+            text-transform: uppercase;
+
+            letter-spacing: 0.1em;
+
+            font-size: 0.72rem;
 
             font-weight: 700;
 
-            text-transform: uppercase;
-
-            letter-spacing: 0.12em;
-
-            margin-bottom: 9px;
+            margin-bottom: 7px;
 
         }
+
 
 
         .note-title {
@@ -369,30 +513,48 @@ title: Notes
                 "Times New Roman",
                 serif;
 
-            font-size: 1.8rem;
+            font-size: 1.55rem;
+
+            line-height: 1.25;
 
             font-weight: 500;
 
-            line-height: 1.2;
-
             margin: 0 0 10px;
+
+            color: var(--ink);
 
         }
 
 
-        .note-excerpt {
 
-            color: var(--muted);
+        .note-title a {
 
-            font-size: 0.98rem;
+            transition: color 0.18s ease;
 
-            line-height: 1.65;
+        }
+
+
+
+        .note-title a:hover {
+
+            color: var(--petrol);
+
+        }
+
+
+
+        .note-description {
+
+            color: #596963;
+
+            font-size: 0.96rem;
 
             margin: 0;
 
-            max-width: 730px;
+            max-width: 700px;
 
         }
+
 
 
         .note-tags {
@@ -403,49 +565,55 @@ title: Notes
 
             gap: 8px;
 
-            margin-top: 15px;
+            margin-top: 14px;
 
         }
+
 
 
         .note-tag {
 
-            color: #7a8580;
+            font-size: 0.72rem;
 
-            font-size: 0.8rem;
+            color: var(--petrol-dark);
 
-        }
+            background: var(--sage-soft);
 
+            padding: 4px 8px;
 
-        .note-tag + .note-tag::before {
-
-            content: "·";
-
-            color: #a0aaa5;
-
-            margin-right: 8px;
+            border-radius: 999px;
 
         }
 
 
-        .read-link {
+
+        .note-read {
 
             display: inline-block;
 
-            margin-top: 17px;
+            margin-top: 15px;
 
             color: var(--petrol);
 
-            font-size: 0.9rem;
-
             font-weight: 600;
+
+            font-size: 0.88rem;
 
         }
 
 
-        .empty-state {
 
-            padding: 55px 0;
+        .note-read:hover {
+
+            color: var(--petrol-dark);
+
+        }
+
+
+
+        .empty-notes {
+
+            padding: 36px 0;
 
             color: var(--muted);
 
@@ -460,15 +628,16 @@ title: Notes
 
         .site-footer {
 
-            border-top: 1px solid var(--line);
+            border-top: 1px solid var(--line-dark);
 
             padding: 28px 0;
 
-            color: #7a8580;
+            color: #718078;
 
             font-size: 0.82rem;
 
         }
+
 
 
         .footer-inner {
@@ -486,35 +655,17 @@ title: Notes
 
 
         /* ======================================
-           MOBILE
+           TABLET
         ====================================== */
 
 
-        @media (max-width: 780px) {
-
-            .navbar {
-
-                align-items: flex-start;
-
-                padding: 18px 0;
-
-            }
-
-
-            .nav-links {
-
-                gap: 14px;
-
-                font-size: 0.86rem;
-
-            }
-
+        @media (max-width: 820px) {
 
             .note-item {
 
-                grid-template-columns: 1fr;
+                grid-template-columns: 90px 180px 1fr;
 
-                gap: 8px;
+                gap: 20px;
 
             }
 
@@ -522,15 +673,25 @@ title: Notes
 
 
 
-        @media (max-width: 540px) {
+        /* ======================================
+           MOBILE
+        ====================================== */
+
+
+        @media (max-width: 640px) {
 
             .navbar {
 
                 flex-direction: column;
 
+                align-items: flex-start;
+
+                padding: 18px 0;
+
                 gap: 10px;
 
             }
+
 
 
             .nav-links {
@@ -541,19 +702,49 @@ title: Notes
 
                 flex-wrap: wrap;
 
+                gap: 12px;
+
+            }
+
+
+
+            .notes-hero {
+
+                padding: 62px 0 54px;
+
             }
 
 
-            h1 {
 
-                font-size: 3.6rem;
+            .note-item {
+
+                grid-template-columns: 1fr;
+
+                gap: 12px;
 
             }
+
+
+
+            .note-date {
+
+                padding-top: 0;
+
+            }
+
+
+
+            .note-image-link {
+
+                max-width: 320px;
+
+            }
+
 
 
             .note-title {
 
-                font-size: 1.55rem;
+                font-size: 1.35rem;
 
             }
 
@@ -569,23 +760,18 @@ title: Notes
 <body>
 
 
-    <!-- ======================================
-         HEADER
-    ====================================== -->
+    <!-- HEADER -->
 
 
     <header class="site-header">
 
         <div class="container navbar">
 
-
             <a
                 class="site-name"
                 href="/"
             >
-
                 Francesco Catalfamo
-
             </a>
 
 
@@ -594,11 +780,9 @@ title: Notes
                 aria-label="Main navigation"
             >
 
-
                 <a href="/research/">
                     Research
                 </a>
-
 
                 <a
                     href="/notes/"
@@ -607,19 +791,15 @@ title: Notes
                     Notes
                 </a>
 
-
                 <a href="/about/">
                     About
                 </a>
-
 
                 <a href="/contact/">
                     Contact
                 </a>
 
-
             </nav>
-
 
         </div>
 
@@ -631,31 +811,23 @@ title: Notes
     <main>
 
 
-        <!-- ======================================
-             HERO
-        ====================================== -->
+        <!-- HERO -->
 
 
-        <section class="page-hero">
+        <section class="notes-hero">
 
             <div class="container">
 
-
                 <div class="eyebrow">
-
                     Notes
-
                 </div>
 
-
                 <h1>
-
-                    Analysis &amp; commentary.
-
+                    Analysis &amp;<br>
+                    commentary.
                 </h1>
 
-
-                <p class="page-intro">
+                <p class="notes-intro">
 
                     Short analyses and observations on politics,
                     political science, data and methods.
@@ -666,7 +838,6 @@ title: Notes
 
                 </p>
 
-
             </div>
 
         </section>
@@ -674,40 +845,36 @@ title: Notes
 
 
 
-        <!-- ======================================
-             FILTERS
-        ====================================== -->
+        <!-- FILTERS -->
 
 
         <section class="filters-section">
 
             <div class="container">
 
-
                 <div class="filters">
 
-                    <span class="filter active">
+                    <span class="filter-pill active">
                         All
                     </span>
 
-                    <span class="filter">
+                    <span class="filter-pill">
                         Politics
                     </span>
 
-                    <span class="filter">
+                    <span class="filter-pill">
                         Methods
                     </span>
 
-                    <span class="filter">
+                    <span class="filter-pill">
                         Data
                     </span>
 
-                    <span class="filter">
+                    <span class="filter-pill">
                         Papers
                     </span>
 
                 </div>
-
 
             </div>
 
@@ -716,121 +883,156 @@ title: Notes
 
 
 
-        <!-- ======================================
-             AUTOMATIC NOTES ARCHIVE
-        ====================================== -->
+        <!-- NOTES ARCHIVE -->
 
 
         <section class="notes-section">
 
             <div class="container">
 
-
-                {% assign sorted_notes = site.notes | sort: "date" | reverse %}
-
-
-                {% if sorted_notes.size > 0 %}
+                <div class="notes-list">
 
 
-                    {% for note in sorted_notes %}
+                    {% assign sorted_notes = site.notes | sort: "date" | reverse %}
 
 
-                        <article class="note-item">
+                    {% if sorted_notes.size > 0 %}
 
 
-                            <div class="note-date">
-
-                                {{ note.date | date: "%d %b %Y" }}
-
-                            </div>
+                        {% for note in sorted_notes %}
 
 
-                            <div class="note-content">
+                            <article class="note-item">
 
 
-                                {% if note.category %}
+                                <div class="note-date">
 
-                                    <div class="note-category">
+                                    {{ note.date | date: "%d %b %Y" }}
 
-                                        {{ note.category }}
-
-                                    </div>
-
-                                {% endif %}
+                                </div>
 
 
-                                <h2 class="note-title">
-
-                                    <a href="{{ note.url }}">
-
-                                        {{ note.title }}
-
-                                    </a>
-
-                                </h2>
-
-
-                                {% if note.description %}
-
-                                    <p class="note-excerpt">
-
-                                        {{ note.description }}
-
-                                    </p>
-
-                                {% endif %}
-
-
-                                {% if note.tags %}
-
-                                    <div class="note-tags">
-
-                                        {% for tag in note.tags %}
-
-                                            <span class="note-tag">
-
-                                                {{ tag }}
-
-                                            </span>
-
-                                        {% endfor %}
-
-                                    </div>
-
-                                {% endif %}
 
 
                                 <a
-                                    class="read-link"
+                                    class="note-image-link"
                                     href="{{ note.url }}"
                                 >
 
-                                    Read →
+                                    {% if note.image %}
+
+                                        <img
+                                            class="note-image"
+                                            src="{{ note.image }}"
+                                            alt="Cover image for {{ note.title }}"
+                                        >
+
+                                    {% else %}
+
+                                        <div class="note-image-placeholder">
+                                        </div>
+
+                                    {% endif %}
 
                                 </a>
 
 
-                            </div>
 
 
-                        </article>
+                                <div class="note-content">
 
 
-                    {% endfor %}
+                                    {% if note.category %}
+
+                                        <div class="note-category">
+
+                                            {{ note.category }}
+
+                                        </div>
+
+                                    {% endif %}
 
 
-                {% else %}
 
 
-                    <div class="empty-state">
+                                    <h2 class="note-title">
 
-                        No notes published yet.
+                                        <a href="{{ note.url }}">
 
-                    </div>
+                                            {{ note.title }}
+
+                                        </a>
+
+                                    </h2>
 
 
-                {% endif %}
 
+
+                                    {% if note.description %}
+
+                                        <p class="note-description">
+
+                                            {{ note.description }}
+
+                                        </p>
+
+                                    {% endif %}
+
+
+
+
+                                    {% if note.tags %}
+
+                                        <div class="note-tags">
+
+                                            {% for tag in note.tags %}
+
+                                                <span class="note-tag">
+
+                                                    {{ tag }}
+
+                                                </span>
+
+                                            {% endfor %}
+
+                                        </div>
+
+                                    {% endif %}
+
+
+
+
+                                    <a
+                                        class="note-read"
+                                        href="{{ note.url }}"
+                                    >
+                                        Read →
+                                    </a>
+
+
+                                </div>
+
+
+                            </article>
+
+
+                        {% endfor %}
+
+
+                    {% else %}
+
+
+                        <div class="empty-notes">
+
+                            No notes published yet.
+
+                        </div>
+
+
+                    {% endif %}
+
+
+                </div>
 
             </div>
 
@@ -842,29 +1044,20 @@ title: Notes
 
 
 
-    <!-- ======================================
-         FOOTER
-    ====================================== -->
+    <!-- FOOTER -->
 
 
     <footer class="site-footer">
 
         <div class="container footer-inner">
 
-
             <span>
-
                 © 2026 Francesco Catalfamo
-
             </span>
-
 
             <span>
-
                 Political Science
-
             </span>
-
 
         </div>
 
