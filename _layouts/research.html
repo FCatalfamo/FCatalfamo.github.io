@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="{{ page.description }}"
+    >
+
+    <title>{{ page.title }} — Francesco Catalfamo</title>
+
+
+    <style>
+
+        :root {
+
+            --petrol: #165f5a;
+            --petrol-dark: #104945;
+
+            --ivory: rgba(246, 229, 209, 0.42);
+
+            --sage: #88b79b;
+            --sage-soft: rgba(136, 183, 155, 0.22);
+
+            --dark-section: rgba(16, 73, 69, 0.92);
+
+            --ink: #202522;
+            --muted: #66716c;
+
+            --light-text: #f7f4ef;
+
+            --line-dark: rgba(16, 73, 69, 0.22);
+
+            --max-width: 1120px;
+            --article-width: 760px;
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family:
+                Inter,
+                ui-sans-serif,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            color: var(--ink);
+
+            background: #ffffff;
+
+            line-height: 1.72;
+
+        }
+
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+
+        .container {
+
+            width: min(var(--max-width), 90%);
+
+            margin: 0 auto;
+
+        }
+
+
+
+        /* ======================================
+           HEADER
+        ====================================== */
+
+
+        .site-header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+            background: rgba(252, 248, 243, 0.94);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid var(--line-dark);
+
+        }
+
+
+        .navbar {
+
+            min-height: 72px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 2rem;
+
+        }
+
+
+        .site-name {
+
+            font-weight: 700;
+
+            letter-spacing: -0.02em;
+
+            color: var(--petrol-dark);
+
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 1.6rem;
+
+            font-size: 0.95rem;
+
+        }
+
+
+        .nav-links a {
+
+            color: var(--petrol-dark);
+
+            transition: color 0.18s ease;
+
+        }
+
+
+        .nav-links a:hover,
+        .nav-links a.active {
+
+            color: var(--petrol);
+
+        }
+
+
+
+        /* ======================================
+           PROJECT HERO
+        ====================================== */
+
+
+        .project-hero {
+
+            background: var(--ivory);
+
+            padding: 76px 0 62px;
+
+        }
+
+
+        .project-status {
+
+            color: var(--petrol);
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.14em;
+
+            font-size: 0.78rem;
+
+            font-weight: 700;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .project-title {
+
+            max-width: 900px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: clamp(2.8rem, 6vw, 5rem);
+
+            line-height: 1;
+
+            letter-spacing: -0.035em;
+
+            font-weight: 500;
+
+            color: var(--petrol-dark);
+
+            margin: 0 0 24px;
+
+        }
+
+
+        .project-description {
+
+            max-width: 760px;
+
+            color: #4c5953;
+
+            font-size: 1.15rem;
+
+            margin: 0;
+
+        }
+
+
+        .project-authors {
+
+            margin-top: 22px;
+
+            color: #718078;
+
+            font-size: 0.92rem;
+
+        }
+
+
+
+        /* ======================================
+           COVER
+        ====================================== */
+
+
+        .cover-section {
+
+            background: var(--ivory);
+
+            padding: 0 0 66px;
+
+        }
+
+
+        .project-cover {
+
+            width: 100%;
+
+            max-height: 590px;
+
+            object-fit: cover;
+
+        }
+
+
+        .project-cover-placeholder {
+
+            width: 100%;
+
+            aspect-ratio: 16 / 7;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(136, 183, 155, 0.18),
+                    rgba(246, 229, 209, 0.35)
+                );
+
+        }
+
+
+        .project-cover-placeholder::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 310px;
+
+            height: 310px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(16, 73, 69, 0.18);
+
+            top: -100px;
+
+            right: 6%;
+
+        }
+
+
+        .project-cover-placeholder::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 180px;
+
+            height: 180px;
+
+            background: var(--sage-soft);
+
+            bottom: -80px;
+
+            left: 12%;
+
+            transform: rotate(35deg);
+
+        }
+
+
+
+        /* ======================================
+           ARTICLE
+        ====================================== */
+
+
+        .article-section {
+
+            padding: 78px 0 86px;
+
+        }
+
+
+        .article-layout {
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1fr)
+                minmax(0, var(--article-width))
+                minmax(0, 1fr);
+
+            gap: 38px;
+
+        }
+
+
+        .article-body {
+
+            grid-column: 2;
+
+            min-width: 0;
+
+            color: #394540;
+
+            font-size: 1.03rem;
+
+        }
+
+
+        .article-body > :first-child {
+            margin-top: 0;
+        }
+
+
+        .article-body h2 {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 1.9rem;
+
+            line-height: 1.25;
+
+            font-weight: 500;
+
+            color: var(--petrol-dark);
+
+            margin-top: 48px;
+
+            margin-bottom: 16px;
+
+        }
+
+
+        .article-body h3 {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 1.35rem;
+
+            font-weight: 500;
+
+            color: var(--petrol-dark);
+
+            margin-top: 34px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .article-body p {
+
+            margin: 0 0 20px;
+
+        }
+
+
+        .article-body ul,
+        .article-body ol {
+
+            margin: 0 0 22px;
+
+            padding-left: 24px;
+
+        }
+
+
+        .article-body li {
+
+            margin-bottom: 7px;
+
+        }
+
+
+        .article-body blockquote {
+
+            margin: 32px 0;
+
+            padding: 6px 0 6px 22px;
+
+            border-left: 3px solid var(--sage);
+
+            color: #53625b;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 1.08rem;
+
+            font-style: italic;
+
+        }
+
+
+        .article-body a {
+
+            color: var(--petrol);
+
+            text-decoration: underline;
+
+            text-decoration-thickness: 1px;
+
+            text-underline-offset: 3px;
+
+        }
+
+
+        .article-body a:hover {
+
+            color: var(--petrol-dark);
+
+        }
+
+
+
+        /* ======================================
+           TAGS
+        ====================================== */
+
+
+        .project-tags {
+
+            grid-column: 2;
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 30px;
+
+        }
+
+
+        .project-tag {
+
+            padding: 5px 9px;
+
+            border-radius: 999px;
+
+            background: var(--sage-soft);
+
+            color: var(--petrol-dark);
+
+            font-size: 0.73rem;
+
+        }
+
+
+
+        /* ======================================
+           PAPER BUTTON
+        ====================================== */
+
+
+        .paper-area {
+
+            grid-column: 2;
+
+            margin-top: 48px;
+
+            padding-top: 30px;
+
+            border-top: 1px solid var(--line-dark);
+
+        }
+
+
+        .paper-area-label {
+
+            color: #718078;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.11em;
+
+            font-size: 0.72rem;
+
+            font-weight: 700;
+
+            margin-bottom: 14px;
+
+        }
+
+
+        .paper-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 12px 18px;
+
+            background: var(--petrol-dark);
+
+            color: #ffffff;
+
+            font-weight: 600;
+
+            font-size: 0.9rem;
+
+            transition:
+                background 0.18s ease,
+                transform 0.18s ease;
+
+        }
+
+
+        .paper-button:hover {
+
+            background: var(--petrol);
+
+            transform: translateY(-1px);
+
+        }
+
+
+
+        /* ======================================
+           BACK LINK
+        ====================================== */
+
+
+        .back-area {
+
+            grid-column: 2;
+
+            margin-top: 46px;
+
+        }
+
+
+        .back-link {
+
+            color: var(--petrol);
+
+            font-weight: 600;
+
+            font-size: 0.9rem;
+
+        }
+
+
+        .back-link:hover {
+
+            color: var(--petrol-dark);
+
+        }
+
+
+
+        /* ======================================
+           FOOTER
+        ====================================== */
+
+
+        .site-footer {
+
+            background: var(--dark-section);
+
+            padding: 28px 0;
+
+            color: #dbe5df;
+
+            font-size: 0.82rem;
+
+        }
+
+
+        .footer-inner {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+
+        /* ======================================
+           RESPONSIVE
+        ====================================== */
+
+
+        @media (max-width: 900px) {
+
+            .article-layout {
+
+                display: block;
+
+            }
+
+
+            .article-body,
+            .project-tags,
+            .paper-area,
+            .back-area {
+
+                max-width: var(--article-width);
+
+                margin-left: auto;
+
+                margin-right: auto;
+
+            }
+
+
+            .project-tags {
+
+                margin-top: 30px;
+
+            }
+
+
+            .paper-area {
+
+                margin-top: 48px;
+
+            }
+
+
+            .back-area {
+
+                margin-top: 46px;
+
+            }
+
+        }
+
+
+        @media (max-width: 560px) {
+
+            .navbar {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                padding: 18px 0;
+
+                gap: 10px;
+
+            }
+
+
+            .nav-links {
+
+                width: 100%;
+
+                justify-content: space-between;
+
+                flex-wrap: wrap;
+
+                gap: 12px;
+
+            }
+
+
+            .project-hero {
+
+                padding: 58px 0 48px;
+
+            }
+
+
+            .article-section {
+
+                padding: 58px 0 68px;
+
+            }
+
+        }
+
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+
+    <header class="site-header">
+
+        <div class="container navbar">
+
+
+            <a
+                class="site-name"
+                href="/"
+            >
+                Francesco Catalfamo
+            </a>
+
+
+            <nav
+                class="nav-links"
+                aria-label="Main navigation"
+            >
+
+                <a
+                    href="/research/"
+                    class="active"
+                >
+                    Research
+                </a>
+
+                <a href="/notes/">
+                    Notes
+                </a>
+
+                <a href="/about/">
+                    About
+                </a>
+
+                <a href="/contact/">
+                    Contact
+                </a>
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+
+    <main>
+
+
+        <!-- PROJECT HERO -->
+
+
+        <section class="project-hero">
+
+            <div class="container">
+
+
+                {% if page.status %}
+
+                    <div class="project-status">
+
+                        {{ page.status }}
+
+                    </div>
+
+                {% endif %}
+
+
+                <h1 class="project-title">
+
+                    {{ page.title }}
+
+                </h1>
+
+
+                {% if page.description %}
+
+                    <p class="project-description">
+
+                        {{ page.description }}
+
+                    </p>
+
+                {% endif %}
+
+
+                {% if page.authors %}
+
+                    <div class="project-authors">
+
+                        {{ page.authors }}
+
+                    </div>
+
+                {% endif %}
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- COVER -->
+
+
+        <section class="cover-section">
+
+            <div class="container">
+
+
+                {% if page.image %}
+
+                    <img
+                        class="project-cover"
+                        src="{{ page.image }}"
+                        alt="Cover image for {{ page.title }}"
+                    >
+
+                {% else %}
+
+                    <div class="project-cover-placeholder">
+                    </div>
+
+                {% endif %}
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- CONTENT -->
+
+
+        <section class="article-section">
+
+            <div class="container article-layout">
+
+
+                <article class="article-body">
+
+                    {{ content }}
+
+                </article>
+
+
+
+
+                {% if page.tags %}
+
+                    <div class="project-tags">
+
+
+                        {% for tag in page.tags %}
+
+                            <span class="project-tag">
+
+                                {{ tag }}
+
+                            </span>
+
+                        {% endfor %}
+
+
+                    </div>
+
+                {% endif %}
+
+
+
+
+                {% if page.pdf %}
+
+                    <div class="paper-area">
+
+
+                        <div class="paper-area-label">
+                            Full paper
+                        </div>
+
+
+                        <a
+                            class="paper-button"
+                            href="{{ page.pdf }}"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Read the paper →
+                        </a>
+
+
+                    </div>
+
+                {% endif %}
+
+
+
+
+                <div class="back-area">
+
+                    <a
+                        class="back-link"
+                        href="/research/"
+                    >
+                        ← Back to Research
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+
+    <!-- FOOTER -->
+
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <span>
+                © 2026 Francesco Catalfamo
+            </span>
+
+            <span>
+                Political Science
+            </span>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
