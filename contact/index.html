@@ -30,15 +30,24 @@ title: Contact
             --petrol: #165f5a;
             --petrol-dark: #104945;
 
-            --ivory: rgba(246, 229, 209, 0.42);
+            --ivory: #fbf7f1;
+            --ivory-strong: #f6eee4;
+
+            --sage: #88b79b;
+            --sage-soft: rgba(136, 183, 155, 0.16);
+            --sage-medium: rgba(136, 183, 155, 0.28);
+
+            --dark-section: rgba(16, 73, 69, 0.92);
 
             --ink: #202522;
             --muted: #66716c;
 
             --light-text: #f7f2ec;
             --light-muted: #e5ddd4;
+            --light-soft: #f0e9e1;
 
             --line-dark: rgba(16, 73, 69, 0.22);
+            --line-light: rgba(246, 229, 209, 0.24);
 
             --max-width: 1120px;
 
@@ -179,7 +188,59 @@ title: Contact
 
         .contact-hero {
 
-            padding: 88px 0 68px;
+            padding: 90px 0 68px;
+
+            background: var(--ivory);
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .contact-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 360px;
+
+            height: 360px;
+
+            right: -130px;
+
+            top: -105px;
+
+            background: var(--sage-soft);
+
+            border-radius:
+                47% 53% 44% 56%
+                / 55% 41% 59% 45%;
+
+            transform: rotate(10deg);
+
+        }
+
+
+        .contact-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 155px;
+
+            height: 155px;
+
+            right: 105px;
+
+            bottom: -80px;
+
+            border: 1px solid rgba(22, 95, 90, 0.18);
+
+            border-radius: 50%;
 
         }
 
@@ -187,6 +248,10 @@ title: Contact
         .hero-inner {
 
             max-width: 760px;
+
+            position: relative;
+
+            z-index: 1;
 
         }
 
@@ -203,7 +268,7 @@ title: Contact
 
             font-weight: 700;
 
-            margin-bottom: 20px;
+            margin-bottom: 19px;
 
         }
 
@@ -215,28 +280,30 @@ title: Contact
                 "Times New Roman",
                 serif;
 
-            font-size: clamp(3.6rem, 6vw, 5.2rem);
+            font-size: clamp(3.7rem, 6.5vw, 5.5rem);
 
-            line-height: 0.96;
+            line-height: 0.98;
 
-            letter-spacing: -0.04em;
+            letter-spacing: -0.045em;
 
             font-weight: 500;
 
             color: var(--petrol-dark);
 
-            margin: 0 0 26px;
+            margin: 0 0 27px;
 
         }
 
 
-        .contact-intro {
+        .hero-intro {
 
-            color: #4c5953;
+            max-width: 690px;
 
-            font-size: 1.12rem;
+            color: #53605a;
 
-            max-width: 700px;
+            font-size: 1.08rem;
+
+            line-height: 1.7;
 
             margin: 0;
 
@@ -245,24 +312,24 @@ title: Contact
 
 
         /* ======================================
-           CONTACT BODY
+           CONTACT CONTENT
         ====================================== */
 
 
-        .contact-main {
+        .contact-section {
 
-            padding: 10px 0 96px;
+            padding: 36px 0 92px;
+
+            background: var(--ivory);
 
         }
 
 
         .contact-panel {
 
-            max-width: 880px;
+            width: min(880px, 100%);
 
-            margin-left: auto;
-
-            margin-right: auto;
+            margin: 0 auto;
 
         }
 
@@ -275,28 +342,49 @@ title: Contact
 
         .email-block {
 
-            padding: 30px 0 34px;
+            padding: 31px 0 34px;
 
             border-top: 1px solid var(--line-dark);
 
             border-bottom: 1px solid var(--line-dark);
 
+            position: relative;
+
         }
 
 
-        .small-label {
+        .email-block::before {
 
-            color: #718078;
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            top: -2px;
+
+            width: 76px;
+
+            height: 3px;
+
+            background: var(--sage);
+
+        }
+
+
+        .contact-label {
+
+            color: var(--petrol);
 
             text-transform: uppercase;
 
-            letter-spacing: 0.12em;
+            letter-spacing: 0.13em;
 
             font-size: 0.72rem;
 
             font-weight: 700;
 
-            margin-bottom: 10px;
+            margin-bottom: 9px;
 
         }
 
@@ -310,15 +398,15 @@ title: Contact
                 "Times New Roman",
                 serif;
 
-            font-size: clamp(1.05rem, 1.7vw, 1.55rem);
-
-            line-height: 1.25;
-
             color: var(--petrol-dark);
 
-            transition: color 0.18s ease;
+            font-size: clamp(1.05rem, 1.7vw, 1.55rem);
+
+            line-height: 1.35;
 
             white-space: nowrap;
+
+            transition: color 0.18s ease;
 
         }
 
@@ -332,13 +420,15 @@ title: Contact
 
 
         /* ======================================
-           SOCIAL LIST
+           SOCIAL LINKS
         ====================================== */
 
 
         .social-list {
 
-            margin-top: 10px;
+            margin-top: 38px;
+
+            border-top: 1px solid var(--line-dark);
 
         }
 
@@ -349,55 +439,69 @@ title: Contact
 
             grid-template-columns: 1fr auto;
 
-            gap: 24px;
+            gap: 30px;
 
             align-items: center;
 
-            padding: 24px 0;
+            padding: 29px 0;
 
             border-bottom: 1px solid var(--line-dark);
+
+            transition:
+                padding 0.2s ease,
+                background 0.2s ease;
+
+        }
+
+
+        .social-row:hover {
+
+            padding-left: 12px;
+            padding-right: 12px;
+
+            background: rgba(136, 183, 155, 0.10);
 
         }
 
 
         .social-main {
 
-            min-width: 0;
-
-        }
-
-
-        .social-name {
-
             font-family:
                 Georgia,
                 "Times New Roman",
                 serif;
 
-            font-size: 1.35rem;
+            font-size: clamp(1.55rem, 2.6vw, 2.2rem);
 
-            line-height: 1.25;
+            line-height: 1.1;
 
             color: var(--ink);
-
-            margin-bottom: 3px;
 
             transition: color 0.18s ease;
 
         }
 
 
-        .social-platform {
+        .social-row:hover .social-main {
 
-            color: #718078;
+            color: var(--petrol);
 
-            text-transform: uppercase;
+        }
 
-            letter-spacing: 0.11em;
 
-            font-size: 0.7rem;
+        .social-type {
+
+            margin-top: 7px;
+
+            color: var(--petrol);
+
+            font-size: 0.69rem;
 
             font-weight: 700;
+
+            letter-spacing: 0.13em;
+
+            text-transform: uppercase;
 
         }
 
@@ -406,27 +510,18 @@ title: Contact
 
             color: var(--petrol);
 
-            font-size: 1.05rem;
+            font-size: 1.3rem;
 
-            transition:
-                transform 0.18s ease,
-                color 0.18s ease;
+            transform: translateX(0);
 
-        }
-
-
-        .social-row:hover .social-name {
-
-            color: var(--petrol);
+            transition: transform 0.18s ease;
 
         }
 
 
         .social-row:hover .social-arrow {
 
-            transform: translate(2px, -2px);
-
-            color: var(--petrol-dark);
+            transform: translateX(5px);
 
         }
 
@@ -467,37 +562,11 @@ title: Contact
 
 
         /* ======================================
-           TABLET
-        ====================================== */
-
-
-        @media (max-width: 760px) {
-
-            .contact-panel {
-
-                max-width: 100%;
-
-            }
-
-
-            .email-link {
-
-                white-space: normal;
-
-                overflow-wrap: anywhere;
-
-            }
-
-        }
-
-
-
-        /* ======================================
            MOBILE
         ====================================== */
 
 
-        @media (max-width: 560px) {
+        @media (max-width: 620px) {
 
             .navbar {
 
@@ -527,28 +596,30 @@ title: Contact
 
             .contact-hero {
 
-                padding: 62px 0 46px;
+                padding: 62px 0 48px;
 
             }
 
 
-            .contact-main {
+            .contact-section {
 
-                padding-bottom: 70px;
-
-            }
-
-
-            .social-name {
-
-                font-size: 1.2rem;
+                padding-bottom: 64px;
 
             }
 
 
             .email-link {
 
-                font-size: 1rem;
+                white-space: normal;
+
+                overflow-wrap: anywhere;
+
+            }
+
+
+            .social-row {
+
+                padding: 24px 0;
 
             }
 
@@ -641,7 +712,7 @@ title: Contact
                     </h1>
 
 
-                    <p class="contact-intro">
+                    <p class="hero-intro">
 
                         Feel free to get in touch regarding research,
                         collaborations, academic opportunities or anything
@@ -660,13 +731,14 @@ title: Contact
 
 
         <!-- ======================================
-             CONTACT DETAILS
+             CONTACT
         ====================================== -->
 
 
-        <section class="contact-main">
+        <section class="contact-section">
 
             <div class="container">
+
 
                 <div class="contact-panel">
 
@@ -677,7 +749,7 @@ title: Contact
                     <div class="email-block">
 
 
-                        <div class="small-label">
+                        <div class="contact-label">
                             Email
                         </div>
 
@@ -695,7 +767,7 @@ title: Contact
 
 
 
-                    <!-- SOCIALS -->
+                    <!-- SOCIAL -->
 
 
                     <div class="social-list">
@@ -708,21 +780,27 @@ title: Contact
                             rel="noopener"
                         >
 
-                            <div class="social-main">
 
-                                <div class="social-name">
+                            <div>
+
+
+                                <div class="social-main">
                                     Francesco Catalfamo
                                 </div>
 
-                                <div class="social-platform">
+
+                                <div class="social-type">
                                     LinkedIn
                                 </div>
 
+
                             </div>
 
+
                             <div class="social-arrow">
-                                ↗
+                                →
                             </div>
+
 
                         </a>
 
@@ -736,21 +814,27 @@ title: Contact
                             rel="noopener"
                         >
 
-                            <div class="social-main">
 
-                                <div class="social-name">
+                            <div>
+
+
+                                <div class="social-main">
                                     @f_catalfamo
                                 </div>
 
-                                <div class="social-platform">
+
+                                <div class="social-type">
                                     X
                                 </div>
 
+
                             </div>
 
+
                             <div class="social-arrow">
-                                ↗
+                                →
                             </div>
+
 
                         </a>
 
@@ -764,21 +848,27 @@ title: Contact
                             rel="noopener"
                         >
 
-                            <div class="social-main">
 
-                                <div class="social-name">
+                            <div>
+
+
+                                <div class="social-main">
                                     FCatalfamo
                                 </div>
 
-                                <div class="social-platform">
+
+                                <div class="social-type">
                                     GitHub
                                 </div>
 
+
                             </div>
 
+
                             <div class="social-arrow">
-                                ↗
+                                →
                             </div>
+
 
                         </a>
 
@@ -787,6 +877,7 @@ title: Contact
 
 
                 </div>
+
 
             </div>
 
@@ -807,13 +898,16 @@ title: Contact
 
         <div class="container footer-inner">
 
+
             <span>
                 © 2026 Francesco Catalfamo
             </span>
 
+
             <span>
                 Political Science
             </span>
+
 
         </div>
 
