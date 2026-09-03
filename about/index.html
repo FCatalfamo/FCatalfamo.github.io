@@ -38,10 +38,12 @@ title: About
             --petrol: #165f5a;
             --petrol-dark: #104945;
 
-            --ivory: rgba(246, 229, 209, 0.42);
+            --ivory: #fbf7f1;
+            --ivory-strong: #f6eee4;
 
             --sage: #88b79b;
-            --sage-soft: rgba(136, 183, 155, 0.22);
+            --sage-soft: rgba(136, 183, 155, 0.16);
+            --sage-medium: rgba(136, 183, 155, 0.28);
 
             --dark-section: rgba(16, 73, 69, 0.92);
 
@@ -50,6 +52,7 @@ title: About
 
             --light-text: #f7f2ec;
             --light-muted: #e5ddd4;
+            --light-soft: #f0e9e1;
 
             --line-dark: rgba(16, 73, 69, 0.22);
             --line-light: rgba(246, 229, 209, 0.24);
@@ -201,12 +204,43 @@ title: About
 
             padding: 88px 0 72px;
 
+            background: var(--ivory);
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .about-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 330px;
+
+            height: 330px;
+
+            right: -120px;
+
+            top: -85px;
+
+            border-radius: 50%;
+
+            background: var(--sage-soft);
+
         }
 
 
         .hero-inner {
 
             max-width: 780px;
+
+            position: relative;
+
+            z-index: 1;
 
         }
 
@@ -263,7 +297,9 @@ title: About
         }
 
 
-        .section-bordered {
+        .section-light {
+
+            background: var(--ivory);
 
             border-top: 1px solid var(--line-dark);
 
@@ -331,6 +367,51 @@ title: About
 
 
         /* ======================================
+           ACADEMIC PROFILE
+        ====================================== */
+
+
+        .academic-section {
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .academic-section::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 250px;
+
+            height: 250px;
+
+            right: -130px;
+
+            bottom: -95px;
+
+            border: 34px solid rgba(136, 183, 155, 0.12);
+
+            border-radius: 50%;
+
+        }
+
+
+        .academic-section .container {
+
+            position: relative;
+
+            z-index: 1;
+
+        }
+
+
+
+        /* ======================================
            PROFESSIONAL EXPERIENCE
         ====================================== */
 
@@ -364,9 +445,54 @@ title: About
 
         .experience-meta {
 
-            color: #718078;
+            color: var(--petrol);
 
             font-size: 0.88rem;
+
+            font-weight: 600;
+
+        }
+
+
+        .professional-section {
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .professional-section::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 280px;
+
+            height: 280px;
+
+            left: -155px;
+
+            top: 70px;
+
+            background: rgba(136, 183, 155, 0.10);
+
+            border-radius:
+                46% 54% 57% 43%
+                / 42% 49% 51% 58%;
+
+            transform: rotate(-10deg);
+
+        }
+
+
+        .professional-section .container {
+
+            position: relative;
+
+            z-index: 1;
 
         }
 
@@ -388,7 +514,7 @@ title: About
 
         .outside-heading {
 
-            margin-bottom: 30px;
+            margin-bottom: 32px;
 
         }
 
@@ -464,12 +590,6 @@ title: About
         }
 
 
-
-        /* ======================================
-           IMAGE PLACEHOLDER
-        ====================================== */
-
-
         .outside-placeholder {
 
             width: 100%;
@@ -480,12 +600,7 @@ title: About
 
             overflow: hidden;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(136, 183, 155, 0.16),
-                    rgba(246, 229, 209, 0.08)
-                );
+            background: rgba(136, 183, 155, 0.18);
 
         }
 
@@ -532,12 +647,6 @@ title: About
         }
 
 
-
-        /* ======================================
-           OUTSIDE TITLES
-        ====================================== */
-
-
         .outside-title {
 
             font-family:
@@ -570,7 +679,7 @@ title: About
 
             min-height: 300px;
 
-            background: rgba(255, 255, 255, 0.03);
+            background: #eef3f0;
 
         }
 
@@ -630,6 +739,8 @@ title: About
         .more-section {
 
             background: var(--ivory);
+
+            border-top: 1px solid var(--line-dark);
 
         }
 
@@ -814,15 +925,9 @@ title: About
 <body>
 
 
-    <!-- ======================================
-         HEADER
-    ====================================== -->
-
-
     <header class="site-header">
 
         <div class="container navbar">
-
 
             <a
                 class="site-name"
@@ -830,7 +935,6 @@ title: About
             >
                 Francesco Catalfamo
             </a>
-
 
             <nav
                 class="nav-links"
@@ -858,7 +962,6 @@ title: About
 
             </nav>
 
-
         </div>
 
     </header>
@@ -869,9 +972,7 @@ title: About
     <main>
 
 
-        <!-- ======================================
-             HERO
-        ====================================== -->
+        <!-- HERO -->
 
 
         <section class="about-hero">
@@ -880,16 +981,13 @@ title: About
 
                 <div class="hero-inner">
 
-
                     <div class="eyebrow">
                         About
                     </div>
 
-
                     <h1>
                         About me.
                     </h1>
-
 
                 </div>
 
@@ -900,12 +998,10 @@ title: About
 
 
 
-        <!-- ======================================
-             ACADEMIC PROFILE
-        ====================================== -->
+        <!-- ACADEMIC PROFILE -->
 
 
-        <section class="section section-bordered">
+        <section class="section section-light academic-section">
 
             <div class="container section-grid">
 
@@ -962,12 +1058,10 @@ title: About
 
 
 
-        <!-- ======================================
-             PROFESSIONAL EXPERIENCE
-        ====================================== -->
+        <!-- PROFESSIONAL EXPERIENCE -->
 
 
-        <section class="section section-bordered">
+        <section class="section section-light professional-section">
 
             <div class="container section-grid">
 
@@ -1033,9 +1127,7 @@ title: About
 
 
 
-        <!-- ======================================
-             OUTSIDE ACADEMIA
-        ====================================== -->
+        <!-- OUTSIDE ACADEMIA -->
 
 
         <section class="section outside-section">
@@ -1052,14 +1144,10 @@ title: About
                 </div>
 
 
-
-
                 <div class="outside-grid">
 
 
-                    <!-- ======================================
-                         VOLLEYBALL
-                    ====================================== -->
+                    <!-- VOLLEYBALL -->
 
 
                     <div class="outside-card">
@@ -1099,9 +1187,7 @@ title: About
 
 
 
-                    <!-- ======================================
-                         TRAVEL
-                    ====================================== -->
+                    <!-- TRAVEL -->
 
 
                     <div class="outside-card">
@@ -1125,9 +1211,7 @@ title: About
 
 
 
-                    <!-- ======================================
-                         BEER & FRIENDS
-                    ====================================== -->
+                    <!-- BEER & FRIENDS -->
 
 
                     <div class="outside-card">
@@ -1175,9 +1259,7 @@ title: About
 
 
 
-        <!-- ======================================
-             MORE
-        ====================================== -->
+        <!-- MORE -->
 
 
         <section class="section more-section">
@@ -1240,36 +1322,23 @@ title: About
 
 
 
-    <!-- ======================================
-         FOOTER
-    ====================================== -->
-
-
     <footer class="site-footer">
 
         <div class="container footer-inner">
-
 
             <span>
                 © 2026 Francesco Catalfamo
             </span>
 
-
             <span>
                 Political Science
             </span>
-
 
         </div>
 
     </footer>
 
 
-
-
-    <!-- ======================================
-         LEAFLET
-    ====================================== -->
 
 
     <script
@@ -1285,20 +1354,24 @@ title: About
 
             try {
 
-                const response = await fetch("/assets/data/places.json");
+                const response =
+                    await fetch("/assets/data/places.json");
+
 
                 if (!response.ok) {
                     throw new Error("places.json not found");
                 }
 
 
-                const places = await response.json();
+                const places =
+                    await response.json();
 
 
-                const validPlaces = places.filter(place =>
-                    typeof place.lat === "number" &&
-                    typeof place.lng === "number"
-                );
+                const validPlaces =
+                    places.filter(place =>
+                        typeof place.lat === "number" &&
+                        typeof place.lng === "number"
+                    );
 
 
                 if (validPlaces.length === 0) {
