@@ -12,7 +12,7 @@
 
     <meta
         name="description"
-        content="{{ page.description }}"
+        content="{{ page.description | default: page.title }}"
     >
 
     <title>{{ page.title }} — Francesco Catalfamo</title>
@@ -25,22 +25,27 @@
             --petrol: #165f5a;
             --petrol-dark: #104945;
 
-            --ivory: rgba(246, 229, 209, 0.42);
+            --ivory: #fbf7f1;
+            --ivory-strong: #f6eee4;
 
             --sage: #88b79b;
-            --sage-soft: rgba(136, 183, 155, 0.22);
+            --sage-soft: rgba(136, 183, 155, 0.16);
+            --sage-medium: rgba(136, 183, 155, 0.28);
 
             --dark-section: rgba(16, 73, 69, 0.92);
 
             --ink: #202522;
             --muted: #66716c;
 
-            --light-text: #f7f4ef;
+            --light-text: #f7f2ec;
+            --light-muted: #e5ddd4;
+            --light-soft: #f0e9e1;
 
             --line-dark: rgba(16, 73, 69, 0.22);
+            --line-light: rgba(246, 229, 209, 0.24);
 
             --max-width: 1120px;
-            --article-width: 760px;
+            --article-width: 700px;
 
         }
 
@@ -70,9 +75,9 @@
 
             color: var(--ink);
 
-            background: #ffffff;
+            background: var(--ivory);
 
-            line-height: 1.72;
+            line-height: 1.7;
 
         }
 
@@ -107,16 +112,14 @@
         .site-header {
 
             position: sticky;
-
             top: 0;
-
             z-index: 100;
 
-            background: rgba(252, 248, 243, 0.94);
+            background: rgba(16, 73, 69, 0.97);
 
             backdrop-filter: blur(12px);
 
-            border-bottom: 1px solid var(--line-dark);
+            border-bottom: 1px solid rgba(246, 229, 209, 0.16);
 
         }
 
@@ -126,9 +129,7 @@
             min-height: 72px;
 
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
 
             gap: 2rem;
@@ -139,10 +140,9 @@
         .site-name {
 
             font-weight: 700;
-
             letter-spacing: -0.02em;
 
-            color: var(--petrol-dark);
+            color: var(--light-text);
 
         }
 
@@ -150,7 +150,6 @@
         .nav-links {
 
             display: flex;
-
             align-items: center;
 
             gap: 1.6rem;
@@ -162,7 +161,7 @@
 
         .nav-links a {
 
-            color: var(--petrol-dark);
+            color: var(--light-muted);
 
             transition: color 0.18s ease;
 
@@ -172,22 +171,78 @@
         .nav-links a:hover,
         .nav-links a.active {
 
-            color: var(--petrol);
+            color: #ffffff;
 
         }
 
 
 
         /* ======================================
-           PROJECT HERO
+           HERO
         ====================================== */
 
 
         .project-hero {
 
-            background: var(--ivory);
+            position: relative;
+            overflow: hidden;
 
-            padding: 76px 0 62px;
+            padding: 88px 0 72px;
+
+            border-bottom: 1px solid var(--line-dark);
+
+        }
+
+
+        .project-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 390px;
+            height: 350px;
+
+            right: -145px;
+            top: -115px;
+
+            background: var(--sage-soft);
+
+            border-radius:
+                46% 54% 58% 42%
+                / 41% 48% 52% 59%;
+
+            transform: rotate(9deg);
+
+        }
+
+
+        .project-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 160px;
+            height: 160px;
+
+            right: 145px;
+            bottom: -95px;
+
+            border: 1px solid rgba(22, 95, 90, 0.18);
+
+            border-radius: 50%;
+
+        }
+
+
+        .project-hero-inner {
+
+            position: relative;
+
+            z-index: 1;
+
+            max-width: 940px;
 
         }
 
@@ -201,7 +256,6 @@
             letter-spacing: 0.14em;
 
             font-size: 0.78rem;
-
             font-weight: 700;
 
             margin-bottom: 18px;
@@ -211,18 +265,16 @@
 
         .project-title {
 
-            max-width: 900px;
-
             font-family:
                 Georgia,
                 "Times New Roman",
                 serif;
 
-            font-size: clamp(2.8rem, 6vw, 5rem);
+            font-size: clamp(3rem, 6vw, 5.3rem);
 
-            line-height: 1;
+            line-height: 0.98;
 
-            letter-spacing: -0.035em;
+            letter-spacing: -0.04em;
 
             font-weight: 500;
 
@@ -235,11 +287,12 @@
 
         .project-description {
 
-            max-width: 760px;
+            max-width: 780px;
 
-            color: #4c5953;
+            color: #4d5b55;
 
-            font-size: 1.15rem;
+            font-size: 1.12rem;
+            line-height: 1.7;
 
             margin: 0;
 
@@ -250,9 +303,68 @@
 
             margin-top: 22px;
 
-            color: #718078;
+            color: #68766f;
 
             font-size: 0.92rem;
+
+            font-weight: 600;
+
+        }
+
+
+        .hero-tags {
+
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 22px;
+
+        }
+
+
+        .hero-tag {
+
+            padding: 6px 10px;
+
+            border: 1px solid rgba(136, 183, 155, 0.28);
+
+            background: rgba(136, 183, 155, 0.12);
+
+            color: var(--petrol-dark);
+
+            font-size: 0.72rem;
+
+        }
+
+
+
+        /* ======================================
+           PROJECT BODY
+        ====================================== */
+
+
+        .project-section {
+
+            padding: 70px 0 88px;
+
+        }
+
+
+        .project-layout {
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(250px, 350px)
+                minmax(0, var(--article-width));
+
+            justify-content: center;
+
+            gap: 72px;
+
+            align-items: start;
 
         }
 
@@ -263,11 +375,18 @@
         ====================================== */
 
 
-        .cover-section {
+        .cover-column {
 
-            background: var(--ivory);
+            min-width: 0;
 
-            padding: 0 0 66px;
+        }
+
+
+        .cover-sticky {
+
+            position: sticky;
+
+            top: 110px;
 
         }
 
@@ -276,9 +395,9 @@
 
             width: 100%;
 
-            max-height: 590px;
+            height: auto;
 
-            object-fit: cover;
+            border: 1px solid rgba(16, 73, 69, 0.15);
 
         }
 
@@ -287,18 +406,13 @@
 
             width: 100%;
 
-            aspect-ratio: 16 / 7;
+            aspect-ratio: 4 / 5;
 
             position: relative;
 
             overflow: hidden;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(136, 183, 155, 0.18),
-                    rgba(246, 229, 209, 0.35)
-                );
+            background: #e4eee7;
 
         }
 
@@ -309,17 +423,15 @@
 
             position: absolute;
 
-            width: 310px;
-
-            height: 310px;
+            width: 190px;
+            height: 190px;
 
             border-radius: 50%;
 
-            border: 1px solid rgba(16, 73, 69, 0.18);
+            border: 1px solid rgba(16, 73, 69, 0.20);
 
-            top: -100px;
-
-            right: 6%;
+            right: -40px;
+            top: -45px;
 
         }
 
@@ -330,17 +442,26 @@
 
             position: absolute;
 
-            width: 180px;
+            width: 120px;
+            height: 120px;
 
-            height: 180px;
+            left: 35px;
+            bottom: -45px;
 
-            background: var(--sage-soft);
+            background: rgba(136, 183, 155, 0.38);
 
-            bottom: -80px;
+            transform: rotate(33deg);
 
-            left: 12%;
+        }
 
-            transform: rotate(35deg);
+
+        .cover-caption {
+
+            margin-top: 12px;
+
+            color: #78847f;
+
+            font-size: 0.74rem;
 
         }
 
@@ -351,34 +472,11 @@
         ====================================== */
 
 
-        .article-section {
-
-            padding: 78px 0 86px;
-
-        }
-
-
-        .article-layout {
-
-            display: grid;
-
-            grid-template-columns:
-                minmax(0, 1fr)
-                minmax(0, var(--article-width))
-                minmax(0, 1fr);
-
-            gap: 38px;
-
-        }
-
-
         .article-body {
-
-            grid-column: 2;
 
             min-width: 0;
 
-            color: #394540;
+            color: #3d4944;
 
             font-size: 1.03rem;
 
@@ -386,7 +484,16 @@
 
 
         .article-body > :first-child {
+
             margin-top: 0;
+
+        }
+
+
+        .article-body p {
+
+            margin: 0 0 21px;
+
         }
 
 
@@ -397,17 +504,15 @@
                 "Times New Roman",
                 serif;
 
-            font-size: 1.9rem;
+            color: var(--petrol-dark);
 
-            line-height: 1.25;
+            font-size: 2rem;
+
+            line-height: 1.2;
 
             font-weight: 500;
 
-            color: var(--petrol-dark);
-
-            margin-top: 48px;
-
-            margin-bottom: 16px;
+            margin: 48px 0 17px;
 
         }
 
@@ -419,22 +524,26 @@
                 "Times New Roman",
                 serif;
 
-            font-size: 1.35rem;
+            color: var(--petrol-dark);
+
+            font-size: 1.38rem;
+
+            line-height: 1.3;
 
             font-weight: 500;
 
-            color: var(--petrol-dark);
-
-            margin-top: 34px;
-
-            margin-bottom: 12px;
+            margin: 36px 0 12px;
 
         }
 
 
-        .article-body p {
+        .article-body h4 {
 
-            margin: 0 0 20px;
+            color: var(--petrol-dark);
+
+            font-size: 1rem;
+
+            margin: 30px 0 10px;
 
         }
 
@@ -442,38 +551,36 @@
         .article-body ul,
         .article-body ol {
 
-            margin: 0 0 22px;
-
             padding-left: 24px;
+
+            margin: 0 0 24px;
 
         }
 
 
         .article-body li {
 
-            margin-bottom: 7px;
+            margin-bottom: 8px;
 
         }
 
 
         .article-body blockquote {
 
-            margin: 32px 0;
+            margin: 34px 0;
 
-            padding: 6px 0 6px 22px;
+            padding: 5px 0 5px 22px;
 
             border-left: 3px solid var(--sage);
 
-            color: #53625b;
+            color: #56635d;
 
             font-family:
                 Georgia,
                 "Times New Roman",
                 serif;
 
-            font-size: 1.08rem;
-
-            font-style: italic;
+            font-size: 1.1rem;
 
         }
 
@@ -491,130 +598,167 @@
         }
 
 
-        .article-body a:hover {
+        .article-body img {
 
-            color: var(--petrol-dark);
+            width: 100%;
+            height: auto;
 
-        }
-
-
-
-        /* ======================================
-           TAGS
-        ====================================== */
-
-
-        .project-tags {
-
-            grid-column: 2;
-
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 8px;
-
-            margin-top: 30px;
+            margin: 35px 0;
 
         }
 
 
-        .project-tag {
+        .article-body table {
 
-            padding: 5px 9px;
+            width: 100%;
 
-            border-radius: 999px;
+            border-collapse: collapse;
 
-            background: var(--sage-soft);
-
-            color: var(--petrol-dark);
-
-            font-size: 0.73rem;
-
-        }
-
-
-
-        /* ======================================
-           PAPER BUTTON
-        ====================================== */
-
-
-        .paper-area {
-
-            grid-column: 2;
-
-            margin-top: 48px;
-
-            padding-top: 30px;
-
-            border-top: 1px solid var(--line-dark);
-
-        }
-
-
-        .paper-area-label {
-
-            color: #718078;
-
-            text-transform: uppercase;
-
-            letter-spacing: 0.11em;
-
-            font-size: 0.72rem;
-
-            font-weight: 700;
-
-            margin-bottom: 14px;
-
-        }
-
-
-        .paper-button {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            padding: 12px 18px;
-
-            background: var(--petrol-dark);
-
-            color: #ffffff;
-
-            font-weight: 600;
+            margin: 32px 0;
 
             font-size: 0.9rem;
 
-            transition:
-                background 0.18s ease,
-                transform 0.18s ease;
+        }
+
+
+        .article-body th,
+        .article-body td {
+
+            text-align: left;
+
+            vertical-align: top;
+
+            padding: 10px 12px;
+
+            border-bottom: 1px solid var(--line-dark);
 
         }
 
 
-        .paper-button:hover {
+        .article-body th {
 
-            background: var(--petrol);
+            color: var(--petrol-dark);
 
-            transform: translateY(-1px);
+        }
+
+
+        .article-body code {
+
+            font-size: 0.9em;
+
+            background: #eef3f0;
+
+            padding: 2px 5px;
+
+        }
+
+
+        .article-body pre {
+
+            overflow-x: auto;
+
+            padding: 18px;
+
+            background: #eef3f0;
+
+        }
+
+
+        .article-body pre code {
+
+            padding: 0;
+            background: transparent;
 
         }
 
 
 
         /* ======================================
-           BACK LINK
+           FULL PAPER
+        ====================================== */
+
+
+        .paper-panel {
+
+            margin-top: 56px;
+
+            padding: 30px 32px;
+
+            background: var(--dark-section);
+
+            color: var(--light-text);
+
+        }
+
+
+        .paper-label {
+
+            color: var(--light-muted);
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.12em;
+
+            font-size: 0.7rem;
+            font-weight: 700;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .paper-title {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 1.55rem;
+
+            line-height: 1.2;
+
+            margin-bottom: 17px;
+
+        }
+
+
+        .paper-link {
+
+            display: inline-block;
+
+            color: var(--light-text);
+
+            font-size: 0.9rem;
+            font-weight: 600;
+
+            padding-bottom: 3px;
+
+            border-bottom: 1px solid rgba(247, 242, 236, 0.45);
+
+        }
+
+
+        .paper-link:hover {
+
+            border-color: #ffffff;
+
+        }
+
+
+
+        /* ======================================
+           BACK
         ====================================== */
 
 
         .back-area {
 
-            grid-column: 2;
+            margin-top: 42px;
 
-            margin-top: 46px;
+            padding-top: 26px;
+
+            border-top: 1px solid var(--line-dark);
 
         }
 
@@ -623,9 +767,8 @@
 
             color: var(--petrol);
 
-            font-weight: 600;
-
             font-size: 0.9rem;
+            font-weight: 600;
 
         }
 
@@ -645,11 +788,13 @@
 
         .site-footer {
 
-            background: var(--dark-section);
+            background: rgba(16, 73, 69, 0.97);
+
+            border-top: 1px solid rgba(246, 229, 209, 0.16);
 
             padding: 28px 0;
 
-            color: #dbe5df;
+            color: var(--light-muted);
 
             font-size: 0.82rem;
 
@@ -659,7 +804,6 @@
         .footer-inner {
 
             display: flex;
-
             justify-content: space-between;
 
             gap: 20px;
@@ -675,46 +819,27 @@
         ====================================== */
 
 
-        @media (max-width: 900px) {
+        @media (max-width: 880px) {
 
-            .article-layout {
+            .project-layout {
 
-                display: block;
+                grid-template-columns: 1fr;
 
-            }
-
-
-            .article-body,
-            .project-tags,
-            .paper-area,
-            .back-area {
-
-                max-width: var(--article-width);
-
-                margin-left: auto;
-
-                margin-right: auto;
+                gap: 42px;
 
             }
 
 
-            .project-tags {
+            .cover-column {
 
-                margin-top: 30px;
-
-            }
-
-
-            .paper-area {
-
-                margin-top: 48px;
+                max-width: 520px;
 
             }
 
 
-            .back-area {
+            .cover-sticky {
 
-                margin-top: 46px;
+                position: static;
 
             }
 
@@ -726,7 +851,6 @@
             .navbar {
 
                 flex-direction: column;
-
                 align-items: flex-start;
 
                 padding: 18px 0;
@@ -751,14 +875,21 @@
 
             .project-hero {
 
-                padding: 58px 0 48px;
+                padding: 60px 0 50px;
 
             }
 
 
-            .article-section {
+            .project-section {
 
-                padding: 58px 0 68px;
+                padding: 48px 0 64px;
+
+            }
+
+
+            .paper-panel {
+
+                padding: 25px 22px;
 
             }
 
@@ -772,9 +903,6 @@
 
 
 <body>
-
-
-    <!-- HEADER -->
 
 
     <header class="site-header">
@@ -827,53 +955,66 @@
     <main>
 
 
-        <!-- PROJECT HERO -->
+        <!-- HERO -->
 
 
         <section class="project-hero">
 
             <div class="container">
 
-
-                {% if page.status %}
-
-                    <div class="project-status">
-
-                        {{ page.status }}
-
-                    </div>
-
-                {% endif %}
+                <div class="project-hero-inner">
 
 
-                <h1 class="project-title">
+                    {% if page.status %}
 
-                    {{ page.title }}
+                        <div class="project-status">
+                            {{ page.status }}
+                        </div>
 
-                </h1>
-
-
-                {% if page.description %}
-
-                    <p class="project-description">
-
-                        {{ page.description }}
-
-                    </p>
-
-                {% endif %}
+                    {% endif %}
 
 
-                {% if page.authors %}
+                    <h1 class="project-title">
+                        {{ page.title }}
+                    </h1>
 
-                    <div class="project-authors">
 
-                        {{ page.authors }}
+                    {% if page.description %}
 
-                    </div>
+                        <p class="project-description">
+                            {{ page.description }}
+                        </p>
 
-                {% endif %}
+                    {% endif %}
 
+
+                    {% if page.authors %}
+
+                        <div class="project-authors">
+                            {{ page.authors }}
+                        </div>
+
+                    {% endif %}
+
+
+                    {% if page.tags %}
+
+                        <div class="hero-tags">
+
+                            {% for tag in page.tags %}
+
+                                <span class="hero-tag">
+                                    {{ tag }}
+                                </span>
+
+                            {% endfor %}
+
+                        </div>
+
+                    {% endif %}
+
+
+                </div>
 
             </div>
 
@@ -882,112 +1023,115 @@
 
 
 
-        <!-- COVER -->
+        <!-- PROJECT -->
 
 
-        <section class="cover-section">
+        <section class="project-section">
 
             <div class="container">
 
 
-                {% if page.image %}
-
-                    <img
-                        class="project-cover"
-                        src="{{ page.image }}"
-                        alt="Cover image for {{ page.title }}"
-                    >
-
-                {% else %}
-
-                    <div class="project-cover-placeholder">
-                    </div>
-
-                {% endif %}
+                <div class="project-layout">
 
 
-            </div>
-
-        </section>
+                    <aside class="cover-column">
 
 
+                        <div class="cover-sticky">
 
 
-        <!-- CONTENT -->
+                            {% if page.image %}
+
+                                <img
+                                    class="project-cover"
+                                    src="{{ page.image }}"
+                                    alt="Cover image for {{ page.title }}"
+                                    onerror="
+                                        this.style.display='none';
+                                        this.nextElementSibling.style.display='block';
+                                    "
+                                >
+
+                                <div
+                                    class="project-cover-placeholder"
+                                    style="display:none;"
+                                >
+                                </div>
+
+                            {% else %}
+
+                                <div class="project-cover-placeholder">
+                                </div>
+
+                            {% endif %}
 
 
-        <section class="article-section">
-
-            <div class="container article-layout">
-
-
-                <article class="article-body">
-
-                    {{ content }}
-
-                </article>
-
-
-
-
-                {% if page.tags %}
-
-                    <div class="project-tags">
-
-
-                        {% for tag in page.tags %}
-
-                            <span class="project-tag">
-
-                                {{ tag }}
-
-                            </span>
-
-                        {% endfor %}
-
-
-                    </div>
-
-                {% endif %}
-
-
-
-
-                {% if page.pdf %}
-
-                    <div class="paper-area">
-
-
-                        <div class="paper-area-label">
-                            Full paper
                         </div>
 
 
-                        <a
-                            class="paper-button"
-                            href="{{ page.pdf }}"
-                            target="_blank"
-                            rel="noopener"
-                        >
-                            Read the paper →
-                        </a>
+                    </aside>
+
+
+
+
+                    <div>
+
+
+                        <article class="article-body">
+
+                            {{ content }}
+
+                        </article>
+
+
+
+
+                        {% if page.pdf %}
+
+                            <div class="paper-panel">
+
+
+                                <div class="paper-label">
+                                    Full paper
+                                </div>
+
+
+                                <div class="paper-title">
+                                    Read the complete paper
+                                </div>
+
+
+                                <a
+                                    class="paper-link"
+                                    href="{{ page.pdf }}"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    Open PDF ↗
+                                </a>
+
+
+                            </div>
+
+                        {% endif %}
+
+
+
+
+                        <div class="back-area">
+
+                            <a
+                                class="back-link"
+                                href="/research/"
+                            >
+                                ← Back to Research
+                            </a>
+
+                        </div>
 
 
                     </div>
 
-                {% endif %}
-
-
-
-
-                <div class="back-area">
-
-                    <a
-                        class="back-link"
-                        href="/research/"
-                    >
-                        ← Back to Research
-                    </a>
 
                 </div>
 
@@ -1000,9 +1144,6 @@
     </main>
 
 
-
-
-    <!-- FOOTER -->
 
 
     <footer class="site-footer">
