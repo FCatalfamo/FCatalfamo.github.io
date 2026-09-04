@@ -53,6 +53,11 @@ title: Research
         }
 
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+
         body {
 
             margin: 0;
@@ -103,7 +108,9 @@ title: Research
         .site-header {
 
             position: sticky;
+
             top: 0;
+
             z-index: 100;
 
             background: rgba(16, 73, 69, 0.97);
@@ -118,7 +125,9 @@ title: Research
             min-height: 72px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
 
             gap: 2rem;
@@ -128,9 +137,9 @@ title: Research
 
         .site-name {
 
-            color: var(--light-text);
-
             font-weight: 700;
+
+            color: var(--light-text);
 
         }
 
@@ -173,7 +182,7 @@ title: Research
 
             padding: 90px 0 78px;
 
-            border-bottom: 1px solid var(--line-dark);
+            background: var(--ivory);
 
         }
 
@@ -185,9 +194,11 @@ title: Research
             position: absolute;
 
             width: 380px;
+
             height: 330px;
 
             right: -130px;
+
             top: -110px;
 
             background: var(--sage-soft);
@@ -201,6 +212,27 @@ title: Research
         }
 
 
+        .research-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 165px;
+
+            height: 165px;
+
+            right: 160px;
+
+            bottom: -95px;
+
+            border: 1px solid rgba(22, 95, 90, 0.18);
+
+            border-radius: 50%;
+
+        }
+
+
         .hero-inner {
 
             position: relative;
@@ -208,22 +240,6 @@ title: Research
             z-index: 1;
 
             max-width: 800px;
-
-        }
-
-
-        .eyebrow {
-
-            color: var(--petrol);
-
-            text-transform: uppercase;
-
-            letter-spacing: 0.18em;
-
-            font-size: 0.82rem;
-            font-weight: 700;
-
-            margin-bottom: 20px;
 
         }
 
@@ -271,14 +287,27 @@ title: Research
 
         .research-section {
 
-            padding: 30px 0 92px;
+            padding: 28px 0 92px;
+
+        }
+
+
+        .section-accent {
+
+            width: 100%;
+
+            height: 6px;
+
+            background: rgba(136, 183, 155, 0.55);
+
+            margin-bottom: 34px;
 
         }
 
 
         .research-list {
 
-            border-top: 1px solid var(--line-dark);
+            border-top: none;
 
         }
 
@@ -288,7 +317,7 @@ title: Research
             display: grid;
 
             grid-template-columns:
-                minmax(250px, 0.8fr)
+                minmax(260px, 0.8fr)
                 minmax(0, 1.2fr);
 
             gap: 48px;
@@ -297,11 +326,13 @@ title: Research
 
             border-bottom: 1px solid var(--line-dark);
 
+            align-items: start;
+
         }
 
 
 
-        /* IMAGE */
+        /* COVER */
 
 
         .research-image-link {
@@ -324,8 +355,8 @@ title: Research
             object-fit: cover;
 
             transition:
-                transform 0.35s ease,
-                opacity 0.35s ease;
+                transform 0.4s ease,
+                opacity 0.4s ease;
 
         }
 
@@ -345,49 +376,7 @@ title: Research
 
             aspect-ratio: 16 / 10;
 
-            position: relative;
-
-            overflow: hidden;
-
             background: #e4eee7;
-
-        }
-
-
-        .research-placeholder::before {
-
-            content: "";
-
-            position: absolute;
-
-            width: 180px;
-            height: 180px;
-
-            border-radius: 50%;
-
-            border: 1px solid rgba(16, 73, 69, 0.18);
-
-            right: -25px;
-            top: -45px;
-
-        }
-
-
-        .research-placeholder::after {
-
-            content: "";
-
-            position: absolute;
-
-            width: 115px;
-            height: 115px;
-
-            left: 38px;
-            bottom: -48px;
-
-            background: rgba(136, 183, 155, 0.40);
-
-            transform: rotate(32deg);
 
         }
 
@@ -405,6 +394,7 @@ title: Research
             letter-spacing: 0.12em;
 
             font-size: 0.72rem;
+
             font-weight: 700;
 
             margin-bottom: 12px;
@@ -424,6 +414,8 @@ title: Research
             font-weight: 500;
 
             line-height: 1.15;
+
+            color: var(--ink);
 
             margin: 0 0 12px;
 
@@ -456,6 +448,8 @@ title: Research
 
             line-height: 1.65;
 
+            max-width: 650px;
+
             margin: 0 0 19px;
 
         }
@@ -464,6 +458,7 @@ title: Research
         .research-tags {
 
             display: flex;
+
             flex-wrap: wrap;
 
             gap: 8px;
@@ -477,11 +472,11 @@ title: Research
 
             background: rgba(136, 183, 155, 0.14);
 
-            border: 1px solid rgba(136, 183, 155, 0.24);
-
             color: var(--petrol-dark);
 
             font-size: 0.72rem;
+
+            border: 1px solid rgba(136, 183, 155, 0.24);
 
         }
 
@@ -506,6 +501,7 @@ title: Research
         .footer-inner {
 
             display: flex;
+
             justify-content: space-between;
 
             gap: 20px;
@@ -534,6 +530,7 @@ title: Research
             .navbar {
 
                 flex-direction: column;
+
                 align-items: flex-start;
 
                 padding: 18px 0;
@@ -582,10 +579,7 @@ title: Research
 
             <nav class="nav-links">
 
-                <a
-                    href="/research/"
-                    class="active"
-                >
+                <a href="/research/" class="active">
                     Research
                 </a>
 
@@ -619,16 +613,9 @@ title: Research
 
                 <div class="hero-inner">
 
-
-                    <div class="eyebrow">
-                        Research
-                    </div>
-
-
                     <h1>
-                        Research.
+                        Research
                     </h1>
-
 
                     <p class="hero-intro">
 
@@ -638,7 +625,6 @@ title: Research
                         affective polarization and intra-party dynamics.
 
                     </p>
-
 
                 </div>
 
@@ -654,17 +640,18 @@ title: Research
             <div class="container">
 
 
+                <div class="section-accent"></div>
+
+
                 {% assign projects = site.research | sort: "date" | reverse %}
 
 
                 {% if projects.size > 0 %}
 
-
                     <div class="research-list">
 
 
                         {% for project in projects %}
-
 
                             <article class="research-item">
 
@@ -674,36 +661,21 @@ title: Research
                                     href="{{ project.url }}"
                                 >
 
-
                                     {% if project.image %}
 
                                         <img
                                             class="research-image"
                                             src="{{ project.image }}"
                                             alt="Cover image for {{ project.title }}"
-                                            onerror="
-                                                this.style.display='none';
-                                                this.nextElementSibling.style.display='block';
-                                            "
                                         >
-
-                                        <div
-                                            class="research-placeholder"
-                                            style="display:none;"
-                                        >
-                                        </div>
 
                                     {% else %}
 
-                                        <div class="research-placeholder">
-                                        </div>
+                                        <div class="research-placeholder"></div>
 
                                     {% endif %}
 
-
                                 </a>
-
-
 
 
                                 <div>
@@ -767,18 +739,10 @@ title: Research
 
                             </article>
 
-
                         {% endfor %}
 
 
                     </div>
-
-
-                {% else %}
-
-                    <p>
-                        No research projects published yet.
-                    </p>
 
                 {% endif %}
 
