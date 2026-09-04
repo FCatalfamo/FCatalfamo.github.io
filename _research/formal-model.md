@@ -2,7 +2,8 @@
 title: "A Formal Model of Donor Intervention in Party Leadership Races"
 status: "Course paper"
 authors: "Francesco Catalfamo"
-year: 2026
+description: "How donor influence in party leadership elections can shape political outcomes before legislative votes."
+year: 2025
 type: "Formal theory"
 image: "/assets/images/research/formal-model.png"
 pdf: "/assets/papers/formal-model.pdf"
