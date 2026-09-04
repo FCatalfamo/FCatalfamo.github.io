@@ -1,6 +1,6 @@
 ---
 layout: none
-title: About
+title: Contact
 ---
 
 <!DOCTYPE html>
@@ -17,16 +17,10 @@ title: About
 
     <meta
         name="description"
-        content="About Francesco Catalfamo"
+        content="Contact Francesco Catalfamo"
     >
 
-    <title>About — Francesco Catalfamo</title>
-
-
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    >
+    <title>Contact — Francesco Catalfamo</title>
 
 
     <style>
@@ -41,10 +35,7 @@ title: About
             --sage: #88b79b;
             --sage-soft: rgba(136, 183, 155, 0.16);
 
-            --dark-section: rgba(16, 73, 69, 0.92);
-
             --ink: #202522;
-            --muted: #66716c;
 
             --light-text: #f7f2ec;
             --light-muted: #e5ddd4;
@@ -58,11 +49,6 @@ title: About
 
         * {
             box-sizing: border-box;
-        }
-
-
-        html {
-            scroll-behavior: smooth;
         }
 
 
@@ -81,9 +67,9 @@ title: About
 
             color: var(--ink);
 
-            background: #ffffff;
+            background: var(--ivory);
 
-            line-height: 1.68;
+            line-height: 1.65;
 
         }
 
@@ -91,12 +77,6 @@ title: About
         a {
             color: inherit;
             text-decoration: none;
-        }
-
-
-        img {
-            display: block;
-            max-width: 100%;
         }
 
 
@@ -110,9 +90,7 @@ title: About
 
 
 
-        /* ======================================
-           HEADER
-        ====================================== */
+        /* HEADER */
 
 
         .site-header {
@@ -149,8 +127,6 @@ title: About
 
             font-weight: 700;
 
-            letter-spacing: -0.02em;
-
             color: var(--light-text);
 
         }
@@ -159,8 +135,6 @@ title: About
         .nav-links {
 
             display: flex;
-
-            align-items: center;
 
             gap: 1.6rem;
 
@@ -172,8 +146,6 @@ title: About
         .nav-links a {
 
             color: var(--light-muted);
-
-            transition: color 0.18s ease;
 
         }
 
@@ -187,12 +159,10 @@ title: About
 
 
 
-        /* ======================================
-           HERO
-        ====================================== */
+        /* HERO */
 
 
-        .about-hero {
+        .contact-hero {
 
             position: relative;
 
@@ -200,28 +170,51 @@ title: About
 
             padding: 90px 0 78px;
 
-            background: var(--ivory);
-
         }
 
 
-        .about-hero::after {
+        .contact-hero::before {
 
             content: "";
 
             position: absolute;
 
-            width: 330px;
+            width: 360px;
 
-            height: 330px;
+            height: 360px;
 
-            right: -120px;
+            right: -130px;
 
-            top: -85px;
-
-            border-radius: 50%;
+            top: -105px;
 
             background: var(--sage-soft);
+
+            border-radius:
+                47% 53% 44% 56%
+                / 55% 41% 59% 45%;
+
+            transform: rotate(10deg);
+
+        }
+
+
+        .contact-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 155px;
+
+            height: 155px;
+
+            right: 105px;
+
+            bottom: -80px;
+
+            border: 1px solid rgba(22, 95, 90, 0.18);
+
+            border-radius: 50%;
 
         }
 
@@ -232,10 +225,12 @@ title: About
 
             z-index: 1;
 
+            max-width: 790px;
+
         }
 
 
-        .about-hero h1 {
+        .contact-hero h1 {
 
             font-family:
                 Georgia,
@@ -252,26 +247,42 @@ title: About
 
             color: var(--petrol-dark);
 
+            margin: 0 0 27px;
+
+        }
+
+
+        .hero-intro {
+
+            max-width: 720px;
+
+            color: #53605a;
+
+            font-size: 1.08rem;
+
+            line-height: 1.7;
+
             margin: 0;
 
         }
 
 
 
-        /* ======================================
-           GENERAL ABOUT SECTIONS
-        ====================================== */
+        /* CONTACT */
 
 
-        .about-section {
+        .contact-section {
 
-            position: relative;
+            padding: 32px 0 92px;
 
-            overflow: hidden;
+        }
 
-            padding: 42px 0 82px;
 
-            background: var(--ivory);
+        .contact-panel {
+
+            max-width: 880px;
+
+            margin: 0 auto;
 
         }
 
@@ -284,324 +295,176 @@ title: About
 
             background: rgba(136, 183, 155, 0.55);
 
-            margin-bottom: 42px;
-
-        }
-
-
-        .about-grid {
-
-            display: grid;
-
-            grid-template-columns: 0.48fr 1.52fr;
-
-            gap: 72px;
-
-        }
-
-
-        .section-title {
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            color: var(--petrol-dark);
-
-            font-size: 2rem;
-
-            font-weight: 500;
-
-            line-height: 1.15;
-
-            margin: 0;
-
-        }
-
-
-        .section-copy {
-
-            color: #46534d;
-
-            font-size: 1.04rem;
-
-            max-width: 800px;
-
-        }
-
-
-        .section-copy p:first-child {
-            margin-top: 0;
-        }
-
-
-        .section-copy p:last-child {
-            margin-bottom: 0;
-        }
-
-
-        .section-copy h3 {
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            color: var(--petrol-dark);
-
-            font-size: 1.4rem;
-
-            line-height: 1.3;
-
-            font-weight: 500;
-
-            margin: 0 0 15px;
+            margin-bottom: 34px;
 
         }
 
 
 
-        /* ======================================
-           ACADEMIC
-        ====================================== */
+        /* EMAIL */
 
 
-        .academic-section::after {
+        .email-block {
 
-            content: "";
-
-            position: absolute;
-
-            width: 250px;
-
-            height: 250px;
-
-            right: -130px;
-
-            bottom: -95px;
-
-            border: 34px solid rgba(136, 183, 155, 0.12);
-
-            border-radius: 50%;
-
-        }
-
-
-
-        /* ======================================
-           PROFESSIONAL
-        ====================================== */
-
-
-        .professional-section::before {
-
-            content: "";
-
-            position: absolute;
-
-            width: 280px;
-
-            height: 280px;
-
-            left: -155px;
-
-            top: 70px;
-
-            background: rgba(136, 183, 155, 0.10);
-
-            border-radius:
-                46% 54% 57% 43%
-                / 42% 49% 51% 58%;
-
-            transform: rotate(-10deg);
-
-        }
-
-
-        .professional-section .container,
-        .academic-section .container {
-
-            position: relative;
-
-            z-index: 1;
-
-        }
-
-
-
-        /* ======================================
-           OUTSIDE ACADEMIA
-        ====================================== */
-
-
-        .outside-section {
-
-            padding: 78px 0;
-
-            background: var(--dark-section);
-
-            color: var(--light-text);
-
-        }
-
-
-        .outside-title {
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            font-size: 2.2rem;
-
-            font-weight: 500;
-
-            margin: 0 0 36px;
-
-            color: var(--light-text);
-
-        }
-
-
-        .outside-grid {
-
-            display: grid;
-
-            grid-template-columns: repeat(3, 1fr);
-
-            gap: 28px;
-
-        }
-
-
-        .outside-card {
-
-            min-width: 0;
-
-        }
-
-
-        .outside-media {
-
-            width: 100%;
-
-            aspect-ratio: 4 / 3;
-
-            object-fit: cover;
-
-            background: rgba(255,255,255,0.06);
-
-        }
-
-
-        #travel-map {
-
-            width: 100%;
-
-            aspect-ratio: 4 / 3;
-
-            background: #eef2ef;
-
-        }
-
-
-        .outside-card h3 {
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            font-size: 1.35rem;
-
-            font-weight: 500;
-
-            margin: 16px 0 0;
-
-            color: var(--light-text);
-
-        }
-
-
-
-        /* ======================================
-           MORE
-        ====================================== */
-
-
-        .more-section {
-
-            padding: 72px 0 84px;
-
-            background: var(--ivory);
-
-        }
-
-
-        .more-title {
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            color: var(--petrol-dark);
-
-            font-size: 2.15rem;
-
-            font-weight: 500;
-
-            margin: 0 0 28px;
-
-        }
-
-
-        .more-list {
-
-            border-top: 1px solid var(--line-dark);
-
-        }
-
-
-        .more-row {
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            gap: 20px;
-
-            padding: 20px 0;
+            padding: 0 0 36px;
 
             border-bottom: 1px solid var(--line-dark);
 
-            color: var(--ink);
+        }
+
+
+        .contact-label {
+
+            color: var(--petrol);
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.14em;
+
+            font-size: 0.7rem;
+
+            font-weight: 700;
+
+            margin-bottom: 14px;
+
+        }
+
+
+        .email-link {
+
+            display: inline-block;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: clamp(1.45rem, 2.8vw, 2.15rem);
+
+            line-height: 1.25;
+
+            letter-spacing: -0.015em;
+
+            color: var(--petrol-dark);
+
+            white-space: nowrap;
+
+        }
+
+
+        .email-link:hover {
+
+            color: var(--petrol);
+
+        }
+
+
+
+        /* SOCIAL */
+
+
+        .social-list {
+
+            margin-top: 0;
+
+        }
+
+
+        .social-row {
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1fr)
+                100px
+                26px;
+
+            gap: 24px;
+
+            align-items: center;
+
+            padding: 22px 0;
+
+            border-bottom: 1px solid var(--line-dark);
 
             transition:
-                color 0.18s ease,
+                background 0.18s ease,
                 padding 0.18s ease;
 
         }
 
 
-        .more-row:hover {
+        .social-row:hover {
+
+            background: rgba(136, 183, 155, 0.10);
+
+            padding-left: 12px;
+
+            padding-right: 12px;
+
+        }
+
+
+        .social-name {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 1.25rem;
+
+            line-height: 1.2;
+
+        }
+
+
+        .social-row:hover .social-name {
 
             color: var(--petrol);
 
-            padding-left: 8px;
+        }
 
-            padding-right: 8px;
+
+        .social-tag {
+
+            color: #74807a;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.13em;
+
+            font-size: 0.61rem;
+
+            font-weight: 700;
+
+            text-align: right;
+
+        }
+
+
+        .social-arrow {
+
+            color: var(--petrol);
+
+            font-size: 0.9rem;
+
+            text-align: right;
+
+            transition: transform 0.18s ease;
+
+        }
+
+
+        .social-row:hover .social-arrow {
+
+            transform: translateX(5px);
 
         }
 
 
 
-        /* ======================================
-           FOOTER
-        ====================================== */
+        /* FOOTER */
 
 
         .site-footer {
@@ -631,35 +494,27 @@ title: About
 
 
 
-        /* ======================================
-           TABLET
-        ====================================== */
+        @media (max-width: 760px) {
 
+            .social-row {
 
-        @media (max-width: 780px) {
+                grid-template-columns:
+                    minmax(0, 1fr)
+                    80px
+                    24px;
 
-            .about-grid {
-
-                grid-template-columns: 1fr;
-
-                gap: 24px;
+                gap: 16px;
 
             }
 
 
-            .outside-grid {
+            .email-link {
 
-                grid-template-columns: 1fr;
+                font-size: 1.55rem;
 
             }
 
         }
-
-
-
-        /* ======================================
-           MOBILE
-        ====================================== */
 
 
         @media (max-width: 560px) {
@@ -685,42 +540,51 @@ title: About
 
                 flex-wrap: wrap;
 
-                gap: 12px;
-
             }
 
 
-            .about-hero {
+            .contact-hero {
 
                 padding: 62px 0 52px;
 
             }
 
 
-            .about-section {
+            .email-link {
 
-                padding: 34px 0 60px;
+                font-size: 1.28rem;
 
-            }
+                white-space: normal;
 
-
-            .section-accent {
-
-                margin-bottom: 32px;
+                overflow-wrap: anywhere;
 
             }
 
 
-            .outside-section {
+            .social-row {
 
-                padding: 60px 0;
+                grid-template-columns:
+                    minmax(0, 1fr)
+                    auto
+                    22px;
+
+                gap: 12px;
+
+                padding: 19px 0;
 
             }
 
 
-            .more-section {
+            .social-name {
 
-                padding: 58px 0 68px;
+                font-size: 1.08rem;
+
+            }
+
+
+            .social-tag {
+
+                font-size: 0.56rem;
 
             }
 
@@ -736,15 +600,9 @@ title: About
 <body>
 
 
-    <!-- ======================================
-         HEADER
-    ====================================== -->
-
-
     <header class="site-header">
 
         <div class="container navbar">
-
 
             <a
                 class="site-name"
@@ -753,11 +611,7 @@ title: About
                 Francesco Catalfamo
             </a>
 
-
-            <nav
-                class="nav-links"
-                aria-label="Main navigation"
-            >
+            <nav class="nav-links">
 
                 <a href="/research/">
                     Research
@@ -767,19 +621,18 @@ title: About
                     Notes
                 </a>
 
-                <a
-                    href="/about/"
-                    class="active"
-                >
+                <a href="/about/">
                     About
                 </a>
 
-                <a href="/contact/">
+                <a
+                    href="/contact/"
+                    class="active"
+                >
                     Contact
                 </a>
 
             </nav>
-
 
         </div>
 
@@ -791,21 +644,24 @@ title: About
     <main>
 
 
-        <!-- ======================================
-             HERO
-        ====================================== -->
-
-
-        <section class="about-hero">
+        <section class="contact-hero">
 
             <div class="container">
 
                 <div class="hero-inner">
 
                     <h1>
-                        About
+                        Get in touch
                     </h1>
 
+                    <p class="hero-intro">
+
+                        Feel free to get in touch regarding research,
+                        collaborations, academic opportunities or
+                        anything related to my work.
+
+                    </p>
+
                 </div>
 
             </div>
@@ -815,305 +671,108 @@ title: About
 
 
 
-        <!-- ======================================
-             ACADEMIC PROFILE
-        ====================================== -->
-
-
-        <section class="about-section academic-section">
+        <section class="contact-section">
 
             <div class="container">
 
 
-                <div class="section-accent"></div>
+                <div class="contact-panel">
 
 
-                <div class="about-grid">
+                    <div class="section-accent"></div>
 
 
-                    <h2 class="section-title">
-                        Academic Profile
-                    </h2>
+                    <div class="email-block">
 
 
-                    <div class="section-copy">
+                        <div class="contact-label">
+                            Email
+                        </div>
 
 
-                        <p>
-
-                            I am a PhD researcher in Political Science at the
-                            Network for the Advancement of Social and Political Studies (NASP),
-                            jointly affiliated with the University of Milan and the University
-                            of Pavia. Before starting my PhD, I completed an M.A. in Political
-                            Science at the University of Mannheim (current grade: 1.8) and an
-                            M.A. in Public and Corporate Communication at the University of
-                            Milan (110/110 cum laude), with a curriculum in Data Analytics
-                            for Politics, Society and Complex Organizations. I previously
-                            obtained a B.A. in Political Science from the University of Milan
-                            (104/110).
-
-                        </p>
-
-
-                        <p>
-
-                            My research focuses on political behaviour, party politics and
-                            political communication, with particular interests in coalition
-                            politics, affective polarization and intra-party dynamics.
-                            I primarily use quantitative and comparative methods, including
-                            panel data and computational approaches to political text.
-
-                        </p>
+                        <a
+                            class="email-link"
+                            href="mailto:francesco.catalfamo01@universitadipavia.it"
+                        >
+                            francesco.catalfamo01@universitadipavia.it
+                        </a>
 
 
                     </div>
 
 
-                </div>
 
 
-            </div>
-
-        </section>
+                    <div class="social-list">
 
 
-
-
-        <!-- ======================================
-             PROFESSIONAL EXPERIENCE
-        ====================================== -->
-
-
-        <section class="about-section professional-section">
-
-            <div class="container">
-
-
-                <div class="section-accent"></div>
-
-
-                <div class="about-grid">
-
-
-                    <h2 class="section-title">
-                        Professional Experience
-                    </h2>
-
-
-                    <div class="section-copy">
-
-
-                        <h3>
-                            Istituto Bruno Leoni
-                        </h3>
-
-
-                        <p>
-
-                            At the Istituto Bruno Leoni, my work combined research and
-                            policy analysis with the communication of research to broader
-                            audiences. Alongside quantitative work, data collection and
-                            research support, I contributed to translating policy research
-                            into accessible public-facing content.
-
-                        </p>
-
-
-                        <p>
-
-                            My work included social media and digital communication,
-                            press releases, graphics, video and audio production,
-                            website management, stakeholder outreach and event organisation.
-                            I was also involved in educational initiatives aimed at bringing
-                            economic and policy debates to students outside traditional
-                            academic settings.
-
-                        </p>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-
-
-        <!-- ======================================
-             OUTSIDE ACADEMIA
-        ====================================== -->
-
-
-        <section class="outside-section">
-
-            <div class="container">
-
-
-                <h2 class="outside-title">
-                    Outside Academia
-                </h2>
-
-
-                <div class="outside-grid">
-
-
-                    <div class="outside-card">
-
-
-                        <img
-                            class="outside-media"
-                            src="/assets/images/about/volleyball.jpg"
-                            alt="Volleyball"
+                        <a
+                            class="social-row"
+                            href="https://www.linkedin.com/in/francesco-catalfamo-53475a194/"
+                            target="_blank"
+                            rel="noopener"
                         >
 
+                            <div class="social-name">
+                                Francesco Catalfamo
+                            </div>
 
-                        <h3>
-                            Volleyball
-                        </h3>
+                            <div class="social-tag">
+                                LinkedIn
+                            </div>
 
+                            <div class="social-arrow">
+                                →
+                            </div>
 
-                    </div>
-
-
-
-
-                    <div class="outside-card">
-
-
-                        <div id="travel-map"></div>
+                        </a>
 
 
-                        <h3>
-                            Travel &amp; Outdoors
-                        </h3>
-
-
-                    </div>
-
-
-
-
-                    <div class="outside-card">
-
-
-                        <img
-                            class="outside-media"
-                            src="/assets/images/about/beer-friends.jpg"
-                            alt="Beer and friends"
+                        <a
+                            class="social-row"
+                            href="https://x.com/f_catalfamo"
+                            target="_blank"
+                            rel="noopener"
                         >
 
+                            <div class="social-name">
+                                @f_catalfamo
+                            </div>
 
-                        <h3>
-                            Beer &amp; Friends
-                        </h3>
+                            <div class="social-tag">
+                                X
+                            </div>
+
+                            <div class="social-arrow">
+                                →
+                            </div>
+
+                        </a>
+
+
+                        <a
+                            class="social-row"
+                            href="https://github.com/FCatalfamo"
+                            target="_blank"
+                            rel="noopener"
+                        >
+
+                            <div class="social-name">
+                                FCatalfamo
+                            </div>
+
+                            <div class="social-tag">
+                                GitHub
+                            </div>
+
+                            <div class="social-arrow">
+                                →
+                            </div>
+
+                        </a>
 
 
                     </div>
-
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-
-
-        <!-- ======================================
-             MORE
-        ====================================== -->
-
-
-        <section class="more-section">
-
-            <div class="container">
-
-
-                <h2 class="more-title">
-                    More
-                </h2>
-
-
-                <div class="more-list">
-
-
-                    <a
-                        class="more-row"
-                        href="/assets/cv.pdf"
-                        target="_blank"
-                        rel="noopener"
-                    >
-
-                        <span>
-                            Curriculum Vitae
-                        </span>
-
-                        <span>
-                            →
-                        </span>
-
-                    </a>
-
-
-
-
-                    <a
-                        class="more-row"
-                        href="/research/"
-                    >
-
-                        <span>
-                            Research
-                        </span>
-
-                        <span>
-                            →
-                        </span>
-
-                    </a>
-
-
-
-
-                    <a
-                        class="more-row"
-                        href="/notes/"
-                    >
-
-                        <span>
-                            Notes
-                        </span>
-
-                        <span>
-                            →
-                        </span>
-
-                    </a>
-
-
-
-
-                    <a
-                        class="more-row"
-                        href="/contact/"
-                    >
-
-                        <span>
-                            Contact
-                        </span>
-
-                        <span>
-                            →
-                        </span>
-
-                    </a>
 
 
                 </div>
@@ -1129,111 +788,21 @@ title: About
 
 
 
-    <!-- ======================================
-         FOOTER
-    ====================================== -->
-
-
     <footer class="site-footer">
 
         <div class="container footer-inner">
-
 
             <span>
                 © 2026 Francesco Catalfamo
             </span>
 
-
             <span>
                 Political Science
             </span>
 
-
         </div>
 
     </footer>
-
-
-
-
-    <!-- ======================================
-         LEAFLET
-    ====================================== -->
-
-
-    <script
-        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    ></script>
-
-
-    <script>
-
-        const map =
-            L.map(
-                "travel-map",
-                {
-                    scrollWheelZoom: false
-                }
-            );
-
-
-        L.tileLayer(
-            "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-            {
-                attribution:
-                    "&copy; OpenStreetMap contributors &copy; CARTO"
-            }
-        ).addTo(map);
-
-
-        fetch("/assets/data/places.json")
-            .then(response => response.json())
-            .then(places => {
-
-                const bounds = [];
-
-
-                places.forEach(place => {
-
-
-                    L.circleMarker(
-                        [place.lat, place.lng],
-                        {
-                            radius: 5,
-                            color: "#165f5a",
-                            weight: 1,
-                            fillColor: "#165f5a",
-                            fillOpacity: 0.82
-                        }
-                    )
-                    .addTo(map)
-                    .bindPopup(place.name);
-
-
-                    bounds.push(
-                        [place.lat, place.lng]
-                    );
-
-
-                });
-
-
-                if (bounds.length > 0) {
-
-                    map.fitBounds(
-                        bounds,
-                        {
-                            padding: [22, 22]
-                        }
-                    );
-
-                }
-
-
-            });
-
-
-    </script>
 
 
 </body>
