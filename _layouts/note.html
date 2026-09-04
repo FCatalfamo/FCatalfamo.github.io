@@ -15,9 +15,7 @@
         content="{{ page.description | default: page.title }}"
     >
 
-    <title>
-        {{ page.title }} | Francesco Catalfamo
-    </title>
+    <title>{{ page.title }} — Francesco Catalfamo</title>
 
 
     <style>
@@ -26,13 +24,21 @@
 
             --petrol: #165f5a;
             --petrol-dark: #104945;
-            --petrol-soft: #eef5f2;
+
+            --ivory: #fbf7f1;
+
+            --sage: #88b79b;
+            --sage-soft: rgba(136, 183, 155, 0.16);
+
+            --dark-section: rgba(16, 73, 69, 0.92);
 
             --ink: #202522;
             --muted: #66716c;
-            --line: #dfe6e2;
 
-            --paper: #ffffff;
+            --light-text: #f7f2ec;
+            --light-muted: #e5ddd4;
+
+            --line-dark: rgba(16, 73, 69, 0.22);
 
             --max-width: 1120px;
             --article-width: 760px;
@@ -65,7 +71,7 @@
 
             color: var(--ink);
 
-            background: var(--paper);
+            background: var(--ivory);
 
             line-height: 1.7;
 
@@ -73,16 +79,14 @@
 
 
         a {
-
             color: inherit;
-
             text-decoration: none;
-
         }
 
 
-        a:hover {
-            color: var(--petrol);
+        img {
+            display: block;
+            max-width: 100%;
         }
 
 
@@ -105,24 +109,20 @@
 
 
 
-        /* ======================================
-           HEADER
-        ====================================== */
+        /* HEADER */
 
 
         .site-header {
 
             position: sticky;
-
             top: 0;
-
             z-index: 100;
 
-            background: rgba(255, 255, 255, 0.94);
+            background: rgba(16, 73, 69, 0.97);
 
             backdrop-filter: blur(12px);
 
-            border-bottom: 1px solid var(--line);
+            border-bottom: 1px solid rgba(246, 229, 209, 0.16);
 
         }
 
@@ -132,9 +132,7 @@
             min-height: 72px;
 
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
 
             gap: 2rem;
@@ -145,8 +143,9 @@
         .site-name {
 
             font-weight: 700;
-
             letter-spacing: -0.02em;
+
+            color: var(--light-text);
 
         }
 
@@ -154,7 +153,6 @@
         .nav-links {
 
             display: flex;
-
             align-items: center;
 
             gap: 1.6rem;
@@ -164,24 +162,66 @@
         }
 
 
-        .nav-links .active {
+        .nav-links a {
 
-            color: var(--petrol);
+            color: var(--light-muted);
 
-            font-weight: 600;
+        }
+
+
+        .nav-links a:hover,
+        .nav-links a.active {
+
+            color: #ffffff;
 
         }
 
 
 
-        /* ======================================
-           ARTICLE HERO
-        ====================================== */
+        /* HERO */
 
 
         .article-hero {
 
-            padding: 90px 0 56px;
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 88px 0 62px;
+
+            border-bottom: 1px solid var(--line-dark);
+
+        }
+
+
+        .article-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 340px;
+            height: 310px;
+
+            right: -140px;
+            top: -105px;
+
+            background: var(--sage-soft);
+
+            border-radius:
+                47% 53% 42% 58%
+                / 55% 44% 56% 45%;
+
+            transform: rotate(8deg);
+
+        }
+
+
+        .article-hero-inner {
+
+            position: relative;
+
+            z-index: 1;
 
         }
 
@@ -194,11 +234,10 @@
 
             letter-spacing: 0.14em;
 
-            font-size: 0.8rem;
-
+            font-size: 0.76rem;
             font-weight: 700;
 
-            margin-bottom: 20px;
+            margin-bottom: 18px;
 
         }
 
@@ -210,13 +249,15 @@
                 "Times New Roman",
                 serif;
 
-            font-size: clamp(3rem, 7vw, 5.2rem);
+            font-size: clamp(3rem, 6vw, 5rem);
 
             font-weight: 500;
 
             letter-spacing: -0.04em;
 
-            line-height: 1.02;
+            line-height: 1;
+
+            color: var(--petrol-dark);
 
             margin: 0;
 
@@ -225,13 +266,11 @@
 
         .article-subtitle {
 
-            margin-top: 24px;
+            margin: 24px 0 0;
 
-            max-width: 720px;
+            color: #56635d;
 
-            color: var(--muted);
-
-            font-size: 1.18rem;
+            font-size: 1.12rem;
 
             line-height: 1.7;
 
@@ -244,13 +283,13 @@
 
             flex-wrap: wrap;
 
-            gap: 10px 18px;
+            gap: 8px 18px;
 
-            margin-top: 28px;
+            margin-top: 26px;
 
-            color: #7a8580;
+            color: #75817b;
 
-            font-size: 0.88rem;
+            font-size: 0.86rem;
 
         }
 
@@ -261,21 +300,14 @@
 
             margin-right: 18px;
 
-            color: #a0aaa5;
+            color: #9aa49f;
 
         }
-
-
-
-        /* ======================================
-           TAGS
-        ====================================== */
 
 
         .tags {
 
             display: flex;
-
             flex-wrap: wrap;
 
             gap: 8px;
@@ -287,43 +319,75 @@
 
         .tag {
 
-            background: var(--petrol-soft);
+            padding: 5px 9px;
 
-            color: var(--petrol);
+            background: rgba(136, 183, 155, 0.13);
 
-            border-radius: 999px;
+            border: 1px solid rgba(136, 183, 155, 0.25);
 
-            padding: 6px 11px;
+            color: var(--petrol-dark);
 
-            font-size: 0.8rem;
-
-            font-weight: 600;
+            font-size: 0.72rem;
 
         }
 
 
 
-        /* ======================================
-           ARTICLE BODY
-        ====================================== */
+        /* COVER */
+
+
+        .note-cover-section {
+
+            padding-top: 46px;
+
+        }
+
+
+        .note-cover {
+
+            width: min(900px, 90%);
+
+            max-height: 520px;
+
+            object-fit: cover;
+
+            margin: 0 auto;
+
+            border: 1px solid rgba(16, 73, 69, 0.14);
+
+        }
+
+
+
+        /* ARTICLE */
+
+
+        .article-section {
+
+            padding: 60px 0 78px;
+
+        }
 
 
         .article-body {
 
-            border-top: 1px solid var(--line);
+            color: #3e4944;
 
-            padding: 58px 0 80px;
+            font-size: 1.04rem;
+
+        }
+
+
+        .article-body > :first-child {
+
+            margin-top: 0;
 
         }
 
 
         .article-body p {
 
-            margin: 0 0 24px;
-
-            color: #3f4944;
-
-            font-size: 1.04rem;
+            margin: 0 0 23px;
 
         }
 
@@ -335,22 +399,33 @@
                 "Times New Roman",
                 serif;
 
+            color: var(--petrol-dark);
+
             font-size: 2rem;
 
             font-weight: 500;
 
             line-height: 1.2;
 
-            margin: 48px 0 18px;
+            margin: 48px 0 17px;
 
         }
 
 
         .article-body h3 {
 
-            font-size: 1.15rem;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
 
-            margin: 36px 0 12px;
+            color: var(--petrol-dark);
+
+            font-size: 1.4rem;
+
+            font-weight: 500;
+
+            margin: 36px 0 13px;
 
         }
 
@@ -361,8 +436,6 @@
             margin: 0 0 24px;
 
             padding-left: 24px;
-
-            color: #3f4944;
 
         }
 
@@ -376,22 +449,20 @@
 
         .article-body blockquote {
 
-            margin: 36px 0;
+            margin: 34px 0;
 
-            padding: 2px 0 2px 22px;
+            padding: 5px 0 5px 22px;
 
-            border-left: 3px solid var(--petrol);
+            border-left: 3px solid var(--sage);
 
-            color: #58635e;
+            color: #55625c;
 
             font-family:
                 Georgia,
                 "Times New Roman",
                 serif;
 
-            font-size: 1.18rem;
-
-            line-height: 1.6;
+            font-size: 1.13rem;
 
         }
 
@@ -411,28 +482,22 @@
 
         .article-body img {
 
-            max-width: 100%;
+            width: 100%;
 
-            height: auto;
-
-            display: block;
-
-            margin: 40px auto 12px;
+            margin: 36px 0;
 
         }
 
 
 
-        /* ======================================
-           NOTE FOOTER
-        ====================================== */
+        /* END */
 
 
         .note-end {
 
-            border-top: 1px solid var(--line);
+            padding: 34px 0 66px;
 
-            padding: 36px 0 64px;
+            border-top: 1px solid var(--line-dark);
 
         }
 
@@ -441,33 +506,23 @@
 
             color: var(--petrol);
 
+            font-size: 0.9rem;
             font-weight: 600;
 
-            font-size: 0.92rem;
-
-        }
-
-
-        .back-link:hover {
-
-            color: var(--petrol-dark);
-
         }
 
 
 
-        /* ======================================
-           SITE FOOTER
-        ====================================== */
+        /* FOOTER */
 
 
         .site-footer {
 
-            border-top: 1px solid var(--line);
+            background: rgba(16, 73, 69, 0.97);
 
             padding: 28px 0;
 
-            color: #7a8580;
+            color: var(--light-muted);
 
             font-size: 0.82rem;
 
@@ -477,7 +532,6 @@
         .footer-inner {
 
             display: flex;
-
             justify-content: space-between;
 
             gap: 20px;
@@ -488,53 +542,17 @@
 
 
 
-        /* ======================================
-           MOBILE
-        ====================================== */
+        /* MOBILE */
 
 
-        @media (max-width: 780px) {
-
-            .navbar {
-
-                align-items: flex-start;
-
-                padding: 18px 0;
-
-            }
-
-
-            .nav-links {
-
-                gap: 14px;
-
-                font-size: 0.86rem;
-
-            }
-
-
-            .article-hero {
-
-                padding: 62px 0 44px;
-
-            }
-
-
-            .article-title {
-
-                font-size: 3.2rem;
-
-            }
-
-        }
-
-
-
-        @media (max-width: 540px) {
+        @media (max-width: 560px) {
 
             .navbar {
 
                 flex-direction: column;
+                align-items: flex-start;
+
+                padding: 18px 0;
 
                 gap: 10px;
 
@@ -548,6 +566,22 @@
                 justify-content: space-between;
 
                 flex-wrap: wrap;
+
+                gap: 12px;
+
+            }
+
+
+            .article-hero {
+
+                padding: 60px 0 48px;
+
+            }
+
+
+            .article-section {
+
+                padding: 48px 0 62px;
 
             }
 
@@ -581,11 +615,6 @@
 <body>
 
 
-    <!-- ======================================
-         HEADER
-    ====================================== -->
-
-
     <header class="site-header">
 
         <div class="container navbar">
@@ -595,9 +624,7 @@
                 class="site-name"
                 href="/"
             >
-
                 Francesco Catalfamo
-
             </a>
 
 
@@ -606,11 +633,9 @@
                 aria-label="Main navigation"
             >
 
-
                 <a href="/research/">
                     Research
                 </a>
-
 
                 <a
                     href="/notes/"
@@ -619,16 +644,13 @@
                     Notes
                 </a>
 
-
                 <a href="/about/">
                     About
                 </a>
 
-
                 <a href="/contact/">
                     Contact
                 </a>
-
 
             </nav>
 
@@ -643,40 +665,29 @@
     <main>
 
 
-        <!-- ======================================
-             ARTICLE HERO
-        ====================================== -->
-
-
         <section class="article-hero">
 
-            <div class="article-container">
+            <div class="article-container article-hero-inner">
 
 
                 {% if page.category %}
 
                     <div class="article-category">
-
                         {{ page.category }}
-
                     </div>
 
                 {% endif %}
 
 
                 <h1 class="article-title">
-
                     {{ page.title }}
-
                 </h1>
 
 
                 {% if page.description %}
 
                     <p class="article-subtitle">
-
                         {{ page.description }}
-
                     </p>
 
                 {% endif %}
@@ -686,18 +697,14 @@
 
 
                     <span>
-
                         {{ page.date | date: "%-d %B %Y" }}
-
                     </span>
 
 
                     {% if page.reading_time %}
 
                         <span>
-
                             {{ page.reading_time }}
-
                         </span>
 
                     {% endif %}
@@ -710,17 +717,13 @@
 
                     <div class="tags">
 
-
                         {% for tag in page.tags %}
 
                             <span class="tag">
-
                                 {{ tag }}
-
                             </span>
 
                         {% endfor %}
-
 
                     </div>
 
@@ -734,43 +737,46 @@
 
 
 
-        <!-- ======================================
-             ARTICLE BODY
-        ====================================== -->
+        {% if page.image %}
+
+            <section class="note-cover-section">
+
+                <img
+                    class="note-cover"
+                    src="{{ page.image }}"
+                    alt="Cover image for {{ page.title }}"
+                >
+
+            </section>
+
+        {% endif %}
 
 
-        <article class="article-body">
 
-            <div class="article-container">
+
+        <section class="article-section">
+
+            <article class="article-container article-body">
 
                 {{ content }}
 
-            </div>
+            </article>
 
-        </article>
-
-
+        </section>
 
 
-        <!-- ======================================
-             BACK TO NOTES
-        ====================================== -->
 
 
         <section class="note-end">
 
             <div class="article-container">
 
-
                 <a
                     class="back-link"
                     href="/notes/"
                 >
-
-                    ← Back to all Notes
-
+                    ← Back to Notes
                 </a>
-
 
             </div>
 
@@ -782,29 +788,17 @@
 
 
 
-    <!-- ======================================
-         FOOTER
-    ====================================== -->
-
-
     <footer class="site-footer">
 
         <div class="container footer-inner">
 
-
             <span>
-
                 © 2026 Francesco Catalfamo
-
             </span>
-
 
             <span>
-
                 Political Science
-
             </span>
-
 
         </div>
 
