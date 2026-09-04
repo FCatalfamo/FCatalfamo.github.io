@@ -4,7 +4,7 @@ status: "Course paper"
 authors: "Francesco Catalfamo"
 year: 2026
 type: "Formal theory"
-image: "/assets/images/research/formal-model-donor-intervention.png"
+image: "/assets/images/research/formal-model.png"
 pdf: "/assets/papers/formal-model.pdf"
 abstract: >
   This paper examines how donors can influence policy indirectly by intervening
