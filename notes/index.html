@@ -108,7 +108,9 @@ title: Notes
         .site-header {
 
             position: sticky;
+
             top: 0;
+
             z-index: 100;
 
             background: rgba(16, 73, 69, 0.97);
@@ -123,7 +125,9 @@ title: Notes
             min-height: 72px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
 
             gap: 2rem;
@@ -133,9 +137,9 @@ title: Notes
 
         .site-name {
 
-            color: var(--light-text);
-
             font-weight: 700;
+
+            color: var(--light-text);
 
         }
 
@@ -178,8 +182,6 @@ title: Notes
 
             padding: 90px 0 78px;
 
-            border-bottom: 1px solid var(--line-dark);
-
         }
 
 
@@ -190,9 +192,11 @@ title: Notes
             position: absolute;
 
             width: 370px;
+
             height: 330px;
 
             right: -135px;
+
             top: -100px;
 
             background: var(--sage-soft);
@@ -213,23 +217,6 @@ title: Notes
             z-index: 1;
 
             max-width: 790px;
-
-        }
-
-
-        .eyebrow {
-
-            color: var(--petrol);
-
-            text-transform: uppercase;
-
-            font-size: 0.82rem;
-
-            letter-spacing: 0.18em;
-
-            font-weight: 700;
-
-            margin-bottom: 20px;
 
         }
 
@@ -270,7 +257,7 @@ title: Notes
 
 
 
-        /* FILTERS */
+        /* SECTION */
 
 
         .notes-section {
@@ -280,9 +267,27 @@ title: Notes
         }
 
 
+        .section-accent {
+
+            width: 100%;
+
+            height: 6px;
+
+            background: rgba(136, 183, 155, 0.55);
+
+            margin-bottom: 34px;
+
+        }
+
+
+
+        /* FILTERS */
+
+
         .filters {
 
             display: flex;
+
             flex-wrap: wrap;
 
             gap: 9px;
@@ -305,6 +310,7 @@ title: Notes
             cursor: pointer;
 
             font-size: 0.78rem;
+
             font-weight: 600;
 
         }
@@ -334,7 +340,7 @@ title: Notes
 
         .note-list {
 
-            border-top: 1px solid var(--line-dark);
+            border-top: none;
 
         }
 
@@ -349,6 +355,8 @@ title: Notes
                 minmax(0, 1fr);
 
             gap: 30px;
+
+            align-items: start;
 
             padding: 30px 12px;
 
@@ -365,9 +373,7 @@ title: Notes
 
 
         .note-row.hidden {
-
             display: none;
-
         }
 
 
@@ -408,49 +414,7 @@ title: Notes
 
             aspect-ratio: 4 / 3;
 
-            position: relative;
-
-            overflow: hidden;
-
             background: #e4eee7;
-
-        }
-
-
-        .note-placeholder::before {
-
-            content: "";
-
-            position: absolute;
-
-            width: 92px;
-            height: 92px;
-
-            border: 1px solid rgba(16, 73, 69, 0.18);
-
-            border-radius: 50%;
-
-            top: 15px;
-            right: 15px;
-
-        }
-
-
-        .note-placeholder::after {
-
-            content: "";
-
-            position: absolute;
-
-            width: 56px;
-            height: 56px;
-
-            background: rgba(136, 183, 155, 0.40);
-
-            left: 25px;
-            bottom: -19px;
-
-            transform: rotate(34deg);
 
         }
 
@@ -541,6 +505,7 @@ title: Notes
         .footer-inner {
 
             display: flex;
+
             justify-content: space-between;
 
             gap: 20px;
@@ -578,6 +543,7 @@ title: Notes
             .navbar {
 
                 flex-direction: column;
+
                 align-items: flex-start;
 
                 padding: 18px 0;
@@ -620,10 +586,7 @@ title: Notes
 
         <div class="container navbar">
 
-            <a
-                class="site-name"
-                href="/"
-            >
+            <a class="site-name" href="/">
                 Francesco Catalfamo
             </a>
 
@@ -633,10 +596,7 @@ title: Notes
                     Research
                 </a>
 
-                <a
-                    href="/notes/"
-                    class="active"
-                >
+                <a href="/notes/" class="active">
                     Notes
                 </a>
 
@@ -666,16 +626,9 @@ title: Notes
 
                 <div class="hero-inner">
 
-
-                    <div class="eyebrow">
-                        Notes
-                    </div>
-
-
                     <h1>
-                        Notes.
+                        Notes
                     </h1>
-
 
                     <p class="hero-intro">
 
@@ -683,7 +636,6 @@ title: Notes
                         politics, political science, data and methods.
 
                     </p>
-
 
                 </div>
 
@@ -699,8 +651,10 @@ title: Notes
             <div class="container">
 
 
-                <div class="filters">
+                <div class="section-accent"></div>
 
+
+                <div class="filters">
 
                     <button
                         class="filter-button active"
@@ -710,7 +664,6 @@ title: Notes
                         All
                     </button>
 
-
                     <button
                         class="filter-button"
                         type="button"
@@ -718,7 +671,6 @@ title: Notes
                     >
                         Politics
                     </button>
-
 
                     <button
                         class="filter-button"
@@ -728,7 +680,6 @@ title: Notes
                         Methods
                     </button>
 
-
                     <button
                         class="filter-button"
                         type="button"
@@ -736,7 +687,6 @@ title: Notes
                     >
                         Data
                     </button>
-
 
                     <button
                         class="filter-button"
@@ -746,10 +696,7 @@ title: Notes
                         Papers
                     </button>
 
-
                 </div>
-
-
 
 
                 {% assign sorted_notes = site.notes | sort: "date" | reverse %}
@@ -760,7 +707,6 @@ title: Notes
 
                     {% for note in sorted_notes %}
 
-
                         <article
                             class="note-row"
                             data-category="{{ note.category | default: '' | downcase }}"
@@ -768,12 +714,8 @@ title: Notes
 
 
                             <div class="note-date">
-
                                 {{ note.date | date: "%d %b %Y" }}
-
                             </div>
-
-
 
 
                             <a
@@ -781,36 +723,21 @@ title: Notes
                                 href="{{ note.url }}"
                             >
 
-
                                 {% if note.image %}
 
                                     <img
                                         class="note-image"
                                         src="{{ note.image }}"
-                                        alt="Cover image for {{ note.title }}"
-                                        onerror="
-                                            this.style.display='none';
-                                            this.nextElementSibling.style.display='block';
-                                        "
+                                        alt="{{ note.title }}"
                                     >
-
-                                    <div
-                                        class="note-placeholder"
-                                        style="display:none;"
-                                    >
-                                    </div>
 
                                 {% else %}
 
-                                    <div class="note-placeholder">
-                                    </div>
+                                    <div class="note-placeholder"></div>
 
                                 {% endif %}
 
-
                             </a>
-
-
 
 
                             <div>
@@ -856,7 +783,6 @@ title: Notes
 
 
                         </article>
-
 
                     {% endfor %}
 
@@ -906,7 +832,6 @@ title: Notes
 
             button.addEventListener("click", () => {
 
-
                 const filter =
                     button.dataset.filter;
 
@@ -920,7 +845,6 @@ title: Notes
 
 
                 notes.forEach(note => {
-
 
                     const category =
                         note.dataset.category;
@@ -939,9 +863,7 @@ title: Notes
 
                     }
 
-
                 });
-
 
             });
 
