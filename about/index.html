@@ -48,8 +48,10 @@ title: About
 
             --light-text: #f7f2ec;
             --light-muted: #e5ddd4;
+            --light-soft: #f0e9e1;
 
             --line-dark: rgba(16, 73, 69, 0.22);
+            --line-light: rgba(246, 229, 209, 0.24);
 
             --max-width: 1120px;
 
@@ -81,7 +83,7 @@ title: About
 
             color: var(--ink);
 
-            background: #ffffff;
+            background: var(--ivory);
 
             line-height: 1.68;
 
@@ -126,6 +128,8 @@ title: About
             background: rgba(16, 73, 69, 0.97);
 
             backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid rgba(246, 229, 209, 0.16);
 
         }
 
@@ -363,7 +367,7 @@ title: About
 
 
         /* ======================================
-           ACADEMIC
+           ACADEMIC PROFILE
         ====================================== */
 
 
@@ -388,9 +392,18 @@ title: About
         }
 
 
+        .academic-section .container {
+
+            position: relative;
+
+            z-index: 1;
+
+        }
+
+
 
         /* ======================================
-           PROFESSIONAL
+           PROFESSIONAL EXPERIENCE
         ====================================== */
 
 
@@ -419,8 +432,7 @@ title: About
         }
 
 
-        .professional-section .container,
-        .academic-section .container {
+        .professional-section .container {
 
             position: relative;
 
@@ -490,7 +502,7 @@ title: About
 
             object-fit: cover;
 
-            background: rgba(255,255,255,0.06);
+            background: rgba(255, 255, 255, 0.06);
 
         }
 
@@ -526,74 +538,115 @@ title: About
 
 
         /* ======================================
-           MORE
+           MORE LINKS
         ====================================== */
 
 
-        .more-section {
-
-            padding: 72px 0 84px;
+        .more-links-section {
 
             background: var(--ivory);
 
-        }
-
-
-        .more-title {
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            color: var(--petrol-dark);
-
-            font-size: 2.15rem;
-
-            font-weight: 500;
-
-            margin: 0 0 28px;
+            padding: 56px 0 64px;
 
         }
 
 
-        .more-list {
+        .more-links-grid {
 
-            border-top: 1px solid var(--line-dark);
+            display: grid;
 
-        }
+            grid-template-columns: 220px 1fr;
 
+            gap: 48px;
 
-        .more-row {
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            gap: 20px;
-
-            padding: 20px 0;
-
-            border-bottom: 1px solid var(--line-dark);
-
-            color: var(--ink);
-
-            transition:
-                color 0.18s ease,
-                padding 0.18s ease;
+            align-items: start;
 
         }
 
 
-        .more-row:hover {
+        .more-links-label {
 
             color: var(--petrol);
 
-            padding-left: 8px;
+            text-transform: uppercase;
 
-            padding-right: 8px;
+            letter-spacing: 0.14em;
+
+            font-size: 1.05rem;
+
+            font-weight: 700;
+
+            line-height: 1.3;
+
+            margin-top: 4px;
+
+        }
+
+
+        .more-links-list {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 34px 42px;
+
+            align-items: center;
+
+        }
+
+
+        .more-link {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            color: var(--petrol);
+
+            font-family:
+                Inter,
+                ui-sans-serif,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            font-size: 1.08rem;
+
+            font-weight: 500;
+
+            padding-bottom: 6px;
+
+            border-bottom: 1px solid rgba(22, 95, 90, 0.22);
+
+            transition:
+                color 0.18s ease,
+                border-color 0.18s ease,
+                transform 0.18s ease;
+
+        }
+
+
+        .more-link:hover {
+
+            color: var(--petrol-dark);
+
+            border-color: rgba(22, 95, 90, 0.45);
+
+            transform: translateY(-1px);
+
+        }
+
+
+        .more-link-arrow {
+
+            font-size: 1rem;
+
+            line-height: 1;
 
         }
 
@@ -607,6 +660,8 @@ title: About
         .site-footer {
 
             background: rgba(16, 73, 69, 0.97);
+
+            border-top: 1px solid rgba(246, 229, 209, 0.14);
 
             padding: 28px 0;
 
@@ -650,6 +705,15 @@ title: About
             .outside-grid {
 
                 grid-template-columns: 1fr;
+
+            }
+
+
+            .more-links-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 22px;
 
             }
 
@@ -718,9 +782,23 @@ title: About
             }
 
 
-            .more-section {
+            .more-links-section {
 
-                padding: 58px 0 68px;
+                padding: 42px 0 50px;
+
+            }
+
+
+            .more-links-list {
+
+                gap: 22px 28px;
+
+            }
+
+
+            .more-link {
+
+                font-size: 1rem;
 
             }
 
@@ -734,11 +812,6 @@ title: About
 
 
 <body>
-
-
-    <!-- ======================================
-         HEADER
-    ====================================== -->
 
 
     <header class="site-header">
@@ -791,11 +864,6 @@ title: About
     <main>
 
 
-        <!-- ======================================
-             HERO
-        ====================================== -->
-
-
         <section class="about-hero">
 
             <div class="container">
@@ -813,11 +881,6 @@ title: About
         </section>
 
 
-
-
-        <!-- ======================================
-             ACADEMIC PROFILE
-        ====================================== -->
 
 
         <section class="about-section academic-section">
@@ -840,7 +903,6 @@ title: About
 
 
                         <p>
-
                             I am a PhD researcher in Political Science at the
                             Network for the Advancement of Social and Political Studies (NASP),
                             jointly affiliated with the University of Milan and the University
@@ -851,18 +913,15 @@ title: About
                             for Politics, Society and Complex Organizations. I previously
                             obtained a B.A. in Political Science from the University of Milan
                             (104/110).
-
                         </p>
 
 
                         <p>
-
                             My research focuses on political behaviour, party politics and
                             political communication, with particular interests in coalition
                             politics, affective polarization and intra-party dynamics.
                             I primarily use quantitative and comparative methods, including
                             panel data and computational approaches to political text.
-
                         </p>
 
 
@@ -877,11 +936,6 @@ title: About
         </section>
 
 
-
-
-        <!-- ======================================
-             PROFESSIONAL EXPERIENCE
-        ====================================== -->
 
 
         <section class="about-section professional-section">
@@ -909,25 +963,21 @@ title: About
 
 
                         <p>
-
                             At the Istituto Bruno Leoni, my work combined research and
                             policy analysis with the communication of research to broader
                             audiences. Alongside quantitative work, data collection and
                             research support, I contributed to translating policy research
                             into accessible public-facing content.
-
                         </p>
 
 
                         <p>
-
                             My work included social media and digital communication,
                             press releases, graphics, video and audio production,
                             website management, stakeholder outreach and event organisation.
                             I was also involved in educational initiatives aimed at bringing
                             economic and policy debates to students outside traditional
                             academic settings.
-
                         </p>
 
 
@@ -942,11 +992,6 @@ title: About
         </section>
 
 
-
-
-        <!-- ======================================
-             OUTSIDE ACADEMIA
-        ====================================== -->
 
 
         <section class="outside-section">
@@ -964,18 +1009,15 @@ title: About
 
                     <div class="outside-card">
 
-
                         <img
                             class="outside-media"
                             src="/assets/images/about/volleyball.jpg"
                             alt="Volleyball"
                         >
 
-
                         <h3>
                             Volleyball
                         </h3>
-
 
                     </div>
 
@@ -984,22 +1026,18 @@ title: About
 
                     <div class="outside-card">
 
-
                         <div id="travel-map"></div>
-
 
                         <h3>
                             Travel &amp; Outdoors
                         </h3>
 
-
                     </div>
 
 
 
 
                     <div class="outside-card">
-
 
                         <img
                             class="outside-media"
@@ -1007,11 +1045,9 @@ title: About
                             alt="Beer and friends"
                         >
 
-
                         <h3>
                             Beer &amp; Friends
                         </h3>
-
 
                     </div>
 
@@ -1026,94 +1062,61 @@ title: About
 
 
 
-        <!-- ======================================
-             MORE
-        ====================================== -->
-
-
-        <section class="more-section">
+        <section class="more-links-section">
 
             <div class="container">
 
 
-                <h2 class="more-title">
-                    More
-                </h2>
+                <div class="more-links-grid">
 
 
-                <div class="more-list">
+                    <div class="more-links-label">
+                        More
+                    </div>
 
 
-                    <a
-                        class="more-row"
-                        href="/assets/cv.pdf"
-                        target="_blank"
-                        rel="noopener"
-                    >
-
-                        <span>
-                            Curriculum Vitae
-                        </span>
-
-                        <span>
-                            →
-                        </span>
-
-                    </a>
+                    <div class="more-links-list">
 
 
+                        <a
+                            class="more-link"
+                            href="/assets/cv.pdf"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <span>Curriculum Vitae</span>
+                            <span class="more-link-arrow">↗</span>
+                        </a>
 
 
-                    <a
-                        class="more-row"
-                        href="/research/"
-                    >
-
-                        <span>
-                            Research
-                        </span>
-
-                        <span>
-                            →
-                        </span>
-
-                    </a>
+                        <a
+                            class="more-link"
+                            href="/research/"
+                        >
+                            <span>Research</span>
+                            <span class="more-link-arrow">→</span>
+                        </a>
 
 
+                        <a
+                            class="more-link"
+                            href="/notes/"
+                        >
+                            <span>Notes</span>
+                            <span class="more-link-arrow">→</span>
+                        </a>
 
 
-                    <a
-                        class="more-row"
-                        href="/notes/"
-                    >
-
-                        <span>
-                            Notes
-                        </span>
-
-                        <span>
-                            →
-                        </span>
-
-                    </a>
+                        <a
+                            class="more-link"
+                            href="/contact/"
+                        >
+                            <span>Contact</span>
+                            <span class="more-link-arrow">→</span>
+                        </a>
 
 
-
-
-                    <a
-                        class="more-row"
-                        href="/contact/"
-                    >
-
-                        <span>
-                            Contact
-                        </span>
-
-                        <span>
-                            →
-                        </span>
-
-                    </a>
+                    </div>
 
 
                 </div>
@@ -1129,36 +1132,23 @@ title: About
 
 
 
-    <!-- ======================================
-         FOOTER
-    ====================================== -->
-
-
     <footer class="site-footer">
 
         <div class="container footer-inner">
-
 
             <span>
                 © 2026 Francesco Catalfamo
             </span>
 
-
             <span>
                 Political Science
             </span>
-
 
         </div>
 
     </footer>
 
 
-
-
-    <!-- ======================================
-         LEAFLET
-    ====================================== -->
 
 
     <script
@@ -1195,7 +1185,6 @@ title: About
 
                 places.forEach(place => {
 
-
                     L.circleMarker(
                         [place.lat, place.lng],
                         {
@@ -1209,11 +1198,7 @@ title: About
                     .addTo(map)
                     .bindPopup(place.name);
 
-
-                    bounds.push(
-                        [place.lat, place.lng]
-                    );
-
+                    bounds.push([place.lat, place.lng]);
 
                 });
 
@@ -1229,9 +1214,7 @@ title: About
 
                 }
 
-
             });
-
 
     </script>
 
