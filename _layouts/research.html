@@ -31,6 +31,8 @@
             --sage: #88b79b;
             --sage-soft: rgba(136, 183, 155, 0.15);
 
+            --dark-section: rgba(16, 73, 69, 0.94);
+
             --ink: #202522;
             --muted: #66716c;
 
@@ -41,8 +43,7 @@
             --line-light: rgba(246, 229, 209, 0.22);
 
             --max-width: 1120px;
-            --article-width: 760px;
-            --cover-width: 860px;
+            --article-width: 780px;
 
         }
 
@@ -200,9 +201,11 @@
 
             overflow: hidden;
 
-            padding: 86px 0 68px;
+            padding: 78px 0 60px;
 
             background: var(--ivory);
+
+            border-bottom: 1px solid var(--line-dark);
 
         }
 
@@ -213,9 +216,9 @@
 
             position: absolute;
 
-            width: 330px;
+            width: 310px;
 
-            height: 290px;
+            height: 280px;
 
             right: -140px;
 
@@ -238,13 +241,13 @@
 
             position: absolute;
 
-            width: 130px;
+            width: 125px;
 
-            height: 130px;
+            height: 125px;
 
-            right: 135px;
+            right: 130px;
 
-            bottom: -78px;
+            bottom: -75px;
 
             border: 1px solid rgba(22, 95, 90, 0.16);
 
@@ -259,7 +262,7 @@
 
             z-index: 1;
 
-            max-width: 930px;
+            max-width: 900px;
 
         }
 
@@ -274,7 +277,7 @@
 
             gap: 20px;
 
-            margin-bottom: 23px;
+            margin-bottom: 20px;
 
         }
 
@@ -287,7 +290,7 @@
 
             letter-spacing: 0.14em;
 
-            font-size: 0.75rem;
+            font-size: 0.74rem;
 
             font-weight: 700;
 
@@ -298,7 +301,7 @@
 
             color: #76817c;
 
-            font-size: 0.78rem;
+            font-size: 0.76rem;
 
             letter-spacing: 0.06em;
 
@@ -312,45 +315,45 @@
                 "Times New Roman",
                 serif;
 
-            font-size: clamp(3.1rem, 6vw, 5.25rem);
+            font-size: clamp(2.7rem, 5vw, 4.55rem);
 
             font-weight: 500;
 
-            line-height: 0.99;
+            line-height: 1.02;
 
-            letter-spacing: -0.042em;
+            letter-spacing: -0.038em;
 
             color: var(--petrol-dark);
 
             margin: 0;
 
-            max-width: 920px;
+            max-width: 880px;
 
         }
 
 
         .project-description {
 
-            max-width: 760px;
+            max-width: 740px;
 
-            margin: 26px 0 0;
+            margin: 23px 0 0;
 
             color: #4f5c56;
 
-            font-size: 1.12rem;
+            font-size: 1.08rem;
 
-            line-height: 1.7;
+            line-height: 1.68;
 
         }
 
 
         .project-authors {
 
-            margin-top: 23px;
+            margin-top: 21px;
 
             color: #67736d;
 
-            font-size: 0.91rem;
+            font-size: 0.9rem;
 
             font-weight: 600;
 
@@ -365,7 +368,7 @@
 
             gap: 8px;
 
-            margin-top: 21px;
+            margin-top: 19px;
 
         }
 
@@ -389,52 +392,78 @@
 
 
         /* ======================================
-           COVER
+           ARTICLE
         ====================================== */
 
 
-        .cover-section {
+        .article-section {
 
-            padding: 18px 0 70px;
-
-            background: var(--ivory);
-
-        }
-
-
-        .cover-frame {
-
-            width: min(var(--cover-width), 90%);
-
-            margin: 0 auto;
-
-            padding: 22px;
+            padding: 70px 0 86px;
 
             background: #ffffff;
 
-            border: 1px solid rgba(16, 73, 69, 0.12);
+        }
+
+
+        .article-body {
+
+            color: #3d4843;
+
+            font-size: 1.035rem;
+
+            line-height: 1.78;
 
         }
 
 
-        .project-cover {
+        .article-body::after {
+
+            content: "";
+
+            display: block;
+
+            clear: both;
+
+        }
+
+
+
+        /* ======================================
+           SMALL COVER INSIDE ARTICLE
+        ====================================== */
+
+
+        .article-cover-wrapper {
+
+            float: left;
+
+            width: 240px;
+
+            margin:
+                2px
+                34px
+                22px
+                0;
+
+        }
+
+
+        .article-cover {
 
             width: 100%;
 
             height: auto;
 
-            max-height: 500px;
-
-            object-fit: cover;
+            border: 1px solid rgba(16, 73, 69, 0.13);
 
         }
 
 
-        .project-cover-placeholder {
+        .article-cover-placeholder {
 
             width: 100%;
 
-            aspect-ratio: 16 / 8;
+            aspect-ratio: 4 / 5;
 
             position: relative;
 
@@ -445,76 +474,52 @@
         }
 
 
-        .project-cover-placeholder::before {
+        .article-cover-placeholder::before {
 
             content: "";
 
             position: absolute;
 
-            width: 240px;
+            width: 130px;
 
-            height: 240px;
+            height: 130px;
+
+            right: -25px;
+
+            top: -30px;
+
+            border: 1px solid rgba(16, 73, 69, 0.18);
 
             border-radius: 50%;
-
-            border: 1px solid rgba(16, 73, 69, 0.17);
-
-            top: -75px;
-
-            right: 8%;
 
         }
 
 
-        .project-cover-placeholder::after {
+        .article-cover-placeholder::after {
 
             content: "";
 
             position: absolute;
 
-            width: 150px;
+            width: 75px;
 
-            height: 150px;
+            height: 75px;
 
-            background: rgba(136, 183, 155, 0.34);
+            left: 24px;
 
-            left: 13%;
+            bottom: -28px;
 
-            bottom: -65px;
+            background: rgba(136, 183, 155, 0.36);
 
-            transform: rotate(34deg);
+            transform: rotate(33deg);
 
         }
 
 
 
         /* ======================================
-           ARTICLE
+           TYPOGRAPHY
         ====================================== */
-
-
-        .article-section {
-
-            padding: 76px 0 88px;
-
-            background: #ffffff;
-
-            border-top: 1px solid rgba(16, 73, 69, 0.12);
-
-            border-bottom: 1px solid rgba(16, 73, 69, 0.12);
-
-        }
-
-
-        .article-body {
-
-            color: #3d4843;
-
-            font-size: 1.04rem;
-
-            line-height: 1.78;
-
-        }
 
 
         .article-body > :first-child {
@@ -526,7 +531,15 @@
 
         .article-body p {
 
-            margin: 0 0 24px;
+            margin: 0 0 23px;
+
+            text-align: justify;
+
+            text-justify: inter-word;
+
+            hyphens: auto;
+
+            -webkit-hyphens: auto;
 
         }
 
@@ -540,15 +553,22 @@
 
             color: var(--petrol-dark);
 
-            font-size: 2.08rem;
+            font-size: 1.95rem;
 
-            line-height: 1.2;
+            line-height: 1.22;
 
             font-weight: 500;
 
-            letter-spacing: -0.015em;
+            letter-spacing: -0.01em;
 
-            margin: 58px 0 19px;
+            margin: 52px 0 18px;
+
+        }
+
+
+        .article-body h2:first-of-type {
+
+            margin-top: 0;
 
         }
 
@@ -562,13 +582,13 @@
 
             color: var(--petrol-dark);
 
-            font-size: 1.45rem;
+            font-size: 1.4rem;
 
             line-height: 1.3;
 
             font-weight: 500;
 
-            margin: 39px 0 13px;
+            margin: 37px 0 13px;
 
         }
 
@@ -577,9 +597,9 @@
 
             color: var(--petrol-dark);
 
-            font-size: 1.02rem;
+            font-size: 1rem;
 
-            margin: 31px 0 11px;
+            margin: 30px 0 10px;
 
         }
 
@@ -598,6 +618,10 @@
 
             padding-left: 24px;
 
+            text-align: justify;
+
+            hyphens: auto;
+
         }
 
 
@@ -610,7 +634,7 @@
 
         .article-body blockquote {
 
-            margin: 38px 0;
+            margin: 36px 0;
 
             padding: 5px 0 5px 22px;
 
@@ -623,9 +647,16 @@
                 "Times New Roman",
                 serif;
 
-            font-size: 1.12rem;
+            font-size: 1.1rem;
 
             line-height: 1.65;
+
+        }
+
+
+        .article-body blockquote p {
+
+            text-align: left;
 
         }
 
@@ -650,13 +681,13 @@
         }
 
 
-        .article-body img {
+        .article-body img:not(.article-cover) {
 
             width: 100%;
 
             height: auto;
 
-            margin: 40px 0;
+            margin: 38px 0;
 
         }
 
@@ -678,7 +709,7 @@
 
             border-collapse: collapse;
 
-            margin: 36px 0;
+            margin: 34px 0;
 
             font-size: 0.9rem;
 
@@ -688,7 +719,7 @@
         .article-body th,
         .article-body td {
 
-            padding: 11px 12px;
+            padding: 10px 12px;
 
             text-align: left;
 
@@ -723,7 +754,7 @@
 
             overflow-x: auto;
 
-            margin: 34px 0;
+            margin: 32px 0;
 
             padding: 18px;
 
@@ -743,7 +774,7 @@
 
 
         /* ======================================
-           PDF / END MATTER
+           END SECTION
         ====================================== */
 
 
@@ -752,6 +783,8 @@
             padding: 62px 0 72px;
 
             background: var(--ivory);
+
+            border-top: 1px solid rgba(16, 73, 69, 0.12);
 
         }
 
@@ -765,20 +798,26 @@
         }
 
 
-        .paper-area {
 
-            padding: 28px 0 31px;
+        /* ======================================
+           READ PAPER BLOCK
+        ====================================== */
 
-            border-top: 1px solid var(--line-dark);
 
-            border-bottom: 1px solid var(--line-dark);
+        .paper-panel {
+
+            padding: 30px 32px;
+
+            background: var(--dark-section);
+
+            color: var(--light-text);
 
         }
 
 
         .paper-label {
 
-            color: var(--petrol);
+            color: var(--light-muted);
 
             text-transform: uppercase;
 
@@ -788,20 +827,7 @@
 
             font-weight: 700;
 
-            margin-bottom: 12px;
-
-        }
-
-
-        .paper-row {
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: end;
-
-            gap: 30px;
+            margin-bottom: 10px;
 
         }
 
@@ -813,43 +839,39 @@
                 "Times New Roman",
                 serif;
 
-            color: var(--petrol-dark);
-
             font-size: 1.55rem;
+
+            line-height: 1.2;
 
             font-weight: 500;
 
-            line-height: 1.25;
+            margin-bottom: 17px;
 
         }
 
 
         .paper-link {
 
-            flex-shrink: 0;
+            display: inline-block;
 
-            color: var(--petrol);
+            color: var(--light-text);
 
             font-size: 0.9rem;
 
-            font-weight: 700;
+            font-weight: 600;
 
             padding-bottom: 3px;
 
-            border-bottom: 1px solid rgba(22, 95, 90, 0.35);
+            border-bottom: 1px solid rgba(247, 242, 236, 0.45);
 
-            transition:
-                color 0.18s ease,
-                border-color 0.18s ease;
+            transition: border-color 0.18s ease;
 
         }
 
 
         .paper-link:hover {
 
-            color: var(--petrol-dark);
-
-            border-color: var(--petrol-dark);
+            border-color: #ffffff;
 
         }
 
@@ -929,28 +951,23 @@
 
             .project-hero {
 
-                padding: 68px 0 55px;
-
-            }
-
-
-            .cover-section {
-
-                padding-bottom: 54px;
-
-            }
-
-
-            .cover-frame {
-
-                padding: 15px;
+                padding: 64px 0 52px;
 
             }
 
 
             .article-section {
 
-                padding: 60px 0 70px;
+                padding: 58px 0 70px;
+
+            }
+
+
+            .article-cover-wrapper {
+
+                width: 210px;
+
+                margin-right: 26px;
 
             }
 
@@ -993,75 +1010,82 @@
 
             .project-hero {
 
-                padding: 56px 0 46px;
+                padding: 54px 0 44px;
 
             }
 
 
             .hero-topline {
 
-                align-items: flex-start;
-
                 flex-direction: column;
 
-                gap: 6px;
+                align-items: flex-start;
+
+                gap: 5px;
 
                 margin-bottom: 18px;
 
             }
 
 
+            .project-title {
+
+                font-size: 2.65rem;
+
+            }
+
+
             .project-description {
 
-                font-size: 1.04rem;
-
-            }
-
-
-            .cover-section {
-
-                padding: 8px 0 44px;
-
-            }
-
-
-            .cover-frame {
-
-                padding: 9px;
+                font-size: 1.02rem;
 
             }
 
 
             .article-section {
 
-                padding: 50px 0 60px;
+                padding: 46px 0 58px;
 
             }
 
 
-            .article-body {
+            .article-cover-wrapper {
 
-                font-size: 1rem;
+                float: none;
 
-            }
+                width: 190px;
 
-
-            .article-body h2 {
-
-                font-size: 1.82rem;
-
-                margin-top: 48px;
+                margin:
+                    0
+                    auto
+                    30px;
 
             }
 
 
-            .paper-row {
+            .article-body p,
+            .article-body ul,
+            .article-body ol {
 
-                flex-direction: column;
+                text-align: left;
 
-                align-items: flex-start;
+                hyphens: none;
 
-                gap: 15px;
+                -webkit-hyphens: none;
+
+            }
+
+
+            .article-body h2:first-of-type {
+
+                margin-top: 0;
+
+            }
+
+
+            .paper-panel {
+
+                padding: 26px 23px;
 
             }
 
@@ -1235,67 +1259,53 @@
 
 
         <!-- ======================================
-             COVER
-        ====================================== -->
-
-
-        <section class="cover-section">
-
-
-            <div class="cover-frame">
-
-
-                {% if page.image %}
-
-
-                    <img
-                        class="project-cover"
-                        src="{{ page.image }}"
-                        alt="Cover image for {{ page.title }}"
-                        onerror="
-                            this.style.display='none';
-                            this.nextElementSibling.style.display='block';
-                        "
-                    >
-
-
-                    <div
-                        class="project-cover-placeholder"
-                        style="display:none;"
-                    >
-                    </div>
-
-
-                {% else %}
-
-
-                    <div class="project-cover-placeholder">
-                    </div>
-
-
-                {% endif %}
-
-
-            </div>
-
-
-        </section>
-
-
-
-
-        <!-- ======================================
              ARTICLE
         ====================================== -->
 
 
         <section class="article-section">
 
+
             <article class="article-container article-body">
+
+
+                {% if page.image %}
+
+
+                    <div class="article-cover-wrapper">
+
+
+                        <img
+                            class="article-cover"
+                            src="{{ page.image }}"
+                            alt="Cover image for {{ page.title }}"
+                            onerror="
+                                this.style.display='none';
+                                this.nextElementSibling.style.display='block';
+                            "
+                        >
+
+
+                        <div
+                            class="article-cover-placeholder"
+                            style="display:none;"
+                        >
+                        </div>
+
+
+                    </div>
+
+
+                {% endif %}
+
+
+
 
                 {{ content }}
 
+
             </article>
+
 
         </section>
 
@@ -1303,7 +1313,7 @@
 
 
         <!-- ======================================
-             END / PDF
+             PDF + BACK
         ====================================== -->
 
 
@@ -1315,7 +1325,7 @@
                 {% if page.pdf %}
 
 
-                    <div class="paper-area">
+                    <div class="paper-panel">
 
 
                         <div class="paper-label">
@@ -1323,25 +1333,19 @@
                         </div>
 
 
-                        <div class="paper-row">
-
-
-                            <div class="paper-title">
-                                Read the complete paper
-                            </div>
-
-
-                            <a
-                                class="paper-link"
-                                href="{{ page.pdf }}"
-                                target="_blank"
-                                rel="noopener"
-                            >
-                                View PDF ↗
-                            </a>
-
-
+                        <div class="paper-title">
+                            Read the complete paper
                         </div>
+
+
+                        <a
+                            class="paper-link"
+                            href="{{ page.pdf }}"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Read the paper ↗
+                        </a>
 
 
                     </div>
