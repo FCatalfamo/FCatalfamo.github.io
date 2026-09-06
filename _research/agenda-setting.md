@@ -1,6 +1,6 @@
 ---
 title: "Agenda-Setting Beyond Votes: Sectoral Campaign Contributions and Legislative Speech in the U.S. Senate"
-status: "Writing sample"
+status: "Course paper"
 authors: "Francesco Catalfamo"
 year: 2025
 type: "Quantitative text analysis"
