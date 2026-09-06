@@ -4,6 +4,7 @@ status: "Course paper"
 authors: "Francesco Catalfamo"
 description: "How donor influence in party leadership elections can shape political outcomes before legislative votes."
 year: 2025
+date: 2025-12-10
 type: "Formal theory"
 image: "/assets/images/research/formal-model.png"
 pdf: "/assets/papers/formal-model.pdf"
