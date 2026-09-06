@@ -3,6 +3,7 @@ title: "Agenda-Setting Beyond Votes: Sectoral Campaign Contributions and Legisla
 status: "Course paper"
 authors: "Francesco Catalfamo"
 year: 2025
+date: 2025-12-20
 type: "Quantitative text analysis"
 image: "/assets/images/research/agenda-setting.png"
 pdf: "/assets/papers/agenda-setting.pdf"
