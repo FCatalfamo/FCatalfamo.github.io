@@ -14,10 +14,6 @@ abstract: >
   contributions can increase a preferred candidate's perceived viability,
   alter the probability of leadership selection, and shift expected policy
   outcomes toward donor preferences.
-tags:
-  - Money in politics
-  - Party leadership
-  - Formal theory
 ---
 
 ## Overview
